@@ -600,24 +600,50 @@
           <div class="contact-form-box">
             <h3>Formulaire de contact</h3>
             <p class="form-desc">Notre équipe est à votre écoute pour répondre à vos questions et vous accompagner dans la découverte de l’École Maternelle Lila.</p>
-            <form id="contact-form">
-              <div class="form-group"><label for="form-name">Votre nom *</label><input type="text" id="form-name" class="form-input" placeholder="Ex. Mme ou M. Ait-Ahmed" required></div>
-              <div class="form-group"><label for="form-phone">Votre numéro de téléphone *</label><input type="tel" id="form-phone" class="form-input" placeholder="Ex. 0556 XX XX XX" required></div>
-              <div class="form-group">
-                <label for="form-section">Quel est l’objet de votre message ?</label>
-                <select id="form-section" class="form-select">
-                  <option value="autre" selected>Renseignement général / Visite</option>
-                  <option value="creche">Inscription en Section d’Éveil</option>
-                  <option value="tps">Inscription en Toute Petite Section (TPS)</option>
-                  <option value="ps">Inscription en Petite Section (PS)</option>
-                  <option value="ms">Inscription en Moyenne Section (MS)</option>
-                  <option value="gs">Inscription en Grande Section (GS)</option>
-                </select>
-              </div>
-              <div class="form-group"><label for="form-msg">Votre message</label><textarea id="form-msg" class="form-textarea" placeholder="Précisez l'âge de votre enfant, vos souhaits ou vos disponibilités pour une visite..."></textarea></div>
-              <button type="submit" class="btn btn-primary" style="width: 100%;"><span>Envoyer ma demande</span></button>
-              <div id="form-feedback" class="form-feedback" role="alert"></div>
-            </form>
+            
+<form id="contact-form">
+  <!-- Configuration Web3Forms -->
+  <input type="hidden" name="access_key" value="591ca5fc-c7cc-40bb-a660-b7c1635a50a0">
+  <input type="hidden" name="subject" id="form-email-subject" value="Nouvelle demande — Site École Maternelle Lila">
+<input type="hidden" name="from_name" value="Contact via le site">
+
+  <div class="form-group">
+    <label for="form-name">Votre nom *</label>
+    <input type="text" id="form-name" name="name" class="form-input"
+      placeholder="Ex. Mme ou M. Ait-Ahmed" required>
+  </div>
+
+  <div class="form-group">
+    <label for="form-phone">Votre numéro de téléphone *</label>
+    <input type="tel" id="form-phone" name="phone" class="form-input"
+      placeholder="Ex. 0556 XX XX XX" required>
+  </div>
+
+  <div class="form-group">
+    <label for="form-section">Quel est l’objet de votre message ?</label>
+    <select id="form-section" name="objet" class="form-select">
+      <option value="autre" selected>Renseignement général / Visite</option>
+      <option value="creche">Inscription en Section d’Éveil</option>
+      <option value="tps">Inscription en Toute Petite Section (TPS)</option>
+      <option value="ps">Inscription en Petite Section (PS)</option>
+      <option value="ms">Inscription en Moyenne Section (MS)</option>
+      <option value="gs">Inscription en Grande Section (GS)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="form-msg">Votre message</label>
+    <textarea id="form-msg" name="message" class="form-textarea"
+      placeholder="Précisez l'âge de votre enfant, vos souhaits ou vos disponibilités pour une visite..."></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary" style="width: 100%;">
+    <span>Envoyer ma demande</span>
+  </button>
+
+  <div id="form-feedback" class="form-feedback" role="alert"></div>
+</form>
+
           </div>
         </div>
       </div>

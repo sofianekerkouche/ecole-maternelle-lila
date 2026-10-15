@@ -164,33 +164,98 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // --- 6. Formulaire de contact interactif ---
+  
+  // --- 6. Formulaire de contact via Web3Forms ---
   const contactForm = document.getElementById('contact-form');
   const formFeedback = document.getElementById('form-feedback');
 
-  contactForm?.addEventListener('submit', (e) => {
+  contactForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const nameInput = document.getElementById('form-name');
     const phoneInput = document.getElementById('form-phone');
+    const sectionInput = document.getElementById('form-section');
+const emailSubject = document.getElementById('form-email-subject');
+
+const subjectLabels = {
+  autre: 'Renseignement général / Visite',
+  creche: 'Inscription — Section d’Éveil',
+  tps: 'Inscription — TPS',
+  ps: 'Inscription — PS',
+  ms: 'Inscription — MS',
+  gs: 'Inscription — GS'
+};
+
+if (emailSubject && sectionInput) {
+  emailSubject.value =
+    `Demande — ${subjectLabels[sectionInput.value] || 'Renseignement général'}`;
+}	
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const submitText = submitButton?.querySelector('span');
 
     if (!nameInput?.value.trim() || !phoneInput?.value.trim()) {
-      alert('Veuillez renseigner votre nom et votre numéro de téléphone.');
+      if (formFeedback) {
+        formFeedback.textContent =
+          'Veuillez renseigner votre nom et votre numéro de téléphone.';
+        formFeedback.className = 'form-feedback error';
+      }
       return;
     }
 
-    // Simulation de succès côté client
     if (formFeedback) {
-      formFeedback.innerHTML = `
-        <strong>Merci beaucoup ${nameInput.value} ! 🌸</strong><br>
-        Votre message a bien été pris en compte. L'équipe de l'École Lila vous recontactera au <strong>${phoneInput.value}</strong> très prochainement.
-      `;
-      formFeedback.className = 'form-feedback success';
-      formFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      formFeedback.textContent = '';
+      formFeedback.className = 'form-feedback';
     }
 
-    contactForm.reset();
+    if (submitButton) submitButton.disabled = true;
+    if (submitText) submitText.textContent = 'Envoi en cours…';
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(contactForm)
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'Échec de l’envoi.');
+      }
+
+      if (formFeedback) {
+  formFeedback.textContent =
+    'Merci pour votre message ! ' +
+    'Votre demande a bien été transmise à l’administration de l’École Maternelle Lila.';
+  formFeedback.className = 'form-feedback success';
+  formFeedback.scrollIntoView({
+    behavior: 'smooth',
+    block: 'nearest'
   });
+}
+
+      contactForm.reset();
+
+    } catch (error) {
+      console.error('Erreur formulaire Web3Forms :', error);
+
+      if (formFeedback) {
+  formFeedback.textContent =
+    'Oups, votre message n’a pas pu être envoyé. ' +
+    'Une erreur est survenue lors de l’envoi de votre demande. ' +
+    'Veuillez réessayer dans quelques instants ou nous contacter directement par téléphone au +213 556 06 77 79.';
+  formFeedback.className = 'form-feedback error';
+  formFeedback.scrollIntoView({
+    behavior: 'smooth',
+    block: 'nearest'
+  });
+}
+
+    } finally {
+      if (submitButton) submitButton.disabled = false;
+      if (submitText) submitText.textContent = 'Envoyer ma demande';
+    }
+  });
+
 
   // --- Carrousel des avis Google (8 avis, 2 par vue sur ordinateur) ---
   const reviewCarousel = document.querySelector('.parents-reviews-carousel');
