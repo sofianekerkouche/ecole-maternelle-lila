@@ -157,6 +157,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Carrousel de la galerie : une photo avance toutes les 3 secondes.
+  const galleryTrack = document.getElementById('school-gallery-track');
+  if (galleryTrack) {
+    const originalGalleryItems = Array.from(galleryTrack.querySelectorAll('.gallery-item'));
+    originalGalleryItems.slice(0, 3).forEach(item => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      clone.setAttribute('tabindex', '-1');
+      clone.querySelectorAll('[tabindex]').forEach(el => el.setAttribute('tabindex', '-1'));
+      clone.addEventListener('click', () => {
+        const img = clone.querySelector('img');
+        const captionEl = clone.querySelector('.gallery-overlay h5');
+        const caption = captionEl ? captionEl.textContent : (img ? img.alt : '');
+        if (img) openLightbox(img.src, caption);
+      });
+      galleryTrack.appendChild(clone);
+    });
+
+    let galleryIndex = 0;
+    let galleryTimer;
+    const moveGallery = () => {
+      const items = galleryTrack.querySelectorAll('.gallery-item');
+      if (!items.length) return;
+      const gap = parseFloat(getComputedStyle(galleryTrack).columnGap || getComputedStyle(galleryTrack).gap) || 0;
+      const step = items[0].getBoundingClientRect().width + gap;
+      galleryTrack.style.transform = `translateX(${-galleryIndex * step}px)`;
+    };
+    const startGallery = () => {
+      if (galleryTimer) window.clearInterval(galleryTimer);
+      galleryTimer = window.setInterval(() => {
+        galleryIndex += 1;
+        galleryTrack.style.transition = 'transform 650ms ease';
+        moveGallery();
+        if (galleryIndex === originalGalleryItems.length) {
+          galleryTrack.addEventListener('transitionend', function resetGallery(event) {
+            if (event.propertyName !== 'transform') return;
+            galleryTrack.removeEventListener('transitionend', resetGallery);
+            galleryTrack.style.transition = 'none';
+            galleryIndex = 0;
+            moveGallery();
+            requestAnimationFrame(() => {
+              requestAnimationFrame(() => { galleryTrack.style.transition = 'transform 650ms ease'; });
+            });
+          });
+        }
+      }, 3000);
+    };
+    window.addEventListener('resize', moveGallery);
+    moveGallery();
+    startGallery();
+  }
+
   lightboxClose?.addEventListener('click', closeLightbox);
   lightboxModal?.addEventListener('click', (e) => {
     if (e.target === lightboxModal) {
@@ -257,50 +309,51 @@ if (emailSubject && sectionInput) {
   });
 
 
-  // --- Carrousel des avis Google (8 avis, 2 par vue sur ordinateur) ---
+  // --- Carrousel des avis Google : deux témoignages affichés, défilement d’un avis toutes les 6 secondes ---
   const reviewCarousel = document.querySelector('.parents-reviews-carousel');
   if (reviewCarousel) {
     const reviewCards = Array.from(reviewCarousel.querySelectorAll('.parent-review-card'));
     const prevReviewButton = reviewCarousel.querySelector('.review-prev');
     const nextReviewButton = reviewCarousel.querySelector('.review-next');
     const reviewDots = Array.from(reviewCarousel.querySelectorAll('.review-page-dot'));
-    let reviewPage = 0;
+    let reviewIndex = 0;
+    let reviewTimer;
 
-    const reviewsPerView = () => 2;
-    const renderReviewPage = () => {
-      const perView = reviewsPerView();
-      const maxPage = Math.ceil(reviewCards.length / perView) - 1;
-      reviewPage = Math.min(reviewPage, maxPage);
-      const start = reviewPage * perView;
+    const renderReview = () => {
       reviewCards.forEach((card, index) => {
-        const visible = index >= start && index < start + perView;
+        const visible = index === reviewIndex || index === (reviewIndex + 1) % reviewCards.length;
         card.classList.toggle('is-visible', visible);
         card.setAttribute('aria-hidden', visible ? 'false' : 'true');
       });
-      if (prevReviewButton) prevReviewButton.disabled = reviewPage === 0;
-      if (nextReviewButton) nextReviewButton.disabled = reviewPage >= maxPage;
       reviewDots.forEach((dot, index) => {
-        const active = index === reviewPage;
+        const active = index === reviewIndex;
         dot.classList.toggle('is-active', active);
         if (active) dot.setAttribute('aria-current', 'true');
         else dot.removeAttribute('aria-current');
-        dot.hidden = index > maxPage;
+        dot.hidden = index >= reviewCards.length;
       });
     };
 
-    prevReviewButton?.addEventListener('click', () => {
-      if (reviewPage > 0) { reviewPage--; renderReviewPage(); }
-    });
-    nextReviewButton?.addEventListener('click', () => {
-      const maxPage = Math.ceil(reviewCards.length / reviewsPerView()) - 1;
-      if (reviewPage < maxPage) { reviewPage++; renderReviewPage(); }
-    });
-    reviewDots.forEach((dot, index) => dot.addEventListener('click', () => {
-      reviewPage = index;
-      renderReviewPage();
-    }));
-    window.addEventListener('resize', renderReviewPage);
-    renderReviewPage();
+    const goToReview = (index) => {
+      if (!reviewCards.length) return;
+      reviewIndex = (index + reviewCards.length) % reviewCards.length;
+      renderReview();
+      startReviewTimer();
+    };
+
+    const startReviewTimer = () => {
+      if (reviewTimer) window.clearInterval(reviewTimer);
+      reviewTimer = window.setInterval(() => {
+        reviewIndex = (reviewIndex + 1) % reviewCards.length;
+        renderReview();
+      }, 6000);
+    };
+
+    prevReviewButton?.addEventListener('click', () => goToReview(reviewIndex - 1));
+    nextReviewButton?.addEventListener('click', () => goToReview(reviewIndex + 1));
+    reviewDots.forEach((dot, index) => dot.addEventListener('click', () => goToReview(index)));
+    renderReview();
+    startReviewTimer();
   }
 
 });

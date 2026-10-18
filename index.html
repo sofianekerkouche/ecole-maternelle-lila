@@ -116,7 +116,7 @@
             <h2 class="section-title">Bienvenue à l'École Maternelle Lila</h2>
             <div class="about-lead-text">
               <p>À l'École Maternelle Lila, nous accompagnons les enfants dans leurs premiers apprentissages au sein d'un environnement accueillant, stimulant et adapté à leur âge.</p>
-              <p>Notre mission est de favoriser leur éveil, leur autonomie et leur créativité à travers des activités pédagogiques et ludiques, encadrées par une équipe bienveillante et qualifiée. Nous veillons au bien-être et au rythme de chaque enfant afin de lui offrir un cadre sécurisant propice à son épanouissement.</p>
+              <p>Notre mission est de favoriser leur éveil, leur autonomie et leur créativité à travers des activités pédagogiques et ludiques, encadrées par une équipe bienveillante et qualifiée. Nous accompagnons chaque enfant dans son développement, en l'aidant à gagner en confiance, à développer son autonomie et à prendre plaisir dans ses apprentissages.</p>
             </div>
             <p class="about-slogan">Grandir en confiance, apprendre avec plaisir !</p>
             <div class="about-cta-actions">
@@ -126,24 +126,11 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- ====================================================================
-         SECTION 3 — POURQUOI CHOISIR L'ÉCOLE LILA (QUOTIDIEN & GALERIE PHOTOS)
-         ==================================================================== -->
-    <section class="section environment-section" id="environnement-ecole">
-      <div class="container">
-        <div class="section-title-wrap environment-title-wrap">
-          <h2 class="section-title environment-title">Un cadre adapté aux besoins des enfants</h2>
-        </div>
-
-        <!-- Présentation des salles de classe avant la galerie -->
-        <div class="gallery-intro">
-          <p>De la Section d’Éveil à la Grande Section, chaque salle est aménagée en fonction de la section et des besoins des enfants. Mobilier adapté, espaces organisés et matériel choisi avec soin permettent à chacun d’évoluer, d’explorer et d’apprendre à son rythme, dans un environnement accueillant.</p>
-        </div>
-
-        <!-- Grille Galerie Photos Réelles de l'école -->
-        <div class="gallery-grid">
+<div class="container environment-content" id="environnement-ecole">
+          <div class="gallery-carousel" aria-label="Galerie photos de l’École Maternelle Lila">
+            <div class="gallery-viewport">
+              <!-- Grille Galerie Photos Réelles de l'école -->
+        <div class="gallery-grid carousel-track" id="school-gallery-track">
           <!-- Photo 1 : Classe colorée -->
           <div class="gallery-item" tabindex="0" role="button" aria-label="Agrandir la photo de la salle d'activités">
             <img 
@@ -228,7 +215,12 @@
             </div>
           </div>
         </div>
-        <div class="school-facilities-grid" aria-label="Les atouts de notre établissement">
+            </div>
+          </div>
+          <div class="gallery-intro">
+            <p>De la Section d’Éveil à la Grande Section, chaque salle est aménagée en fonction de la section et des besoins des enfants. Mobilier adapté, espaces organisés et matériel choisi avec soin permettent à chacun d’évoluer, d’explorer et d’apprendre à son rythme, dans un environnement accueillant.</p>
+          </div>
+          <div class="school-facilities-grid" aria-label="Les atouts de notre établissement">
             <div class="facade-card">
               <img 
                 src="references/photos-ecole/2025-01-27.jpg" 
@@ -253,8 +245,9 @@
               </div>
             </div>
         </div>
-      </div>
+        </div>
     </section>
+    
 
     <!-- Section dédiée aux espaces, à la galerie et à l'environnement de l'école -->
     <section class="section niveaux-section" id="sections">
@@ -272,7 +265,7 @@
                 <div class="niveau-icon-wrap">🍼</div>
                 <h3>Section d’Éveil</h3>
               </div>
-              <span class="age-badge">15 mois à 3 ans</span>
+              <span class="age-badge">15 mois à 2 ans</span>
             </div>
             <p class="niveau-subtitle">Les premières découvertes en toute douceur</p>
             <p class="niveau-desc">
@@ -292,11 +285,11 @@
                 <div class="niveau-icon-wrap">🎈</div>
                 <h3>Toute Petite Section (TPS)</h3>
               </div>
-              <span class="age-badge">Dès 2 ans (selon préparation)</span>
+              <span class="age-badge">2 à 3 ans</span>
             </div>
             <p class="niveau-subtitle">La passerelle vers la vie scolaire</p>
             <p class="niveau-desc">
-              Une première immersion dans la vie scolaire, accessible à certains enfants dès 2 ans selon leur rythme et leur préparation, en concertation avec la direction lors de la visite d'admission.
+              Une première immersion dans la vie scolaire, accessible à certains enfants dès 2 ans selon leur rythme et leur préparation.
             </p>
             <ul class="niveau-features">
               <li>Éveil sensoriel &amp; approche Montessori adaptée</li>
@@ -488,12 +481,14 @@
               </article>
             </div>
             <div class="review-carousel-controls">
-              <button class="review-arrow review-prev" type="button" aria-label="Afficher les avis précédents" disabled><span aria-hidden="true">‹</span></button>
-              <div class="review-pagination" aria-label="Page du carrousel">
-                <button type="button" class="review-page-dot is-active" aria-label="Afficher les avis 1 et 2" aria-current="true"></button>
-                <button type="button" class="review-page-dot" aria-label="Afficher les avis 3 et 4"></button>
-                <button type="button" class="review-page-dot" aria-label="Afficher les avis 5 et 6"></button>
-                
+              <button class="review-arrow review-prev" type="button" aria-label="Afficher les avis précédents"><span aria-hidden="true">‹</span></button>
+              <div class="review-pagination" aria-label="Choisir un témoignage">
+                <button type="button" class="review-page-dot is-active" aria-label="Afficher le témoignage 1" aria-current="true"></button>
+                <button type="button" class="review-page-dot" aria-label="Afficher le témoignage 2"></button>
+                <button type="button" class="review-page-dot" aria-label="Afficher le témoignage 3"></button>
+                <button type="button" class="review-page-dot" aria-label="Afficher le témoignage 4"></button>
+                <button type="button" class="review-page-dot" aria-label="Afficher le témoignage 5"></button>
+                <button type="button" class="review-page-dot" aria-label="Afficher le témoignage 6"></button>
               </div>
               <button class="review-arrow review-next" type="button" aria-label="Afficher les avis suivants"><span aria-hidden="true">›</span></button>
             </div>
@@ -552,7 +547,7 @@
 
         <!-- Bannière d'appel direct -->
         <div class="inscriptions-banner-box">
-          <div class="banner-illustration" aria-hidden="true"><svg viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="43" fill="#d8f0ed"/><path d="M34 43a8 8 0 0 1 8-8h36a8 8 0 0 1 8 8v23a8 8 0 0 1-8 8H58L43 85v-11h-1a8 8 0 0 1-8-8V43Z" stroke="#234b4c" stroke-width="4.5" stroke-linejoin="round"/><path d="M46 49h28M46 59h20" stroke="#234b4c" stroke-width="4" stroke-linecap="round"/></svg></div>
+          <div class="banner-illustration" aria-hidden="true"><svg viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="60" fill="#d8f0ed"/><path d="M34 43a8 8 0 0 1 8-8h36a8 8 0 0 1 8 8v23a8 8 0 0 1-8 8H58L43 85v-11h-1a8 8 0 0 1-8-8V43Z" stroke="#234b4c" stroke-width="4.5" stroke-linejoin="round"/><path d="M46 49h28M46 59h20" stroke="#234b4c" stroke-width="4" stroke-linecap="round"/></svg></div>
           <div class="banner-info">
             <h4>Besoin de plus de renseignements ?</h4>
             <p>Notre équipe est à votre écoute pour vous accompagner dans toutes vos démarches.</p>
@@ -590,10 +585,10 @@
               </div>
               <div class="contact-item-card">
                 <div class="contact-icon-circle blue">📍</div>
-                <div class="contact-item-details"><strong>Adresse de l'école</strong><a class="value" href="https://maps.app.goo.gl/nZ51tsDNtELWB9HW9" target="_blank" rel="noopener noreferrer" title="Ouvrir la localisation de l’école dans Google Maps">Thala-Allam, Tizi-Ouzou, Algérie</a></div>
+                <div class="contact-item-details"><strong>Adresse de l'école</strong><a class="value" href="https://www.google.com/maps?cid=10066076199577272309&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF" target="_blank" rel="noopener noreferrer" title="Ouvrir la localisation de l’école dans Google Maps">Thala-Allam, Tizi-Ouzou, Algérie</a></div>
               </div>
               <div class="map-card-wrapper" aria-label="Localisation de l'École Maternelle Lila sur Google Maps">
-                <iframe src="https://www.google.com/maps?q=36.724912,4.025570&z=17&output=embed" title="Localisation exacte de l’École Maternelle Lila dans Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://maps.google.com/maps?cid=10066076199577272309&output=embed" title="Localisation exacte de l’École Maternelle Lila dans Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
           </div>
@@ -702,7 +697,7 @@
           <div style="margin-top: 1rem; font-size: 0.95rem; line-height: 1.6;">
             <span class="footer-contact-line"><img src="assets/images/picto-telephone-Ecole-Maternelle-Lila.svg" alt="" class="footer-picto"> <a href="tel:+213556067779" style="color: #F5C842; font-weight: 700;">+213 556 06 77 79</a></span><br>
             <span class="footer-contact-line"><img src="assets/images/picto-mail-Ecole-Maternelle-Lila.svg" alt="" class="footer-picto"> <a href="mailto:ecolematernellelila@gmail.com" style="color: #FFFFFF;">ecolematernellelila@gmail.com</a></span><br>
-            <span class="footer-contact-line"><img src="assets/images/picto-localisation-Ecole-Maternelle-Lila.svg" alt="" class="footer-picto"> <a href="https://maps.app.goo.gl/nZ51tsDNtELWB9HW9" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF;" title="Ouvrir la localisation de l’école dans Google Maps">Thala-Allam, Tizi-Ouzou</a></span>
+            <span class="footer-contact-line"><img src="assets/images/picto-localisation-Ecole-Maternelle-Lila.svg" alt="" class="footer-picto"> <a href="https://www.google.com/maps?cid=10066076199577272309&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF;" title="Ouvrir la localisation de l’école dans Google Maps">Thala-Allam, Tizi-Ouzou</a></span>
           </div>
         </div>
       </div>
@@ -710,7 +705,7 @@
       <!-- Copyright bas de page -->
       <div class="footer-bottom">
         <p>© 2026 École Maternelle Lila — Tous droits réservés.</p>
-        <p>Thala-Allam, Tizi-Ouzou, Algérie · Fait avec amour et bienveillance</p>
+        <p>Thala-Allam, Tizi-Ouzou, Algérie · Site web réalisé par Impulzia.</p>
       </div>
     </div>
   </footer>
