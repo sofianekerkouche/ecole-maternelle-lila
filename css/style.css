@@ -3010,3 +3010,389 @@ ul, ol {
   .banner-illustration { flex-basis: auto; width: 100%; padding: 0 0 1rem; }
   .banner-illustration svg { width: 64px; height: 64px; }
 }
+
+
+/* Première passe d'adaptation mobile — en-tête, titre et slogan */
+@media (max-width: 820px) {
+  /* Sur mobile/tablette, l'en-tête ne conserve que le logo et le menu. */
+  #header-inscriptions-btn { display: none !important; }
+  .header-container { gap: .5rem; padding-left: 1rem; padding-right: 1rem; }
+  .logo-brand { flex: 1 1 auto; min-width: 0; }
+  .header-actions { flex: 0 0 auto; margin-left: .25rem; }
+  .logo-img { width: min(72vw, 300px); max-width: 100%; max-height: 58px; }
+}
+.mobile-title-break { display: none; }
+@media (max-width: 600px) {
+  .mobile-title-break { display: block; }
+  .about-copy-panel > .section-title {
+    font-size: clamp(1.55rem, 6.2vw, 2rem);
+    line-height: 1.2;
+    margin-bottom: 1.1rem;
+  }
+  .about-slogan {
+    display: block;
+    white-space: normal;
+    font-size: clamp(1.2rem, 5vw, 1.4rem);
+    line-height: 1.35;
+    padding: .65rem 0;
+    margin-top: 1.1rem;
+  }
+  .about-slogan span { display: block; }
+}
+
+
+/* ==========================================================================
+   DÉCOR DE FOND — SECTION « LES ÉTAPES DE MON PARCOURS »
+   Décorations CSS légères, sans image, adaptables aux écrans mobiles.
+   ========================================================================== */
+.niveaux-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  /* La couleur de fond existante (#f7f0e6) est volontairement conservée. */
+  background-color: #f7f0e6 !important;
+}
+
+.niveaux-section::before,
+.niveaux-section::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: clamp(220px, 26vw, 410px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.niveaux-section::before {
+  top: -185px;
+  right: -155px;
+  background: rgba(129, 201, 203, 0.19);
+  box-shadow:
+    -34px 115px 0 -105px rgba(231, 157, 130, 0.55),
+    -88px 205px 0 -148px rgba(245, 200, 66, 0.72);
+}
+
+.niveaux-section::after {
+  bottom: -235px;
+  left: -165px;
+  background: rgba(245, 200, 66, 0.13);
+  box-shadow:
+    155px -92px 0 -145px rgba(129, 201, 203, 0.72),
+    205px -48px 0 -150px rgba(231, 157, 130, 0.68);
+}
+
+.niveaux-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .niveaux-section::before {
+    width: 190px;
+    top: -105px;
+    right: -125px;
+  }
+
+  .niveaux-section::after {
+    width: 210px;
+    bottom: -145px;
+    left: -145px;
+  }
+}
+
+@media (max-width: 480px) {
+  .niveaux-section::before {
+    width: 145px;
+    top: -78px;
+    right: -98px;
+  }
+
+  .niveaux-section::after {
+    width: 160px;
+    bottom: -110px;
+    left: -108px;
+  }
+}
+
+/* Ajustements mobiles : carrousel photo, titres et footer */
+.mobile-title-break { display: none; }
+@media (max-width: 600px) {
+  .mobile-title-break { display: block; }
+
+  /* Une seule photo visible, avec une largeur confortable sur téléphone. */
+  .environment-content .gallery-grid.carousel-track {
+    gap: 0;
+  }
+  .environment-content .gallery-grid.carousel-track .gallery-item {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  .environment-content .gallery-grid.carousel-track .gallery-item img {
+    width: 100%;
+    height: clamp(230px, 68vw, 360px);
+    object-fit: cover;
+  }
+
+  /* Le footer reste plus compact sur mobile. */
+  .site-footer .footer-sections-col {
+    display: none !important;
+  }
+}
+
+/* Bouton d'appel : conserver le jaune sur ordinateur, vert uniquement sur mobile */
+.btn-call {
+  background-color: #f5c842;
+  color: #234b4c;
+  border-color: #f5c842;
+}
+.btn-call:hover,
+.btn-call:focus-visible {
+  background-color: #e9b92e;
+  border-color: #e9b92e;
+  color: #234b4c;
+}
+.floating-call-btn {
+  background-color: #689b22;
+  box-shadow: 0 8px 24px rgba(104, 155, 34, 0.35);
+}
+@media (max-width: 768px) {
+  .btn-call {
+    background-color: #689b22;
+    border-color: #689b22;
+    color: #ffffff;
+  }
+  .btn-call:hover,
+  .btn-call:focus-visible {
+    background-color: #58851b;
+    border-color: #58851b;
+    color: #ffffff;
+  }
+}
+
+.mobile-social-section {
+  margin: 1.5rem 1.25rem 1rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(35, 75, 76, 0.16);
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+.mobile-social-section h3 {
+  margin: 0 0 .25rem;
+  color: #234b4c;
+  font-size: 1rem;
+  font-weight: 800;
+}
+.mobile-social-section a {
+  color: #234b4c;
+  font-weight: 600;
+  text-decoration: none;
+  padding: .25rem 0;
+}
+.mobile-social-section a:hover,
+.mobile-social-section a:focus-visible { color: #689b22; }
+
+.gallery-carousel-controls,
+.review-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+  margin: 1rem auto 0;
+}
+.gallery-arrow,
+.review-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border: 1px solid #2b777d;
+  border-radius: 50%;
+  background: #fffdf8;
+  color: #205b61;
+  font-size: 1.65rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease, transform .2s ease;
+}
+.gallery-arrow:hover,
+.review-arrow:hover { background: #2b777d; color: #fff; transform: translateY(-1px); }
+.gallery-pagination,
+.review-pagination { display: flex; align-items: center; justify-content: center; gap: .45rem; }
+.gallery-page-dot,
+.review-page-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #c7d5d2;
+  cursor: pointer;
+  transition: background-color .2s ease, transform .2s ease;
+}
+.gallery-page-dot.is-active,
+.review-page-dot.is-active { background: #689b22; transform: scale(1.2); }
+.gallery-page-dot:focus-visible,
+.review-page-dot:focus-visible,
+.gallery-arrow:focus-visible,
+.review-arrow:focus-visible { outline: 2px solid #234b4c; outline-offset: 3px; }
+
+@media (max-width: 600px) {
+  /* Titres principaux plus lisibles sur téléphone. */
+  .section-title {
+    font-size: clamp(1.75rem, 7.1vw, 2.25rem);
+    line-height: 1.2;
+  }
+  .section-title-wrap { padding-inline: .25rem; }
+
+  /* Les photos et leurs commandes occupent toute la largeur disponible. */
+  .environment-content .gallery-carousel-controls { width: 100%; }
+  .environment-content .gallery-arrow { width: 36px; height: 36px; flex-basis: 36px; }
+
+  /* Le témoignage unique utilise toute la largeur du carrousel mobile. */
+  .parents-reviews-carousel { width: 100%; max-width: none; min-width: 0; }
+  .review-cards { display: grid; grid-template-columns: minmax(0, 1fr); width: 100%; }
+  .parent-review-card { width: 100%; min-width: 0; box-sizing: border-box; }
+  .review-carousel-controls { width: 100%; }
+}
+@media (max-width: 600px) {
+  .niveaux-section .section-title,
+  .why-choose-title,
+  .inscriptions-section .section-title,
+  .about-copy-panel > .section-title,
+  .contact-section-title {
+    font-size: clamp(1.75rem, 7.1vw, 2.25rem);
+    line-height: 1.2;
+  }
+}
+
+
+/* Menu mobile : logo vertical et pictogrammes sociaux, alignés comme dans le footer */
+.mobile-drawer-header {
+  align-items: flex-start;
+}
+.mobile-drawer-header .mobile-drawer-logo {
+  display: block;
+  width: auto;
+  height: auto !important;
+  max-width: 145px;
+  max-height: 125px;
+  object-fit: contain;
+  object-position: left top;
+  flex: 0 1 auto;
+}
+.mobile-social-section {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding-top: 1.1rem;
+}
+.mobile-social-section a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  transition: transform .2s ease;
+}
+.mobile-social-section a:hover,
+.mobile-social-section a:focus-visible {
+  transform: scale(1.08);
+}
+.mobile-social-section .footer-picto {
+  display: block;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+@media (max-width: 480px) {
+  .mobile-drawer-header .mobile-drawer-logo {
+    max-width: 125px;
+    max-height: 112px;
+  }
+}
+
+/* Ajustements du menu burger mobile : logo et pictogrammes centrés */
+.mobile-drawer-header {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.mobile-drawer-header .mobile-drawer-logo {
+  width: auto;
+  height: auto !important;
+  max-width: 165px;
+  max-height: 145px;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto;
+}
+.mobile-drawer-header .mobile-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.mobile-social-section {
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .9rem;
+  margin: .65rem 1.25rem 1rem;
+  padding-top: .7rem;
+  border-top: 1px solid rgba(35, 75, 76, 0.16);
+}
+@media (max-width: 480px) {
+  .mobile-drawer-header .mobile-drawer-logo {
+    max-width: 145px;
+    max-height: 130px;
+  }
+}
+
+/* Ajustements demandés : logo du menu mobile agrandi et boutons d'accueil colorés par défaut */
+.mobile-drawer-header .mobile-drawer-logo {
+  width: 100%;
+  max-width: 200px;
+  max-height: 170px;
+  margin: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+.about-cta-actions .btn-primary {
+  background: #689b22;
+  color: #fff;
+  border: 2px solid #689b22;
+}
+.about-cta-actions .btn-primary:hover,
+.about-cta-actions .btn-primary:focus-visible {
+  background: #527d19;
+  color: #fff;
+  border-color: #527d19;
+}
+.about-cta-actions .btn-call {
+  background: #f5c842;
+  color: #173e46;
+  border: 2px solid #f5c842;
+}
+.about-cta-actions .btn-call:hover,
+.about-cta-actions .btn-call:focus-visible {
+  background: #e7b92c;
+  color: #173e46;
+  border-color: #e7b92c;
+}
+
+@media (max-width: 480px) {
+  .mobile-drawer-header .mobile-drawer-logo {
+    max-width: 200px;
+    max-height: 170px;
+    margin: 0;
+  }
+}

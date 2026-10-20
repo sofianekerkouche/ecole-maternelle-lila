@@ -73,9 +73,9 @@
   <aside class="mobile-nav-drawer" id="mobile-drawer" aria-label="Menu mobile">
     <div class="mobile-drawer-header">
       <img 
-        src="assets/images/logo-horizontal-ecole-maternelle-lila.svg" 
+        src="assets/images/logo-vertical-ecole-maternelle-lila.svg" 
         alt="Logo École Maternelle Lila" 
-        style="height: 48px; width: auto;"
+        class="mobile-drawer-logo"
       >
       <button class="mobile-close-btn" id="mobile-close-btn" aria-label="Fermer le menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -85,20 +85,19 @@
       </button>
     </div>
 
-    <div class="mobile-links">
-      <a href="#vie-ecole">🎨 L'école</a>
-      <a href="#sections">🎓 Nos sections</a>
-      <a href="#inscriptions">📋 Inscriptions 2026-2027</a>
-      <a href="#contact">📍 Contact & Accès</a>
-    </div>
+    <nav class="mobile-links" aria-label="Navigation principale mobile">
+      <a href="#environnement-ecole">Notre école</a>
+      <a href="#sections">Nos sections</a>
+      <a href="#inscriptions">Inscriptions</a>
+      <a href="#contact">Nous contacter</a>
+    </nav>
 
-    <div class="mobile-drawer-footer">
-      <a href="tel:+213556067779" class="btn btn-call" style="width: 100%;">
-        <span>📞 Appeler (+213 556 06 77 79)</span>
-      </a>
-      <a href="#inscriptions" class="btn btn-primary" style="width: 100%;">
-        <span>Demande d'inscription</span>
-      </a>
+    <div class="mobile-social-section" aria-label="Réseaux sociaux et coordonnées">
+      <a href="https://www.facebook.com/maternellelila/" target="_blank" rel="noopener noreferrer" aria-label="Page Facebook École Maternelle Lila"><img src="assets/images/picto-facebook-Ecole-Maternelle-Lila.svg" alt="" class="footer-picto"></a>
+      <a href="https://www.instagram.com/ecole_maternelle_lila/" target="_blank" rel="noopener noreferrer" aria-label="Profil Instagram École Maternelle Lila"><img src="assets/images/picto-insta-Ecole-Maternelle-Lila.svg" alt="" class="footer-picto"></a>
+      <a href="https://www.google.com/maps?cid=10066076199577272309&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF" target="_blank" rel="noopener noreferrer" aria-label="Localisation de l’École Maternelle Lila dans Google Maps"><img src="assets/images/picto-localisation-Ecole-Maternelle-Lila.svg" alt="" class="footer-picto"></a>
+      <a href="tel:+213556067779" aria-label="Appeler l’École Maternelle Lila"><img src="assets/images/picto-telephone-Ecole-Maternelle-Lila.svg" alt="" class="footer-picto"></a>
+      <a href="mailto:ecolematernellelila@gmail.com" aria-label="Envoyer un e-mail à l’École Maternelle Lila"><img src="assets/images/picto-mail-Ecole-Maternelle-Lila.svg" alt="" class="footer-picto"></a>
     </div>
   </aside>
 
@@ -113,12 +112,12 @@
             <img src="assets/images/Logo-principal-Ecole-Maternelle-Lila.svg" alt="Logo de l’École Maternelle Lila" loading="lazy">
           </div>
           <div class="about-copy-panel">
-            <h2 class="section-title">Bienvenue à l'École Maternelle Lila</h2>
+            <h2 class="section-title">Bienvenue à l'École <span class="mobile-title-break" aria-hidden="true"></span>Maternelle Lila</h2>
             <div class="about-lead-text">
               <p>À l'École Maternelle Lila, nous accompagnons les enfants dans leurs premiers apprentissages au sein d'un environnement accueillant, stimulant et adapté à leur âge.</p>
               <p>Notre mission est de favoriser leur éveil, leur autonomie et leur créativité à travers des activités pédagogiques et ludiques, encadrées par une équipe bienveillante et qualifiée. Nous accompagnons chaque enfant dans son développement, en l'aidant à gagner en confiance, à développer son autonomie et à prendre plaisir dans ses apprentissages.</p>
             </div>
-            <p class="about-slogan">Grandir en confiance, apprendre avec plaisir !</p>
+            <p class="about-slogan"><span>Grandir en confiance,</span> <span>apprendre avec plaisir !</span></p>
             <div class="about-cta-actions">
               <a href="#sections" class="btn btn-primary">Découvrir nos sections</a>
               <a href="#inscriptions" class="btn btn-call">Organiser une visite</a>
@@ -217,6 +216,11 @@
         </div>
             </div>
           </div>
+          <div class="gallery-carousel-controls" aria-label="Commandes du carrousel photos">
+            <button class="gallery-arrow gallery-prev" type="button" aria-label="Afficher les photos précédentes">‹</button>
+            <div class="gallery-pagination" aria-label="Choisir une photo"></div>
+            <button class="gallery-arrow gallery-next" type="button" aria-label="Afficher les photos suivantes">›</button>
+          </div>
           <div class="gallery-intro">
             <p>De la Section d’Éveil à la Grande Section, chaque salle est aménagée en fonction de la section et des besoins des enfants. Mobilier adapté, espaces organisés et matériel choisi avec soin permettent à chacun d’évoluer, d’explorer et d’apprendre à son rythme, dans un environnement accueillant.</p>
           </div>
@@ -254,7 +258,7 @@
       <div class="container">
         <div class="section-title-wrap">
           
-          <h2 class="section-title">Les étapes de mon parcours à l’école</h2>
+          <h2 class="section-title">Les étapes de mon <br class="mobile-title-break">parcours à l’école</h2>
         </div>
 
         <div class="niveaux-grid">
@@ -374,7 +378,7 @@
       <div class="container">
         <div class="section-title-wrap">
           
-          <h2 class="section-title why-choose-title">Pourquoi choisir l’École Maternelle Lila ?</h2>
+          <h2 class="section-title why-choose-title">Pourquoi choisir <br class="mobile-title-break">l’École Maternelle Lila ?</h2>
           <p class="section-subtitle">
             À l’École Maternelle Lila, chaque journée est une occasion d’apprendre, d’explorer et de grandir en confiance. Grâce à des activités adaptées, des espaces pensés pour la petite enfance et une relation étroite avec les familles, nous accompagnons les enfants dans leurs découvertes et le développement de leur autonomie.
           </p>
@@ -503,7 +507,7 @@
     <section class="section inscriptions-section" id="inscriptions">
       <div class="container">
         <div class="section-title-wrap">
-          <h2 class="section-title">Comment inscrire votre enfant ?</h2>
+          <h2 class="section-title">Comment inscrire votre <br class="mobile-title-break">enfant ?</h2>
           <p class="section-subtitle">
             Un processus simple et transparent en 3 étapes pour vous accompagner dans l’inscription de votre enfant, à tout moment de l’année.
           </p>
@@ -545,22 +549,6 @@
           </div>
         </div>
 
-        <!-- Bannière d'appel direct -->
-        <div class="inscriptions-banner-box">
-          <div class="banner-illustration" aria-hidden="true"><svg viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="60" fill="#d8f0ed"/><path d="M34 43a8 8 0 0 1 8-8h36a8 8 0 0 1 8 8v23a8 8 0 0 1-8 8H58L43 85v-11h-1a8 8 0 0 1-8-8V43Z" stroke="#234b4c" stroke-width="4.5" stroke-linejoin="round"/><path d="M46 49h28M46 59h20" stroke="#234b4c" stroke-width="4" stroke-linecap="round"/></svg></div>
-          <div class="banner-info">
-            <h4>Besoin de plus de renseignements ?</h4>
-            <p>Notre équipe est à votre écoute pour vous accompagner dans toutes vos démarches.</p>
-          </div>
-          <div class="banner-actions">
-            <a href="tel:+213556067779" class="btn btn-primary" id="inscriptions-call-btn">
-              <span>Appeler le 0556 06 77 79</span>
-            </a>
-            <a href="#contact" class="btn btn-secondary" id="inscriptions-form-btn">
-              <span>Envoyer un message</span>
-            </a>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -676,7 +664,7 @@
         </div>
 
         <!-- Sections & Niveaux -->
-        <div class="footer-col">
+        <div class="footer-col footer-sections-col">
           <h4>Nos Sections</h4>
           <ul class="footer-links">
             <li><a href="#sections">Section d’Éveil</a></li>
