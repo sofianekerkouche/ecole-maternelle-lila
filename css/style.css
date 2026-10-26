@@ -3396,3 +3396,9 @@ ul, ol {
     margin: 0;
   }
 }
+
+
+/* Liens légaux du pied de page */
+.footer-legal-links { margin-bottom: .5rem; }
+.footer-legal-links a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.footer-legal-links a:hover, .footer-legal-links a:focus-visible { color: #F5C842; }
