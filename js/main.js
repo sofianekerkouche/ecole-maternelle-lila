@@ -1,7 +1,7 @@
 /**
  * ==========================================================================
  * ÉCOLE MATERNELLE LILA — LOGIQUE INTERACTIVE OFFICIELLE
- * Navigation mobile, Défilement fluide, Galerie Lightbox & Formulaire
+ * Navigation mobile, Défilement fluide, Galerie photos & Formulaire
  * ==========================================================================
  */
 
@@ -69,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeMobileMenu();
-      closeLightbox();
     }
   });
 
@@ -122,132 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', highlightNavOnScroll, { passive: true });
 
-  // --- 5. Galerie Photos Interactive & Modal Lightbox ---
-  const lightboxModal = document.getElementById('lightbox-modal');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const lightboxCaption = document.getElementById('lightbox-caption');
-  const lightboxClose = document.getElementById('lightbox-close');
-  const galleryItems = document.querySelectorAll('.gallery-item');
-
-  function openLightbox(src, caption) {
-    if (!lightboxModal || !lightboxImg) return;
-    lightboxImg.src = src;
-    lightboxImg.alt = caption || 'Photo École Maternelle Lila';
-    if (lightboxCaption) {
-      lightboxCaption.textContent = caption || '';
-    }
-    lightboxModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLightbox() {
-    if (!lightboxModal) return;
-    lightboxModal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  galleryItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const img = item.querySelector('img');
-      const captionEl = item.querySelector('.gallery-overlay h5');
-      const caption = captionEl ? captionEl.textContent : (img ? img.alt : '');
-      if (img) {
-        openLightbox(img.src, caption);
-      }
-    });
-  });
-
-  // Carrousel photos : 3 photos visibles sur ordinateur, une sur mobile.
-  const galleryTrack = document.getElementById('school-gallery-track');
-  if (galleryTrack) {
-    const originalGalleryItems = Array.from(galleryTrack.querySelectorAll('.gallery-item'));
-    const galleryCarousel = galleryTrack.closest('.gallery-carousel');
-    const galleryDotsContainer = galleryCarousel?.querySelector('.gallery-pagination');
-    const galleryPrev = galleryCarousel?.querySelector('.gallery-prev');
-    const galleryNext = galleryCarousel?.querySelector('.gallery-next');
-
-    originalGalleryItems.slice(0, 3).forEach(item => {
-      const clone = item.cloneNode(true);
-      clone.setAttribute('aria-hidden', 'true');
-      clone.setAttribute('tabindex', '-1');
-      clone.querySelectorAll('[tabindex]').forEach(el => el.setAttribute('tabindex', '-1'));
-      clone.addEventListener('click', () => {
-        const img = clone.querySelector('img');
-        const captionEl = clone.querySelector('.gallery-overlay h5');
-        const caption = captionEl ? captionEl.textContent : (img ? img.alt : '');
-        if (img) openLightbox(img.src, caption);
-      });
-      galleryTrack.appendChild(clone);
-    });
-
-    let galleryIndex = 0;
-    let galleryTimer;
-    const galleryDots = originalGalleryItems.map((_, index) => {
-      const dot = document.createElement('button');
-      dot.type = 'button';
-      dot.className = 'gallery-page-dot' + (index === 0 ? ' is-active' : '');
-      dot.setAttribute('aria-label', `Afficher la photo ${index + 1}`);
-      if (index === 0) dot.setAttribute('aria-current', 'true');
-      dot.addEventListener('click', () => goToGallery(index));
-      galleryDotsContainer?.appendChild(dot);
-      return dot;
-    });
-
-    const moveGallery = () => {
-      const items = galleryTrack.querySelectorAll('.gallery-item');
-      if (!items.length) return;
-      const gap = parseFloat(getComputedStyle(galleryTrack).columnGap || getComputedStyle(galleryTrack).gap) || 0;
-      const step = items[0].getBoundingClientRect().width + gap;
-      galleryTrack.style.transform = `translateX(${-galleryIndex * step}px)`;
-      galleryDots.forEach((dot, index) => {
-        const active = index === galleryIndex % originalGalleryItems.length;
-        dot.classList.toggle('is-active', active);
-        if (active) dot.setAttribute('aria-current', 'true');
-        else dot.removeAttribute('aria-current');
-      });
-    };
-    const goToGallery = (index) => {
-      galleryIndex = (index + originalGalleryItems.length) % originalGalleryItems.length;
-      galleryTrack.style.transition = 'transform 650ms ease';
-      moveGallery();
-      startGallery();
-    };
-    const advanceGallery = () => {
-      galleryIndex += 1;
-      galleryTrack.style.transition = 'transform 650ms ease';
-      moveGallery();
-      if (galleryIndex === originalGalleryItems.length) {
-        galleryTrack.addEventListener('transitionend', function resetGallery(event) {
-          if (event.propertyName !== 'transform') return;
-          galleryTrack.removeEventListener('transitionend', resetGallery);
-          galleryTrack.style.transition = 'none';
-          galleryIndex = 0;
-          moveGallery();
-          requestAnimationFrame(() => requestAnimationFrame(() => {
-            galleryTrack.style.transition = 'transform 650ms ease';
-          }));
-        });
-      }
-    };
-    const startGallery = () => {
-      if (galleryTimer) window.clearInterval(galleryTimer);
-      galleryTimer = window.setInterval(advanceGallery, 4000);
-    };
-    galleryPrev?.addEventListener('click', () => goToGallery(galleryIndex - 1));
-    galleryNext?.addEventListener('click', () => goToGallery(galleryIndex + 1));
-    window.addEventListener('resize', moveGallery);
-    moveGallery();
-    startGallery();
-  }
-
-  lightboxClose?.addEventListener('click', closeLightbox);
-  lightboxModal?.addEventListener('click', (e) => {
-    if (e.target === lightboxModal) {
-      closeLightbox();
-    }
-  });
-
-  
   // --- 6. Formulaire de contact via Web3Forms ---
   const contactForm = document.getElementById('contact-form');
   const formFeedback = document.getElementById('form-feedback');

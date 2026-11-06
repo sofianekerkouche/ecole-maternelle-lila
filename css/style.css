@@ -156,7 +156,7 @@ ul, ol {
 
 .badge-tag.yellow {
   background-color: var(--color-accent-yellow-light);
-  color: #B58406;
+  color: #E8253A;
 }
 
 .badge-tag.blue {
@@ -1396,7 +1396,7 @@ ul, ol {
 
 .contact-icon-circle.yellow {
   background-color: var(--color-accent-yellow-light);
-  color: #B58406;
+  color: #E8253A;
 }
 
 .contact-item-details strong {
@@ -2578,13 +2578,14 @@ ul, ol {
   box-shadow: 0 6px 18px rgba(34, 62, 62, 0.16);
 }
 
-/* Alternance des fonds — première section fusionnée sur un fond uniforme */
-.about-section { background: #fffaf1 !important; }
-.environment-content { background: #fffaf1 !important; }
-.niveaux-section { background: #f7f0e6 !important; }
-.vie-section { background: #fffaf1 !important; }
-.inscriptions-section { background: #81c9cb !important; }
-.contact-section { background: #f7f0e6 !important; }
+/* Harmonisation des fonds — palette douce de l'identité Lila */
+.about-section { background: #FFF9F1 !important; }
+.environment-content { background: #FFF9F1 !important; }
+.niveaux-section { background: #F2F7F8 !important; }
+.vie-section { background: #FFF9F1 !important; }
+/* Le fond turquoise de la section d'inscription est volontairement conservé. */
+.inscriptions-section { background: #81C9CB !important; }
+.contact-section { background: #F2F7F8 !important; }
 
 
 /* ==========================================================================
@@ -3043,76 +3044,42 @@ ul, ol {
 
 /* ==========================================================================
    DÉCOR DE FOND — SECTION « LES ÉTAPES DE MON PARCOURS »
-   Décorations CSS légères, sans image, adaptables aux écrans mobiles.
+   Motifs repris à l'identique de la section « Comment inscrire votre enfant ? »
    ========================================================================== */
 .niveaux-section {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  /* La couleur de fond existante (#f7f0e6) est volontairement conservée. */
-  background-color: #f7f0e6 !important;
-}
-
-.niveaux-section::before,
-.niveaux-section::after {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  width: clamp(220px, 26vw, 410px);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  pointer-events: none;
+  background-color: #F2F7F8 !important;
 }
 
 .niveaux-section::before {
-  top: -185px;
-  right: -155px;
-  background: rgba(129, 201, 203, 0.19);
-  box-shadow:
-    -34px 115px 0 -105px rgba(231, 157, 130, 0.55),
-    -88px 205px 0 -148px rgba(245, 200, 66, 0.72);
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  pointer-events: none;
 }
 
 .niveaux-section::after {
-  bottom: -235px;
-  left: -165px;
-  background: rgba(245, 200, 66, 0.13);
-  box-shadow:
-    155px -92px 0 -145px rgba(129, 201, 203, 0.72),
-    205px -48px 0 -150px rgba(231, 157, 130, 0.68);
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -40px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  pointer-events: none;
 }
 
 .niveaux-section > .container {
   position: relative;
   z-index: 1;
-}
-
-@media (max-width: 768px) {
-  .niveaux-section::before {
-    width: 190px;
-    top: -105px;
-    right: -125px;
-  }
-
-  .niveaux-section::after {
-    width: 210px;
-    bottom: -145px;
-    left: -145px;
-  }
-}
-
-@media (max-width: 480px) {
-  .niveaux-section::before {
-    width: 145px;
-    top: -78px;
-    right: -98px;
-  }
-
-  .niveaux-section::after {
-    width: 160px;
-    bottom: -110px;
-    left: -108px;
-  }
 }
 
 /* Ajustements mobiles : carrousel photo, titres et footer */
@@ -3402,3 +3369,489 @@ ul, ol {
 .footer-legal-links { margin-bottom: .5rem; }
 .footer-legal-links a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .footer-legal-links a:hover, .footer-legal-links a:focus-visible { color: #F5C842; }
+
+
+/* ==========================================================================
+   PALETTE FINALE — HARMONISATION DES SECTIONS
+   Les cartes et les éléments internes conservent leurs styles propres.
+   ========================================================================== */
+.about-section,
+.environment-content {
+  background-color: #FFF9F1 !important;
+}
+
+.niveaux-section {
+  background-color: #F2F7F8 !important;
+}
+
+.vie-section {
+  background-color: #FFF9F1 !important;
+}
+
+/* Préservation stricte du turquoise de « Comment inscrire votre enfant ? » */
+.inscriptions-section {
+  background-color: #81C9CB !important;
+}
+
+.contact-section {
+  background-color: #F2F7F8 !important;
+}
+
+
+/* Corrections de finition — cartes de contact */
+.contact-item-card:hover,
+.contact-item-card:focus-within {
+  border-color: #F5C842 !important;
+  box-shadow: 0 6px 18px rgba(245, 200, 66, 0.20);
+}
+
+.contact-icon-circle .contact-footer-picto {
+  display: block;
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.contact-icon-circle.red,
+.contact-icon-circle.blue {
+  background-color: var(--color-accent-green-light);
+  color: var(--color-accent-green);
+}
+
+.contact-item-details a.value:hover,
+.contact-item-details a.value:focus-visible {
+  color: #E8253A;
+}
+
+
+/* Liens de contact : conserver le rouge signature au survol */
+.contact-item-details a.value:hover,
+.contact-item-details a.value:focus-visible {
+  color: #E8253A !important;
+}
+
+
+/* Cartes de présentation : deux colonnes sur desktop, sans zoom ni effet coloré */
+.school-facilities-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 0;
+}
+
+.school-facilities-grid .facade-card {
+  min-width: 0;
+}
+
+.school-facilities-grid .facade-card img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 0;
+  cursor: default;
+  transition: none;
+}
+
+.school-facilities-grid .facade-card:hover img {
+  transform: none;
+}
+
+@media (max-width: 820px) {
+  .school-facilities-grid {
+    grid-template-columns: 1fr;
+  }
+  .school-facilities-grid .facade-card img {
+    height: 220px;
+  }
+}
+
+
+/* Réglages finaux des cartes environnement : 2 colonnes desktop, aucun zoom */
+.school-facilities-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.school-facilities-grid .facade-card img {
+  cursor: default !important;
+  transition: none !important;
+}
+.school-facilities-grid .facade-card:hover img {
+  transform: none !important;
+  filter: none !important;
+}
+@media (max-width: 820px) {
+  .school-facilities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Composition asymétrique des trois cartes de présentation — desktop */
+@media (min-width: 821px) {
+  .school-facilities-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+    grid-template-rows: repeat(2, minmax(220px, auto));
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  /* La carte consacrée aux espaces devient la carte principale à gauche. */
+  .school-facilities-grid .facade-card:first-child {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  .school-facilities-grid .facade-card:first-child img {
+    flex: 0 0 280px;
+    height: 280px;
+    max-height: none;
+    min-height: 280px;
+  }
+
+  .school-facilities-grid .facade-card:first-child .facade-info {
+    padding: 1.35rem 1.25rem 1.2rem;
+  }
+
+  /* Les deux autres cartes sont empilées à droite. */
+  .school-facilities-grid .facade-card:nth-child(2),
+  .school-facilities-grid .facade-card:nth-child(3) {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+    align-items: stretch;
+    min-height: 0;
+  }
+
+  .school-facilities-grid .facade-card:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .school-facilities-grid .facade-card:nth-child(3) {
+    grid-row: 2;
+  }
+
+  .school-facilities-grid .facade-card:nth-child(2) img,
+  .school-facilities-grid .facade-card:nth-child(3) img {
+    height: 100%;
+    min-height: 200px;
+    max-height: none;
+  }
+
+  .school-facilities-grid .facade-card:nth-child(2) .facade-info,
+  .school-facilities-grid .facade-card:nth-child(3) .facade-info {
+    padding: 1rem;
+  }
+}
+
+/* Sur mobile, les trois cartes restent empilées comme auparavant. */
+@media (max-width: 820px) {
+  .school-facilities-grid .facade-card:first-child {
+    grid-column: auto;
+    grid-row: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Ajustement de la composition asymétrique : photos en haut, textes en bas */
+@media (min-width: 821px) {
+  .school-facilities-grid .facade-card:first-child img {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 390px;
+    min-height: 390px;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .school-facilities-grid .facade-card:nth-child(2),
+  .school-facilities-grid .facade-card:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .school-facilities-grid .facade-card:nth-child(2) img,
+  .school-facilities-grid .facade-card:nth-child(3) img {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 190px;
+    min-height: 190px;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .school-facilities-grid .facade-card:nth-child(2) .facade-info,
+  .school-facilities-grid .facade-card:nth-child(3) .facade-info {
+    flex: 1 1 auto;
+  }
+}
+
+
+/* Composition en deux rangées : une carte panoramique, puis deux cartes classiques */
+@media (min-width: 821px) {
+  .school-facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  /* Première rangée : une carte pleine largeur, photo à gauche et texte à droite. */
+  .school-facilities-grid .facade-card:first-child {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+    align-items: stretch;
+    min-height: 320px;
+  }
+
+  .school-facilities-grid .facade-card:first-child img {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .school-facilities-grid .facade-card:first-child .facade-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  /* Deuxième rangée : les deux cartes restantes, photo au-dessus du texte. */
+  .school-facilities-grid .facade-card:nth-child(2),
+  .school-facilities-grid .facade-card:nth-child(3) {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+  }
+
+  .school-facilities-grid .facade-card:nth-child(2) {
+    grid-column: 1;
+  }
+
+  .school-facilities-grid .facade-card:nth-child(3) {
+    grid-column: 2;
+  }
+
+  .school-facilities-grid .facade-card:nth-child(2) img,
+  .school-facilities-grid .facade-card:nth-child(3) img {
+    width: 100%;
+    height: 240px;
+    min-height: 240px;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .school-facilities-grid .facade-card:nth-child(2) .facade-info,
+  .school-facilities-grid .facade-card:nth-child(3) .facade-info {
+    flex: 1 1 auto;
+  }
+}
+
+/* Sur mobile : les trois cartes restent en colonne, photo au-dessus du texte. */
+@media (max-width: 820px) {
+  .school-facilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .school-facilities-grid .facade-card:first-child {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .school-facilities-grid .facade-card:first-child img {
+    width: 100%;
+    height: 220px;
+    min-height: 220px;
+  }
+}
+
+
+/* Harmonisation de la première carte : image et bloc texte de même hauteur */
+@media (min-width: 821px) {
+  .school-facilities-grid .facade-card:first-child {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+    align-items: stretch;
+    min-height: 0;
+  }
+
+  .school-facilities-grid .facade-card:first-child img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+    align-self: stretch;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .school-facilities-grid .facade-card:first-child .facade-info {
+    min-height: 0;
+    justify-content: center;
+  }
+}
+
+
+/* Carte principale : la photo prend exactement la hauteur du texte */
+@media (min-width: 821px) {
+  .school-facilities-grid .facade-card:first-child {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+    grid-template-rows: minmax(0, auto);
+    align-items: stretch;
+    min-height: 0;
+    height: auto;
+  }
+
+  .school-facilities-grid .facade-card:first-child img {
+    display: block;
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+    align-self: stretch;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .school-facilities-grid .facade-card:first-child .facade-info {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem 2rem;
+  }
+}
+
+
+/* Correction ferme : image de la première carte aux mêmes dimensions
+   que les photos des deux cartes de la seconde rangée. */
+@media (min-width: 821px) {
+  .school-facilities-grid .facade-card:first-child {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .school-facilities-grid .facade-card:first-child img {
+    display: block !important;
+    flex: 0 0 50% !important;
+    width: 50% !important;
+    height: 240px !important;
+    min-height: 240px !important;
+    max-height: 240px !important;
+    object-fit: cover !important;
+    align-self: auto !important;
+  }
+
+  .school-facilities-grid .facade-card:first-child .facade-info {
+    flex: 1 1 50% !important;
+    width: 50% !important;
+    min-width: 0 !important;
+    height: 240px !important;
+    min-height: 240px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    overflow: auto;
+    padding: 1.25rem 1.5rem !important;
+  }
+}
+
+
+/* Quatre cartes équilibrées : grille 2 x 2 sur ordinateur */
+@media (min-width: 821px) {
+  .school-facilities-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .school-facilities-grid .facade-card,
+  .school-facilities-grid .facade-card:first-child,
+  .school-facilities-grid .facade-card:nth-child(2),
+  .school-facilities-grid .facade-card:nth-child(3),
+  .school-facilities-grid .facade-card:nth-child(4) {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    width: 100%;
+    height: 100% !important;
+    min-height: 0 !important;
+    align-items: stretch !important;
+  }
+
+  .school-facilities-grid .facade-card img,
+  .school-facilities-grid .facade-card:first-child img {
+    display: block !important;
+    flex: 0 0 240px !important;
+    width: 100% !important;
+    height: 240px !important;
+    min-height: 240px !important;
+    max-height: 240px !important;
+    object-fit: cover !important;
+    align-self: auto !important;
+  }
+
+  .school-facilities-grid .facade-card .facade-info,
+  .school-facilities-grid .facade-card:first-child .facade-info {
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    display: block !important;
+    overflow: visible !important;
+    padding: 1.25rem 1.5rem 1.5rem !important;
+  }
+}
+
+@media (max-width: 820px) {
+  .school-facilities-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .school-facilities-grid .facade-card,
+  .school-facilities-grid .facade-card:first-child {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  .school-facilities-grid .facade-card img,
+  .school-facilities-grid .facade-card:first-child img {
+    width: 100% !important;
+    height: 220px !important;
+    min-height: 220px !important;
+    max-height: 220px !important;
+  }
+}
