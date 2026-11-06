@@ -3855,3 +3855,10 @@ ul, ol {
     max-height: 220px !important;
   }
 }
+
+
+/* Position de recadrage personnalisable image par image dans les cartes */
+.school-facilities-grid .facade-card img {
+  object-fit: cover;
+  object-position: var(--image-position, center);
+}
