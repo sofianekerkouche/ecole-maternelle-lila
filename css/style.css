@@ -2870,14 +2870,16 @@ ul, ol {
 .niveau-card.gs .niveau-features li::before { color: #9067B5; }
 
 
-/* Ajustements demandés : boutons verts et pictogrammes des atouts */
-#header-inscriptions-btn {
+/* Bouton d'inscription du header : règle commune à toutes les pages.
+   Toute nouvelle page utilisant .header-actions > .btn-primary héritera du même rendu. */
+.header-actions > .btn-primary {
   background-color: #689b22 !important;
   border-color: #689b22 !important;
   color: #fff !important;
   box-shadow: 0 4px 14px rgba(75, 111, 15, .22) !important;
 }
-#header-inscriptions-btn:hover, #header-inscriptions-btn:focus-visible {
+.header-actions > .btn-primary:hover,
+.header-actions > .btn-primary:focus-visible {
   background-color: #527d19 !important;
   border-color: #527d19 !important;
   box-shadow: 0 6px 18px rgba(75, 111, 15, .28) !important;
