@@ -20,7 +20,41 @@
     .legal-wrap .legal-notice { border-left: 4px solid #f5c842; padding: .9rem 1rem; background: #fff4cc; border-radius: 0 8px 8px 0; }
     .legal-wrap a { color: #426b16; overflow-wrap: anywhere; }
     .legal-home { display: inline-block; margin-bottom: 1.5rem; font-weight: 700; }
+    .error-404-illustration {
+      display: block;
+      width: min(100%, 680px);
+      height: auto;
+      margin: 0 auto 1.5rem;
+      object-fit: contain;
+    }
+    .error-404-home-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none !important;
+      color: #fff !important;
+      background: #689b22 !important;
+      border: 2px solid #689b22 !important;
+      box-shadow: 0 5px 14px rgba(104, 155, 34, .22);
+    }
+    .error-404-home-btn:hover,
+    .error-404-home-btn:focus-visible {
+      background: #527d19 !important;
+      border-color: #527d19 !important;
+      color: #fff !important;
+    }
+    @media (max-width: 600px) {
+      .error-404-illustration { width: 100%; margin-bottom: 1.25rem; }
+    }
   </style>
+    <meta property="og:image" content="https://ecolematernellelila.com/assets/images/og-ecole-maternelle-lila.jpg">
+    <meta property="og:image:secure_url" content="https://ecolematernellelila.com/assets/images/og-ecole-maternelle-lila.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="675">
+    <meta property="og:image:alt" content="École Maternelle Lila : enfants, établissement et identité visuelle de l’école">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://ecolematernellelila.com/assets/images/og-ecole-maternelle-lila.jpg">
 </head>
 <body>
   <header class="site-header" id="site-header">
@@ -110,11 +144,17 @@
 
   <main class="legal-page">
     <article class="legal-wrap" style="text-align:center; padding-top:3rem; padding-bottom:4rem;">
-      <p style="font-size:5rem; font-weight:800; color:#689b22; margin-bottom:0;">404</p>
+      <img
+        src="assets/images/illustration-404-ecole-maternelle-lila.png"
+        alt="Illustration de la page 404 de l’École Maternelle Lila"
+        class="error-404-illustration"
+      >
       <h1>Cette page est introuvable</h1>
-      <p>Le lien que vous avez suivi n’est peut-être plus disponible. Retrouvez les informations de l’École Maternelle Lila depuis notre page d’accueil.</p>
-      <p><a class="btn btn-primary" href="index.html" style="display:inline-flex; text-decoration:none; color:#fff;">Retour à l’accueil</a></p>
-      <p><a href="faq.html">Consulter la FAQ</a> · <a href="index.html#contact">Nous contacter</a></p>
+      <p>
+        Le lien que vous avez suivi n’est peut-être plus disponible.<br>
+        Retrouvez les informations de l’École Maternelle Lila depuis notre page d’accueil.
+      </p>
+      <p><a class="btn btn-primary error-404-home-btn" href="index.html">Retour à l’accueil</a></p>
     </article>
   </main>
   <footer class="site-footer">
