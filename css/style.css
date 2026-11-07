@@ -4009,3 +4009,96 @@ ul, ol {
 .mobile-drawer-credit a:hover {
   opacity: .78;
 }
+
+
+/* Corrections mobiles : largeur des cartes de contact et signature visible du menu */
+@media (max-width: 768px) {
+  .contact-section,
+  .contact-section > .container,
+  .contact-layout,
+  .contact-info-col,
+  .contact-card-list,
+  .contact-form-box,
+  .contact-item-card {
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .contact-layout {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-info-col,
+  .contact-card-list {
+    width: 100%;
+  }
+
+  .contact-item-card {
+    width: 100%;
+    padding: 1.1rem 1rem;
+    gap: .9rem;
+    transform: none !important;
+  }
+
+  .contact-item-details {
+    flex: 1 1 0;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-item-details .value {
+    display: block;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    font-size: clamp(.94rem, 4vw, 1.1rem);
+  }
+
+  .contact-form-box {
+    width: 100%;
+    padding: clamp(1.1rem, 4vw, 1.5rem);
+  }
+
+  .contact-form-box .form-input,
+  .contact-form-box .form-select,
+  .contact-form-box .form-textarea {
+    box-sizing: border-box;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+/* Le menu latéral reste scrollable et sa signature est toujours visible en bas. */
+.mobile-nav-drawer {
+  box-sizing: border-box;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
+}
+
+.mobile-links {
+  flex: 0 0 auto;
+  margin-bottom: 0;
+}
+
+.mobile-drawer-credit {
+  display: flex !important;
+  flex: 0 0 auto;
+  min-height: 42px;
+  margin: auto 0 0 !important;
+  padding: 1rem 0 .35rem !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #234b4c !important;
+  text-align: center;
+}
+
+.mobile-drawer-credit img {
+  width: 105px;
+  max-height: 22px;
+}
