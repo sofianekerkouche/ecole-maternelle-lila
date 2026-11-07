@@ -110,11 +110,13 @@
   <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
   <aside class="mobile-nav-drawer" id="mobile-drawer" aria-label="Menu mobile">
     <div class="mobile-drawer-header">
-      <img 
-        src="assets/images/logo-vertical-ecole-maternelle-lila.svg" 
-        alt="Logo École Maternelle Lila" 
-        class="mobile-drawer-logo"
-      >
+      <a class="mobile-drawer-home" href="index.html" aria-label="Accueil de l’École Maternelle Lila">
+        <img
+          src="assets/images/logo-vertical-ecole-maternelle-lila.svg"
+          alt="Logo École Maternelle Lila"
+          class="mobile-drawer-logo"
+        >
+      </a>
       <button class="mobile-close-btn" id="mobile-close-btn" aria-label="Fermer le menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -123,21 +125,28 @@
       </button>
     </div>
 
+    <div class="mobile-social-section" aria-label="Réseaux sociaux et coordonnées">
+      <a href="https://www.facebook.com/maternellelila/" target="_blank" rel="noopener noreferrer" aria-label="Page Facebook École Maternelle Lila"><img src="assets/images/sidebar-menu/facebook.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/ecole_maternelle_lila/" target="_blank" rel="noopener noreferrer" aria-label="Profil Instagram École Maternelle Lila"><img src="assets/images/sidebar-menu/instagram.png" alt="Instagram"></a>
+      <a href="https://www.google.com/maps?cid=10066076199577272309&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF" target="_blank" rel="noopener noreferrer" aria-label="Localisation de l’École Maternelle Lila dans Google Maps"><img src="assets/images/sidebar-menu/localisation.png" alt="Localisation"></a>
+      <a href="tel:+213556067779" aria-label="Appeler l’École Maternelle Lila"><img src="assets/images/sidebar-menu/telephone.png" alt="Téléphone"></a>
+      <a href="mailto:ecolematernellelila@gmail.com" aria-label="Envoyer un e-mail à l’École Maternelle Lila"><img src="assets/images/sidebar-menu/email.png" alt="E-mail"></a>
+    </div>
+
+
     <nav class="mobile-links" aria-label="Navigation principale mobile">
-      <a href="#environnement-ecole">Notre école</a>
-      <a href="#sections">Nos sections</a>
-      <a href="#inscriptions">Inscriptions</a>
+      <a href="index.html#environnement-ecole">Notre école</a>
+      <a href="index.html#sections">Nos sections</a>
+      <a href="index.html#contact">Nous contacter</a>
+      <a href="index.html#inscriptions">Inscriptions</a>
       <a href="faq.html">FAQ</a>
-      <a href="#contact">Nous contacter</a>
     </nav>
 
-    <div class="mobile-social-section" aria-label="Réseaux sociaux et coordonnées">
-      <a href="https://www.facebook.com/maternellelila/" target="_blank" rel="noopener noreferrer" aria-label="Page Facebook École Maternelle Lila"><img src="assets/images/picto-facebook-Ecole-Maternelle-Lila.svg" alt="" class="footer-picto"></a>
-      <a href="https://www.instagram.com/ecole_maternelle_lila/" target="_blank" rel="noopener noreferrer" aria-label="Profil Instagram École Maternelle Lila"><img src="assets/images/picto-insta-Ecole-Maternelle-Lila.svg" alt="" class="footer-picto"></a>
-      <a href="https://www.google.com/maps?cid=10066076199577272309&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF" target="_blank" rel="noopener noreferrer" aria-label="Localisation de l’École Maternelle Lila dans Google Maps"><img src="assets/images/picto-localisation-Ecole-Maternelle-Lila.svg" alt="" class="footer-picto"></a>
-      <a href="tel:+213556067779" aria-label="Appeler l’École Maternelle Lila"><img src="assets/images/picto-telephone-Ecole-Maternelle-Lila.svg" alt="" class="footer-picto"></a>
-      <a href="mailto:ecolematernellelila@gmail.com" aria-label="Envoyer un e-mail à l’École Maternelle Lila"><img src="assets/images/picto-mail-Ecole-Maternelle-Lila.svg" alt="" class="footer-picto"></a>
-    </div>
+    <p class="mobile-drawer-credit">Projet web réalisé par <a href="https://impulzia.fr/" target="_blank" rel="noopener noreferrer"
+         aria-label="Découvrir Impulzia, agence web et stratégie digitale" title="Découvrir Impulzia">
+        <img src="assets/images/logo-impulzia-dark.png" alt="Impulzia">
+      </a>
+    </p>
   </aside>
 
   <main>
@@ -169,7 +178,7 @@
             <!-- Carte 1 : espaces pensés pour chaque enfant -->
             <article class="facade-card">
               <img
-                src="references/photos-ecole/unnamed%20(6).jpg"
+                src="assets/images/salle-activites-lila.webp" decoding="async"
                 alt="Salle d’activités de la crèche et de l’école maternelle Lila à Tizi-Ouzou, aménagée pour les enfants selon leur âge"
                 style="--image-position: 50% 50%;"
                 loading="lazy"
@@ -183,7 +192,7 @@
             <!-- Carte 2 : bien-être et suivi de chaque enfant -->
             <article class="facade-card">
               <img
-                src="references/photos-ecole/bien-etre-enfant.jpg"
+                src="assets/images/espace-bien-etre-lila.webp" decoding="async"
                 alt="Espace de repos aménagé pour les jeunes enfants accueillis à la crèche Lila"
                 style="--image-position: 50% 60%;"
                 loading="lazy"
@@ -197,7 +206,7 @@
             <!-- Carte 3 : bâtiment sécurisé -->
             <article class="facade-card">
               <img
-                src="references/photos-ecole/2025-01-27%20(1).jpg"
+                src="assets/images/cour-ecole-lila.webp" decoding="async"
                 alt="Cour de jeux extérieure de l’École Maternelle Lila à Tizi-Ouzou"
                 style="--image-position: 50% 40%;"
                 loading="lazy"
@@ -211,7 +220,7 @@
             <!-- Carte 4 : quartier et accessibilité -->
             <article class="facade-card">
               <img
-                src="references/photos-ecole/unnamed%20(8).jpg"
+                src="assets/images/quartier-thala-allam-lila.webp" decoding="async"
                 alt="Environnement du quartier de Thala-Allam à Tizi-Ouzou, près de la crèche et de l’école maternelle Lila"
                 style="--image-position: 50% 50%;"
                 loading="lazy"
@@ -592,6 +601,14 @@
     <label for="form-msg">Votre message</label>
     <textarea id="form-msg" name="message" class="form-textarea"
       placeholder="Précisez l'âge de votre enfant, vos souhaits ou vos disponibilités pour une visite..."></textarea>
+  </div>
+
+  <input type="checkbox" name="botcheck" class="form-botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <div class="form-group form-privacy-consent">
+    <label for="form-privacy">
+      <input type="checkbox" id="form-privacy" name="privacy_acknowledged" value="oui" required>
+      <span>J’ai pris connaissance de la <a href="politique-confidentialite.html" target="_blank" rel="noopener noreferrer">politique de confidentialité</a>. *</span>
+    </label>
   </div>
 
   <button type="submit" class="btn btn-primary" style="width: 100%;">

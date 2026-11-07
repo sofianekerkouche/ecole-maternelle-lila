@@ -36,6 +36,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Masquer le bouton d'appel flottant lorsque le footer entre dans l'écran.
+  const floatingCallBtn = document.getElementById('floating-call');
+  const siteFooter = document.querySelector('.site-footer');
+
+  if (floatingCallBtn && siteFooter && 'IntersectionObserver' in window) {
+    const footerObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        floatingCallBtn.classList.toggle('hidden-in-footer', entry.isIntersecting);
+      });
+    }, {
+      root: null,
+      threshold: 0,
+      rootMargin: '0px 0px 0px 0px'
+    });
+
+    footerObserver.observe(siteFooter);
+  }
+
   // --- 2. Menu Navigation Mobile (Tiroir) ---
   const burgerBtn = document.getElementById('burger-btn');
   const mobileDrawer = document.getElementById('mobile-drawer');
@@ -55,13 +73,24 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
-  burgerBtn?.addEventListener('click', openMobileMenu);
-  mobileCloseBtn?.addEventListener('click', closeMobileMenu);
-  mobileBackdrop?.addEventListener('click', closeMobileMenu);
+  burgerBtn?.setAttribute('aria-expanded', 'false');
+  burgerBtn?.addEventListener('click', () => {
+    openMobileMenu();
+    burgerBtn.setAttribute('aria-expanded', 'true');
+  });
+  mobileCloseBtn?.addEventListener('click', () => {
+    closeMobileMenu();
+    burgerBtn?.setAttribute('aria-expanded', 'false');
+  });
+  mobileBackdrop?.addEventListener('click', () => {
+    closeMobileMenu();
+    burgerBtn?.setAttribute('aria-expanded', 'false');
+  });
 
   mobileNavLinks.forEach(link => {
     link.addEventListener('click', () => {
       closeMobileMenu();
+      burgerBtn?.setAttribute('aria-expanded', 'false');
     });
   });
 
@@ -69,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeMobileMenu();
+      burgerBtn?.setAttribute('aria-expanded', 'false');
     }
   });
 
@@ -135,6 +165,7 @@ const emailSubject = document.getElementById('form-email-subject');
 
 const subjectLabels = {
   autre: 'Renseignement général / Visite',
+  partenariat: 'Proposition de partenariat',
   creche: 'Inscription — Section d’Éveil',
   tps: 'Inscription — TPS',
   ps: 'Inscription — PS',

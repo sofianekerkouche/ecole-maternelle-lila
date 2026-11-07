@@ -418,7 +418,7 @@ ul, ol {
   align-items: center;
   justify-content: space-between;
   padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: none;
   margin-bottom: 1.5rem;
 }
 
@@ -1730,7 +1730,14 @@ ul, ol {
   font-weight: 800;
   font-size: 0.95rem;
   box-shadow: 0 8px 24px rgba(60, 168, 116, 0.45);
-  transition: transform var(--transition-bounce);
+  transition: transform var(--transition-bounce), opacity var(--transition-normal), visibility var(--transition-normal);
+}
+
+.floating-call-btn.hidden-in-footer {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(12px);
 }
 
 .floating-call-btn:active {
@@ -3175,14 +3182,7 @@ ul, ol {
   }
 }
 
-.mobile-social-section {
-  margin: 1.5rem 1.25rem 1rem;
-  padding-top: 1.2rem;
-  border-top: 1px solid rgba(35, 75, 76, 0.16);
-  display: flex;
-  flex-direction: column;
-  gap: .75rem;
-}
+
 .mobile-social-section h3 {
   margin: 0 0 .25rem;
   color: #234b4c;
@@ -3899,4 +3899,113 @@ ul, ol {
 .school-facilities-grid .facade-card img {
   object-fit: cover;
   object-position: var(--image-position, center);
+}
+
+/* Formulaire : protection anti-bot et confirmation de lecture */
+.form-botcheck { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.form-privacy-consent label { display: flex; gap: .65rem; align-items: flex-start; font-size: .87rem; line-height: 1.55; cursor: pointer; }
+.form-privacy-consent input { flex: 0 0 auto; width: 17px; height: 17px; margin-top: .2rem; accent-color: #689b22; }
+.form-privacy-consent a { color: #426b16; text-decoration: underline; }
+
+
+/* Signature Impulzia dans le menu mobile */
+
+
+
+
+
+
+
+
+
+
+/* Menu latéral — espacement, séparateurs et signature */
+.mobile-drawer-header {
+  border-bottom: 0;
+  margin-bottom: .35rem;
+  padding-bottom: .25rem;
+}
+
+.mobile-drawer-home {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.mobile-social-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin: 0 0 1.15rem;
+  padding: 0 0 1.1rem;
+  border: 0;
+  border-bottom: 1px solid rgba(35, 75, 76, 0.16);
+}
+
+.mobile-social-section a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  line-height: 0;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.mobile-social-section img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.mobile-social-section a:hover {
+  transform: translateY(-2px);
+  opacity: .82;
+}
+
+.mobile-links {
+  margin-bottom: auto;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(35, 75, 76, 0.16);
+}
+
+.mobile-drawer-credit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin: 1.1rem 0 0;
+  padding: 1rem 0 .25rem;
+  border: 0;
+  color: #234b4c;
+  font-size: .82rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.mobile-drawer-credit a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 0;
+}
+
+.mobile-drawer-credit img {
+  display: block;
+  width: 105px;
+  height: auto;
+  max-height: 22px;
+  object-fit: contain;
+}
+
+.mobile-drawer-credit a:hover {
+  opacity: .78;
 }
