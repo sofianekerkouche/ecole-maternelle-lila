@@ -1676,6 +1676,42 @@ ul, ol {
   color: #FFFFFF;
 }
 
+.footer-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.footer-credit-logo {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.footer-credit-logo img {
+  display: block;
+  width: 82px;
+  height: auto;
+  max-height: 19px;
+  object-fit: contain;
+}
+
+.footer-credit-logo:hover {
+  opacity: 0.82;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .footer-credit-logo img {
+    width: 76px;
+    max-height: 18px;
+  }
+}
+
+
 /* ==========================================================================
    BOUTONS FLOTTANTS (MOBILE CALL & RETOUR HAUT)
    ========================================================================== */
