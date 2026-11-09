@@ -13,7 +13,7 @@
  * Aucune dépendance : Node.js 18 ou plus suffit. Le site publié reste
  * 100 % HTML statique ; ce script ne s'exécute jamais sur le serveur.
  *
- * En-tête, tiroir mobile, pied de page, définitions SVG et bloc « Engagement »
+ * En-tête, tiroir mobile, pied de page et définitions SVG
  * sont repris tels quels du modèle de l'accueil (chemins adaptés à la profondeur) :
  * une modification du modèle se répercute sur toutes les pages à la génération suivante.
  * ==========================================================================
@@ -36,6 +36,14 @@ const IMAGE_PARTAGE = URL_PRODUCTION + 'assets/images/og-ecole-maternelle-lila.j
 const ROBOTS = PREVISUALISATION ? 'noindex,follow' : 'index,follow';
 const MOTS_PAR_MINUTE = 200;
 const ECOLE = { '@type': 'Organization', name: 'École Maternelle Lila', url: URL_PRODUCTION };
+/* Signature des articles (dernier paragraphe de chaque Markdown, en italique). Ce n'est pas une mention d'auteur. */
+const SIGNATURE = 'L’équipe de l’École Maternelle Lila, Avec vous, pas à pas.';
+/* Règle du site : liens externes en nofollow, sauf Impulzia ; aucun attribut sur les liens internes.
+   Les liens générés ici ne s'ouvrent pas dans un nouvel onglet (noopener/noreferrer inutiles). */
+const relExterne = (url) => {
+  if (!/^https?:\/\//i.test(url) || /^https?:\/\/(www\.)?ecolematernellelila\.com(\/|$)/i.test(url)) return '';
+  return /^https?:\/\/(www\.)?impulzia\.fr(\/|$)/i.test(url) ? '' : ' rel="nofollow"';
+};
 
 const erreurs = [];
 const echec = (msg) => erreurs.push(msg);
@@ -64,14 +72,6 @@ function lireMarkdown(chemin) {
     }
   }
   return { meta, corps };
-}
-
-/** Titres H2 du corps, hors conclusion et sources. */
-function sectionsPrincipales(corps) {
-  return corps.split('\n')
-    .filter((l) => /^## /.test(l))
-    .map((l) => l.replace(/^## /, '').trim())
-    .filter((t) => !/^en conclusion/i.test(t) && !/^sources/i.test(t));
 }
 
 /** Temps de lecture : mots du texte éditorial (sans en-tête, titre H1 ni sources). */
@@ -157,8 +157,7 @@ function enLigne(texte, liens, contexte) {
   return s.replace(/\u0000(\d+)\u0000/g, (_, i) => {
     const { libelle, cible } = reserve[Number(i)];
     liens.push({ libelle, cible, contexte });
-    const externe = /^https?:\/\//.test(cible);
-    return `<a href="${echapper(cible)}"${externe ? ' rel="noopener"' : ''}>${formater(libelle)}</a>`;
+    return `<a href="${echapper(cible)}"${relExterne(cible)}>${formater(libelle)}</a>`;
   });
 }
 
@@ -168,6 +167,7 @@ function convertirArticle(corps) {
   const liens = [];
   const html = [];
   let section = 'Introduction';
+  let signatures = 0;
   const blocs = texte.replace(/^# .*\n/m, '').trim().split(/\n{2,}/);
   for (const bloc of blocs) {
     const lignes = bloc.split('\n');
@@ -180,8 +180,12 @@ function convertirArticle(corps) {
       html.push('<ul>\n' + lignes.map((l) => `  <li>${enLigne(l.slice(2), liens, section)}</li>`).join('\n') + '\n</ul>');
     } else if (lignes.every((l) => /^\d+\. /.test(l))) {
       html.push('<ol>\n' + lignes.map((l) => `  <li>${enLigne(l.replace(/^\d+\. /, ''), liens, section)}</li>`).join('\n') + '\n</ol>');
-    } else if (/^\*Article rédigé par/.test(bloc)) {
-      html.push(`<p class="cdp-article-sign"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#cdp-heart"/></svg><span>${enLigne(bloc.replace(/^\*|\*$/g, ''), liens, section)}</span></p>`);
+    } else if (bloc === `*${SIGNATURE}*`) {
+      // Signature institutionnelle sur deux lignes (ce n'est pas une mention d'auteur).
+      html.push(`<p class="cdp-article-sign"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#cdp-heart"/></svg><span class="cdp-article-sign-team">L’équipe de l’École Maternelle Lila,</span> <span class="cdp-brand">Avec vous, pas à pas.</span></p>`);
+      signatures++;
+    } else if (/\b(rédigé|écrit|rédigés|écrits)\s+par\b/i.test(bloc)) {
+      throw new Error(`Mention d'auteur à retirer (« rédigé par » / « écrit par ») :\n${bloc}`);
     } else if (/^\*\*[^*]+\*\*$/.test(bloc)) {
       html.push(`<p class="cdp-key">${enLigne(bloc.replace(/^\*\*|\*\*$/g, ''), liens, section)}</p>`);
     } else if (lignes.some((l) => /^(#|- |\d+\. )/.test(l))) {
@@ -195,6 +199,7 @@ function convertirArticle(corps) {
     if (!m) throw new Error(`Ligne de source non conforme (attendu « - Libellé : URL ») : ${l}`);
     return { libelle: m[1], url: m[2] };
   });
+  if (signatures !== 1) throw new Error(`Signature attendue une fois (« ${SIGNATURE} »), trouvée ${signatures} fois`);
   return { html: html.join('\n'), sources, liens };
 }
 
@@ -208,9 +213,14 @@ const extraire = (motif, nom) => {
 const COMPOSANTS = {
   defs: extraire(/  <!-- Définitions SVG[\s\S]*?<\/svg>\n/, 'définitions SVG'),
   entete: extraire(/  <!-- =+\n\s+EN-TÊTE[\s\S]*?<\/aside>\n/, 'en-tête et tiroir mobile'),
-  engagement: extraire(/    <!-- =+ 7\. ENGAGEMENT =+ -->\n[\s\S]*?<\/section>\n/, 'bloc Engagement'),
   pied: extraire(/  <!-- =+\n\s+PIED DE PAGE[\s\S]*?<\/html>\n?/, 'pied de page'),
 };
+/* Rubrique « Ressources » (Coin des parents, et à l'avenir Médiathèque éducative) : pas de bouton d'appel flottant.
+   Le modèle n'en contient pas ; ce contrôle empêche qu'il soit réintroduit par erreur. */
+if (/floating-call/.test(modeleAccueil)) {
+  console.error('Génération interrompue : le bouton d’appel flottant (floating-call) ne doit pas figurer dans les pages de la rubrique Ressources.');
+  process.exit(1);
+}
 
 /** Adapte un composant de l'accueil (profondeur 1) à une page de profondeur 2. */
 function profondeur2(html) {
@@ -269,7 +279,6 @@ ${profondeur2(COMPOSANTS.entete)}`;
 }
 
 const pied = () => '\n' + profondeur2(COMPOSANTS.pied);
-const engagement = () => profondeur2(COMPOSANTS.engagement);
 
 /* ---------- Fragments ---------- */
 const extrait = (a) => a.excerpt || a.meta_description;       // champ "excerpt" prioritaire s'il existe
@@ -286,7 +295,7 @@ function carteArticle(a, indent, base = 'articles/', titreNiveau = 'h3') {
     `<article class="cdp-post" data-cdp-slug="${a.slug}" data-categorie="${a.category}">`,
     `  <a class="cdp-post-media" href="${url}" tabindex="-1" aria-hidden="true">${visuel(a)}</a>`,
     `  <span class="cdp-chip">${echapper(c.name)}</span>`,
-    `  <${titreNiveau}><a href="${url}">${echapper(a.title)}</a></${titreNiveau}>`,
+    `  <${titreNiveau}><a href="${url}">${titreInsecable(echapper(a.title))}</a></${titreNiveau}>`,
     `  <p class="cdp-excerpt">${echapper(extrait(a))}</p>`,
     `</article>`,
   ].map((l) => indent + l).join('\n');
@@ -306,9 +315,10 @@ function carteCategorie(c, indent, base) {
   ].map((l) => indent + l).join('\n');
 }
 
+/** Carte « À la une » : volontairement compacte (thématique, titre, extrait, temps de lecture, lien),
+    sans liste de questions ni de sous-parties de l'article, quel que soit l'article mis à la une. */
 function blocALaUne(a, indent) {
   const c = categories.get(a.category);
-  const sections = sectionsPrincipales(a._corps);
   const url = `articles/${a.slug}.html`;
   return [
     `<article class="cdp-featured" data-cdp-slug="${a.slug}" data-categorie="${a.category}">`,
@@ -318,17 +328,9 @@ function blocALaUne(a, indent) {
     `  </a>`,
     `  <div class="cdp-featured-body">`,
     `    <span class="cdp-chip">${echapper(c.name)}</span>`,
-    `    <h3><a href="${url}">${echapper(a.title)}</a></h3>`,
+    `    <h3><a href="${url}">${titreInsecable(echapper(a.title))}</a></h3>`,
     `    <p>${echapper(extrait(a))}</p>`,
-    ...(sections.length ? [
-      `    <ul class="cdp-toc" aria-label="Dans cet article">`,
-      ...sections.map((s) => `      <li>${echapper(s)}</li>`),
-      `    </ul>`,
-    ] : []),
-    `    <div class="cdp-meta">`,
-    `      <span class="cdp-by"><img src="../assets/images/logo-vertical-ecole-maternelle-lila.svg" alt="" width="26" height="26">L'équipe de l'École Maternelle Lila</span>`,
-    `      <span class="cdp-sep" aria-hidden="true"></span><span>${a._lecture.minutes} min de lecture</span>`,
-    `    </div>`,
+    `    <div class="cdp-meta"><span>${a._lecture.minutes} min de lecture</span></div>`,
     `    <a class="cdp-link-hand" href="${url}">Lire l'article<span class="cdp-sr-only"> : ${echapper(a.title)}</span> <svg aria-hidden="true"><use href="#cdp-arrow"/></svg></a>`,
     `  </div>`,
     `</article>`,
@@ -372,7 +374,7 @@ function genererAccueil() {
         '@id': url + '#page',
         url,
         name: 'Le Coin des parents',
-        description: 'Des conseils simples et bienveillants rédigés par l’équipe de l’École Maternelle Lila pour les parents d’enfants de 15 mois à 6 ans.',
+        description: 'Des conseils simples et bienveillants pour accompagner les enfants de 15 mois à 6 ans et leurs parents.',
         inLanguage: 'fr',
         isPartOf: { '@type': 'WebSite', name: 'École Maternelle Lila', url: URL_PRODUCTION },
         publisher: ECOLE,
@@ -431,8 +433,7 @@ function genererArticle(a) {
         keywords: a.keyword,
         wordCount: a._lecture.mots,
         timeRequired: `PT${a._lecture.minutes}M`,
-        author: ECOLE,
-        publisher: ECOLE,
+        publisher: ECOLE, // éditeur du site ; aucune mention d'auteur (choix éditorial)
         isPartOf: { '@type': 'CollectionPage', '@id': URL_RUBRIQUE + '#page', name: 'Le Coin des parents', url: URL_RUBRIQUE },
         citation: sources.map((s) => ({ '@type': 'CreativeWork', name: s.libelle, url: s.url })),
         breadcrumb: { '@id': url + '#fil-ariane' },
@@ -463,10 +464,7 @@ function genererArticle(a) {
             </nav>
             <a class="cdp-chip cdp-chip--link" href="../${c.slug}/index.html">${echapper(c.name)}</a>
             <h1 id="cdp-article-title">${titreInsecable(typo(echapper(a.title)))}</h1>
-            <div class="cdp-meta">
-              <span class="cdp-by"><img src="../../assets/images/logo-vertical-ecole-maternelle-lila.svg" alt="" width="26" height="26">L'équipe de l'École Maternelle Lila</span>
-              <span class="cdp-sep" aria-hidden="true"></span><span>${a._lecture.minutes} min de lecture</span>
-            </div>
+            <div class="cdp-meta"><span>${a._lecture.minutes} min de lecture</span></div>
           </div>
         </div>
       </header>
@@ -477,12 +475,13 @@ function genererArticle(a) {
 ${html.split('\n').map((l) => '          ' + l).join('\n')}
         </div>
 
-        <section class="cdp-article-col cdp-sources" aria-labelledby="cdp-sources-title">
-          <h2 id="cdp-sources-title">Sources et ressources</h2>
+        <!-- Accordéon natif : fermé par défaut, utilisable au clavier et sans JavaScript -->
+        <details class="cdp-article-col cdp-sources">
+          <summary><h2 id="cdp-sources-title">Sources et ressources</h2><svg class="cdp-sources-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
           <ul>
-${sources.map((s) => `            <li><a href="${echapper(s.url)}" rel="noopener">${typo(echapper(s.libelle))}</a></li>`).join('\n')}
+${sources.map((s) => `            <li><a href="${echapper(s.url)}"${relExterne(s.url)}>${typo(echapper(s.libelle))}</a></li>`).join('\n')}
           </ul>
-        </section>
+        </details>
       </div>
     </article>
 
@@ -502,8 +501,7 @@ ${connexes.map((r) => carteArticle(r, '          ', '')).join('\n')}
         </div>
       </div>
     </section>
-
-${engagement()}  </main>
+  </main>
 ${pied()}`;
 
   mkdirSync(join(DOSSIER_RUBRIQUE, 'articles'), { recursive: true });
@@ -596,8 +594,7 @@ ${autres.map((x) => carteCategorie(x, '          ', '../')).join('\n')}
         </div>
       </div>
     </section>
-
-${engagement()}  </main>
+  </main>
 ${pied()}`;
 
   mkdirSync(join(DOSSIER_RUBRIQUE, c.slug), { recursive: true });

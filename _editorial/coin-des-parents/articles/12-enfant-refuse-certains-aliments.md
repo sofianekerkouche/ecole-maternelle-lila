@@ -19,9 +19,9 @@ Il est fréquent qu’un enfant accepte certains aliments un jour et les refuse 
 
 Le refus peut avoir plusieurs explications : découverte d’une nouvelle texture, fatigue, manque d’appétit à ce moment-là, besoin d’autonomie ou simple préférence.
 
-Beaucoup d’enfants traversent aussi une période de méfiance envers les aliments nouveaux, appelée néophobie alimentaire. C’est une phase normale et transitoire du développement, fréquente à partir de 18 mois environ et pouvant durer jusqu’à 6 ans. Elle concerne souvent les légumes, au goût plus amer, et peut aussi conduire l’enfant à refuser un aliment qu’il acceptait jusque-là. Il peut avoir besoin de voir, de sentir ou de toucher un aliment plusieurs fois avant d’accepter de le goûter.
+Beaucoup d’enfants traversent aussi une période de méfiance envers les aliments nouveaux, appelée **néophobie alimentaire**. C’est une **phase normale et transitoire du développement**, fréquente à partir de 18 mois environ et pouvant durer jusqu’à 6 ans. Elle concerne souvent les légumes, au goût plus amer, et peut aussi conduire l’enfant à refuser un aliment qu’il acceptait jusque-là. Il peut avoir besoin de voir, de sentir ou de toucher un aliment plusieurs fois avant d’accepter de le goûter.
 
-Un refus ponctuel ne signifie donc pas qu’un aliment sera rejeté durablement. Les goûts évoluent : un aliment boudé aujourd’hui pourra être apprécié quelques semaines plus tard. Plutôt que de juger un seul repas, il est souvent plus rassurant de regarder ce que l’enfant mange sur une semaine.
+Un refus ponctuel ne signifie donc pas qu’un aliment sera rejeté durablement. Les goûts évoluent : un aliment boudé aujourd’hui pourra être apprécié quelques semaines plus tard. Plutôt que de juger un seul repas, il est souvent plus rassurant de **regarder ce que l’enfant mange sur une semaine**.
 
 ## Comment réagir sans transformer le repas en conflit ?
 
@@ -31,17 +31,17 @@ Insister, menacer ou imposer quelques bouchées peut rendre le repas plus tendu.
 
 ### Présenter plusieurs fois les aliments
 
-Un aliment peut être proposé à différentes occasions, en petite quantité, préparé ou présenté de plusieurs façons. Un jeune enfant peut avoir besoin de goûter un aliment à de nombreuses reprises, parfois une dizaine de fois ou davantage, avant de l’apprécier. Ce repère n’est ni une règle ni un objectif à atteindre : certains enfants acceptent un aliment plus vite, d’autres plus lentement, et l’enfant peut d’abord se contenter de l’observer, de le sentir ou de le toucher.
+Un aliment peut être proposé à différentes occasions, en petite quantité, préparé ou présenté de plusieurs façons. Un jeune enfant peut avoir besoin de goûter un aliment à de nombreuses reprises, parfois une dizaine de fois ou davantage, avant de l’apprécier. **Ce repère n’est ni une règle ni un objectif à atteindre** : certains enfants acceptent un aliment plus vite, d’autres plus lentement, et l’enfant peut d’abord se contenter de l’observer, de le sentir ou de le toucher.
 
 ### Valoriser la découverte
 
-Vous pouvez souligner un effort sans exiger qu’il termine son assiette : « Tu as touché le brocoli aujourd’hui, tu as découvert sa texture ». Évitez en revanche d’utiliser la nourriture comme récompense, par exemple le dessert promis s’il finit ses légumes : l’enfant risque d’associer les sucreries au plaisir et les légumes à une contrainte.
+Vous pouvez souligner un effort sans exiger qu’il termine son assiette : « Tu as touché le brocoli aujourd’hui, tu as découvert sa texture ». Évitez en revanche d’**utiliser la nourriture comme récompense**, par exemple le dessert promis s’il finit ses légumes : l’enfant risque d’associer les sucreries au plaisir et les légumes à une contrainte.
 
 ## Des repas partagés et réguliers
 
 ### Partager le même repas
 
-Proposer le même repas à toute la famille, en y incluant au moins un aliment que l’enfant apprécie, évite de préparer un plat à part. Voir les adultes manger varié encourage aussi sa curiosité : les repas sont des moments d’apprentissage par imitation.
+Proposer le même repas à toute la famille, en y incluant **au moins un aliment que l’enfant apprécie**, évite de préparer un plat à part. Voir les adultes manger varié encourage aussi sa curiosité : les repas sont des moments d’apprentissage par imitation.
 
 ### Le faire participer
 
@@ -55,7 +55,7 @@ Si votre enfant prend certains repas en collectivité, vous pouvez échanger ave
 
 ## Faut-il s’inquiéter ?
 
-Un enfant actif, qui grandit et semble en forme, mange généralement suffisamment, même si ses repas paraissent irréguliers.
+Un enfant actif, qui grandit et semble en forme, **mange généralement suffisamment**, même si ses repas paraissent irréguliers.
 
 Si le refus concerne un nombre très limité d’aliments, s’accompagne d’une perte de poids, d’une croissance qui vous préoccupe, de douleurs, de difficultés à avaler ou d’une détresse importante à table, demandez conseil au pédiatre. Il pourra évaluer la situation et vérifier que les besoins nutritionnels sont couverts. De même, avant de supprimer un aliment de son alimentation ou de lui donner un complément, il est préférable d’en parler avec lui.
 
@@ -65,7 +65,7 @@ La découverte alimentaire est progressive. Présenter les aliments sans pressio
 
 **Le but n’est pas qu’il aime tout immédiatement, mais qu’il puisse découvrir à son rythme.**
 
-*Article rédigé par l’équipe de l’École Maternelle Lila.*
+*L’équipe de l’École Maternelle Lila, Avec vous, pas à pas.*
 
 ## Sources et ressources
 - NHS – Fussy eaters : https://www.nhs.uk/baby/weaning-and-feeding/fussy-eaters/

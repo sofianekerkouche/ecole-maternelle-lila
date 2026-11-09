@@ -13,7 +13,7 @@ statut: "validé éditorialement"
 
 Un livre d’images, une petite histoire avant de dormir ou quelques pages regardées ensemble : la lecture peut trouver sa place très tôt dans la vie d’un enfant.
 
-Même lorsqu’il ne comprend pas encore toutes les phrases, il observe les illustrations, écoute la voix de l’adulte et découvre progressivement le plaisir des histoires. Ce moment partagé lui fait entendre les sons, les rythmes et les rimes de la langue, ce qui contribue au développement du langage, et il nourrit la relation avec le parent.
+Même lorsqu’il ne comprend pas encore toutes les phrases, il observe les illustrations, écoute la voix de l’adulte et découvre progressivement le plaisir des histoires. Ce moment partagé lui fait entendre les sons, les rythmes et les rimes de la langue, ce qui **contribue au développement du langage**, et il nourrit la relation avec le parent.
 
 ## La lecture : bien plus qu’une histoire
 
@@ -21,7 +21,7 @@ Lire avec un jeune enfant lui permet d’entendre des mots variés, de découvri
 
 Les livres stimulent également la curiosité et l’imagination. Une illustration peut susciter une question, rappeler une expérience ou donner envie d’inventer la suite.
 
-La lecture partagée est aussi un moment d’attention réciproque : l’adulte suit les réactions de l’enfant, commente ce qu’il regarde et répond à ses initiatives.
+La lecture partagée est aussi **un moment d’attention réciproque** : l’adulte suit les réactions de l’enfant, commente ce qu’il regarde et répond à ses initiatives.
 
 ## Adapter la lecture à l’âge
 
@@ -40,15 +40,15 @@ Il peut tourner les pages, montrer un personnage, nommer un objet ou revenir plu
 
 ### Lire à voix haute, sans chercher la perfection
 
-Vous pouvez modifier votre voix, faire une pause ou commenter une image. Il n’est pas nécessaire de respecter chaque phrase, ni de terminer l’histoire, si l’enfant préfère échanger autour des illustrations.
+Vous pouvez modifier votre voix, faire une pause ou commenter une image. **Il n’est pas nécessaire de respecter chaque phrase**, ni de terminer l’histoire, si l’enfant préfère échanger autour des illustrations.
 
 ### Installer un petit rituel
 
-Un moment calme après le repas ou avant le coucher peut aider à faire de la lecture une habitude. Il n’est toutefois pas indispensable de lire tous les jours à heure fixe : la régularité doit rester compatible avec le rythme familial. Quelques minutes suffisent souvent.
+Un moment calme après le repas ou avant le coucher peut aider à faire de la lecture une habitude. Il n’est toutefois pas indispensable de lire tous les jours à heure fixe : la régularité doit rester compatible avec le rythme familial. **Quelques minutes suffisent souvent**.
 
 ## Lire et raconter dans la langue de la famille
 
-La lecture peut se faire dans la ou les langues parlées à la maison, kabyle, arabe, français ou d’autres encore : chacune nourrit le langage de l’enfant. Si vous ne trouvez pas de livre dans votre langue, vous pouvez raconter librement l’histoire d’un album à partir des images.
+La lecture peut se faire dans la ou les langues parlées à la maison, kabyle, arabe, français ou d’autres encore : **chacune nourrit le langage de l’enfant**. Si vous ne trouvez pas de livre dans votre langue, vous pouvez raconter librement l’histoire d’un album à partir des images.
 
 Les histoires ne passent pas seulement par les livres. Un conte transmis dans la famille, une histoire racontée de mémoire ou inventée ensemble ont aussi toute leur place.
 
@@ -56,11 +56,11 @@ Les histoires ne passent pas seulement par les livres. Un conte transmis dans la
 
 ### Et si mon enfant ne tient pas en place ?
 
-Un jeune enfant peut écouter quelques minutes seulement, se lever, revenir ou demander le même livre plusieurs fois. Cela ne signifie pas qu’il n’aime pas les histoires. Proposez des lectures courtes, suivez son intérêt et arrêtez lorsque son attention s’éloigne. Vous pourrez reprendre plus tard.
+Un jeune enfant peut écouter quelques minutes seulement, se lever, revenir ou demander le même livre plusieurs fois. **Cela ne signifie pas qu’il n’aime pas les histoires**. Proposez des lectures courtes, suivez son intérêt et arrêtez lorsque son attention s’éloigne. Vous pourrez reprendre plus tard.
 
 ### Faut-il acheter beaucoup de livres ?
 
-Non. Il est possible d’emprunter des livres, de relire les mêmes histoires et de fréquenter une bibliothèque lorsque cela est possible. Laisser l’enfant choisir, même s’il réclame toujours le même livre, fait partie du plaisir : la répétition rassure souvent l’enfant et lui permet de remarquer de nouveaux détails.
+Non. Il est possible d’emprunter des livres, de relire les mêmes histoires et de fréquenter une bibliothèque lorsque cela est possible. Laisser l’enfant choisir, même s’il réclame toujours le même livre, fait partie du plaisir : **la répétition rassure souvent l’enfant** et lui permet de remarquer de nouveaux détails.
 
 ## En conclusion
 
@@ -68,7 +68,7 @@ Lire une histoire à son enfant, c’est lui offrir un moment de découverte, de
 
 **Le meilleur livre est souvent celui que l’enfant a envie de retrouver encore et encore.**
 
-*Article rédigé par l’équipe de l’École Maternelle Lila.*
+*L’équipe de l’École Maternelle Lila, Avec vous, pas à pas.*
 
 ## Sources et ressources
 - NHS – Baby and toddler play ideas (Reading to your baby) : https://www.nhs.uk/conditions/baby/babys-development/play-and-learning/baby-and-toddler-play-ideas/

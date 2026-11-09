@@ -13,7 +13,7 @@ statut: "validé éditorialement"
 
 Jouer avec d’autres enfants, participer à une activité de groupe ou attendre son tour : la vie en collectivité offre de nombreuses occasions de découvrir les relations sociales.
 
-Pour un jeune enfant, ces expériences sont progressives. Il apprend à prendre sa place, à exprimer ses envies et à tenir compte de la présence des autres. La socialisation ne se fait pas en un jour : elle se construit à travers les interactions et l’accompagnement des adultes. Si votre enfant s’apprête à vivre ses premiers pas en groupe, découvrez aussi comment [préparer l’entrée en collectivité](preparer-premiere-rentree-creche-maternelle.html).
+Pour un jeune enfant, ces expériences sont progressives. Il apprend à prendre sa place, à exprimer ses envies et à tenir compte de la présence des autres. **La socialisation ne se fait pas en un jour** : elle se construit à travers les interactions et l’accompagnement des adultes. Si votre enfant s’apprête à vivre ses premiers pas en groupe, découvrez aussi comment [préparer l’entrée en collectivité](preparer-premiere-rentree-creche-maternelle.html).
 
 ## Apprendre à être avec les autres
 
@@ -25,7 +25,7 @@ Les jeux partagés lui donnent l’occasion d’observer, d’imiter, de propose
 - **Vers 3 ans** : ils remarquent davantage les autres enfants et les rejoignent plus volontiers pour jouer. Les premières affinités apparaissent.
 - **Vers 3 à 4 ans** : ils jouent plus souvent avec un ou plusieurs camarades, enrichissent ensemble leurs idées de jeu et commencent à chercher des solutions lorsqu’ils ne sont pas d’accord.
 
-Chaque enfant avance à son rythme : ces repères décrivent une évolution progressive, pas des étapes à franchir à date fixe.
+Chaque enfant avance à son rythme : ces repères décrivent une évolution progressive, **pas des étapes à franchir à date fixe**.
 
 ## Qu’apprend-on dans les activités collectives ?
 
@@ -49,17 +49,17 @@ Il peut aussi y entendre une autre langue que celle de la maison. Certains enfan
 
 ## Prêter, se disputer : des étapes normales
 
-Avoir du mal à prêter un jouet est très fréquent chez les jeunes enfants. Comprendre le point de vue de l’autre demande du temps, et les désaccords font partie de l’apprentissage. Vers 3 ans, beaucoup commencent à partager et à attendre leur tour en petit groupe, même s’ils n’y parviennent pas toujours.
+**Avoir du mal à prêter un jouet est très fréquent** chez les jeunes enfants. Comprendre le point de vue de l’autre demande du temps, et les désaccords font partie de l’apprentissage. Vers 3 ans, beaucoup commencent à partager et à attendre leur tour en petit groupe, même s’ils n’y parviennent pas toujours.
 
-Un geste brusque, comme arracher un jouet, n’est pas toujours une volonté de blesser : c’est parfois une manière maladroite de vouloir participer. Plutôt que de gronder, il est souvent plus utile de montrer comment demander ou proposer un tour de rôle. Les tensions sont aussi plus fréquentes lorsque les enfants ont faim, sont fatigués, ont trop chaud ou trop froid.
+Un geste brusque, comme arracher un jouet, n’est pas toujours une volonté de blesser : c’est parfois **une manière maladroite de vouloir participer**. Plutôt que de gronder, il est souvent plus utile de **montrer comment demander ou proposer un tour de rôle**. Les tensions sont aussi plus fréquentes lorsque les enfants ont faim, sont fatigués, ont trop chaud ou trop froid.
 
 ## Le rôle de l’adulte dans la socialisation
 
-L’adulte organise un cadre sécurisant, rappelle les règles et accompagne les interactions. Il peut aider les enfants à résoudre un désaccord sans intervenir systématiquement à leur place.
+L’adulte organise un cadre sécurisant, rappelle les règles et accompagne les interactions. Il peut aider les enfants à résoudre un désaccord **sans intervenir systématiquement à leur place**.
 
 Par exemple : « Vous souhaitez tous les deux le même jouet. Comment pouvons-nous faire ? ». Cette médiation permet d’apprendre progressivement à écouter l’autre et à chercher un compromis. Remarquer ce qui s’est bien passé (« Vous avez réussi à vous passer l’arrosoir chacun votre tour ») encourage aussi ces premiers gestes de coopération.
 
-Il est également important de respecter le tempérament de chaque enfant. Certains vont spontanément vers les autres, tandis que d’autres observent plus longtemps avant de participer.
+Il est également important de **respecter le tempérament de chaque enfant**. Certains vont spontanément vers les autres, tandis que d’autres observent plus longtemps avant de participer.
 
 ## Faut-il s’inquiéter si son enfant préfère jouer seul ?
 
@@ -75,7 +75,7 @@ Ces apprentissages se construisent progressivement, avec le soutien d’adultes 
 
 **Apprendre à vivre ensemble commence par de petites expériences partagées, jour après jour.**
 
-*Article rédigé par l’équipe de l’École Maternelle Lila.*
+*L’équipe de l’École Maternelle Lila, Avec vous, pas à pas.*
 
 ## Sources et ressources
 - CDC – Important Milestones: Your Child By Thirty Months : https://www.cdc.gov/act-early/milestones/30-months.html

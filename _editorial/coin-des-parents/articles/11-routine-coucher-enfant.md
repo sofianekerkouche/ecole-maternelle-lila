@@ -13,7 +13,7 @@ statut: "validé éditorialement"
 
 Le coucher peut devenir un moment délicat pour certaines familles. L’enfant réclame une histoire supplémentaire, se relève ou semble avoir du mal à trouver le sommeil.
 
-Une routine du soir simple et prévisible peut l’aider à comprendre que la journée se termine et que le moment de dormir approche. Elle ne garantit pas un endormissement immédiat, mais offre des repères rassurants.
+Une routine du soir simple et prévisible peut l’aider à comprendre que la journée se termine et que le moment de dormir approche. Elle ne garantit pas un endormissement immédiat, mais **offre des repères rassurants**.
 
 ## Pourquoi les habitudes du soir sont-elles utiles ?
 
@@ -29,7 +29,7 @@ Les besoins de sommeil évoluent avec l’âge, comme [les grandes étapes du d�
 - **De 3 à 5 ans** : 10 à 13 heures, avec ou sans sieste.
 - **À 6 ans** : 9 à 12 heures.
 
-Ces fourchettes sont des repères, pas des objectifs à atteindre chaque nuit : certains enfants dorment naturellement un peu plus, d’autres un peu moins. L’Organisation mondiale de la santé souligne surtout l’intérêt d’horaires de coucher et de lever réguliers. Une sieste trop longue l’après-midi peut aussi retarder l’endormissement du soir.
+**Ces fourchettes sont des repères, pas des objectifs à atteindre chaque nuit** : certains enfants dorment naturellement un peu plus, d’autres un peu moins. L’Organisation mondiale de la santé souligne surtout l’intérêt d’**horaires de coucher et de lever réguliers**. Une sieste trop longue l’après-midi peut aussi retarder l’endormissement du soir.
 
 ## Construire une routine adaptée à votre famille
 
@@ -43,7 +43,7 @@ Par exemple :
 4. Lire une histoire ou chanter une comptine.
 5. Faire un câlin et souhaiter bonne nuit.
 
-La routine peut être courte. Mieux vaut quelques étapes réalistes qu’un programme trop long et difficile à respecter.
+La routine peut être courte. **Mieux vaut quelques étapes réalistes** qu’un programme trop long et difficile à respecter.
 
 ## Quelques habitudes qui peuvent aider
 
@@ -53,7 +53,7 @@ Annoncez à l’enfant que le coucher approche : « Après cette histoire, nous 
 
 ### Créer une ambiance calme
 
-Réduisez progressivement l’agitation, privilégiez une lumière douce et évitez les activités trop stimulantes juste avant le coucher. Le NHS conseille aussi d’éviter les écrans, tablettes et téléphones dans les 30 à 60 minutes qui précèdent le coucher, car leur lumière peut perturber le sommeil.
+Réduisez progressivement l’agitation, privilégiez une lumière douce et évitez les activités trop stimulantes juste avant le coucher. Le NHS conseille aussi d’éviter les écrans, tablettes et téléphones **dans les 30 à 60 minutes qui précèdent le coucher**, car leur lumière peut perturber le sommeil.
 
 ### Rassurer s’il a peur du noir
 
@@ -67,7 +67,7 @@ Des horaires relativement stables facilitent les repères, mais ils doivent teni
 
 Les demandes répétées peuvent traduire un besoin de proximité, une difficulté à accepter la séparation ou simplement une habitude installée. Ce moment rejoint ce que l’enfant vit lors d’autres séparations : nos conseils pour [accompagner les moments de séparation](separation-enfant-difficile-matin.html) peuvent aussi vous aider le soir.
 
-Répondez avec calme, rappelez les étapes du rituel et évitez de multiplier indéfiniment les négociations. S’il se relève, raccompagnez-le dans son lit le plus simplement possible ; une règle tenue avec douceur et constance aide à [poser des limites claires et rassurantes](poser-limites-enfant-bienveillance.html). S’il se réveille la nuit, restez calme et discret, sans allumer la lumière ni relancer le jeu, pour l’aider à se rendormir.
+Répondez avec calme, rappelez les étapes du rituel et évitez de multiplier indéfiniment les négociations. S’il se relève, **raccompagnez-le dans son lit le plus simplement possible** ; une règle tenue avec douceur et constance aide à [poser des limites claires et rassurantes](poser-limites-enfant-bienveillance.html). S’il se réveille la nuit, **restez calme et discret**, sans allumer la lumière ni relancer le jeu, pour l’aider à se rendormir.
 
 Si les difficultés de sommeil sont importantes, durables ou s’accompagnent de signes préoccupants, parlez-en au pédiatre.
 
@@ -77,7 +77,7 @@ Une routine du coucher apaisante n’a pas besoin d’être compliquée. Quelque
 
 **La régularité rassure, mais la souplesse reste nécessaire : chaque famille construit son propre rituel.**
 
-*Article rédigé par l’équipe de l’École Maternelle Lila.*
+*L’équipe de l’École Maternelle Lila, Avec vous, pas à pas.*
 
 ## Sources et ressources
 - OMS – « To grow up healthy, children need to sit less and play more » (2019) : https://www.who.int/news/item/24-04-2019-to-grow-up-healthy-children-need-to-sit-less-and-play-more

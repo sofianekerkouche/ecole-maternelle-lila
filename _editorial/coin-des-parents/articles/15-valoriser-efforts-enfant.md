@@ -19,11 +19,11 @@ Comment trouver le bon équilibre ?
 
 ## Pourquoi reconnaître les efforts ?
 
-Lorsqu’un adulte remarque une tentative, l’enfant comprend que ses initiatives ont de la valeur, même si le résultat n’est pas parfait.
+Lorsqu’un adulte remarque une tentative, l’enfant comprend que **ses initiatives ont de la valeur**, même si le résultat n’est pas parfait.
 
 Il peut ainsi apprendre à persévérer, à accepter les difficultés et à prendre progressivement confiance dans ses capacités.
 
-Valoriser l’effort ne signifie pas ignorer le résultat, mais reconnaître le chemin parcouru.
+Valoriser l’effort ne signifie pas ignorer le résultat, mais **reconnaître le chemin parcouru**.
 
 ## Comment encourager de manière constructive ?
 
@@ -31,11 +31,11 @@ Valoriser l’effort ne signifie pas ignorer le résultat, mais reconnaître le 
 
 Plutôt que de répéter « Bravo, tu es le meilleur », vous pouvez dire : « Tu as essayé plusieurs fois avant de réussir à assembler les pièces ».
 
-Cette remarque montre à l’enfant ce que vous avez observé et évite de réduire sa valeur à une performance.
+Cette remarque montre à l’enfant ce que vous avez observé et **évite de réduire sa valeur à une performance**.
 
 ### Valoriser les progrès personnels
 
-Comparez l’enfant à ses propres expériences précédentes, pas aux autres. « Aujourd’hui, tu as fini le puzzle avec moins d’aide qu’hier » souligne une évolution concrète. Ces encouragements accompagnent aussi ses premiers pas vers l’autonomie : découvrez comment [encourager l’autonomie de son enfant](encourager-autonomie-enfant.html).
+**Comparez l’enfant à ses propres expériences précédentes, pas aux autres**. « Aujourd’hui, tu as fini le puzzle avec moins d’aide qu’hier » souligne une évolution concrète. Ces encouragements accompagnent aussi ses premiers pas vers l’autonomie : découvrez comment [encourager l’autonomie de son enfant](encourager-autonomie-enfant.html).
 
 ### Accepter les erreurs
 
@@ -51,9 +51,9 @@ Vous pouvez lui demander : « Qu’est-ce que tu as préféré dans ton dessin ?
 
 ## Faut-il toujours féliciter ?
 
-Non. Une présence attentive, un sourire ou un intérêt sincère peuvent suffire. L’encouragement gagne à être authentique et proportionné.
+Non. Une présence attentive, un sourire ou un intérêt sincère peuvent suffire. L’encouragement gagne à être **authentique et proportionné**.
 
-Évitez également les compliments qui enferment l’enfant dans une étiquette : « Tu es intelligent » ou « Tu es toujours sage ». Il est préférable de décrire un comportement ou un effort concret.
+Évitez également les compliments qui enferment l’enfant dans une étiquette : « Tu es intelligent » ou « Tu es toujours sage ». Il est préférable de **décrire un comportement ou un effort concret**.
 
 ## En conclusion
 
@@ -61,7 +61,7 @@ Valoriser les efforts, c’est montrer à l’enfant que ses tentatives comptent
 
 **L’important n’est pas de réussir à chaque fois, mais de se sentir libre d’essayer.**
 
-*Article rédigé par l’équipe de l’École Maternelle Lila.*
+*L’équipe de l’École Maternelle Lila, Avec vous, pas à pas.*
 
 ## Sources et ressources
 - CDC – Tips for Using Praise and Rewards : https://www.cdc.gov/parenting-toddlers/discipline-consequences/using-rewards.html

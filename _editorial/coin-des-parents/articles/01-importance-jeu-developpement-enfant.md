@@ -19,7 +19,7 @@ Le jeu participe à son développement moteur, intellectuel, langagier, affectif
 
 Lorsqu’un enfant empile des objets, les fait tomber puis recommence, il expérimente l’équilibre et les relations de cause à effet. Lorsqu’il joue à la marchande ou au docteur, il reproduit des situations observées et développe son imagination.
 
-L’Académie américaine de pédiatrie rappelle que le jeu est la manière dont le jeune enfant explore et comprend le monde qui l’entoure. Le jeu n’est donc pas simplement une pause entre deux apprentissages : il constitue lui-même une occasion d’apprendre.
+L’Académie américaine de pédiatrie rappelle que **le jeu est la manière dont le jeune enfant explore et comprend le monde qui l’entoure**. Le jeu n’est donc pas simplement une pause entre deux apprentissages : **il constitue lui-même une occasion d’apprendre**.
 
 ## Quels sont les principaux bienfaits du jeu ?
 
@@ -31,7 +31,7 @@ Courir, sauter, lancer une balle, construire une tour ou manipuler de petits obj
 
 Un puzzle, une construction ou un jeu d’association invitent l’enfant à observer, essayer et trouver des solutions. Trier des objets par couleur ou compter les cubes d’une tour permettent aussi de [découvrir les couleurs, les formes et les nombres en jouant](apprendre-couleurs-formes-chiffres-enfant.html). Les jeux symboliques, comme jouer à la cuisine ou inventer une histoire, stimulent également son imagination.
 
-Il est utile de lui laisser le temps d’expérimenter, sans faire systématiquement à sa place.
+Il est utile de **lui laisser le temps d’expérimenter**, sans faire systématiquement à sa place.
 
 ### Enrichir le langage
 
@@ -39,7 +39,7 @@ Pendant le jeu, l’enfant entend de nouveaux mots et apprend à communiquer. L�
 
 ### Apprendre à comprendre ses émotions
 
-Le jeu fait vivre des émotions variées : joie, frustration, impatience ou déception. L’adulte peut aider l’enfant à les identifier avec des mots simples : « Tu es déçu parce que ta construction est tombée ». Les jeux de faire semblant, comme jouer au docteur, peuvent aussi l’aider à apprivoiser des émotions difficiles, comme la peur ou la colère. L’objectif n’est pas d’éviter toute émotion difficile, mais d’accompagner progressivement son expression.
+Le jeu fait vivre des émotions variées : joie, frustration, impatience ou déception. L’adulte peut aider l’enfant à les identifier avec des mots simples : « Tu es déçu parce que ta construction est tombée ». Les jeux de faire semblant, comme jouer au docteur, peuvent aussi l’aider à **apprivoiser des émotions difficiles**, comme la peur ou la colère. L’objectif n’est pas d’éviter toute émotion difficile, mais d’accompagner progressivement son expression.
 
 ### Découvrir la vie avec les autres
 
@@ -47,9 +47,9 @@ Jouer avec d’autres enfants permet peu à peu d’apprendre à partager un esp
 
 ## Faut-il beaucoup de jouets ?
 
-Non. Le développement ne dépend pas du nombre de jouets disponibles. Des cubes, des livres illustrés, des balles, des crayons ou des objets du quotidien adaptés et sûrs, comme des gobelets en plastique ou des casseroles, offrent déjà de nombreuses possibilités. Une boîte peut devenir une maison, un garage ou un bateau selon l’imagination de l’enfant. Votre présence et votre participation comptent souvent davantage que le jouet lui-même.
+Non. **Le développement ne dépend pas du nombre de jouets disponibles**. Des cubes, des livres illustrés, des balles, des crayons ou des objets du quotidien adaptés et sûrs, comme des gobelets en plastique ou des casseroles, offrent déjà de nombreuses possibilités. Une boîte peut devenir une maison, un garage ou un bateau selon l’imagination de l’enfant. **Votre présence et votre participation** comptent souvent davantage que le jouet lui-même.
 
-L’essentiel est de proposer un environnement sûr et stimulant, adapté à son âge. Les jeunes enfants portent facilement les objets à la bouche : les petits objets comme les boutons, les pièces de monnaie ou les petites pièces de jouets doivent rester hors de leur portée.
+L’essentiel est de proposer un environnement sûr et stimulant, adapté à son âge. Les jeunes enfants portent facilement les objets à la bouche : les petits objets comme les boutons, les pièces de monnaie ou les petites pièces de jouets **doivent rester hors de leur portée**.
 
 ## Comment accompagner son enfant ?
 
@@ -61,7 +61,7 @@ Les parents n’ont pas besoin d’organiser chaque activité. Ils peuvent se re
 - Respecter son rythme et ses préférences.
 - Privilégier le plaisir d’explorer plutôt que le résultat.
 
-Le jeu libre et les activités accompagnées sont complémentaires : l’un favorise l’initiative, les autres permettent de découvrir de nouvelles expériences avec l’aide d’un adulte.
+**Le jeu libre et les activités accompagnées sont complémentaires** : l’un favorise l’initiative, les autres permettent de découvrir de nouvelles expériences avec l’aide d’un adulte.
 
 ## En conclusion
 
@@ -69,7 +69,7 @@ Le jeu accompagne l’enfant dans ses découvertes. Il contribue au développeme
 
 Une histoire partagée, une construction ou une promenade peuvent déjà devenir de belles occasions d’apprendre. **Grandir, c’est aussi apprendre en jouant, un petit pas après l’autre.**
 
-*Article rédigé par l’équipe de l’École Maternelle Lila.*
+*L’équipe de l’École Maternelle Lila, Avec vous, pas à pas.*
 
 ## Sources et ressources
 - AAP / HealthyChildren.org – Playing is How Toddlers Learn : https://www.healthychildren.org/English/ages-stages/toddler/fitness/Pages/Playing-is-How-Toddlers-Learn.aspx

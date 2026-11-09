@@ -13,7 +13,7 @@ statut: "validé éditorialement"
 
 Courir, attraper une balle, empiler des cubes ou tenir un crayon : ces gestes du quotidien mobilisent différentes compétences motrices. En grandissant, l’enfant apprend progressivement à mieux contrôler son corps et à coordonner ses mouvements.
 
-Bonne nouvelle : il n’est pas nécessaire de disposer d’un équipement particulier pour l’accompagner. Des activités simples, adaptées à son âge et réalisées dans un environnement sûr, peuvent lui offrir de nombreuses occasions de bouger et d’expérimenter. Ces moments rejoignent [la place du jeu dans le développement de l’enfant](importance-jeu-developpement-enfant.html) : c’est en jouant qu’il découvre ce que son corps sait faire.
+Bonne nouvelle : **il n’est pas nécessaire de disposer d’un équipement particulier** pour l’accompagner. Des activités simples, adaptées à son âge et réalisées dans un environnement sûr, peuvent lui offrir de nombreuses occasions de bouger et d’expérimenter. Ces moments rejoignent [la place du jeu dans le développement de l’enfant](importance-jeu-developpement-enfant.html) : c’est en jouant qu’il découvre ce que son corps sait faire.
 
 ## Motricité globale et motricité fine : quelle différence ?
 
@@ -39,7 +39,7 @@ Les cubes, les grosses pièces d’emboîtement et les constructions simples sol
 
 ### 4. Dessiner, manipuler et transvaser
 
-Crayons adaptés, pâte à modeler non toxique et papier à déchirer offrent des expériences variées. Transvaser de l’eau entre deux récipients, toujours sous surveillance, est aussi une activité appréciée des jeunes enfants. Ces activités favorisent la manipulation et la coordination entre les yeux et les mains. Surveillez toujours les jeunes enfants et évitez les matériaux présentant un risque d’ingestion.
+Crayons adaptés, pâte à modeler non toxique et papier à déchirer offrent des expériences variées. Transvaser de l’eau entre deux récipients, **toujours sous surveillance**, est aussi une activité appréciée des jeunes enfants. Ces activités favorisent la manipulation et la coordination entre les yeux et les mains. Surveillez toujours les jeunes enfants et évitez les matériaux présentant un risque d’ingestion.
 
 ### 5. Bouger en musique
 
@@ -56,17 +56,17 @@ Un tout-petit aura surtout besoin d’explorer des mouvements simples et de mani
 - **Vers 4 ans** : il attrape un gros ballon la plupart du temps et tient un crayon entre les doigts et le pouce.
 - **Vers 5 ans** : il commence à sauter sur un pied et à fermer certains boutons.
 
-Ces repères décrivent ce que font beaucoup d’enfants vers un âge donné : ce ne sont pas des acquisitions obligatoires. Pour une vue d’ensemble, consultez [les grandes étapes du développement entre 15 mois et 3 ans](developpement-enfant-15-mois-3-ans.html).
+Ces repères décrivent ce que font beaucoup d’enfants vers un âge donné : **ce ne sont pas des acquisitions obligatoires**. Pour une vue d’ensemble, consultez [les grandes étapes du développement entre 15 mois et 3 ans](developpement-enfant-15-mois-3-ans.html).
 
-Il ne s’agit pas de comparer les enfants ni de chercher à leur faire acquérir une compétence à tout prix. Observez leur intérêt, leur aisance et leur fatigue. Une activité doit rester un moment agréable.
+Il ne s’agit pas de comparer les enfants ni de chercher à leur faire acquérir une compétence à tout prix. Observez leur intérêt, leur aisance et leur fatigue. **Une activité doit rester un moment agréable**.
 
 ### Bouger un peu, souvent
 
-Pour les enfants de 1 à 4 ans, l’Organisation mondiale de la santé recommande au moins 180 minutes d’activités physiques variées par jour, quelle qu’en soit l’intensité. Ce temps n’a pas besoin d’être continu : de courts moments de 10 ou 20 minutes, à l’intérieur comme à l’extérieur, s’additionnent au fil de la journée. L’OMS conseille aussi d’éviter de laisser un jeune enfant assis ou attaché, par exemple dans une poussette ou une chaise haute, plus d’une heure d’affilée.
+Pour les enfants de 1 à 4 ans, l’Organisation mondiale de la santé recommande **au moins 180 minutes d’activités physiques variées par jour**, quelle qu’en soit l’intensité. Ce temps n’a pas besoin d’être continu : **de courts moments de 10 ou 20 minutes**, à l’intérieur comme à l’extérieur, s’additionnent au fil de la journée. L’OMS conseille aussi d’éviter de laisser un jeune enfant assis ou attaché, par exemple dans une poussette ou une chaise haute, plus d’une heure d’affilée.
 
 ## La sécurité avant tout
 
-Choisissez un espace dégagé, du matériel adapté et des objets suffisamment grands pour limiter les risques d’étouffement. Évitez les surfaces glissantes, les meubles instables et les parcours en hauteur. La surveillance d’un adulte reste indispensable pendant les activités physiques, et plus encore lors des jeux d’eau : un jeune enfant peut se noyer dans moins de 5 centimètres d’eau.
+Choisissez un espace dégagé, du matériel adapté et des objets suffisamment grands pour limiter les risques d’étouffement. Évitez les surfaces glissantes, les meubles instables et les parcours en hauteur. La surveillance d’un adulte reste indispensable pendant les activités physiques, et plus encore lors des jeux d’eau : **un jeune enfant peut se noyer dans moins de 5 centimètres d’eau**.
 
 ## En conclusion
 
@@ -74,7 +74,7 @@ La motricité se développe à travers une multitude d’expériences ordinaires
 
 L’essentiel est de lui offrir des occasions régulières d’explorer, tout en respectant ses capacités et son rythme.
 
-*Article rédigé par l’équipe de l’École Maternelle Lila.*
+*L’équipe de l’École Maternelle Lila, Avec vous, pas à pas.*
 
 ## Sources et ressources
 - OMS – « To grow up healthy, children need to sit less and play more » (2019) : https://www.who.int/news/item/24-04-2019-to-grow-up-healthy-children-need-to-sit-less-and-play-more

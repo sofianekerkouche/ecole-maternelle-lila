@@ -150,3 +150,15 @@
 @media (prefers-reduced-motion: reduce) {
   .nav-ressources-btn, .nav-ressources-btn::after, .nav-ressources-chevron, .nav-ressources-menu { transition: none; }
 }
+
+/* ---------- Pied de page : colonne « Navigation » en deux parties ---------- */
+.site-footer .footer-links--ressources {
+  margin-top: 1rem; padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, .14);
+}
+/* Rubrique à venir : visible, sans lien (même traitement que dans le menu « Ressources ») */
+.site-footer .footer-soon {
+  display: inline-flex; flex-wrap: wrap; align-items: center; gap: .1rem .45rem;
+  color: #AEB2AF; font-size: .95rem; font-weight: 600; cursor: default;
+}
+.site-footer .footer-soon .res-soon { margin-left: 0; }

@@ -13,7 +13,7 @@ statut: "validé éditorialement"
 
 Entre 15 mois et 3 ans, l’enfant connaît de nombreuses évolutions. Il gagne progressivement en mobilité, découvre de nouveaux mots, développe son autonomie et commence à mieux comprendre les relations avec son entourage.
 
-Cette période est marquée par de grandes découvertes, mais aussi par des changements parfois déroutants. Chaque enfant avance à son rythme : les âges indiqués ci-dessous sont des repères, pas des échéances à respecter. Ils s’appuient sur les repères publiés par les Centers for Disease Control and Prevention (CDC), qui décrivent ce que font la plupart des enfants, au moins trois sur quatre, vers un âge donné.
+Cette période est marquée par de grandes découvertes, mais aussi par des changements parfois déroutants. Chaque enfant avance à son rythme : **les âges indiqués ci-dessous sont des repères, pas des échéances à respecter**. Ils s’appuient sur les repères publiés par les Centers for Disease Control and Prevention (CDC), qui décrivent ce que font la plupart des enfants, au moins trois sur quatre, vers un âge donné.
 
 ## Entre 15 et 18 mois : explorer et découvrir
 
@@ -35,9 +35,9 @@ L’enfant gagne en assurance et manifeste plus clairement ses préférences.
 - **Jouer** : il commence à combiner plusieurs jouets, par exemple en posant des aliments de dînette dans une assiette.
 - **Relations et émotions** : il remarque de plus en plus quand quelqu’un est triste ou blessé et observe votre visage pour savoir comment réagir face à une situation nouvelle.
 
-Il souhaite aussi faire certaines choses seul et peut refuser votre aide : « Moi tout seul ! » Cette affirmation de soi fait partie du développement. Elle peut s’accompagner de frustrations et de colères : il sait ce qu’il veut, mais ne possède pas encore toutes les capacités pour l’exprimer ou réguler ses émotions. Notre article sur [les colères du jeune enfant](gerer-colere-jeune-enfant.html) propose des pistes pour l’accompagner.
+Il souhaite aussi faire certaines choses seul et peut refuser votre aide : « Moi tout seul ! » **Cette affirmation de soi fait partie du développement**. Elle peut s’accompagner de frustrations et de colères : il sait ce qu’il veut, mais ne possède pas encore toutes les capacités pour l’exprimer ou réguler ses émotions. Notre article sur [les colères du jeune enfant](gerer-colere-jeune-enfant.html) propose des pistes pour l’accompagner.
 
-Des repères réguliers, des choix simples et un accompagnement calme l’aident à traverser ces moments.
+**Des repères réguliers, des choix simples et un accompagnement calme** l’aident à traverser ces moments.
 
 ## Entre 2 et 3 ans : développer le langage et l’autonomie
 
@@ -60,11 +60,11 @@ Les expériences du quotidien offrent de nombreuses occasions d’apprendre.
 - Maintenir des habitudes rassurantes et des règles simples.
 - Accueillir ses émotions et mettre des mots sur ce qu’il ressent.
 
-L’essentiel est de proposer un environnement sécurisant et stimulant, sans chercher à précipiter les apprentissages. Le sommeil et les repas évoluent eux aussi pendant cette période : des horaires réguliers aident l’enfant à se repérer. Nos articles sur [la routine du coucher](routine-coucher-enfant.html) et [les refus alimentaires](enfant-refuse-certains-aliments.html) donnent des repères pour ces moments du quotidien.
+L’essentiel est de proposer un environnement sécurisant et stimulant, **sans chercher à précipiter les apprentissages**. Le sommeil et les repas évoluent eux aussi pendant cette période : des horaires réguliers aident l’enfant à se repérer. Nos articles sur [la routine du coucher](routine-coucher-enfant.html) et [les refus alimentaires](enfant-refuse-certains-aliments.html) donnent des repères pour ces moments du quotidien.
 
 ## Quand faut-il s’interroger ?
 
-Les repères de développement ne constituent pas un diagnostic. Si une acquisition vous préoccupe, si plusieurs difficultés persistent ou si l’enfant perd une compétence qu’il maîtrisait auparavant, parlez-en à son pédiatre ou à un professionnel de santé. Il n’est pas nécessaire d’attendre : un échange précoce permet souvent d’être rassuré et, si nécessaire, d’envisager un accompagnement adapté.
+**Les repères de développement ne constituent pas un diagnostic**. Si une acquisition vous préoccupe, si plusieurs difficultés persistent ou **si l’enfant perd une compétence qu’il maîtrisait auparavant**, parlez-en à son pédiatre ou à un professionnel de santé. **Il n’est pas nécessaire d’attendre** : un échange précoce permet souvent d’être rassuré et, si nécessaire, d’envisager un accompagnement adapté.
 
 ## En conclusion
 
@@ -72,7 +72,7 @@ Entre 15 mois et 3 ans, l’enfant construit progressivement ses premières gran
 
 **Chaque petit progrès compte : grandir, c’est avancer pas à pas, avec confiance et bienveillance.**
 
-*Article rédigé par l’équipe de l’École Maternelle Lila.*
+*L’équipe de l’École Maternelle Lila, Avec vous, pas à pas.*
 
 ## Sources et ressources
 - CDC – Important Milestones: Your Child By Fifteen Months : https://www.cdc.gov/act-early/milestones/15-months.html

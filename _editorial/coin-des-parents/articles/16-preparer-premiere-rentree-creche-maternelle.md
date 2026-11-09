@@ -17,11 +17,11 @@ Elle ne se vit pas au même âge pour tous les enfants. À l’École Maternelle
 
 ## Une préparation adaptée à chaque âge
 
-Quelques jours ou semaines avant la rentrée, expliquez simplement à votre enfant ce qui va changer : il découvrira un lieu, rencontrera des adultes et [découvrira la vie en collectivité](socialisation-enfant-vie-collectivite.html) avec d’autres enfants. Adaptez les explications à son âge et évitez de multiplier les détails qui pourraient l’inquiéter.
+Quelques jours ou semaines avant la rentrée, expliquez simplement à votre enfant ce qui va changer : il découvrira un lieu, rencontrera des adultes et [découvrira la vie en collectivité](socialisation-enfant-vie-collectivite.html) avec d’autres enfants. **Adaptez les explications à son âge** et évitez de multiplier les détails qui pourraient l’inquiéter.
 
-- **Avant 2 ans** : le tout-petit comprend surtout ce qu’il voit et ce qu’il vit. Les repères concrets l’aident davantage que les longues explications : passer devant le bâtiment, refaire le trajet ensemble, emporter un objet familier si le lieu d’accueil le permet. C’est aussi une période où les séparations sont souvent particulièrement difficiles : un temps d’adaptation est fréquent.
+- **Avant 2 ans** : le tout-petit comprend surtout ce qu’il voit et ce qu’il vit. Les repères concrets l’aident davantage que les longues explications : passer devant le bâtiment, refaire le trajet ensemble, emporter un objet familier si le lieu d’accueil le permet. C’est aussi une période où les séparations sont souvent particulièrement difficiles : **un temps d’adaptation est fréquent**.
 - **Entre 2 et 3 ans** : l’enfant comprend de plus en plus de mots et commence à faire semblant. Lire une histoire sur la rentrée, regarder des photos de l’établissement si elles sont disponibles ou jouer à « déposer la poupée à la crèche » l’aide à se représenter la journée.
-- **À partir de 3 ans** : l’enfant peut poser des questions et parler de ce qu’il imagine. Demandez-lui ce qu’il ressent et rassurez-le : il est normal d’être à la fois content, curieux et inquiet.
+- **À partir de 3 ans** : l’enfant peut poser des questions et parler de ce qu’il imagine. Demandez-lui ce qu’il ressent et rassurez-le : **il est normal d’être à la fois content, curieux et inquiet**.
 - **Lorsque la rentrée a lieu plus tard dans le parcours**, par exemple lors d’un changement d’établissement, l’enfant a parfois déjà connu la vie en groupe, mais il découvre de nouveaux adultes, de nouveaux camarades et de nouvelles habitudes. Il a, lui aussi, besoin de temps pour trouver ses repères.
 
 ## Préparer l’enfant en douceur
@@ -44,13 +44,13 @@ Anticiper quelques éléments permet de réduire le stress des premiers matins :
 - Échanger sur les besoins particuliers de l’enfant.
 - Indiquer la ou les langues parlées à la maison, ainsi que quelques mots familiers de l’enfant, par exemple pour boire, dormir ou réclamer son doudou.
 
-Il est utile de vérifier directement auprès de l’établissement la liste des affaires nécessaires et les modalités d’accueil.
+Il est utile de **vérifier directement auprès de l’établissement** la liste des affaires nécessaires et les modalités d’accueil.
 
 ## Les premiers au revoir et le dialogue avec l’équipe
 
-Le jour de la rentrée, un au revoir court et toujours organisé de la même façon aide l’enfant à se repérer : dites-lui au revoir, rappelez-lui quand vous reviendrez, puis partez sans prolonger ce moment. Pour mieux comprendre les pleurs du matin et les apaiser au fil de l’année, vous pouvez lire notre article sur [les difficultés de séparation le matin](separation-enfant-difficile-matin.html).
+Le jour de la rentrée, **un au revoir court et toujours organisé de la même façon** aide l’enfant à se repérer : dites-lui au revoir, rappelez-lui quand vous reviendrez, puis partez sans prolonger ce moment. Pour mieux comprendre les pleurs du matin et les apaiser au fil de l’année, vous pouvez lire notre article sur [les difficultés de séparation le matin](separation-enfant-difficile-matin.html).
 
-Partagez les informations utiles sur votre enfant : ce qui le rassure, ses habitudes, ses goûts, ses difficultés éventuelles et les changements récents. N’hésitez pas à poser des questions sur le déroulement de l’accueil, les temps de transition et les moyens de communiquer avec l’équipe. Une relation de confiance se construit grâce à des échanges réguliers et respectueux.
+Partagez les informations utiles sur votre enfant : ce qui le rassure, ses habitudes, ses goûts, ses difficultés éventuelles et les changements récents. N’hésitez pas à poser des questions sur le déroulement de l’accueil, les temps de transition et les moyens de communiquer avec l’équipe. **Une relation de confiance se construit grâce à des échanges réguliers et respectueux**.
 
 ## Et si l’adaptation prend du temps ?
 
@@ -64,7 +64,7 @@ Une première rentrée se prépare avec des repères simples, une communication 
 
 **Une rentrée réussie ne signifie pas une séparation sans larmes, mais un enfant accompagné avec attention dans cette nouvelle étape.**
 
-*Article rédigé par l’équipe de l’École Maternelle Lila.*
+*L’équipe de l’École Maternelle Lila, Avec vous, pas à pas.*
 
 ## Sources et ressources
 - UNICEF Parenting – How to prepare your child for preschool : https://www.unicef.org/parenting/child-care/how-prepare-your-child-preschool

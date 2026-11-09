@@ -13,20 +13,20 @@ statut: "validé éditorialement"
 
 Dire non, empêcher un geste dangereux ou rappeler une règle fait partie du quotidien des parents. Pourtant, poser des limites peut être difficile : comment rester ferme sans crier ? Comment réagir lorsque l’enfant proteste ?
 
-Les limites ne sont pas opposées à la bienveillance. Elles aident l’enfant à comprendre ce qui est possible, ce qui ne l’est pas et comment vivre avec les autres.
+**Les limites ne sont pas opposées à la bienveillance**. Elles aident l’enfant à comprendre ce qui est possible, ce qui ne l’est pas et comment vivre avec les autres.
 
 ## Pourquoi les limites sont-elles nécessaires ?
 
 Le jeune enfant découvre progressivement les règles de son environnement. Il ne peut pas toujours anticiper les conséquences de ses gestes ni contrôler ses impulsions.
 
-Des règles simples et cohérentes lui donnent des repères. Elles contribuent à sa sécurité et l’aident à comprendre les attentes des adultes. Même lorsqu’il proteste ou cherche à les tester, des limites stables le rassurent souvent.
+Des règles simples et cohérentes lui donnent des repères. Elles contribuent à sa sécurité et l’aident à comprendre les attentes des adultes. Même lorsqu’il proteste ou cherche à les tester, **des limites stables le rassurent souvent**.
 
 ## Adapter les limites à l’âge
 
 Les attentes évoluent avec l’âge de l’enfant. Ces repères sont indicatifs.
 
 - **Avant 2 ans** : le tout-petit comprend encore peu les règles. Mettre hors de portée les objets dangereux ou tentants permet de limiter les interdictions. Détourner son attention ou remplacer un objet interdit par un objet autorisé est souvent plus efficace qu’une longue explication. Le « non » peut être réservé à l’essentiel, comme la sécurité.
-- **Entre 2 et 3 ans** : l’enfant commence à distinguer ce qui est permis, mais il teste souvent les règles pour voir comment vous réagissez. C’est une étape normale. À cet âge, il ne peut retenir que quelques règles à la fois : mieux vaut en choisir deux ou trois, claires et réalistes, plutôt que de multiplier les consignes.
+- **Entre 2 et 3 ans** : l’enfant commence à distinguer ce qui est permis, mais il teste souvent les règles pour voir comment vous réagissez. C’est une étape normale. À cet âge, il ne peut retenir que quelques règles à la fois : **mieux vaut en choisir deux ou trois, claires et réalistes**, plutôt que de multiplier les consignes.
 - **Vers 3 à 6 ans** : il comprend de mieux en mieux le « pourquoi » des règles. Des explications courtes, adaptées à son âge, l’aident à les accepter, même s’il continue parfois à tester les limites.
 
 ## Comment poser une limite clairement ?
@@ -41,13 +41,13 @@ Une explication brève aide l’enfant à comprendre le sens de la règle : « O
 
 ### Distinguer l’émotion du comportement
 
-L’enfant peut être en colère, triste ou déçu. Ces émotions sont acceptables. En revanche, certains comportements doivent être limités : frapper, mordre ou jeter un objet dangereux.
+L’enfant peut être en colère, triste ou déçu. **Ces émotions sont acceptables**. En revanche, certains comportements doivent être limités : frapper, mordre ou jeter un objet dangereux.
 
 Vous pouvez dire : « Tu as le droit d’être en colère, mais je ne te laisse pas faire mal ». Mettre des mots sur ce qu’il ressent permet aussi d’[aider l’enfant à comprendre ses émotions](aider-enfant-exprimer-emotions.html).
 
 ### Proposer une alternative
 
-Au lieu de vous limiter à l’interdiction, indiquez ce que l’enfant peut faire : « Tu ne peux pas dessiner sur le mur, mais voici une feuille ». Proposer un choix limité (« Tu ranges les voitures ou les cubes d’abord ? ») l’aide aussi à coopérer. Pensez enfin à remarquer les moments où la règle est respectée : [encourager les comportements et les efforts](valoriser-efforts-enfant.html) donne à l’enfant des repères positifs.
+Au lieu de vous limiter à l’interdiction, **indiquez ce que l’enfant peut faire** : « Tu ne peux pas dessiner sur le mur, mais voici une feuille ». Proposer un choix limité (« Tu ranges les voitures ou les cubes d’abord ? ») l’aide aussi à coopérer. Pensez enfin à remarquer les moments où la règle est respectée : [encourager les comportements et les efforts](valoriser-efforts-enfant.html) donne à l’enfant des repères positifs.
 
 ## Entre adultes : chercher une cohérence
 
@@ -57,9 +57,9 @@ Il est utile de s’accorder sur quelques règles essentielles, notamment celles
 
 ## Que faire lorsqu’il ne respecte pas la règle ?
 
-Rappelez la limite calmement et intervenez si la sécurité l’exige. Évitez les menaces disproportionnées, les humiliations et les étiquettes comme « méchant » ou « insupportable » : crier ou faire honte ne l’aide pas à comprendre ce qui est attendu.
+Rappelez la limite calmement et intervenez si la sécurité l’exige. Évitez les menaces disproportionnées, les humiliations et les étiquettes comme « méchant » ou « insupportable » : **crier ou faire honte ne l’aide pas à comprendre ce qui est attendu**.
 
-Une conséquence gagne à être compréhensible et liée autant que possible à la situation : si un jouet est lancé, le jeu peut être interrompu un moment pour garantir la sécurité. Si l’enfant réagit par une forte colère, nos conseils pour [réagir aux colères du jeune enfant](gerer-colere-jeune-enfant.html) peuvent vous aider.
+Une conséquence gagne à être **compréhensible et liée autant que possible à la situation** : si un jouet est lancé, le jeu peut être interrompu un moment pour garantir la sécurité. Si l’enfant réagit par une forte colère, nos conseils pour [réagir aux colères du jeune enfant](gerer-colere-jeune-enfant.html) peuvent vous aider.
 
 ## En conclusion
 
@@ -67,7 +67,7 @@ Poser des limites avec bienveillance consiste à associer fermeté, respect et r
 
 **Une limite claire peut être posée avec douceur : la bienveillance n’empêche pas la fermeté.**
 
-*Article rédigé par l’équipe de l’École Maternelle Lila.*
+*L’équipe de l’École Maternelle Lila, Avec vous, pas à pas.*
 
 ## Sources et ressources
 - AAP / HealthyChildren.org – Disciplining Your Child : https://www.healthychildren.org/English/family-life/family-dynamics/communication-discipline/Pages/Disciplining-Your-Child.aspx

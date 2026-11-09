@@ -13,13 +13,13 @@ statut: "validé éditorialement"
 
 Le rouge d’une pomme, le rond d’une assiette, les trois marches d’un escalier : les premières notions se découvrent partout dans l’environnement de l’enfant.
 
-Inutile de multiplier les fiches ou les exercices. À la maison, en promenade ou pendant le jeu, de petites expériences permettent de familiariser progressivement l’enfant avec les couleurs, les formes et les nombres. Comme pour les autres découvertes, [le jeu comme support d’apprentissage](importance-jeu-developpement-enfant.html) reste le meilleur point de départ.
+**Inutile de multiplier les fiches ou les exercices**. À la maison, en promenade ou pendant le jeu, de petites expériences permettent de familiariser progressivement l’enfant avec les couleurs, les formes et les nombres. Comme pour les autres découvertes, [le jeu comme support d’apprentissage](importance-jeu-developpement-enfant.html) reste le meilleur point de départ.
 
 ## Observer, nommer, jouer au quotidien
 
 Les apprentissages commencent souvent par des mots entendus dans des situations concrètes. Vous pouvez nommer la couleur d’un vêtement, la forme d’un objet ou compter quelques éléments pendant une activité. [Nommer les objets et échanger avec son enfant](favoriser-developpement-langage-enfant.html) l’aide à associer les mots aux choses, dans la ou les langues de la famille.
 
-L’idée n’est pas de vérifier constamment si l’enfant a retenu, mais de lui faire entendre et observer ces notions de manière naturelle. Quelques idées simples :
+L’idée n’est pas de vérifier constamment si l’enfant a retenu, mais de lui **faire entendre et observer ces notions de manière naturelle**. Quelques idées simples :
 
 - Trier les chaussettes par couleur.
 - Chercher des objets ronds pendant une promenade.
@@ -27,13 +27,13 @@ L’idée n’est pas de vérifier constamment si l’enfant a retenu, mais de l
 - Construire une tour avec des blocs de tailles différentes.
 - Chanter des comptines qui évoquent les nombres.
 
-Gardez les activités courtes et plaisantes. Si l’enfant se désintéresse, vous pourrez les reprendre un autre jour.
+**Gardez les activités courtes et plaisantes**. Si l’enfant se désintéresse, vous pourrez les reprendre un autre jour.
 
 ## Couleurs et formes : manipuler avant de nommer
 
-Proposez un jeu de tri avec quelques objets de couleurs différentes, adaptés à son âge. Vous pouvez aussi chercher ensemble des objets rouges dans une pièce ou commenter les couleurs d’un livre illustré. Commencez avec peu de couleurs pour éviter de surcharger l’activité. Répétez les mots dans des contextes variés et laissez l’enfant manipuler.
+Proposez un jeu de tri avec quelques objets de couleurs différentes, adaptés à son âge. Vous pouvez aussi chercher ensemble des objets rouges dans une pièce ou commenter les couleurs d’un livre illustré. **Commencez avec peu de couleurs** pour éviter de surcharger l’activité. Répétez les mots dans des contextes variés et laissez l’enfant manipuler.
 
-Les formes sont présentes dans les objets du quotidien : une assiette ronde, une fenêtre rectangulaire ou un panneau triangulaire. Des puzzles simples, des jeux d’encastrement et [les activités de manipulation](activites-motricite-enfant.html) permettent de comparer les formes et de les manipuler. N’attendez pas une reconnaissance immédiate : l’observation et les essais font partie de l’apprentissage.
+Les formes sont présentes dans les objets du quotidien : une assiette ronde, une fenêtre rectangulaire ou un panneau triangulaire. Des puzzles simples, des jeux d’encastrement et [les activités de manipulation](activites-motricite-enfant.html) permettent de comparer les formes et de les manipuler. N’attendez pas une reconnaissance immédiate : **l’observation et les essais font partie de l’apprentissage**.
 
 Veillez à ce que les objets utilisés soient suffisamment grands : les jeunes enfants portent facilement les petits objets à la bouche.
 
@@ -41,7 +41,7 @@ Veillez à ce que les objets utilisés soient suffisamment grands : les jeunes e
 
 Compter les marches en montant, les fruits dans une assiette ou les cubes d’une tour donne du sens aux premiers nombres. Commencez par de petites quantités et accompagnez le comptage en montrant chaque objet.
 
-Réciter une suite de nombres et comprendre qu’un nombre correspond à une quantité sont deux acquisitions différentes qui se construisent progressivement. Il en va de même pour les chiffres : le chiffre est le signe écrit, de 0 à 9, tandis que le nombre désigne une quantité. Relier le chiffre « 3 » à trois objets est une étape qui vient avec le temps.
+Réciter une suite de nombres et comprendre qu’un nombre correspond à une quantité sont **deux acquisitions différentes** qui se construisent progressivement. Il en va de même pour les chiffres : le chiffre est le signe écrit, de 0 à 9, tandis que le nombre désigne une quantité. Relier le chiffre « 3 » à trois objets est une étape qui vient avec le temps.
 
 ## Ce que l’on peut proposer selon l’âge
 
@@ -53,7 +53,7 @@ Les exemples ci-dessous s’appuient notamment sur le référentiel britannique 
 
 ## Faut-il corriger chaque erreur ?
 
-Mieux vaut reformuler naturellement que multiplier les corrections. Si l’enfant appelle « bleu » un objet vert, vous pouvez répondre : « Oui, tu as trouvé un objet vert ». Il entend ainsi le bon mot sans que l’échange devienne une évaluation.
+**Mieux vaut reformuler naturellement que multiplier les corrections**. Si l’enfant appelle « bleu » un objet vert, vous pouvez répondre : « Oui, tu as trouvé un objet vert ». Il entend ainsi le bon mot sans que l’échange devienne une évaluation.
 
 ## En conclusion
 
@@ -61,7 +61,7 @@ Les couleurs, les formes et les nombres se découvrent progressivement grâce à
 
 **Le plus important n’est pas d’apprendre vite, mais de prendre plaisir à découvrir.**
 
-*Article rédigé par l’équipe de l’École Maternelle Lila.*
+*L’équipe de l’École Maternelle Lila, Avec vous, pas à pas.*
 
 ## Sources et ressources
 - GOV.UK – Development Matters (référentiel britannique de la petite enfance), partie « Mathematics » : https://www.gov.uk/government/publications/development-matters--2/development-matters
