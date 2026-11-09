@@ -6,31 +6,37 @@
     {
       "slug": "developpement-enfant",
       "name": "Développement de l'enfant",
+      "short_name": "Développement",
       "count": 3
     },
     {
       "slug": "emotions-comportement",
       "name": "Émotions et comportement",
+      "short_name": "Émotions",
       "count": 3
     },
     {
       "slug": "eveil-apprentissage",
       "name": "Éveil et apprentissage",
+      "short_name": "Éveil et apprentissage",
       "count": 3
     },
     {
       "slug": "vie-quotidienne",
       "name": "Vie quotidienne",
+      "short_name": "Vie quotidienne",
       "count": 3
     },
     {
       "slug": "parentalite",
       "name": "Parentalité",
+      "short_name": "Parentalité",
       "count": 3
     },
     {
       "slug": "vie-a-l-ecole",
       "name": "Vie à l'école",
+      "short_name": "Vie à l'école",
       "count": 2
     }
   ],
@@ -127,6 +133,7 @@
       "title": "Pourquoi la séparation est-elle parfois difficile le matin ?",
       "slug": "separation-enfant-difficile-matin",
       "category": "emotions-comportement",
+      "featured": true,
       "keyword": "difficulté séparation enfant matin",
       "meta_description": "Les pleurs au moment de la séparation sont fréquents chez les jeunes enfants. Comprenez leurs causes et découvrez comment rendre le départ plus rassurant.",
       "file": "articles/04-separation-enfant-difficile-matin.md",
