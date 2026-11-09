@@ -6,7 +6,7 @@ categorie: "emotions-comportement"
 mot_cle_principal: "aider enfant exprimer ses émotions"
 meta_description: "Colère, peur, joie ou tristesse : apprenez à accompagner votre enfant pour reconnaître ses émotions et les exprimer progressivement."
 auteur: "L'équipe de l'École Maternelle Lila"
-statut: "brouillon éditorial à valider"
+statut: "validé éditorialement"
 ---
 
 # Comment aider son enfant à reconnaître et exprimer ses émotions ?
@@ -19,7 +19,7 @@ Les parents jouent un rôle important dans cet apprentissage. Par leur écoute, 
 
 Les émotions peuvent être très intenses durant les premières années. Or, le langage, le recul et les capacités de régulation sont encore en développement.
 
-Un enfant qui pleure, crie ou se met en colère ne sait pas toujours expliquer ce qu’il ressent. Son comportement peut être une manière de communiquer un besoin, une frustration ou une inquiétude.
+Un enfant qui pleure, crie ou se met en colère ne sait pas toujours expliquer ce qu’il ressent. Son comportement peut être une manière de communiquer un besoin, une frustration ou une inquiétude, par exemple au moment de la séparation du matin : nos conseils pour [comprendre les difficultés de séparation](separation-enfant-difficile-matin.html) peuvent vous aider.
 
 Il est donc utile de regarder au-delà du comportement pour essayer de comprendre ce qui l’a déclenché.
 
@@ -35,7 +35,7 @@ Nommez simplement ce que vous observez : « Tu as l’air déçu », « Tu sembl
 
 Écoutez sans minimiser : « Je vois que c’est difficile pour toi ». Dire à l’enfant qu’il n’a pas de raison d’être triste ou qu’il doit arrêter de pleurer peut lui donner le sentiment que son émotion n’est pas entendue.
 
-Accueillir une émotion ne signifie pas autoriser tous les comportements. Il est possible de reconnaître la colère tout en interdisant de frapper.
+Accueillir une émotion ne signifie pas autoriser tous les comportements. Il est possible de reconnaître la colère tout en interdisant de frapper, c’est-à-dire d’[accueillir les émotions tout en posant un cadre](poser-limites-enfant-bienveillance.html).
 
 ### Montrer l’exemple
 
@@ -43,13 +43,11 @@ Les enfants observent les adultes. Exprimer calmement ses propres émotions peut
 
 ### Utiliser les histoires et le jeu
 
-Les livres, les marionnettes, les dessins et les jeux d’imitation permettent d’aborder les émotions à distance. Vous pouvez demander : « À ton avis, comment se sent ce personnage ? » sans transformer le moment en interrogation.
+Les livres, les marionnettes, les dessins et les jeux d’imitation permettent d’aborder les émotions à distance. Vous pouvez demander : « À ton avis, comment se sent ce personnage ? » sans transformer le moment en interrogation. Les [histoires partagées dès le plus jeune âge](importance-lecture-histoires-enfant.html) offrent de nombreuses occasions d’en parler.
 
 ## Que faire lors d’une émotion très intense ?
 
-Lorsque l’enfant est submergé, privilégiez d’abord la sécurité et la présence. Parlez peu, avec une voix calme, et laissez-lui le temps de retrouver son apaisement.
-
-Une fois la situation passée, vous pourrez revenir sur ce qui s’est produit : ce qu’il a ressenti, ce qui l’a contrarié et ce qu’il pourrait essayer une prochaine fois.
+Lorsque l’enfant est submergé, privilégiez d’abord la sécurité et la présence : parlez peu, d’une voix calme, et laissez-lui le temps de retrouver son apaisement. Vous pourrez ensuite revenir ensemble sur ce qui s’est passé. Pour les grandes colères, nos conseils pour [accompagner les colères du jeune enfant](gerer-colere-jeune-enfant.html) proposent des repères plus détaillés.
 
 ## Faut-il apprendre à contrôler toutes ses émotions ?
 
@@ -65,6 +63,5 @@ Aider un enfant à comprendre ses émotions demande du temps, de l’écoute et 
 
 *Article rédigé par l’équipe de l’École Maternelle Lila.*
 
-## Sources documentaires à vérifier avant publication
+## Sources et ressources
 - CDC – Tips for Noticing and Naming Emotions : https://www.cdc.gov/parenting-toddlers/noticing-and-naming/emotion-coaching.html
-- UNICEF – Care for Child Development : https://www.unicef.org/documents/care-child-development

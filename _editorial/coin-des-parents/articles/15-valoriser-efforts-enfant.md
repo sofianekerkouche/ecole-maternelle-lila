@@ -6,7 +6,7 @@ categorie: "parentalite"
 mot_cle_principal: "encourager enfant valoriser efforts"
 meta_description: "Encourager un enfant ne signifie pas le féliciter sans cesse. Découvrez comment reconnaître ses efforts, soutenir sa confiance et respecter son rythme."
 auteur: "L'équipe de l'École Maternelle Lila"
-statut: "brouillon éditorial à valider"
+statut: "validé éditorialement"
 ---
 
 # Comment valoriser les efforts de son enfant sans le mettre sous pression ?
@@ -35,7 +35,7 @@ Cette remarque montre à l’enfant ce que vous avez observé et évite de rédu
 
 ### Valoriser les progrès personnels
 
-Comparez l’enfant à ses propres expériences précédentes, pas aux autres. « Aujourd’hui, tu as réussi à enfiler ton manteau avec moins d’aide » souligne une évolution concrète.
+Comparez l’enfant à ses propres expériences précédentes, pas aux autres. « Aujourd’hui, tu as fini le puzzle avec moins d’aide qu’hier » souligne une évolution concrète. Ces encouragements accompagnent aussi ses premiers pas vers l’autonomie : découvrez comment [encourager l’autonomie de son enfant](encourager-autonomie-enfant.html).
 
 ### Accepter les erreurs
 
@@ -43,9 +43,9 @@ Une construction qui tombe ou un dessin qui ne ressemble pas à ce que l’enfan
 
 ### Éviter les attentes excessives
 
-L’enfant n’a pas besoin de réussir chaque activité ni de recevoir une félicitation pour chaque geste. Laissez aussi de la place au plaisir de faire, sans commentaire permanent.
+L’enfant n’a pas besoin de réussir chaque activité ni de recevoir une félicitation pour chaque geste. Laissez aussi de la place au plaisir de faire, sans commentaire permanent, y compris lorsqu’il [découvre les couleurs, les formes et les nombres en jouant](apprendre-couleurs-formes-chiffres-enfant.html).
 
-### Écouter sa propre satisfaction
+### L’inviter à dire ce qui lui plaît
 
 Vous pouvez lui demander : « Qu’est-ce que tu as préféré dans ton dessin ? » ou « Es-tu content de ce que tu as essayé ? ». Cela l’aide à prendre conscience de son expérience.
 
@@ -57,13 +57,14 @@ Non. Une présence attentive, un sourire ou un intérêt sincère peuvent suffir
 
 ## En conclusion
 
-Valoriser les efforts, c’est montrer à l’enfant que ses tentatives comptent, même lorsqu’elles n’aboutissent pas immédiatement. Des encouragements précis, sincères et mesurés soutiennent sa confiance sans transformer chaque activité en évaluation.
+Valoriser les efforts, c’est montrer à l’enfant que ses tentatives comptent, même lorsqu’elles n’aboutissent pas immédiatement. Des encouragements précis, sincères et mesurés soutiennent sa confiance sans transformer chaque activité en évaluation, et lui laissent le plaisir d’[apprendre en jouant](importance-jeu-developpement-enfant.html).
 
 **L’important n’est pas de réussir à chaque fois, mais de se sentir libre d’essayer.**
 
 *Article rédigé par l’équipe de l’École Maternelle Lila.*
 
-## Sources documentaires à vérifier avant publication
-- CDC – Tips for Child-led Play : https://www.cdc.gov/parenting-toddlers/communication/special-playtime.html
+## Sources et ressources
+- CDC – Tips for Using Praise and Rewards : https://www.cdc.gov/parenting-toddlers/discipline-consequences/using-rewards.html
+- AAP / HealthyChildren.org – Disciplining Your Child : https://www.healthychildren.org/English/family-life/family-dynamics/communication-discipline/Pages/Disciplining-Your-Child.aspx
+- Nemours KidsHealth – 9 Ways to Boost Your Child’s Self-Esteem : https://kidshealth.org/en/parents/boost-self-esteem.html
 - NHS – Teaching your child everyday skills : https://www.nhs.uk/baby/babys-development/play-and-learning/teaching-your-child-everyday-skills/
-- AAP – Framework for Approaching Healthy Mental and Emotional Development in Pediatrics (2026) : https://publications.aap.org/pediatrics/article/157/5/e2026076620/207234/Framework-for-Approaching-Healthy-Mental-and

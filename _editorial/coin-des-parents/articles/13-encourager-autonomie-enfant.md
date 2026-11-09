@@ -6,7 +6,7 @@ categorie: "parentalite"
 mot_cle_principal: "encourager autonomie enfant"
 meta_description: "S’habiller, ranger, manger ou participer aux petites tâches : découvrez comment encourager l’autonomie de votre enfant sans le brusquer."
 auteur: "L'équipe de l'École Maternelle Lila"
-statut: "brouillon éditorial à valider"
+statut: "validé éditorialement"
 ---
 
 # Comment encourager l’autonomie de son enfant au quotidien ?
@@ -23,13 +23,18 @@ L’objectif n’est pas la performance ni la rapidité, mais la participation a
 
 ## Cinq façons de l’encourager
 
-### 1. Lui confier de petites tâches
+### 1. Lui confier de petites tâches adaptées à son âge
 
-Ranger quelques jouets, déposer un vêtement dans le panier ou apporter une serviette sont des gestes simples qui lui permettent de participer à la vie familiale.
+Les gestes possibles évoluent avec l’âge. Les exemples ci-dessous sont indicatifs : chaque enfant avance à son rythme.
+
+- **Vers 15 mois à 2 ans** : tendre les mains pour qu’on les lui lave, passer le bras dans la manche, essayer la cuillère, imiter les tâches de la maison, comme balayer.
+- **Vers 2 à 3 ans** : ranger ses jouets lorsqu’on le lui propose, enlever seul un pantalon ample ou une veste ouverte, manger à la cuillère.
+- **Vers 3 à 4 ans** : enfiler certains vêtements, utiliser une fourchette, se laver et se sécher les mains, aller aux toilettes avec de moins en moins d’aide. Pour cette étape, vous trouverez des repères pour [accompagner l’apprentissage de la propreté](accompagner-apprentissage-proprete-enfant.html).
+- **Vers 4 à 6 ans** : selon ses capacités et avec l’accompagnement d’un adulte, il peut participer à de petites tâches de la maison, comme ranger quelques affaires ou aider à mettre la table.
 
 ### 2. Lui laisser le temps d’essayer
 
-S’habiller ou manger seul peut prendre plus de temps. Lorsque cela est possible, prévoyez une marge et évitez de reprendre immédiatement la tâche à sa place.
+S’habiller ou manger seul peut prendre plus de temps. Lorsque cela est possible, prévoyez une marge et évitez de reprendre immédiatement la tâche à sa place. Il n’a pas besoin de réussir parfaitement du premier coup : ses gestes s’affinent avec la répétition.
 
 ### 3. Proposer des choix limités
 
@@ -37,11 +42,11 @@ S’habiller ou manger seul peut prendre plus de temps. Lorsque cela est possibl
 
 ### 4. Adapter l’environnement
 
-Des objets accessibles, des vêtements faciles à enfiler et un espace de rangement adapté facilitent la participation. La sécurité reste prioritaire : les produits dangereux et objets fragiles doivent rester hors de portée.
+Des objets accessibles, des vêtements faciles à enfiler et un espace de rangement adapté facilitent la participation. La sécurité reste prioritaire : les produits dangereux et objets fragiles doivent rester hors de portée. L’autonomie se construit aussi dans un cadre rassurant : [poser des limites claires et rassurantes](poser-limites-enfant-bienveillance.html) aide l’enfant à savoir ce qu’il peut faire seul.
 
-### 5. Valoriser les efforts
+### 5. Montrer, puis réduire l’aide pas à pas
 
-Soulignez ce que l’enfant a essayé : « Tu as réussi à enfiler une manche tout seul ». Une remarque précise est souvent plus encourageante qu’un simple jugement sur le résultat.
+Montrez-lui comment faire, puis laissez-lui les dernières étapes, par exemple remonter la fermeture éclair une fois que vous l’avez engagée. Réduisez ensuite votre aide progressivement. Lorsqu’il essaie, une remarque précise sur ce qu’il a fait l’encourage davantage qu’un simple jugement : nos conseils pour [valoriser les efforts et les progrès](valoriser-efforts-enfant.html) détaillent cette approche.
 
 ## Que faire lorsqu’il demande de l’aide ?
 
@@ -57,6 +62,10 @@ L’autonomie se développe dans les petites expériences quotidiennes. En donna
 
 *Article rédigé par l’équipe de l’École Maternelle Lila.*
 
-## Sources documentaires à vérifier avant publication
+## Sources et ressources
+- GOV.UK – Development Matters (référentiel britannique de la petite enfance) : https://www.gov.uk/government/publications/development-matters--2/development-matters
 - NHS – Teaching your child everyday skills : https://www.nhs.uk/baby/babys-development/play-and-learning/teaching-your-child-everyday-skills/
-- GOV.UK – Development Matters : https://www.gov.uk/government/publications/development-matters--2/development-matters
+- CDC – Important Milestones: Your Child By Eighteen Months : https://www.cdc.gov/act-early/milestones/18-months.html
+- CDC – Important Milestones: Your Child By Thirty Months : https://www.cdc.gov/act-early/milestones/30-months.html
+- CDC – Important Milestones: Your Child By Three Years : https://www.cdc.gov/act-early/milestones/3-years.html
+- AAP / HealthyChildren.org – Disciplining Your Child : https://www.healthychildren.org/English/family-life/family-dynamics/communication-discipline/Pages/Disciplining-Your-Child.aspx
