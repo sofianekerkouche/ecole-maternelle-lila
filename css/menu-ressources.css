@@ -1,0 +1,152 @@
+/* ==========================================================================
+   ÉCOLE MATERNELLE LILA — MENU « RESSOURCES »
+   Sous-menu partagé par toutes les pages (site institutionnel et Coin des parents).
+   Chargé après css/style.css, qu'il ne modifie pas. Design repris de la maquette validée.
+   ========================================================================== */
+
+:root {
+  --res-ink: #2B2622;
+  --res-muted: #6B635C;          /* 5,2:1 sur crème */
+  --res-line: #E8DECE;
+  --res-card: #FFFFFF;
+  --res-cream: #F7F0E6;
+  --res-green: #689B22;          /* vert du site */
+  --res-green-ink: #426B16;      /* vert foncé des liens du site : 5,5:1 */
+  --res-green-soft: #EAF3E1;
+  --res-turq-ink: #116B78;       /* 5,4:1 sur turquoise pâle */
+  --res-turq-soft: #E3F3F4;
+  --res-red: #E8253A;
+  --res-shadow: 0 2px 4px rgba(60, 44, 28, .05), 0 16px 36px rgba(60, 44, 28, .10);
+  --res-ease: cubic-bezier(.4, 0, .2, 1);
+}
+
+.res-sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* ---------- Menu ordinateur ---------- */
+.nav-ressources { position: relative; display: flex; align-items: center; }
+
+/* Le déclencheur reprend exactement l'apparence des liens .nav-desktop a de style.css */
+.nav-ressources-btn {
+  position: relative;
+  display: inline-flex; align-items: center; gap: .3rem;
+  padding: .35rem .2rem;
+  background: none; border: 0;
+  font-family: inherit; font-size: 1rem; font-weight: 700; line-height: inherit;
+  color: var(--color-text-dark, #242424);
+  cursor: pointer;
+  transition: color .2s var(--res-ease);
+}
+.nav-ressources-btn::after {
+  content: ""; position: absolute; left: 0; bottom: 0;
+  width: 0; height: 3px; border-radius: 9999px;
+  background-color: var(--color-primary, #E8253A);
+  transition: width .2s var(--res-ease);
+}
+.nav-ressources-btn:hover,
+.nav-ressources.is-current .nav-ressources-btn { color: var(--color-primary, #E8253A); }
+.nav-ressources-btn:hover::after,
+.nav-ressources.is-current .nav-ressources-btn::after { width: 100%; }
+.nav-ressources-btn:focus-visible { outline: 3px solid var(--res-green-ink); outline-offset: 3px; border-radius: 6px; }
+.nav-ressources-chevron { width: 14px; height: 14px; transition: transform .2s var(--res-ease); }
+.nav-ressources.open .nav-ressources-chevron { transform: rotate(180deg); }
+
+.nav-ressources-menu {
+  position: absolute; top: calc(100% + 14px); left: 50%; z-index: 1100;
+  width: 320px; margin: 0; padding: .55rem; list-style: none;
+  background: var(--res-card); border: 1px solid var(--res-line); border-radius: 16px;
+  box-shadow: var(--res-shadow);
+  opacity: 0; visibility: hidden; transform: translate(-50%, 6px);
+  transition: opacity .2s var(--res-ease), transform .2s var(--res-ease), visibility .2s;
+}
+.nav-ressources-menu::before { content: ""; position: absolute; left: 0; right: 0; top: -16px; height: 16px; } /* pont de survol */
+.nav-ressources.open .nav-ressources-menu { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+
+/* Les éléments du sous-menu neutralisent les styles .nav-desktop a hérités de style.css */
+.nav-desktop .nav-ressources-item,
+.nav-ressources-item {
+  display: grid; grid-template-columns: 40px 1fr; gap: .8rem; align-items: center;
+  padding: .7rem .75rem; border-radius: 10px;
+  font-size: 1rem; font-weight: 400; line-height: 1.4; color: var(--res-ink); text-decoration: none;
+}
+.nav-desktop .nav-ressources-item::after { content: none; display: none; }
+.nav-desktop a.nav-ressources-item:hover { background: var(--res-cream); color: var(--res-ink); }
+.nav-desktop a.nav-ressources-item:focus-visible { outline: 3px solid var(--res-green-ink); outline-offset: -3px; }
+.nav-ressources-ico { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; }
+.nav-ressources-ico svg { width: 20px; height: 20px; }
+.nav-ressources-ico.is-parents { background: var(--res-green-soft); color: var(--res-green-ink); }
+.nav-ressources-ico.is-media { background: var(--res-turq-soft); color: var(--res-turq-ink); }
+.nav-ressources-item strong { display: block; color: var(--res-ink); font-size: .96rem; font-weight: 700; line-height: 1.3; }
+.nav-ressources-item small { display: block; margin-top: .1rem; color: var(--res-muted); font-size: .82rem; line-height: 1.4; }
+
+/* Rubrique en cours (pages du Coin des parents) */
+.nav-desktop .nav-ressources-item[aria-current="page"] { background: var(--res-green-soft); }
+.nav-ressources-item[aria-current="page"] strong { color: var(--res-green-ink); }
+.nav-ressources-item[aria-current="page"] .nav-ressources-ico.is-parents { background: var(--res-card); }
+.nav-ressources-here {
+  display: inline-flex; align-items: center; gap: .3rem; margin-top: .3rem;
+  font-size: .72rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: var(--res-green-ink);
+}
+.nav-ressources-here::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--res-green-ink); }
+
+/* Rubrique à venir : visible, sans lien */
+.nav-ressources-item.is-soon { cursor: default; }
+.nav-ressources-item.is-soon strong { color: var(--res-muted); }
+.nav-ressources-item.is-soon .nav-ressources-ico { opacity: .8; }
+.res-soon {
+  display: inline-block; margin-left: .35rem; padding: .05rem .5rem; border-radius: 999px;
+  background: var(--res-turq-soft); color: var(--res-turq-ink);
+  font-size: .7rem; font-weight: 800; letter-spacing: .02em; line-height: 1.5; vertical-align: 2px;
+}
+
+/* ---------- Tiroir mobile ---------- */
+.mobile-ressources { display: grid; gap: .35rem; }
+.mobile-ressources-title {
+  margin: 0; padding: .5rem .25rem 0;
+  font-size: 1.15rem; font-weight: 700; line-height: 1.4; color: var(--color-text-dark, #242424);
+}
+.mobile-ressources ul { display: grid; gap: .25rem; margin: 0; padding: 0 0 0 .75rem; list-style: none; }
+.mobile-links .mobile-ressources a,
+.mobile-ressources .is-soon {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .2rem .5rem;
+  min-height: 44px; padding: .5rem .75rem; border-radius: var(--radius-sm, 10px);
+  font-size: 1rem; font-weight: 700; line-height: 1.35;
+}
+.mobile-links .mobile-ressources a { color: var(--color-text-dark, #242424); }
+.mobile-links .mobile-ressources a:hover { color: var(--color-primary, #E8253A); background-color: var(--color-primary-light, #FDE8EA); padding-left: .75rem; }
+.mobile-links .mobile-ressources a[aria-current="page"] { background: var(--res-green-soft); color: var(--res-green-ink); }
+.mobile-links .mobile-ressources a[aria-current="page"] .nav-ressources-here { margin: 0 0 0 auto; }
+.mobile-ressources .is-soon { color: var(--res-muted); }
+
+/* ---------- En-tête : place nécessaire pour le 6e lien (PROPOSITION À VALIDER) ----------
+   Mesures : logo 270 px + 6 liens 589 px + téléphone 196 px + Inscriptions 143 px + écarts = 1 214 px,
+   pour 1 152 px disponibles dans le conteneur de 1 200 px. Sans correction, les liens passent sur
+   deux lignes à toutes les largeurs et la page défile horizontalement sous 1 100 px. */
+.nav-desktop > a,
+.nav-ressources-btn,
+.header-actions > .btn { white-space: nowrap; }
+
+@media (min-width: 821px) {
+  /* Bouton téléphone compact : pastille jaune avec l'icône, numéro conservé pour les lecteurs d'écran */
+  .header-actions > .btn-call {
+    position: relative;
+    width: 48px; height: 48px; padding: 0; gap: 0; border-radius: 50%;
+    justify-content: center;
+  }
+  .header-actions > .btn-call > span:last-child {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+}
+
+@media (min-width: 821px) and (max-width: 1140px) {
+  /* Tablette paysage : la navigation passe dans le tiroir, comme sur mobile */
+  .nav-desktop { display: none; }
+  .burger-btn { display: flex; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-ressources-btn, .nav-ressources-btn::after, .nav-ressources-chevron, .nav-ressources-menu { transition: none; }
+}

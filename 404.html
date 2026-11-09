@@ -6,6 +6,22 @@
   <meta name="robots" content="noindex,follow">
   <title>Page introuvable (404) — École Maternelle Lila</title>
   <meta name="description" content="La page demandée est introuvable. Retournez sur le site de l’École Maternelle Lila.">
+  <script>
+    /* GitHub Pages affiche cette page pour toute adresse introuvable, y compris dans un sous-dossier
+       (ex. /coin-des-parents/xxx). On fixe donc la base des liens relatifs à la racine du site :
+       /ecole-maternelle-lila/ en prévisualisation GitHub Pages, / sur le domaine définitif.
+       Ce script doit rester avant toute balise contenant un chemin relatif. */
+    (function () {
+      var projet = 'ecole-maternelle-lila';
+      var premier = location.pathname.split('/')[1];
+      var base = document.createElement('base');
+      base.href = premier === projet ? '/' + projet + '/' : '/';
+      document.head.appendChild(base);
+      /* Limite connue : le pré-chargeur du navigateur lit le HTML avant ce script et peut tenter
+         quelques requêtes avec l'ancienne base. Elles échouent sans effet visible ; l'affichage final
+         utilise bien la base corrigée. Sans JavaScript, seule la 404 à la racine s'affiche correctement. */
+    })();
+  </script>
   <link rel="icon" type="image/svg+xml" href="assets/images/Logo-principal-Ecole-Maternelle-Lila.svg">
   <link rel="stylesheet" href="css/style.css">
   <style>
@@ -55,6 +71,7 @@
     <meta property="og:image:alt" content="École Maternelle Lila : enfants, établissement et identité visuelle de l’école">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://ecolematernellelila.com/assets/images/og-ecole-maternelle-lila.jpg">
+  <link rel="stylesheet" href="css/menu-ressources.css">
 </head>
 <body>
   <header class="site-header" id="site-header">
@@ -73,6 +90,23 @@
         <a href="index.html#environnement-ecole">L'école</a>
         <a href="index.html#sections">Nos sections</a>
         <a href="index.html#inscriptions">Inscriptions</a>
+        <div class="nav-ressources">
+          <button type="button" class="nav-ressources-btn" aria-expanded="false" aria-controls="menu-ressources">Ressources <svg class="nav-ressources-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <ul class="nav-ressources-menu" id="menu-ressources">
+            <li>
+              <a class="nav-ressources-item" href="coin-des-parents/index.html">
+                <span class="nav-ressources-ico is-parents"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3S3.5 15 3.5 9.2A4.6 4.6 0 0 1 12 6.6a4.6 4.6 0 0 1 8.5 2.6C20.5 15 12 20.3 12 20.3Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span><strong>Le Coin des parents</strong><small>Conseils et repères pour accompagner votre enfant</small></span>
+              </a>
+            </li>
+            <li>
+              <div class="nav-ressources-item is-soon">
+                <span class="nav-ressources-ico is-media"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2Z"/><path d="M4 19.5A2 2 0 0 0 6 21h13"/></svg></span>
+                <span><strong>Médiathèque éducative <span class="res-soon">Bientôt</span></strong><small>Comptines, histoires et activités à partager<span class="res-sr-only"> — rubrique en préparation, pas encore disponible</span></small></span>
+              </div>
+            </li>
+          </ul>
+        </div>
         <a href="faq.html">FAQ</a>
         <a href="index.html#contact">Contact</a>
       </nav>
@@ -132,6 +166,13 @@
       <a href="index.html#sections">Nos sections</a>
       <a href="index.html#contact">Nous contacter</a>
       <a href="index.html#inscriptions">Inscriptions</a>
+      <div class="mobile-ressources">
+        <p class="mobile-ressources-title" id="mobile-ressources-title">Ressources</p>
+        <ul aria-labelledby="mobile-ressources-title">
+          <li><a href="coin-des-parents/index.html">Le Coin des parents</a></li>
+          <li><span class="is-soon">Médiathèque éducative <span class="res-soon">Bientôt</span><span class="res-sr-only"> — pas encore disponible</span></span></li>
+        </ul>
+      </div>
       <a href="faq.html">FAQ</a>
     </nav>
 
@@ -180,6 +221,7 @@
             <li><a href="index.html#environnement-ecole">Notre école</a></li>
             <li><a href="index.html#sections">Nos sections</a></li>
             <li><a href="index.html#inscriptions">Inscriptions</a></li>
+            <li><a href="coin-des-parents/index.html">Le Coin des parents</a></li>
             <li><a href="index.html#contact">Nous contacter</a></li>
           </ul>
         </div>
@@ -220,5 +262,6 @@
     </div>
   </foote
   <script src="js/main.js"></script>
+  <script src="js/menu-ressources.js"></script>
 </body>
 </html>
