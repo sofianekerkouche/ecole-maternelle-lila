@@ -443,6 +443,11 @@ function genererAccueil() {
 }
 
 /* ---------- 2. Pages articles ---------- */
+const cacheIds = new Map(); // fichier → identifiants présents (contrôle des ancres des liens internes)
+const idsDe = (fichier) => {
+  if (!cacheIds.has(fichier)) cacheIds.set(fichier, new Set([...readFileSync(fichier, 'utf8').matchAll(/\sid="([^"]+)"/g)].map((m) => m[1])));
+  return cacheIds.get(fichier);
+};
 const tousLesLiens = new Map(); // slug → liens contextuels (contrôles)
 
 function genererArticle(a) {
@@ -451,13 +456,19 @@ function genererArticle(a) {
   tousLesLiens.set(a.slug, liens);
   const url = urlProdArticle(a);
 
-  // Contrôle des liens internes : articles existants, ou fichiers existants du site.
-  for (const l of liens) {
+  // Encart de fin d'article (manifeste, champ facultatif "encart" : une phrase, liens au format Markdown).
+  const liensEncart = [];
+  const encart = a.encart ? enLigne(a.encart, liensEncart, 'encart') : '';
+
+  // Contrôle des liens internes (texte et encart) : articles existants, fichiers existants du site et ancres présentes.
+  for (const l of [...liens, ...liensEncart]) {
     if (/^https?:\/\//.test(l.cible)) continue;
     const art = l.cible.match(/^([a-z0-9-]+)\.html$/);
     if (art) { if (!articles.has(art[1])) echec(`${a.slug} : lien vers un article inexistant (${l.cible})`); continue; }
-    const fichier = join(DOSSIER_RUBRIQUE, 'articles', l.cible.split('#')[0]);
+    const [chemin, ancre] = l.cible.split('#');
+    const fichier = join(DOSSIER_RUBRIQUE, 'articles', chemin);
     if (!existsSync(fichier)) echec(`${a.slug} : lien interne cassé (${l.cible})`);
+    else if (ancre && !idsDe(fichier).has(ancre)) echec(`${a.slug} : ancre absente de la page de destination (${l.cible})`);
   }
   if (!sources.length) echec(`${a.slug} : aucune source`);
 
@@ -524,7 +535,12 @@ function genererArticle(a) {
         <div class="cdp-article-col cdp-prose">
 ${html.split('\n').map((l) => '          ' + l).join('\n')}
         </div>
-
+${encart ? `
+        <!-- Encart discret vers l'établissement (manifeste, champ "encart") -->
+        <aside class="cdp-article-col cdp-encart" aria-label="Découvrir l’École Maternelle Lila">
+          <p>${encart}</p>
+        </aside>
+` : ''}
         <!-- Accordéon natif : fermé par défaut, utilisable au clavier et sans JavaScript -->
         <details class="cdp-article-col cdp-sources">
           <summary><h2 id="cdp-sources-title">Sources et ressources</h2><svg class="cdp-sources-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>

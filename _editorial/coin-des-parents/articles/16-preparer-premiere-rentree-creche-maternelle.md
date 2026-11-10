@@ -13,7 +13,7 @@ statut: "validé éditorialement"
 
 La première rentrée en crèche ou en maternelle représente une étape importante pour l’enfant comme pour ses parents. Nouvel environnement, nouvelles personnes, habitudes différentes : cette transition peut susciter de la curiosité, mais aussi de l’inquiétude.
 
-Elle ne se vit pas au même âge pour tous les enfants. À l’École Maternelle Lila, par exemple, les enfants peuvent être accueillis dès 15 mois, en Section d’Éveil, et accompagnés jusqu’à la Grande Section, vers 6 ans. Une préparation adaptée à l’âge de l’enfant et des échanges avec l’équipe d’accueil peuvent aider toute la famille à aborder ce changement plus sereinement.
+Elle ne se vit pas au même âge pour tous les enfants. À l’École Maternelle Lila, par exemple, les enfants peuvent être [accueillis dès 15 mois, en Section d’Éveil](../../index.html#sections), et accompagnés jusqu’à la Grande Section, vers 6 ans. Une préparation adaptée à l’âge de l’enfant et des échanges avec l’équipe d’accueil peuvent aider toute la famille à aborder ce changement plus sereinement.
 
 ## Une préparation adaptée à chaque âge
 

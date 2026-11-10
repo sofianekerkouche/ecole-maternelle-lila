@@ -52,7 +52,7 @@ Si l’enfant dit « encore gâteau », vous pouvez répondre : « Tu veux encor
 Dans de nombreuses familles, l’enfant entend plusieurs langues au quotidien : kabyle, arabe, français ou d’autres encore. C’est une richesse. **Apprendre plusieurs langues ne provoque pas, à lui seul, de trouble du langage**, et le fait de mélanger les langues ne signifie pas que l’enfant est confus.
 
 - **Les langues où vous êtes le plus à l’aise** : il est généralement conseillé de parler à l’enfant dans la ou les langues que l’on maîtrise le mieux. Vous pouvez ainsi communiquer avec lui spontanément, en partageant naturellement vos mots, vos expressions et votre culture.
-- **Les langues de la maison, une base solide** : elles l’aident ensuite à en apprendre d’autres, y compris à l’école.
+- **Les langues de la maison, une base solide** : elles l’aident ensuite à en apprendre d’autres, [y compris à l’école](../../index.html#vie-ecole).
 - **Le mélange des langues est fréquent** : un jeune enfant peut utiliser des mots de plusieurs langues dans une même phrase. Avec le temps, l’enfant apprend progressivement à adapter la langue qu’il utilise à son interlocuteur et à la situation. Cette évolution se fait naturellement, à son propre rythme.
 - **Un vocabulaire à considérer dans l’ensemble de ses langues** : un enfant peut connaître certains mots dans une langue et d’autres dans une autre. Pour apprécier ses progrès, c’est l’ensemble de ses mots, toutes langues confondues, qui donne une image juste.
 - **Les livres et les histoires ont leur place dans chaque langue** : lire ou raconter dans la langue de la famille nourrit aussi son langage.
