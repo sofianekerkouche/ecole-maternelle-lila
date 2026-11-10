@@ -338,10 +338,46 @@
       "age_min": 3,
       "age_max": 4,
       "acces": "public",
-      "statut": "a-venir",
+      "statut": "disponible",
       "type": "Planches d'association",
-      "description": "Associer chaque animal à son milieu de vie : la ferme, la forêt, la mer ou la savane.",
-      "a_valider": true
+      "description": "La ferme, la forêt, la mer et la savane : quatre paysages illustrés pour découvrir où vivent les animaux, avec un jeu à relier et un jeu de tri.",
+      "objectifs": [
+        "Découvrir quatre milieux de vie et les animaux qui y vivent.",
+        "Associer chaque animal à son milieu.",
+        "Observer, comparer et décrire des paysages."
+      ],
+      "materiel": [
+        "Le document imprimé en couleur, sur papier A4.",
+        "Des ciseaux pour l'adulte qui découpe les cartes du jeu de tri.",
+        "Un crayon pour le jeu à relier."
+      ],
+      "contenu": [
+        "Une couverture.",
+        "Planche 1 : la ferme et la forêt, avec leurs animaux.",
+        "Planche 2 : la mer et la savane, avec leurs animaux.",
+        "Le jeu « Où j'habite ? » : relier six animaux à leur milieu.",
+        "Le jeu de tri « Chacun dans son milieu » : huit cartes à découper.",
+        "Un guide pour accompagner votre enfant."
+      ],
+      "conseils": [
+        "Décrivez chaque paysage ensemble : les arbres, l'eau, le sable, l'herbe.",
+        "Posez des questions ouvertes et accueillez ses idées, même inattendues.",
+        "Commencez par la ferme, souvent plus familière, puis découvrez les autres milieux.",
+        "En promenade ou dans un livre, rappelez-vous où vivent les animaux rencontrés."
+      ],
+      "duree": "Quelques minutes par activité",
+      "securite": "Les petites cartes du jeu de tri sont découpées par un adulte. Surveillez les plus jeunes, qui peuvent les porter à la bouche.",
+      "fichier": "mediatheque-educative/fichiers/ou-vivent-les-animaux.pdf",
+      "pages": 6,
+      "apercus": [
+        "mediatheque-educative/apercus/ou-vivent-les-animaux-1.webp",
+        "mediatheque-educative/apercus/ou-vivent-les-animaux-2.webp",
+        "mediatheque-educative/apercus/ou-vivent-les-animaux-3.webp",
+        "mediatheque-educative/apercus/ou-vivent-les-animaux-4.webp",
+        "mediatheque-educative/apercus/ou-vivent-les-animaux-5.webp",
+        "mediatheque-educative/apercus/ou-vivent-les-animaux-6.webp"
+      ],
+      "publie_le": "2026-11-10"
     },
     {
       "numero": 12,
@@ -485,8 +521,31 @@
       "acces": "public",
       "statut": "a-venir",
       "type": "Livret illustré",
-      "description": "Le temps qu'il fait, les vêtements, la nature qui change : les quatre saisons racontées en images.",
-      "a_valider": true
+      "description": "Le même arbre au fil du printemps, de l'été, de l'automne et de l'hiver : le temps qu'il fait, la nature qui change et les vêtements de chaque saison, avec un jeu et un tableau de la météo.",
+      "objectifs": [
+        "Découvrir les quatre saisons et ce qui les caractérise.",
+        "Observer et décrire le temps qu'il fait.",
+        "Se repérer dans le temps qui passe au fil de l'année."
+      ],
+      "materiel": [
+        "Le document imprimé en couleur, sur papier A4.",
+        "Des crayons pour le jeu et le tableau du temps."
+      ],
+      "contenu": [
+        "Une couverture.",
+        "Planche 1 : le printemps et l'été.",
+        "Planche 2 : l'automne et l'hiver.",
+        "Le jeu « À quelle saison ? », et trois autres idées autour des saisons.",
+        "Le tableau « Le temps qu'il fait », à remplir chaque jour de la semaine.",
+        "Un guide pour accompagner votre enfant."
+      ],
+      "conseils": [
+        "Observez dehors : le ciel, les arbres, le vent.",
+        "Reliez les saisons à des moments que votre enfant connaît.",
+        "Utilisez souvent les mots chaud, froid, doux, sec, mouillé.",
+        "Partez de ce que votre enfant voit autour de lui : les saisons ne se ressemblent pas partout."
+      ],
+      "duree": "Quelques minutes, à reprendre au fil de l'année"
     },
     {
       "numero": 18,
@@ -595,8 +654,31 @@
         "Français",
         "Anglais"
       ],
-      "description": "Les objets du quotidien à nommer en français et en anglais, pièce par pièce.",
-      "a_valider": true
+      "description": "Dix objets du quotidien, pièce par pièce, à nommer en français et en anglais, avec deux petits jeux de reconnaissance et un guide pour accompagner votre enfant.",
+      "objectifs": [
+        "Découvrir le nom de dix objets du quotidien en français et en anglais.",
+        "Associer un mot entendu à son illustration, puis à son nom écrit.",
+        "Écouter, répéter et prendre plaisir à jouer avec deux langues."
+      ],
+      "materiel": [
+        "Le document imprimé en couleur, sur papier A4.",
+        "Des crayons de couleur pour les deux jeux."
+      ],
+      "contenu": [
+        "Une couverture.",
+        "Planche 1, dans la cuisine et le salon : la table, la chaise, la tasse, l'assiette, la cuillère.",
+        "Planche 2, dans la chambre et la salle de bain : le lit, la lampe, le livre, la brosse à dents, la serviette.",
+        "Jeu 1 « Je montre et je reconnais » : retrouver les dix objets.",
+        "Jeu 2 « Je joue avec les mots » : relier cinq objets à leur nom, et trois idées de jeux.",
+        "Un guide pour accompagner votre enfant."
+      ],
+      "conseils": [
+        "Préférez des moments courts et réguliers.",
+        "Montrez les vrais objets de la maison en disant leur nom.",
+        "Si l'anglais ne vous est pas familier, écoutez la prononciation avec un dictionnaire en ligne.",
+        "Les langues parlées à la maison restent une base précieuse."
+      ],
+      "duree": "Quelques minutes, à reprendre souvent"
     },
     {
       "numero": 23,
