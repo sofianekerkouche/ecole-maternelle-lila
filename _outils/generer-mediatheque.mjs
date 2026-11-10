@@ -401,9 +401,6 @@ ${options.map(([v, t]) => `    <option value="${v}">${t}</option>`).join('\n')}
     <!-- ==================== 1. HERO ==================== -->
     <section class="cdp-hero mdt-hero" aria-labelledby="mdt-hero-title">
       <div class="cdp-wrap">
-        <nav class="cdp-crumbs" aria-label="Fil d'Ariane">
-          <ol><li><a href="../index.html">Accueil</a></li><li>Ressources</li><li aria-current="page">${NOM}</li></ol>
-        </nav>
         <div class="cdp-hero-grid">
           <div class="cdp-hero-copy">
             <p class="cdp-kicker">Ressources pour les familles</p>

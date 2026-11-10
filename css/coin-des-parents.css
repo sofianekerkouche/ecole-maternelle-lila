@@ -408,6 +408,18 @@ a.cdp-chip--link:hover { box-shadow: inset 0 0 0 1.5px var(--c); }
 .cdp-cat-visual-ico svg { width: 46%; height: 46%; }
 
 /* ============ RESPONSIVE (seuils de la maquette : 1024 / 820 / 600) ============ */
+/* Héros des pages d'entrée (Coin des parents, Médiathèque) en colonne unique :
+   titre, surtitre, arche, puis signature, accroche et boutons. Les héros de thématique (sans arche) ne changent pas. */
+@media (max-width: 820px) {
+  .cdp-hero:not(.cdp-cat-hero) .cdp-hero-grid { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+  .cdp-hero:not(.cdp-cat-hero) .cdp-hero-copy { display: contents; }
+  .cdp-main .cdp-hero:not(.cdp-cat-hero) h1 { order: 1; margin-top: 0; }
+  .cdp-hero:not(.cdp-cat-hero) .cdp-kicker { order: 2; margin-top: .9rem; align-self: flex-start; }
+  .cdp-hero:not(.cdp-cat-hero) .cdp-hero-visual { order: 3; align-self: center; margin-top: 2.25rem; }
+  .cdp-main .cdp-hero:not(.cdp-cat-hero) .cdp-signature { order: 4; margin-top: 2rem; }
+  .cdp-main .cdp-hero:not(.cdp-cat-hero) .cdp-hero-lead { order: 5; }
+  .cdp-hero:not(.cdp-cat-hero) .cdp-hero-actions { order: 6; }
+}
 @media (max-width: 1024px) {
   .cdp-cats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cdp-posts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
