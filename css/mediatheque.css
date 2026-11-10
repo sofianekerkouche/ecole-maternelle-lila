@@ -1,0 +1,279 @@
+/* ==========================================================================
+   ÉCOLE MATERNELLE LILA — LA MÉDIATHÈQUE ÉDUCATIVE
+   Chargée après style.css, menu-ressources.css et coin-des-parents.css : la Médiathèque
+   réutilise les composants validés du Coin des parents (héros, cartes de catégories,
+   fil d'Ariane, boutons, filtres) et n'ajoute que ses propres éléments, préfixés « mdt- ».
+   Toutes les règles sont limitées à body.mdt : aucune autre page n'est touchée.
+   Couleurs : charte de la Médiathèque (pastels dominants, quatre couleurs vives en touches).
+   Contrastes des textes colorés vérifiés ≥ 4,5:1 sur leur fond pâle (WCAG 2.1 AA).
+   ========================================================================== */
+
+body.mdt {
+  /* Accès réservé aux familles de l'école : orangé doré, visible sans être agressif */
+  --mdt-lock: #F2A93B;            /* pastille du cadenas */
+  --mdt-lock-ico: #4A3000;        /* cadenas sur la pastille : 7,4:1 */
+  --mdt-lock-ink: #8A4B00;        /* textes : 6:1 sur orangé pâle */
+  --mdt-lock-soft: #FFF1D6;
+  --mdt-lock-line: #F3D29A;
+  --mdt-petrol: #173E46;          /* 12,6:1 sur blanc */
+  --mdt-petrol-soft: #E4EEF0;
+  --mdt-gold: #E7B92C;
+  --mdt-gold-soft: #FFF5D7;
+  /* Catégories : couleur / texte lisible / fond pâle */
+  --mdt-c-app: #81C9CB; --mdt-c-app-ink: #116B78; --mdt-c-app-soft: #E3F3F4;   /* turquoise */
+  --mdt-c-cre: #E39A93; --mdt-c-cre-ink: #A2473C; --mdt-c-cre-soft: #F8E6E4;   /* rose poudré */
+  --mdt-c-jeu: #E7B92C; --mdt-c-jeu-ink: #7A5A00; --mdt-c-jeu-soft: #FBF1D3;   /* jaune doré */
+  --mdt-c-dec: #8DB255; --mdt-c-dec-ink: #426B16; --mdt-c-dec-soft: #E8F0E3;   /* vert olive */
+  --mdt-c-lan: #A48BC9; --mdt-c-lan-ink: #6B4892; --mdt-c-lan-soft: #EFEAF6;   /* lavande */
+  --mdt-c-quo: #5B8F99; --mdt-c-quo-ink: #173E46; --mdt-c-quo-soft: #E4EEF0;   /* bleu pétrole */
+  background-color: #FFF9F1; /* ivoire de la charte */
+}
+
+body.mdt [data-categorie="premiers-apprentissages"]    { --c: var(--mdt-c-app); --ink-c: var(--mdt-c-app-ink); --soft: var(--mdt-c-app-soft); }
+body.mdt [data-categorie="activites-creatives"]        { --c: var(--mdt-c-cre); --ink-c: var(--mdt-c-cre-ink); --soft: var(--mdt-c-cre-soft); }
+body.mdt [data-categorie="jeux-et-logique"]            { --c: var(--mdt-c-jeu); --ink-c: var(--mdt-c-jeu-ink); --soft: var(--mdt-c-jeu-soft); }
+body.mdt [data-categorie="decouverte-du-monde"]        { --c: var(--mdt-c-dec); --ink-c: var(--mdt-c-dec-ink); --soft: var(--mdt-c-dec-soft); }
+body.mdt [data-categorie="langues-eveil-linguistique"] { --c: var(--mdt-c-lan); --ink-c: var(--mdt-c-lan-ink); --soft: var(--mdt-c-lan-soft); }
+body.mdt [data-categorie="vie-quotidienne-autonomie"]  { --c: var(--mdt-c-quo); --ink-c: var(--mdt-c-quo-ink); --soft: var(--mdt-c-quo-soft); }
+
+.mdt-main svg { flex: none; }
+.mdt-main .mdt-section-lead { margin-top: .9rem; max-width: 60ch; color: var(--cdp-muted); }
+
+/* ============ CARTES DE RESSOURCES ============ */
+.mdt-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.mdt-card {
+  position: relative; display: flex; flex-direction: column; min-width: 0;
+  background: var(--cdp-card); border: 1px solid var(--cdp-line); border-radius: var(--cdp-r-lg); overflow: hidden;
+  transition: transform .3s var(--cdp-ease), box-shadow .3s var(--cdp-ease), border-color .3s var(--cdp-ease);
+}
+.mdt-card[hidden] { display: none; }
+.mdt-card:hover { transform: translateY(-3px); box-shadow: var(--cdp-shadow-lift); border-color: color-mix(in srgb, var(--c) 45%, var(--cdp-line)); }
+.mdt-card.is-entering { animation: cdpCardIn .32s var(--cdp-ease) both; animation-delay: calc(var(--i, 0) * 30ms); }
+.mdt-card-media { position: relative; display: block; aspect-ratio: 4 / 3; background: var(--soft); overflow: hidden; }
+.mdt-card-media > .mdt-apercu-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.mdt-card-body { display: flex; flex-direction: column; gap: .6rem; flex: 1; padding: 1.2rem 1.35rem 1.35rem; }
+.mdt-main .mdt-card h3 { font-size: 1.2rem; line-height: 1.28; font-weight: 600; }
+.mdt-card h3 a { color: var(--cdp-ink); text-decoration: none; background: linear-gradient(var(--c), var(--c)) left 100% / 0 2px no-repeat; transition: background-size .35s var(--cdp-ease); }
+.mdt-card h3 a::after { content: ""; position: absolute; inset: 0; z-index: 1; } /* toute la carte est cliquable */
+.mdt-card:hover h3 a { background-size: 100% 2px; }
+.mdt-main .mdt-card-desc { color: var(--cdp-muted); font-size: .94rem; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.mdt-card-meta { display: flex; flex-wrap: wrap; gap: .3rem 1rem; margin: 0; padding: 0; list-style: none; font-size: .84rem; font-weight: 700; color: var(--cdp-muted); line-height: 1.4; }
+.mdt-card-meta li { display: inline-flex; align-items: center; gap: .35rem; }
+.mdt-card-meta svg { width: 16px; height: 16px; color: var(--ink-c); }
+.mdt-card-body > .mdt-access { margin-top: auto; padding-top: .35rem; }
+
+/* Pastille d'accès */
+.mdt-main .mdt-access { display: flex; }
+.mdt-access span { display: inline-flex; }
+.mdt-access svg { width: 15px; height: 15px; }
+.mdt-access--public, .mdt-access--familles { align-items: center; gap: .4rem; font-size: .8rem; font-weight: 800; letter-spacing: .01em; line-height: 1.3; }
+.mdt-access--public { color: var(--cdp-green-ink); }
+.mdt-access--familles {
+  align-self: flex-start; padding: .3rem .75rem .3rem .4rem; border-radius: var(--cdp-r-pill);
+  background: var(--mdt-lock-soft); color: var(--mdt-lock-ink);
+}
+.mdt-access--familles svg { width: 22px; height: 22px; padding: 4px; border-radius: 50%; background: var(--mdt-lock); color: var(--mdt-lock-ico); }
+.mdt-card-body > .mdt-access--familles { margin-top: auto; }
+.mdt-card[data-acces="familles"] { border-color: var(--mdt-lock-line); }
+.mdt-card[data-acces="familles"]:hover { border-color: #E9B866; }
+
+/* Visuel d'attente : feuille A4 aux couleurs de la catégorie (remplacée par l'aperçu réel à la publication) */
+.mdt-mock { position: absolute; inset: 0; display: grid; place-items: center; }
+.mdt-mock > .cdp-wash { inset: 8% 10%; width: 80%; height: 84%; }
+.mdt-sheet {
+  position: relative; width: 38%; aspect-ratio: 210 / 297; padding: 9% 7% 0; border-radius: 5px; background: #fff;
+  box-shadow: 0 1px 2px rgba(60, 44, 28, .08), 0 10px 24px rgba(60, 44, 28, .12);
+  display: flex; flex-direction: column; align-items: center; gap: 12%;
+  transform: rotate(-4deg); transition: transform .45s var(--cdp-ease);
+}
+.mdt-sheet::before { /* deuxième page, derrière */
+  content: ""; position: absolute; inset: 0; z-index: -1; border-radius: 5px; background: #fff;
+  box-shadow: 0 6px 16px rgba(60, 44, 28, .10); transform: translate(14%, 4%) rotate(9deg); opacity: .85;
+}
+.mdt-sheet-band { position: absolute; top: 0; left: 0; right: 0; height: 9%; border-radius: 5px 5px 0 0; background: var(--c); opacity: .55; }
+.mdt-sheet-ico { flex: none; width: 52%; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; background: var(--soft); color: var(--ink-c); margin-top: 6%; }
+.mdt-sheet-ico svg { width: 56%; height: auto; aspect-ratio: 1; }
+.mdt-sheet-lines { width: 100%; display: grid; gap: .32rem; justify-items: center; }
+.mdt-sheet-lines i { display: block; height: 4px; border-radius: 4px; background: #ECE6DC; width: 80%; }
+.mdt-sheet-lines i:nth-child(2) { width: 64%; }
+.mdt-sheet-lines i:nth-child(3) { width: 72%; background: color-mix(in srgb, var(--c) 40%, #ECE6DC); }
+.mdt-card:hover .mdt-sheet { transform: rotate(-1.5deg) translateY(-4px); }
+
+.mdt-flag {
+  position: absolute; top: .85rem; left: .85rem; z-index: 1; padding: .25rem .7rem; border-radius: var(--cdp-r-pill);
+  background: rgba(255, 255, 255, .94); color: var(--mdt-c-app-ink); font-size: .74rem; font-weight: 800; letter-spacing: .02em; line-height: 1.4;
+  box-shadow: 0 2px 8px rgba(60, 44, 28, .08);
+}
+.mdt-lock-badge {
+  position: absolute; top: .7rem; right: .7rem; z-index: 1; width: 36px; height: 36px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--mdt-lock); color: var(--mdt-lock-ico); box-shadow: 0 0 0 3px rgba(255, 255, 255, .9), 0 4px 12px rgba(242, 169, 59, .4);
+}
+.mdt-lock-badge svg { width: 18px; height: 18px; }
+
+/* ============ RECHERCHE ET FILTRES (listes déroulantes) ============ */
+.mdt-tools {
+  margin-bottom: 2rem; padding: clamp(1rem, 2.2vw, 1.4rem); background: var(--cdp-card);
+  border: 1px solid var(--cdp-line); border-radius: var(--cdp-r-lg); box-shadow: var(--cdp-shadow-soft);
+}
+.mdt-tools[hidden] { display: none; }
+.mdt-tools-row { display: grid; grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr)); gap: .75rem; }
+.mdt-search, .mdt-select { position: relative; min-width: 0; }
+.mdt-search-ico { position: absolute; left: 1.05rem; top: 50%; width: 20px; height: 20px; transform: translateY(-50%); color: var(--cdp-muted); pointer-events: none; }
+.mdt-search input, .mdt-select select {
+  width: 100%; min-height: 50px; border: 1.5px solid var(--cdp-line); border-radius: var(--cdp-r-pill);
+  background-color: var(--cdp-ivory); font-family: var(--cdp-font-body); font-size: .98rem; color: var(--cdp-ink);
+  transition: border-color .2s var(--cdp-ease), box-shadow .2s var(--cdp-ease), background-color .2s var(--cdp-ease);
+}
+.mdt-search input { padding: .6rem 1.2rem .6rem 3rem; }
+.mdt-search input::placeholder { color: #8A8178; }
+.mdt-select select {
+  appearance: none; -webkit-appearance: none; padding: .6rem 2.6rem .6rem 1.15rem; cursor: pointer; font-weight: 700;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.mdt-select-chevron { position: absolute; right: 1rem; top: 50%; width: 18px; height: 18px; transform: translateY(-50%); color: var(--cdp-muted); pointer-events: none; }
+.mdt-search input:hover, .mdt-select select:hover { border-color: #D6C9B4; }
+.mdt-search input:focus, .mdt-select select:focus { outline: none; border-color: var(--cdp-green); background-color: #fff; box-shadow: 0 0 0 4px rgba(104, 155, 34, .16); }
+/* Filtre actif : fond vert pâle, bordure verte, texte vert foncé (5,5:1) */
+.mdt-select select.is-active { background-color: var(--cdp-green-soft); border-color: var(--cdp-green); color: var(--cdp-green-ink); font-weight: 800; }
+.mdt-select select.is-active + .mdt-select-chevron { color: var(--cdp-green-ink); }
+.mdt-tools .cdp-results-bar[hidden] { display: none; }
+.mdt-tools .cdp-results-bar { margin-top: 1rem; padding-top: .85rem; border-top: 1px dashed var(--cdp-line); min-height: 2.4rem; }
+.mdt-reset {
+  display: inline-flex; align-items: center; gap: .4rem; min-height: 40px; padding: .35rem .2rem; border: 0; background: none; cursor: pointer;
+  font-family: var(--cdp-font-body); font-size: .9rem; font-weight: 800; color: var(--cdp-green-ink); text-decoration: underline; text-underline-offset: 3px;
+}
+.mdt-reset[hidden] { display: none; }
+.mdt-reset svg { width: 16px; height: 16px; }
+.mdt-reset:hover { color: var(--cdp-green-hover); }
+.mdt-empty { display: grid; justify-items: center; gap: 1rem; }
+.mdt-empty[hidden] { display: none; }
+
+/* ============ LE COIN DES PARENTS (même composition que la Médiathèque dans le Coin des parents, en vert) ============ */
+.mdt-cross-band { background: var(--cdp-green-soft); }
+.mdt-cross-band > .cdp-wash { color: var(--cdp-green-wash); }
+.mdt-cross-band .cdp-media-copy .cdp-kicker, .mdt-cross-band .cdp-media-lead { color: var(--cdp-green-ink); }
+.mdt-cross-band .cdp-media-tags li { border-color: rgba(66, 107, 22, .2); color: var(--cdp-green-ink); }
+.mdt-cross-band .cdp-media-visual > .cdp-wash { color: var(--cdp-green-wash); }
+.mdt-cross-band .cdp-media-visual figure { transform: rotate(-1.5deg); }
+
+/* ============ ENCADRÉ « UNE ACTIVITÉ À PARTAGER » ============ */
+.mdt-share {
+  display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 1.25rem; align-items: start;
+  max-width: 880px; margin-inline: auto; padding: clamp(1.4rem, 3vw, 2rem);
+  background: var(--cdp-card); border: 1px solid var(--cdp-line); border-radius: var(--cdp-r-lg); box-shadow: var(--cdp-shadow-soft);
+  border-left: 5px solid #F3D9D7;
+}
+.mdt-share-ico { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: #FBEDEC; color: var(--cdp-red); }
+.mdt-share-ico svg { width: 26px; height: 26px; }
+.mdt-main .mdt-share h2 { font-size: clamp(1.35rem, 2.4vw, 1.6rem); line-height: 1.2; font-weight: 600; }
+.mdt-main .mdt-share p { margin-top: .5rem; color: var(--cdp-text); line-height: 1.65; }
+
+/* ============ FICHE RESSOURCE ============ */
+.mdt-fiche-head .cdp-wrap { position: relative; }
+.mdt-main .mdt-fiche-head h1 { max-width: 22ch; }
+.mdt-main .mdt-fiche-lead { margin-top: 1rem; max-width: 62ch; font-size: 1.15rem; line-height: 1.6; }
+.mdt-badges { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.4rem 0 0; padding: 0; list-style: none; }
+.mdt-badges li {
+  display: inline-flex; align-items: center; gap: .4rem; padding: .35rem .85rem; border-radius: var(--cdp-r-pill);
+  background: var(--cdp-card); border: 1px solid var(--cdp-line); font-size: .86rem; font-weight: 700; color: var(--cdp-text); line-height: 1.35;
+}
+.mdt-badges svg { width: 16px; height: 16px; color: var(--ink-c); }
+.mdt-badges .mdt-badge--public { background: var(--cdp-green-soft); border-color: transparent; color: var(--cdp-green-ink); }
+.mdt-badges .mdt-badge--public svg { color: currentColor; }
+.mdt-badges .mdt-badge--familles { background: var(--mdt-lock-soft); border-color: var(--mdt-lock-line); color: var(--mdt-lock-ink); font-weight: 800; }
+.mdt-badges .mdt-badge--familles svg { color: currentColor; }
+.mdt-badges .mdt-badge--soon { background: var(--mdt-c-app-soft); border-color: transparent; color: var(--mdt-c-app-ink); font-weight: 800; }
+
+.mdt-fiche-grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: clamp(2rem, 4vw, 3.5rem); align-items: start; padding-bottom: clamp(3rem, 6vw, 5rem); }
+.mdt-fiche-main { min-width: 0; }
+.mdt-main .mdt-fiche-main > * + * { margin-top: clamp(2rem, 4vw, 2.75rem); }
+.mdt-main .mdt-fiche-section h2 { font-size: clamp(1.4rem, 2.5vw, 1.7rem); line-height: 1.2; letter-spacing: -.01em; }
+.mdt-fiche-section > ul, .mdt-fiche-section > ol { margin: 1rem 0 0; padding-left: 1.5rem; display: grid; gap: .6rem; line-height: 1.6; }
+.mdt-fiche-section > ul { list-style: none; }
+.mdt-fiche-section > ol { list-style: decimal; }
+.mdt-fiche-section > ol > li { padding-left: .25rem; }
+.mdt-fiche-section > ul > li { position: relative; }
+.mdt-fiche-section > ul > li::before { content: ""; position: absolute; left: -1.15rem; top: .68em; width: 7px; height: 7px; border-radius: 50%; background: var(--c); }
+.mdt-fiche-section > ol > li::marker { color: var(--ink-c); font-weight: 800; }
+.mdt-fiche-main .mdt-share { margin-inline: 0; max-width: none; }
+
+.mdt-apercu-vide {
+  position: relative; margin-top: 1rem; aspect-ratio: 16 / 10; border-radius: var(--cdp-r-lg); overflow: hidden;
+  background: var(--soft); border: 1px solid var(--cdp-line);
+}
+.mdt-mock--grand .mdt-sheet { width: 26%; }
+.mdt-main .mdt-apercu-vide > p {
+  position: absolute; left: 50%; bottom: 1rem; transform: translateX(-50%); width: max-content; max-width: calc(100% - 2rem);
+  padding: .4rem 1rem; border-radius: var(--cdp-r-pill); background: rgba(255, 255, 255, .92);
+  font-size: .86rem; font-weight: 700; color: var(--cdp-muted); text-align: center; line-height: 1.45;
+}
+.mdt-apercus { margin-top: 1rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; }
+.mdt-apercus img { display: block; width: 100%; height: auto; border-radius: var(--cdp-r-sm); border: 1px solid var(--cdp-line); box-shadow: var(--cdp-shadow-soft); background: #fff; }
+
+.mdt-main .mdt-securite { padding: 1rem 1.2rem; border-radius: 0 var(--cdp-r-md) var(--cdp-r-md) 0; background: var(--mdt-gold-soft); border-left: 4px solid var(--mdt-gold); font-size: .97rem; line-height: 1.6; }
+.mdt-securite strong { color: var(--cdp-ink); }
+.mdt-main .mdt-fiche-later { padding: 1.1rem 1.25rem; border: 1px dashed var(--cdp-line); border-radius: var(--cdp-r-md); color: var(--cdp-muted); font-size: .97rem; }
+
+.mdt-fiche-aside { position: sticky; top: 110px; min-width: 0; }
+.mdt-bref { padding: 1.5rem; background: var(--cdp-card); border: 1px solid var(--cdp-line); border-radius: var(--cdp-r-lg); box-shadow: var(--cdp-shadow-soft); }
+.mdt-main .mdt-bref h2 { font-size: 1.3rem; line-height: 1.2; font-weight: 600; }
+.mdt-bref dl { margin: 1rem 0 1.25rem; display: grid; }
+.mdt-bref dl > div { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .25rem 1rem; align-items: baseline; padding: .65rem 0; border-top: 1px dashed var(--cdp-line); }
+.mdt-bref dt { display: inline-flex; align-items: center; white-space: nowrap; gap: .45rem; font-size: .86rem; font-weight: 700; color: var(--cdp-muted); }
+.mdt-bref dt svg { width: 16px; height: 16px; color: var(--ink-c); align-self: center; }
+.mdt-bref dd { margin: 0; font-size: .92rem; font-weight: 800; color: var(--cdp-ink); text-align: right; }
+.mdt-bref dd a { color: var(--ink-c); text-decoration: underline; text-underline-offset: 3px; }
+
+.mdt-download { width: 100%; }
+.mdt-download svg { width: 20px; height: 20px; }
+.mdt-main .mdt-action-note { margin-top: .6rem; text-align: center; font-size: .84rem; color: var(--cdp-muted); }
+.mdt-action-soon, .mdt-action-lock { padding: 1.1rem 1.2rem; border-radius: var(--cdp-r-md); display: grid; gap: .55rem; font-size: .93rem; line-height: 1.55; }
+.mdt-action-soon { background: var(--mdt-c-app-soft); color: var(--cdp-text); }
+.mdt-action-lock { background: var(--mdt-lock-soft); border: 1px solid var(--mdt-lock-line); color: var(--cdp-text); }
+.mdt-main .mdt-action-title { display: flex; align-items: center; gap: .55rem; font-size: 1rem; font-weight: 800; }
+.mdt-action-soon .mdt-action-title { color: var(--mdt-c-app-ink); }
+.mdt-action-lock .mdt-action-title { color: var(--mdt-lock-ink); }
+.mdt-action-lock .mdt-action-title svg { width: 28px; height: 28px; padding: 5px; border-radius: 50%; background: var(--mdt-lock); color: var(--mdt-lock-ico); }
+.mdt-action-title svg { width: 20px; height: 20px; }
+.mdt-main .mdt-action-soon-line { display: flex; align-items: center; gap: .55rem; font-weight: 800; color: var(--mdt-c-app-ink); }
+.mdt-action-link { display: inline-flex; align-items: center; gap: .35rem; font-weight: 800; color: var(--mdt-lock-ink); text-decoration: underline; text-underline-offset: 3px; }
+.mdt-action-link svg { width: 16px; height: 16px; transition: transform .25s var(--cdp-ease); }
+.mdt-action-link:hover svg { transform: translateX(3px); }
+.mdt-action-lock .cdp-btn { margin-top: .25rem; }
+
+/* ============ RESPONSIVE (seuils du Coin des parents : 1024 / 820 / 600) ============ */
+@media (max-width: 1024px) {
+  .mdt-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mdt-fiche-grid { grid-template-columns: minmax(0, 1fr) 300px; }
+}
+@media (max-width: 820px) {
+  .mdt-tools-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .mdt-search { grid-column: 1 / -1; }
+  .mdt-fiche-grid { grid-template-columns: minmax(0, 1fr); }
+  .mdt-fiche-aside { position: static; order: -1; }   /* informations et accès juste sous le titre */
+}
+@media (max-width: 600px) {
+  .mdt-cards { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  /* Cartes horizontales : visuel à gauche, texte à droite */
+  .mdt-card { display: grid; grid-template-columns: 112px minmax(0, 1fr); }
+  .mdt-card-media { aspect-ratio: auto; min-height: 100%; }
+  .mdt-card-body { padding: .95rem 1rem 1rem; gap: .4rem; }
+  .mdt-main .mdt-card h3 { font-size: 1.05rem; }
+  .mdt-main .mdt-card-desc { display: none; }
+  .mdt-card .cdp-chip { font-size: .72rem; }
+  .mdt-sheet { width: 58%; }
+  .mdt-flag { top: auto; bottom: .5rem; left: .4rem; right: .4rem; padding: .2rem .35rem; font-size: .66rem; text-align: center; }
+  .mdt-lock-badge { top: .45rem; right: .45rem; width: 30px; height: 30px; }
+  .mdt-lock-badge svg { width: 15px; height: 15px; }
+  .mdt-tools-row { grid-template-columns: minmax(0, 1fr); gap: .6rem; }
+  .mdt-access--familles { font-size: .76rem; }
+  .mdt-share { grid-template-columns: minmax(0, 1fr); }
+  .mdt-share-ico { width: 48px; height: 48px; }
+  .mdt-apercu-vide { aspect-ratio: 4 / 3; }
+  .mdt-mock--grand .mdt-sheet { width: 36%; }
+  .mdt-main .mdt-apercu-vide > p { width: auto; left: 1rem; right: 1rem; transform: none; border-radius: var(--cdp-r-md); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mdt-card, .mdt-sheet { transition: none; }
+  .mdt-card:hover, .mdt-card:hover .mdt-sheet { transform: none; }
+}

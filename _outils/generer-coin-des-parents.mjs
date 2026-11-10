@@ -690,8 +690,12 @@ function genererSitemap() {
     else if (/<meta name="robots" content="[^"]*noindex/.test(readFileSync(f, 'utf8'))) echec(`sitemap : ${fichier} est en noindex`);
   }
   arreter();
+  // Médiathèque éducative : ses URL (mediatheque/sitemap.xml, absent en prévisualisation) restent dans le sitemap du site.
+  const sitemapMediatheque = join(RACINE, 'mediatheque-educative', 'sitemap.xml');
+  const urlsMediatheque = existsSync(sitemapMediatheque)
+    ? [...readFileSync(sitemapMediatheque, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]) : [];
   writeFileSync(chemin, xmlSitemap(urls), 'utf8');
-  writeFileSync(cheminSite, xmlSitemap([...PAGES_SITE.map(([, u]) => u), ...urls]), 'utf8');
+  writeFileSync(cheminSite, xmlSitemap([...PAGES_SITE.map(([, u]) => u), ...urls, ...urlsMediatheque]), 'utf8');
   return true;
 }
 

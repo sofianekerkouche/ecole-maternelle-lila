@@ -30,4 +30,4 @@ Un espace de conseils destiné aux parents francophones, avec une voix professio
 « Article rédigé par l'équipe de l'École Maternelle Lila. »
 
 ## Ligne finale
-« Grandir ensemble, pas à pas. » peut être utilisée comme signature de marque dans l'interface, sans être ajoutée mécaniquement à chaque article.
+« Grandir en confiance. » peut être utilisée comme signature de marque dans l'interface, sans être ajoutée mécaniquement à chaque article.

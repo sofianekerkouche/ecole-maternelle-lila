@@ -1,0 +1,525 @@
+{
+  "collection": "La Médiathèque éducative",
+  "signature": "Apprendre avec plaisir.",
+  "version": "0.1",
+  "_notes": [
+    "Source unique de la Médiathèque : les pages sont générées par _outils/generer-mediatheque.mjs.",
+    "acces : \"public\" (téléchargement libre) ou \"familles\" (réservé aux familles inscrites).",
+    "statut : \"a-venir\" (fiche visible, pas de téléchargement) ou \"disponible\".",
+    "fichier : uniquement pour une ressource publique disponible, chemin depuis la racine du site (ex. mediatheque-educative/fichiers/<slug>.pdf).",
+    "Une ressource \"familles\" ne doit JAMAIS avoir de champ fichier : ses PDF ne vont pas dans ce dépôt public (le générateur bloque).",
+    "apercus : liste d'images (chemins depuis la racine du site), vide tant que le document n'est pas finalisé.",
+    "Textes descriptifs : propositions à valider (a_valider: true) tant que la ressource n'est pas produite."
+  ],
+  "espace_familles_url": null,
+  "categories": [
+    {
+      "slug": "premiers-apprentissages",
+      "nom": "Premiers apprentissages",
+      "nom_court": "Premiers apprentissages",
+      "description": "Couleurs, formes, nombres, tracés et lettres : les premières notions, par le jeu.",
+      "intro": "Reconnaître les couleurs, nommer les formes, compter, tracer ses premières lignes, découvrir les lettres : ces ressources accompagnent les premières notions à la maison, par le jeu et la manipulation, au rythme de chaque enfant."
+    },
+    {
+      "slug": "activites-creatives",
+      "nom": "Activités créatives et manuelles",
+      "nom_court": "Activités créatives",
+      "description": "Coloriage, découpage, collage, modelage : créer avec ses mains et son imagination.",
+      "intro": "Colorier, découper, coller, modeler, dessiner : les activités manuelles développent la précision du geste, la concentration et l'imagination. Ces ressources proposent des créations simples, à réaliser ensemble avec du matériel facile à trouver."
+    },
+    {
+      "slug": "jeux-et-logique",
+      "nom": "Jeux et logique",
+      "nom_court": "Jeux et logique",
+      "description": "Mémoire, observation, suites logiques : de petits jeux pour réfléchir en s'amusant.",
+      "intro": "Retrouver des paires, observer des différences, continuer une suite, relever un petit défi : ces jeux à imprimer exercent la mémoire, l'attention et le raisonnement, sous une forme ludique à partager en famille."
+    },
+    {
+      "slug": "decouverte-du-monde",
+      "nom": "Découverte du monde",
+      "nom_court": "Découverte du monde",
+      "description": "Animaux, saisons, corps, sens et nature : observer le monde qui nous entoure.",
+      "intro": "Les animaux et leurs petits, le fil des saisons, le corps, les cinq sens, la nature : ces ressources nourrissent la curiosité des enfants et les invitent à observer, à questionner et à s'émerveiller."
+    },
+    {
+      "slug": "langues-eveil-linguistique",
+      "nom": "Langues et éveil linguistique",
+      "nom_court": "Langues",
+      "description": "Français, arabe, anglais : jouer avec les mots et découvrir d'autres langues.",
+      "intro": "Imagiers bilingues et trilingues, cartes et jeux de vocabulaire : ces ressources invitent à nommer le monde en français, en arabe et en anglais, et à jouer avec les mots en famille."
+    },
+    {
+      "slug": "vie-quotidienne-autonomie",
+      "nom": "Vie quotidienne et autonomie",
+      "nom_court": "Vie quotidienne",
+      "description": "Routines, émotions, habillage, hygiène : grandir et gagner en autonomie au quotidien.",
+      "intro": "Le matin, l'habillage, l'hygiène, les émotions, les petites tâches de la maison : ces supports en images aident les enfants à se repérer dans leur journée et à faire seuls, un petit pas après l'autre."
+    }
+  ],
+  "ressources": [
+    {
+      "numero": 1,
+      "slug": "a-la-decouverte-des-couleurs",
+      "titre": "À la découverte des couleurs",
+      "categorie": "premiers-apprentissages",
+      "age_min": 2,
+      "age_max": 3,
+      "acces": "public",
+      "statut": "a-venir",
+      "type": "Imagier",
+      "description": "Un imagier coloré pour nommer les couleurs et les retrouver autour de soi, à la maison comme dehors.",
+      "a_valider": true
+    },
+    {
+      "numero": 2,
+      "slug": "les-formes-geometriques-autour-de-nous",
+      "titre": "Les formes géométriques autour de nous",
+      "categorie": "premiers-apprentissages",
+      "age_min": 3,
+      "age_max": 4,
+      "acces": "public",
+      "statut": "a-venir",
+      "type": "Planches d'association",
+      "description": "Rond, carré, triangle, rectangle : reconnaître les formes simples dans les objets du quotidien.",
+      "a_valider": true
+    },
+    {
+      "numero": 3,
+      "slug": "je-decouvre-les-nombres-et-je-compte",
+      "titre": "Je découvre les nombres et je compte",
+      "categorie": "premiers-apprentissages",
+      "age_min": 3,
+      "age_max": 4,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Cartes illustrées",
+      "description": "Des cartes à manipuler pour associer les petites quantités aux nombres et compter ensemble.",
+      "a_valider": true
+    },
+    {
+      "numero": 4,
+      "slug": "mes-premiers-traces-lignes-et-formes",
+      "titre": "Mes premiers tracés : lignes et formes",
+      "categorie": "premiers-apprentissages",
+      "age_min": 3,
+      "age_max": 5,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Fiches de motricité fine",
+      "description": "Des lignes, des boucles et des formes à suivre du doigt puis au crayon, pour préparer la main au geste d'écriture.",
+      "a_valider": true
+    },
+    {
+      "numero": 5,
+      "slug": "mon-premier-abecedaire",
+      "titre": "Mon premier abécédaire",
+      "categorie": "premiers-apprentissages",
+      "age_min": 4,
+      "age_max": 6,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Livret illustré",
+      "description": "Une lettre, un mot, une image : un abécédaire illustré pour se familiariser avec les lettres et leurs sons.",
+      "a_valider": true
+    },
+    {
+      "numero": 6,
+      "slug": "mes-coloriages-des-animaux",
+      "titre": "Mes coloriages des animaux",
+      "categorie": "activites-creatives",
+      "age_min": 2,
+      "age_max": 4,
+      "acces": "public",
+      "statut": "a-venir",
+      "type": "Coloriages",
+      "description": "De grands dessins d'animaux aux contours épais, pensés pour les petites mains.",
+      "a_valider": true
+    },
+    {
+      "numero": 7,
+      "slug": "mes-premieres-creations-decoupage-et-collage",
+      "titre": "Mes premières créations : découpage et collage",
+      "categorie": "activites-creatives",
+      "age_min": 3,
+      "age_max": 4,
+      "acces": "public",
+      "statut": "a-venir",
+      "pilote": 3,
+      "type": "Livret d'activité illustré",
+      "description": "Créer un petit jardin à partir de formes simples à découper et à coller : fleurs, arbres, papillons, nuages et herbe.",
+      "objectifs": [
+        "Reconnaître et nommer des formes simples.",
+        "Exercer la précision du geste en découpant et en collant.",
+        "Composer une création personnelle à partir d'éléments donnés."
+      ],
+      "materiel": [
+        "Le livret imprimé.",
+        "Des ciseaux adaptés à l'âge de l'enfant.",
+        "De la colle non toxique.",
+        "Des crayons ou des feutres pour personnaliser le jardin."
+      ],
+      "contenu": [
+        "Une couverture.",
+        "La découverte des formes et du matériel.",
+        "Les éléments à découper.",
+        "Un fond de jardin à compléter.",
+        "Des idées pour personnaliser la création.",
+        "Des conseils pour accompagner l'enfant."
+      ],
+      "conseils": [
+        "Pour les plus jeunes, préparez ou découpez vous-même les formes si nécessaire.",
+        "Les ciseaux adaptés ne s'utilisent qu'avec une surveillance rapprochée.",
+        "Laissez l'enfant choisir où placer chaque élément : il n'y a pas de bon ou de mauvais jardin."
+      ],
+      "securite": "Activité à réaliser sous la surveillance d'un adulte : ciseaux adaptés à l'âge, colle non toxique.",
+      "a_valider": true
+    },
+    {
+      "numero": 8,
+      "slug": "petites-creations-au-fil-des-saisons",
+      "titre": "Petites créations au fil des saisons",
+      "categorie": "activites-creatives",
+      "age_min": 3,
+      "age_max": 6,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Guide d'activités créatives",
+      "description": "Des idées de bricolages pour chaque saison, avec des matériaux simples à trouver à la maison.",
+      "a_valider": true
+    },
+    {
+      "numero": 9,
+      "slug": "mon-atelier-de-pate-a-modeler",
+      "titre": "Mon atelier de pâte à modeler",
+      "categorie": "activites-creatives",
+      "age_min": 2,
+      "age_max": 5,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Cartes illustrées",
+      "description": "Des cartes modèles pour façonner des animaux, des fruits et des formes en pâte à modeler.",
+      "a_valider": true
+    },
+    {
+      "numero": 10,
+      "slug": "mon-carnet-de-dessin-et-d-imagination",
+      "titre": "Mon carnet de dessin et d'imagination",
+      "categorie": "activites-creatives",
+      "age_min": 3,
+      "age_max": 6,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Livret illustré",
+      "description": "Des pages à compléter pour dessiner, imaginer et inventer ses propres histoires.",
+      "a_valider": true
+    },
+    {
+      "numero": 11,
+      "slug": "ou-vivent-les-animaux",
+      "titre": "Où vivent les animaux ?",
+      "categorie": "jeux-et-logique",
+      "age_min": 3,
+      "age_max": 4,
+      "acces": "public",
+      "statut": "a-venir",
+      "type": "Planches d'association",
+      "description": "Associer chaque animal à son milieu de vie : la ferme, la forêt, la mer ou la savane.",
+      "a_valider": true
+    },
+    {
+      "numero": 12,
+      "slug": "mon-premier-jeu-de-memoire",
+      "titre": "Mon premier jeu de mémoire",
+      "categorie": "jeux-et-logique",
+      "age_min": 3,
+      "age_max": 5,
+      "acces": "public",
+      "statut": "a-venir",
+      "pilote": 2,
+      "type": "Jeu de cartes à découper",
+      "description": "Seize cartes illustrées, soit huit paires, à découper pour jouer en famille, avec des variantes selon l'âge.",
+      "objectifs": [
+        "Exercer la mémoire et l'attention.",
+        "Observer et reconnaître des images identiques.",
+        "Apprendre à attendre son tour et à respecter une règle de jeu."
+      ],
+      "materiel": [
+        "Le document imprimé, de préférence sur papier épais.",
+        "Des ciseaux (découpage par l'adulte)."
+      ],
+      "contenu": [
+        "Une couverture.",
+        "Deux planches de cartes à découper.",
+        "Les règles du jeu pour les parents.",
+        "Des variantes pour simplifier ou complexifier le jeu."
+      ],
+      "conseils": [
+        "Commencez avec trois ou quatre paires pour les plus jeunes, puis ajoutez des cartes au fil des parties.",
+        "Nommez les images en les retournant : le jeu devient aussi un moment de langage.",
+        "Valorisez les essais plus que les victoires."
+      ],
+      "securite": "Cartes découpées par un adulte. Surveillez les plus jeunes, qui peuvent porter les cartes à la bouche.",
+      "a_valider": true
+    },
+    {
+      "numero": 13,
+      "slug": "je-continue-les-suites-logiques",
+      "titre": "Je continue les suites logiques",
+      "categorie": "jeux-et-logique",
+      "age_min": 4,
+      "age_max": 6,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Jeu à découper",
+      "description": "Observer une suite de couleurs, de formes ou d'images, puis trouver ce qui vient ensuite.",
+      "a_valider": true
+    },
+    {
+      "numero": 14,
+      "slug": "le-jeu-des-differences",
+      "titre": "Le jeu des différences",
+      "categorie": "jeux-et-logique",
+      "age_min": 4,
+      "age_max": 6,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Planches d'observation",
+      "description": "Deux images presque identiques : à l'enfant de repérer ce qui a changé.",
+      "a_valider": true
+    },
+    {
+      "numero": 15,
+      "slug": "mes-petits-defis-de-logique",
+      "titre": "Mes petits défis de logique",
+      "categorie": "jeux-et-logique",
+      "age_min": 4,
+      "age_max": 6,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Livret de jeux",
+      "description": "Labyrinthes, intrus, classements : de petits défis progressifs pour exercer la réflexion.",
+      "a_valider": true
+    },
+    {
+      "numero": 16,
+      "slug": "les-animaux-et-leurs-petits",
+      "titre": "Les animaux et leurs petits",
+      "categorie": "decouverte-du-monde",
+      "age_min": 2,
+      "age_max": 4,
+      "acces": "public",
+      "statut": "a-venir",
+      "type": "Imagier",
+      "description": "La chatte et son chaton, la vache et son veau : un imagier pour découvrir les animaux et leurs petits.",
+      "a_valider": true
+    },
+    {
+      "numero": 17,
+      "slug": "a-la-decouverte-des-quatre-saisons",
+      "titre": "À la découverte des quatre saisons",
+      "categorie": "decouverte-du-monde",
+      "age_min": 3,
+      "age_max": 5,
+      "acces": "public",
+      "statut": "a-venir",
+      "type": "Livret illustré",
+      "description": "Le temps qu'il fait, les vêtements, la nature qui change : les quatre saisons racontées en images.",
+      "a_valider": true
+    },
+    {
+      "numero": 18,
+      "slug": "mon-corps-apprendre-a-se-connaitre",
+      "titre": "Mon corps : apprendre à se connaître",
+      "categorie": "decouverte-du-monde",
+      "age_min": 3,
+      "age_max": 6,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Livret illustré",
+      "description": "Nommer les parties du corps et découvrir tout ce qu'elles nous permettent de faire.",
+      "a_valider": true
+    },
+    {
+      "numero": 19,
+      "slug": "les-cinq-sens-petites-experiences-a-partager",
+      "titre": "Les cinq sens : petites expériences à partager",
+      "categorie": "decouverte-du-monde",
+      "age_min": 3,
+      "age_max": 6,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Guide d'activités",
+      "description": "Toucher, goûter, sentir, écouter, regarder : de petites expériences sensorielles à vivre ensemble.",
+      "a_valider": true
+    },
+    {
+      "numero": 20,
+      "slug": "j-explore-la-nature-et-l-environnement",
+      "titre": "J'explore la nature et l'environnement",
+      "categorie": "decouverte-du-monde",
+      "age_min": 4,
+      "age_max": 6,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Livret d'activité",
+      "description": "Observer les plantes, les insectes et les arbres, et apprendre à prendre soin de la nature.",
+      "a_valider": true
+    },
+    {
+      "numero": 21,
+      "slug": "les-animaux-en-francais-et-en-arabe",
+      "titre": "Les animaux en français et en arabe",
+      "categorie": "langues-eveil-linguistique",
+      "age_min": 2,
+      "age_max": 5,
+      "acces": "public",
+      "statut": "a-venir",
+      "pilote": 1,
+      "a_la_une": true,
+      "type": "Imagier bilingue illustré",
+      "langues": ["Français", "Arabe standard"],
+      "description": "Dix animaux familiers à nommer en français et en arabe standard, avec deux petits jeux de reconnaissance à partager.",
+      "objectifs": [
+        "Découvrir le nom de dix animaux familiers en français et en arabe standard.",
+        "Associer un mot entendu à son illustration.",
+        "Écouter, répéter et prendre plaisir à jouer avec deux langues."
+      ],
+      "materiel": [
+        "Le document imprimé, ou affiché sur un écran."
+      ],
+      "contenu": [
+        "Une couverture.",
+        "Deux planches de cinq animaux : chat, chien, cheval, vache, mouton, lion, éléphant, lapin, oiseau, poisson.",
+        "Le jeu « Je montre et je reconnais ».",
+        "Le jeu « Je joue avec les mots ».",
+        "Des conseils aux parents."
+      ],
+      "conseils": [
+        "Prononcez le nom d'un animal dans une langue, puis dans l'autre.",
+        "Invitez votre enfant à montrer l'illustration correspondante.",
+        "Accompagnez-le sans pression : l'important est de jouer ensemble, pas de tout retenir."
+      ],
+      "a_valider": true
+    },
+    {
+      "numero": 22,
+      "slug": "les-objets-de-la-maison-en-francais-et-en-anglais",
+      "titre": "Les objets de la maison en français et en anglais",
+      "categorie": "langues-eveil-linguistique",
+      "age_min": 3,
+      "age_max": 5,
+      "acces": "public",
+      "statut": "a-venir",
+      "type": "Imagier bilingue",
+      "langues": ["Français", "Anglais"],
+      "description": "Les objets du quotidien à nommer en français et en anglais, pièce par pièce.",
+      "a_valider": true
+    },
+    {
+      "numero": 23,
+      "slug": "mon-imagier-trilingue",
+      "titre": "Mon imagier trilingue",
+      "categorie": "langues-eveil-linguistique",
+      "age_min": 3,
+      "age_max": 6,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Imagier trilingue",
+      "langues": ["Français", "Arabe standard", "Anglais"],
+      "description": "Un imagier en français, en arabe et en anglais pour enrichir le vocabulaire dans trois langues.",
+      "a_valider": true
+    },
+    {
+      "numero": 24,
+      "slug": "les-couleurs-et-les-nombres-en-trois-langues",
+      "titre": "Les couleurs et les nombres en trois langues",
+      "categorie": "langues-eveil-linguistique",
+      "age_min": 3,
+      "age_max": 6,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Cartes illustrées",
+      "langues": ["Français", "Arabe standard", "Anglais"],
+      "description": "Les couleurs et les premiers nombres en français, en arabe et en anglais.",
+      "a_valider": true
+    },
+    {
+      "numero": 25,
+      "slug": "jeux-de-vocabulaire-et-d-association",
+      "titre": "Jeux de vocabulaire et d'association",
+      "categorie": "langues-eveil-linguistique",
+      "age_min": 4,
+      "age_max": 6,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Cartes de jeu",
+      "description": "Des jeux de cartes pour associer les mots et les images, et enrichir son vocabulaire en s'amusant.",
+      "a_valider": true
+    },
+    {
+      "numero": 26,
+      "slug": "ma-routine-du-matin-en-images",
+      "titre": "Ma routine du matin en images",
+      "categorie": "vie-quotidienne-autonomie",
+      "age_min": 2,
+      "age_max": 4,
+      "acces": "public",
+      "statut": "a-venir",
+      "type": "Support de routine",
+      "description": "Se lever, se laver, s'habiller, prendre son petit-déjeuner : les étapes du matin en images, à afficher à hauteur d'enfant.",
+      "a_valider": true
+    },
+    {
+      "numero": 27,
+      "slug": "je-reconnais-et-j-exprime-mes-emotions",
+      "titre": "Je reconnais et j'exprime mes émotions",
+      "categorie": "vie-quotidienne-autonomie",
+      "age_min": 3,
+      "age_max": 5,
+      "acces": "public",
+      "statut": "a-venir",
+      "type": "Cartes illustrées",
+      "description": "Joie, tristesse, colère, peur : des cartes pour reconnaître les émotions et apprendre à les dire.",
+      "a_valider": true
+    },
+    {
+      "numero": 28,
+      "slug": "je-m-habille-tout-seul-les-petits-gestes",
+      "titre": "Je m'habille tout seul : les petits gestes",
+      "categorie": "vie-quotidienne-autonomie",
+      "age_min": 2,
+      "age_max": 5,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Tableau visuel",
+      "description": "Les étapes pour s'habiller seul, illustrées pas à pas, pour encourager l'autonomie.",
+      "a_valider": true
+    },
+    {
+      "numero": 29,
+      "slug": "les-bons-gestes-pour-prendre-soin-de-moi",
+      "titre": "Les bons gestes pour prendre soin de moi",
+      "categorie": "vie-quotidienne-autonomie",
+      "age_min": 2,
+      "age_max": 5,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Supports de routines",
+      "description": "Se laver les mains, se brosser les dents, se moucher : les gestes d'hygiène en images.",
+      "a_valider": true
+    },
+    {
+      "numero": 30,
+      "slug": "mes-petites-responsabilites-au-quotidien",
+      "titre": "Mes petites responsabilités au quotidien",
+      "categorie": "vie-quotidienne-autonomie",
+      "age_min": 3,
+      "age_max": 6,
+      "acces": "familles",
+      "statut": "a-venir",
+      "type": "Tableau visuel",
+      "description": "Mettre la table, ranger ses jouets, arroser une plante : un tableau pour valoriser les petites tâches de la maison.",
+      "a_valider": true
+    }
+  ]
+}

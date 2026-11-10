@@ -292,6 +292,7 @@ body.cdp [data-categorie="vie-a-l-ecole"]         { --c: var(--cdp-c-eco-deco); 
 @keyframes cdpPulse { 0% { box-shadow: 0 0 0 0 rgba(45, 175, 192, .45); } 70% { box-shadow: 0 0 0 10px rgba(45, 175, 192, 0); } 100% { box-shadow: 0 0 0 0 rgba(45, 175, 192, 0); } }
 .cdp-main .cdp-media-lead { margin-top: 1.25rem; font-size: .92rem; font-weight: 700; color: var(--cdp-c-eve-ink); }
 .cdp-media-lead + .cdp-media-tags { margin-top: .6rem; }
+.cdp-main .cdp-media-actions { margin-top: 1.75rem; }
 /* Visuel décoratif de la future rubrique (même traitement que le visuel du bloc « Engagement ») */
 .cdp-media-visual { position: relative; min-width: 0; justify-self: center; width: min(100%, 480px); }
 .cdp-media-visual > .cdp-wash { color: var(--cdp-turquoise-brand); width: 70%; left: -12%; bottom: -14%; }

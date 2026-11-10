@@ -85,6 +85,14 @@
 .nav-desktop .nav-ressources-item[aria-current="page"] { background: var(--res-green-soft); }
 .nav-ressources-item[aria-current="page"] strong { color: var(--res-green-ink); }
 .nav-ressources-item[aria-current="page"] .nav-ressources-ico.is-parents { background: var(--res-card); }
+/* Rubrique en cours : Médiathèque éducative (turquoise) */
+.nav-desktop .nav-ressources-item.is-media-current[aria-current="page"] { background: var(--res-turq-soft); }
+.nav-ressources-item.is-media-current[aria-current="page"] strong,
+.nav-ressources-item.is-media-current .nav-ressources-here { color: var(--res-turq-ink); }
+.nav-ressources-item.is-media-current .nav-ressources-here::before { background: var(--res-turq-ink); }
+.nav-ressources-item[aria-current="page"] .nav-ressources-ico.is-media { background: var(--res-card); }
+.mobile-links .mobile-ressources a.is-media-current[aria-current="page"] { background: var(--res-turq-soft); color: var(--res-turq-ink); }
+.mobile-links .mobile-ressources a.is-media-current .nav-ressources-here { color: var(--res-turq-ink); }
 .nav-ressources-here {
   display: inline-flex; align-items: center; gap: .3rem; margin-top: .3rem;
   font-size: .72rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: var(--res-green-ink);
