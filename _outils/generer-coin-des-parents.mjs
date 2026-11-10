@@ -9,7 +9,7 @@
  *   - coin-des-parents/index.html                 (accueil, modèle _outils/modeles/accueil.html)
  *   - coin-des-parents/<categorie>/index.html     (6 pages catégories)
  *   - coin-des-parents/articles/<slug>.html       (17 pages articles)
- *   - coin-des-parents/sitemap.xml                (uniquement hors prévisualisation)
+ *   - sitemap.xml (site entier) et coin-des-parents/sitemap.xml (uniquement hors prévisualisation)
  * Aucune dépendance : Node.js 18 ou plus suffit. Le site publié reste
  * 100 % HTML statique ; ce script ne s'exécute jamais sur le serveur.
  *
@@ -122,6 +122,7 @@ for (const a of manifeste.articles) {
   // Visuel : nommé exactement d'après le slug, original et variante -800 présents, texte alternatif renseigné.
   if (a.image !== `assets/images/coin-des-parents/${a.slug}.webp`) echec(`${a.slug} : champ "image" absent ou ne correspondant pas au slug (${a.image})`);
   else for (const f of [a.image, a.image.replace(/\.webp$/, '-800.webp')]) if (!existsSync(join(RACINE, f))) echec(`${a.slug} : fichier image manquant ${f}`);
+  if (!existsSync(join(RACINE, 'assets/images/coin-des-parents/partage', a.slug + '.jpg'))) echec(`${a.slug} : image de partage manquante (assets/images/coin-des-parents/partage/${a.slug}.jpg)`);
   if (!a.image_alt || !a.image_alt.trim()) echec(`${a.slug} : texte alternatif "image_alt" manquant`);
 }
 const aLaUne = manifeste.articles.filter((a) => a.featured === true);
@@ -236,7 +237,10 @@ function profondeur2(html) {
     .replace(/ <\/a><\/li>/g, '</a></li>');
 }
 
-function tete({ titre, description, canonique, typeOg, ld }) {
+/* Image de partage par défaut (pages thématiques) ; chaque article a la sienne, tirée de son illustration. */
+const PARTAGE_ECOLE = { url: IMAGE_PARTAGE, largeur: 1200, hauteur: 675, alt: 'École Maternelle Lila : enfants, établissement et identité visuelle de l’école' };
+const imagePartage = (fichier, alt) => ({ url: `${URL_PRODUCTION}assets/images/coin-des-parents/partage/${fichier}.jpg`, largeur: 1200, hauteur: 630, alt });
+function tete({ titre, description, canonique, typeOg, ld, partage = PARTAGE_ECOLE }) {
   return `<!DOCTYPE html>
 <!-- Fichier généré par _outils/generer-coin-des-parents.mjs à partir de manifest.json et des sources éditoriales. Ne pas modifier directement. -->
 <html lang="fr">
@@ -255,13 +259,14 @@ function tete({ titre, description, canonique, typeOg, ld }) {
   <meta property="og:url" content="${canonique}">
   <meta property="og:title" content="${echapper(titre)}">
   <meta property="og:description" content="${echapper(description)}">
-  <meta property="og:image" content="${IMAGE_PARTAGE}">
+  <meta property="og:image" content="${partage.url}">
   <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="675">
-  <meta property="og:image:alt" content="École Maternelle Lila : enfants, établissement et identité visuelle de l’école">
+  <meta property="og:image:width" content="${partage.largeur}">
+  <meta property="og:image:height" content="${partage.hauteur}">
+  <meta property="og:image:alt" content="${echapper(partage.alt)}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="${IMAGE_PARTAGE}">
+  <meta name="twitter:image" content="${partage.url}">
+  <meta name="twitter:image:alt" content="${echapper(partage.alt)}">
 
   <link rel="icon" type="image/svg+xml" href="../../assets/images/Logo-principal-Ecole-Maternelle-Lila.svg">
 
@@ -467,7 +472,7 @@ function genererArticle(a) {
         inLanguage: 'fr',
         url,
         mainEntityOfPage: url,
-        image: IMAGE_PARTAGE,
+        image: [URL_PRODUCTION + a.image, imagePartage(a.slug, a.image_alt).url], // illustration 16:9 et image de partage
         articleSection: c.name,
         keywords: a.keyword,
         wordCount: a._lecture.mots,
@@ -489,6 +494,7 @@ function genererArticle(a) {
     canonique: url,
     typeOg: 'article',
     ld,
+    partage: imagePartage(a.slug, a.image_alt),
   })}
   <main class="cdp-main cdp-article-page" id="contenu" data-cdp-manifeste="../manifest.json" data-cdp-rubrique="../">
 
@@ -644,12 +650,31 @@ ${pied()}`;
   writeFileSync(join(DOSSIER_RUBRIQUE, c.slug, 'index.html'), page, 'utf8');
 }
 
-/* ---------- 4. Sitemap de la rubrique (hors prévisualisation) ---------- */
+/* ---------- 4. Sitemaps (hors prévisualisation) ----------
+   - sitemap.xml à la racine : site entier (pages principales indexables + rubrique), déclaré dans robots.txt ;
+   - coin-des-parents/sitemap.xml : rubrique seule.
+   Pages principales du site (écrites à la main) : fichier → URL publique. La page 404 (noindex) n'y figure pas. */
+const PAGES_SITE = [
+  ['index.html', URL_PRODUCTION],
+  ['faq.html', URL_PRODUCTION + 'faq.html'],
+  ['partenariat.html', URL_PRODUCTION + 'partenariat.html'],
+  ['mentions-legales.html', URL_PRODUCTION + 'mentions-legales.html'],
+  ['politique-confidentialite.html', URL_PRODUCTION + 'politique-confidentialite.html'],
+];
+const xmlSitemap = (urls) => `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${u}</loc></url>`).join('\n')}\n</urlset>\n`;
 function genererSitemap() {
   const chemin = join(DOSSIER_RUBRIQUE, 'sitemap.xml');
-  if (PREVISUALISATION) { if (existsSync(chemin)) rmSync(chemin); return false; }
+  const cheminSite = join(RACINE, 'sitemap.xml');
+  if (PREVISUALISATION) { for (const c of [chemin, cheminSite]) if (existsSync(c)) rmSync(c); return false; }
   const urls = [URL_RUBRIQUE, ...manifeste.categories.map(urlProdCategorie), ...manifeste.articles.map(urlProdArticle)];
-  writeFileSync(chemin, `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${u}</loc></url>`).join('\n')}\n</urlset>\n`, 'utf8');
+  for (const [fichier] of PAGES_SITE) {
+    const f = join(RACINE, fichier);
+    if (!existsSync(f)) echec(`sitemap : page du site introuvable (${fichier})`);
+    else if (/<meta name="robots" content="[^"]*noindex/.test(readFileSync(f, 'utf8'))) echec(`sitemap : ${fichier} est en noindex`);
+  }
+  arreter();
+  writeFileSync(chemin, xmlSitemap(urls), 'utf8');
+  writeFileSync(cheminSite, xmlSitemap([...PAGES_SITE.map(([, u]) => u), ...urls]), 'utf8');
   return true;
 }
 
@@ -679,4 +704,4 @@ for (const c of manifeste.categories) {
 const nbLiens = [...tousLesLiens.values()].reduce((n, l) => n + l.filter((x) => !/^https?:/.test(x.cible)).length, 0);
 console.log(`Maillage : ${nbLiens} liens internes dans les textes ; liens entrants par article : min ${Math.min(...[...entrants.values()].map((s) => s.size))}, max ${Math.max(...[...entrants.values()].map((s) => s.size))}`);
 avertissements.forEach((w) => console.warn('  ⚠ ' + w));
-if (sitemap) console.log('coin-des-parents/sitemap.xml généré');
+if (sitemap) console.log('sitemap.xml (site entier) et coin-des-parents/sitemap.xml générés');
