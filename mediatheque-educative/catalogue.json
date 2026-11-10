@@ -65,10 +65,45 @@
       "age_min": 2,
       "age_max": 3,
       "acces": "public",
-      "statut": "a-venir",
+      "statut": "disponible",
       "type": "Imagier",
-      "description": "Un imagier coloré pour nommer les couleurs et les retrouver autour de soi, à la maison comme dehors.",
-      "a_valider": true
+      "description": "Un imagier pour découvrir six couleurs avec des objets familiers, un jeu pour relier chaque objet à sa couleur et une chasse aux couleurs à faire à la maison.",
+      "objectifs": [
+        "Découvrir et nommer six couleurs : rouge, jaune, bleu, vert, orange, violet.",
+        "Associer une couleur à des objets familiers.",
+        "Observer son environnement et y retrouver les couleurs."
+      ],
+      "materiel": [
+        "Le document imprimé en couleur, sur papier A4.",
+        "Des crayons de couleur pour le jeu.",
+        "Facultatif : de la colle et des images découpées pour la chasse aux couleurs."
+      ],
+      "contenu": [
+        "Une couverture.",
+        "Planche 1 : rouge, jaune, bleu, chacun avec deux objets.",
+        "Planche 2 : vert, orange, violet.",
+        "Le jeu « Je relie à la bonne couleur », et trois autres jeux de couleurs.",
+        "« Ma chasse aux couleurs » : dessiner ou coller un objet de chaque couleur trouvé à la maison.",
+        "Un guide pour accompagner votre enfant."
+      ],
+      "conseils": [
+        "Commencez par une ou deux couleurs, puis ajoutez-en d'autres au fil des jours.",
+        "Nommez les couleurs au fil de la journée : au repas, au bain, en promenade.",
+        "Montrez et nommez d'abord, demandez ensuite de montrer : l'enfant nommera lui-même les couleurs plus tard.",
+        "Préférez les jeux aux questions répétées."
+      ],
+      "duree": "Quelques minutes, à reprendre souvent",
+      "fichier": "mediatheque-educative/fichiers/a-la-decouverte-des-couleurs.pdf",
+      "pages": 6,
+      "apercus": [
+        "mediatheque-educative/apercus/a-la-decouverte-des-couleurs-1.webp",
+        "mediatheque-educative/apercus/a-la-decouverte-des-couleurs-2.webp",
+        "mediatheque-educative/apercus/a-la-decouverte-des-couleurs-3.webp",
+        "mediatheque-educative/apercus/a-la-decouverte-des-couleurs-4.webp",
+        "mediatheque-educative/apercus/a-la-decouverte-des-couleurs-5.webp",
+        "mediatheque-educative/apercus/a-la-decouverte-des-couleurs-6.webp"
+      ],
+      "publie_le": "2026-11-10"
     },
     {
       "numero": 2,
@@ -132,8 +167,29 @@
       "acces": "public",
       "statut": "a-venir",
       "type": "Coloriages",
-      "description": "De grands dessins d'animaux aux contours épais, pensés pour les petites mains.",
-      "a_valider": true
+      "description": "Six grands dessins d'animaux aux contours épais, pensés pour les petites mains, avec un espace pour dessiner le décor et un petit modèle en couleur.",
+      "objectifs": [
+        "Exercer le geste et la tenue du crayon.",
+        "Choisir et nommer des couleurs.",
+        "Imaginer et dessiner un décor autour de l'animal."
+      ],
+      "materiel": [
+        "Le document imprimé sur papier A4 : les dessins s'impriment en noir et blanc.",
+        "De gros crayons de couleur ou des craies grasses."
+      ],
+      "contenu": [
+        "Une couverture.",
+        "Six coloriages : le chat, le chien, le lapin, le poisson, l'éléphant et le lion.",
+        "Un guide pour accompagner votre enfant."
+      ],
+      "conseils": [
+        "Laissez votre enfant choisir ses couleurs : le modèle n'est qu'une idée.",
+        "Les plus jeunes colorient en grands traits qui dépassent : c'est normal.",
+        "Parlez du dessin avec lui : le coloriage devient aussi un moment de langage.",
+        "Proposez une page à la fois et affichez les coloriages terminés."
+      ],
+      "duree": "Environ 10 minutes par coloriage",
+      "securite": "Surveillez les plus jeunes, qui peuvent porter les crayons à la bouche."
     },
     {
       "numero": 7,
@@ -518,8 +574,32 @@
       "acces": "public",
       "statut": "a-venir",
       "type": "Support de routine",
-      "description": "Se lever, se laver, s'habiller, prendre son petit-déjeuner : les étapes du matin en images, à afficher à hauteur d'enfant.",
-      "a_valider": true
+      "description": "Les étapes du matin en images, du réveil aux chaussures : une affiche à placer à hauteur d'enfant, des cartes à découper et un tableau de la semaine.",
+      "objectifs": [
+        "Se repérer dans les étapes du matin.",
+        "Gagner en autonomie dans les gestes du quotidien.",
+        "Anticiper ce qui va se passer grâce à une routine régulière."
+      ],
+      "materiel": [
+        "Le document imprimé sur papier A4, de préférence un peu épais.",
+        "Des ciseaux pour l'adulte qui découpe les cartes.",
+        "Des crayons pour le tableau de la semaine.",
+        "Facultatif : de la pâte adhésive pour afficher l'affiche ou les cartes."
+      ],
+      "contenu": [
+        "Une couverture.",
+        "L'affiche « Le matin, je… » : sept étapes, du réveil aux chaussures.",
+        "Les cartes à découper, avec deux cartes libres pour vos propres étapes.",
+        "Mon tableau du matin : un rond à colorier pour chaque étape, chaque jour de la semaine.",
+        "Un guide pour accompagner votre enfant."
+      ],
+      "conseils": [
+        "Gardez le même ordre chaque matin, en l'adaptant à votre famille.",
+        "Montrez l'image de l'étape suivante plutôt que de répéter les consignes.",
+        "Laissez votre enfant faire seul ce qu'il peut, même si c'est plus long.",
+        "Le tableau de la semaine est un repère, ni une note ni une obligation."
+      ],
+      "duree": "Chaque matin, quelques minutes"
     },
     {
       "numero": 27,
