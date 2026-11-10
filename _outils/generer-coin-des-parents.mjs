@@ -32,7 +32,6 @@ const DOSSIER_EDITORIAL = join(RACINE, '_editorial', 'coin-des-parents');
 const MODELES = join(RACINE, '_outils', 'modeles');
 const URL_PRODUCTION = 'https://ecolematernellelila.com/';
 const URL_RUBRIQUE = URL_PRODUCTION + 'coin-des-parents/';
-const IMAGE_PARTAGE = URL_PRODUCTION + 'assets/images/og-ecole-maternelle-lila.jpg';
 const ROBOTS = PREVISUALISATION ? 'noindex,follow' : 'index,follow';
 const MOTS_PAR_MINUTE = 200;
 const ECOLE = { '@type': 'Organization', name: 'École Maternelle Lila', url: URL_PRODUCTION };
@@ -237,10 +236,12 @@ function profondeur2(html) {
     .replace(/ <\/a><\/li>/g, '</a></li>');
 }
 
-/* Image de partage par défaut (pages thématiques) ; chaque article a la sienne, tirée de son illustration. */
-const PARTAGE_ECOLE = { url: IMAGE_PARTAGE, largeur: 1200, hauteur: 675, alt: 'École Maternelle Lila : enfants, établissement et identité visuelle de l’école' };
+/* Images de partage (JPEG 1200 × 630, assets/images/coin-des-parents/partage/) : chaque article a la sienne, tirée
+   de son illustration ; les pages thématiques reprennent celle de la rubrique (même visuel que l'accueil de la rubrique). */
 const imagePartage = (fichier, alt) => ({ url: `${URL_PRODUCTION}assets/images/coin-des-parents/partage/${fichier}.jpg`, largeur: 1200, hauteur: 630, alt });
-function tete({ titre, description, canonique, typeOg, ld, partage = PARTAGE_ECOLE }) {
+const PARTAGE_RUBRIQUE = imagePartage('coin-des-parents', 'Une maman et sa fille lisent ensemble un album illustré, toutes deux souriantes');
+if (!existsSync(join(RACINE, 'assets/images/coin-des-parents/partage/coin-des-parents.jpg'))) echec('image de partage de la rubrique manquante (partage/coin-des-parents.jpg)');
+function tete({ titre, description, canonique, typeOg, ld, partage = PARTAGE_RUBRIQUE }) {
   return `<!DOCTYPE html>
 <!-- Fichier généré par _outils/generer-coin-des-parents.mjs à partir de manifest.json et des sources éditoriales. Ne pas modifier directement. -->
 <html lang="fr">
