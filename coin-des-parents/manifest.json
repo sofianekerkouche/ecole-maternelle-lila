@@ -1,0 +1,599 @@
+{
+  "collection": "Le Coin des parents",
+  "version": "1.1",
+  "total_articles": 17,
+  "categories": [
+    {
+      "slug": "developpement-enfant",
+      "name": "Développement de l'enfant",
+      "short_name": "Développement",
+      "description": "Jeu, motricité, grandes étapes : comprendre comment votre enfant grandit de 15 mois à 6 ans.",
+      "intro": "Entre 15 mois et 6 ans, l'enfant change très vite : il bouge, explore, joue et gagne peu à peu en autonomie. Ces articles proposent des repères pour comprendre ces grandes étapes et des idées simples pour les accompagner au quotidien. Chaque enfant avance à son rythme : les repères d'âge restent indicatifs.",
+      "count": 3
+    },
+    {
+      "slug": "emotions-comportement",
+      "name": "Émotions et comportement",
+      "short_name": "Émotions",
+      "description": "Séparation, colères, émotions : comprendre ce que vit votre enfant.",
+      "intro": "Pleurs au moment de la séparation, colères, émotions difficiles à nommer : les jeunes enfants vivent des émotions intenses qu'ils apprennent progressivement à reconnaître. Ces articles vous aident à comprendre ce qu'ils traversent et à les accompagner avec calme et bienveillance.",
+      "count": 3
+    },
+    {
+      "slug": "eveil-apprentissage",
+      "name": "Éveil et apprentissage",
+      "short_name": "Éveil et apprentissage",
+      "description": "Langage, lecture, premières notions : nourrir sa curiosité au quotidien.",
+      "intro": "Le langage, la curiosité et les premières notions se construisent d'abord dans les échanges, les jeux et les histoires partagées. Retrouvez ici des idées simples pour nourrir l'éveil de votre enfant à la maison, sans pression et en prenant plaisir ensemble.",
+      "count": 3
+    },
+    {
+      "slug": "vie-quotidienne",
+      "name": "Vie quotidienne",
+      "short_name": "Vie quotidienne",
+      "description": "Propreté, coucher, repas : des repères pour les journées.",
+      "intro": "Propreté, coucher, repas : les moments du quotidien rythment la journée des jeunes enfants et peuvent parfois devenir sources de tension. Ces articles proposent des repères concrets pour les aborder plus sereinement, à votre rythme et à celui de votre enfant.",
+      "count": 3
+    },
+    {
+      "slug": "parentalite",
+      "name": "Parentalité",
+      "short_name": "Parentalité",
+      "description": "Autonomie, limites, encouragements : trouver son équilibre au quotidien.",
+      "intro": "Encourager l'autonomie, poser des limites, valoriser les efforts : accompagner un jeune enfant demande de trouver chaque jour un équilibre entre cadre et bienveillance. Ces articles partagent des pistes pour avancer pas à pas, sans recherche de perfection.",
+      "count": 3
+    },
+    {
+      "slug": "vie-a-l-ecole",
+      "name": "Vie à l'école",
+      "short_name": "Vie à l'école",
+      "description": "Première rentrée, vie en collectivité : l'école racontée aux parents.",
+      "intro": "La première rentrée en crèche ou en maternelle, puis la découverte de la vie en groupe, sont des étapes importantes pour l'enfant comme pour ses parents. Ces articles vous aident à les préparer et à les vivre plus sereinement.",
+      "count": 2
+    }
+  ],
+  "articles": [
+    {
+      "number": "01",
+      "title": "Pourquoi le jeu est-il indispensable au développement de l’enfant ?",
+      "slug": "importance-jeu-developpement-enfant",
+      "category": "developpement-enfant",
+      "keyword": "importance du jeu chez l’enfant",
+      "meta_description": "Découvrez pourquoi le jeu est indispensable au développement de l’enfant : motricité, langage, imagination, émotions et relations avec les autres.",
+      "file": "articles/01-importance-jeu-developpement-enfant.md",
+      "image": "assets/images/coin-des-parents/importance-jeu-developpement-enfant.webp",
+      "image_alt": "Petit garçon souriant qui construit une maison en blocs de bois",
+      "related_articles": [
+        {
+          "slug": "activites-motricite-enfant",
+          "title": "Comment développer la motricité de son enfant à travers des activités simples ?",
+          "anchor": "activités de mouvement et de manipulation",
+          "placement": "Section « Quels sont les principaux bienfaits du jeu ? »"
+        },
+        {
+          "slug": "apprendre-couleurs-formes-chiffres-enfant",
+          "title": "Comment apprendre les couleurs, les formes et les chiffres en s’amusant ?",
+          "anchor": "découvrir les couleurs, les formes et les nombres en jouant",
+          "placement": "Section « Quels sont les principaux bienfaits du jeu ? »"
+        },
+        {
+          "slug": "favoriser-developpement-langage-enfant",
+          "title": "Comment favoriser le développement du langage chez le jeune enfant ?",
+          "anchor": "favoriser le développement du langage",
+          "placement": "Section « Quels sont les principaux bienfaits du jeu ? »"
+        }
+      ]
+    },
+    {
+      "number": "02",
+      "title": "Quelles sont les grandes étapes du développement d’un enfant entre 15 mois et 3 ans ?",
+      "slug": "developpement-enfant-15-mois-3-ans",
+      "category": "developpement-enfant",
+      "keyword": "développement enfant 15 mois à 3 ans",
+      "meta_description": "Motricité, langage, autonomie, émotions : découvrez les grandes étapes du développement de l’enfant entre 15 mois et 3 ans et comment l’accompagner.",
+      "file": "articles/02-developpement-enfant-15-mois-3-ans.md",
+      "image": "assets/images/coin-des-parents/developpement-enfant-15-mois-3-ans.webp",
+      "image_alt": "Fillette qui empile les anneaux colorés d’un jouet à empiler",
+      "related_articles": [
+        {
+          "slug": "gerer-colere-jeune-enfant",
+          "title": "Colères chez le jeune enfant : comment réagir et l’aider à gérer ses émotions ?",
+          "anchor": "les colères du jeune enfant",
+          "placement": "Section « Entre 18 mois et 2 ans : affirmer sa personnalité »"
+        },
+        {
+          "slug": "favoriser-developpement-langage-enfant",
+          "title": "Comment favoriser le développement du langage chez le jeune enfant ?",
+          "anchor": "accompagner le développement du langage",
+          "placement": "Section « Comment accompagner ces évolutions ? »"
+        },
+        {
+          "slug": "activites-motricite-enfant",
+          "title": "Comment développer la motricité de son enfant à travers des activités simples ?",
+          "anchor": "Proposer des activités adaptées à son développement moteur",
+          "placement": "Section « Comment accompagner ces évolutions ? »"
+        }
+      ]
+    },
+    {
+      "number": "03",
+      "title": "Comment développer la motricité de son enfant à travers des activités simples ?",
+      "slug": "activites-motricite-enfant",
+      "category": "developpement-enfant",
+      "keyword": "activités motricité enfant",
+      "meta_description": "Jeux de mouvement, parcours, dessin et manipulation : découvrez des activités simples pour accompagner le développement moteur de votre enfant.",
+      "file": "articles/03-activites-motricite-enfant.md",
+      "image": "assets/images/coin-des-parents/activites-motricite-enfant.webp",
+      "image_alt": "Petit garçon qui grimpe sur des blocs en mousse dans un espace de motricité",
+      "related_articles": [
+        {
+          "slug": "importance-jeu-developpement-enfant",
+          "title": "Pourquoi le jeu est-il indispensable au développement de l’enfant ?",
+          "anchor": "la place du jeu dans le développement de l’enfant",
+          "placement": "Section « Introduction »"
+        },
+        {
+          "slug": "apprendre-couleurs-formes-chiffres-enfant",
+          "title": "Comment apprendre les couleurs, les formes et les chiffres en s’amusant ?",
+          "anchor": "jeux d’éveil et de manipulation",
+          "placement": "Section « Cinq idées d’activités faciles à proposer »"
+        },
+        {
+          "slug": "developpement-enfant-15-mois-3-ans",
+          "title": "Quelles sont les grandes étapes du développement d’un enfant entre 15 mois et 3 ans ?",
+          "anchor": "les grandes étapes du développement entre 15 mois et 3 ans",
+          "placement": "Section « Comment adapter les activités à son âge ? »"
+        }
+      ]
+    },
+    {
+      "number": "04",
+      "title": "Pourquoi la séparation est-elle parfois difficile le matin ?",
+      "slug": "separation-enfant-difficile-matin",
+      "category": "emotions-comportement",
+      "featured": true,
+      "keyword": "difficulté séparation enfant matin",
+      "meta_description": "Les pleurs au moment de la séparation sont fréquents chez les jeunes enfants. Comprenez leurs causes et découvrez comment rendre le départ plus rassurant.",
+      "file": "articles/04-separation-enfant-difficile-matin.md",
+      "image": "assets/images/coin-des-parents/separation-enfant-difficile-matin.webp",
+      "image_alt": "Une maman accroupie dit au revoir à sa fille, cartable rose sur le dos, à l’entrée de l’école",
+      "related_articles": [
+        {
+          "slug": "preparer-premiere-rentree-creche-maternelle",
+          "title": "Comment se préparer à la première rentrée en crèche ou en maternelle ?",
+          "anchor": "arrivée dans un nouvel établissement",
+          "placement": "Section « Pourquoi mon enfant pleure-t-il au moment du départ ? »"
+        },
+        {
+          "slug": "aider-enfant-exprimer-emotions",
+          "title": "Comment aider son enfant à reconnaître et exprimer ses émotions ?",
+          "anchor": "aider son enfant à exprimer ses émotions",
+          "placement": "Section « Pourquoi mon enfant pleure-t-il au moment du départ ? »"
+        },
+        {
+          "slug": "routine-coucher-enfant",
+          "title": "Comment instaurer une routine du coucher pour faciliter l’endormissement ?",
+          "anchor": "installer des repères réguliers au quotidien",
+          "placement": "Section « Comment rendre la séparation plus rassurante ? »"
+        }
+      ]
+    },
+    {
+      "number": "05",
+      "title": "Colères chez le jeune enfant : comment réagir et l’aider à gérer ses émotions ?",
+      "slug": "gerer-colere-jeune-enfant",
+      "category": "emotions-comportement",
+      "keyword": "gérer colère enfant",
+      "meta_description": "Pourquoi les jeunes enfants font-ils des colères ? Découvrez comment réagir avec calme, poser des limites et accompagner leurs émotions.",
+      "file": "articles/05-gerer-colere-jeune-enfant.md",
+      "image": "assets/images/coin-des-parents/gerer-colere-jeune-enfant.webp",
+      "image_alt": "Une adulte accroupie, calme et mains ouvertes, face à un petit garçon en pleine colère",
+      "related_articles": [
+        {
+          "slug": "encourager-autonomie-enfant",
+          "title": "Comment encourager l’autonomie de son enfant au quotidien ?",
+          "anchor": "envie de faire seul",
+          "placement": "Section « Pourquoi les colères sont-elles fréquentes ? »"
+        },
+        {
+          "slug": "poser-limites-enfant-bienveillance",
+          "title": "Comment poser des limites à un jeune enfant avec bienveillance ?",
+          "anchor": "poser des limites avec bienveillance",
+          "placement": "Section « Comment réagir pendant une crise ? »"
+        },
+        {
+          "slug": "aider-enfant-exprimer-emotions",
+          "title": "Comment aider son enfant à reconnaître et exprimer ses émotions ?",
+          "anchor": "reconnaître et exprimer ses émotions",
+          "placement": "Section « Après la crise : réconforter et chercher des solutions »"
+        }
+      ]
+    },
+    {
+      "number": "06",
+      "title": "Comment aider son enfant à reconnaître et exprimer ses émotions ?",
+      "slug": "aider-enfant-exprimer-emotions",
+      "category": "emotions-comportement",
+      "keyword": "aider enfant exprimer ses émotions",
+      "meta_description": "Colère, peur, joie ou tristesse : apprenez à accompagner votre enfant pour reconnaître ses émotions et les exprimer progressivement.",
+      "file": "articles/06-aider-enfant-exprimer-emotions.md",
+      "image": "assets/images/coin-des-parents/aider-enfant-exprimer-emotions.webp",
+      "image_alt": "Une adulte montre à un groupe d’enfants des cartes illustrant un visage joyeux et un visage triste",
+      "related_articles": [
+        {
+          "slug": "separation-enfant-difficile-matin",
+          "title": "Pourquoi la séparation est-elle parfois difficile le matin ?",
+          "anchor": "comprendre les difficultés de séparation",
+          "placement": "Section « Pourquoi est-ce parfois difficile pour un jeune enfant ? »"
+        },
+        {
+          "slug": "poser-limites-enfant-bienveillance",
+          "title": "Comment poser des limites à un jeune enfant avec bienveillance ?",
+          "anchor": "accueillir les émotions tout en posant un cadre",
+          "placement": "Section « Quatre façons de l’aider au quotidien »"
+        },
+        {
+          "slug": "importance-lecture-histoires-enfant",
+          "title": "Pourquoi lire des histoires à son enfant dès le plus jeune âge ?",
+          "anchor": "histoires partagées dès le plus jeune âge",
+          "placement": "Section « Quatre façons de l’aider au quotidien »"
+        }
+      ]
+    },
+    {
+      "number": "07",
+      "title": "Comment favoriser le développement du langage chez le jeune enfant ?",
+      "slug": "favoriser-developpement-langage-enfant",
+      "category": "eveil-apprentissage",
+      "keyword": "développer langage enfant",
+      "meta_description": "Parler, lire, chanter et jouer : découvrez des gestes simples pour accompagner le développement du langage de votre jeune enfant au quotidien.",
+      "file": "articles/07-favoriser-developpement-langage-enfant.md",
+      "image": "assets/images/coin-des-parents/favoriser-developpement-langage-enfant.webp",
+      "image_alt": "Une adulte lit un album à des enfants, un petit garçon raconte en faisant des gestes",
+      "related_articles": [
+        {
+          "slug": "importance-jeu-developpement-enfant",
+          "title": "Pourquoi le jeu est-il indispensable au développement de l’enfant ?",
+          "anchor": "utiliser le jeu pour apprendre et communiquer",
+          "placement": "Section « Le langage se construit dans les interactions »"
+        },
+        {
+          "slug": "apprendre-couleurs-formes-chiffres-enfant",
+          "title": "Comment apprendre les couleurs, les formes et les chiffres en s’amusant ?",
+          "anchor": "découvrir les premières notions en s’amusant",
+          "placement": "Section « Cinq habitudes pour encourager le langage »"
+        },
+        {
+          "slug": "importance-lecture-histoires-enfant",
+          "title": "Pourquoi lire des histoires à son enfant dès le plus jeune âge ?",
+          "anchor": "partager des histoires dès le plus jeune âge",
+          "placement": "Section « Cinq habitudes pour encourager le langage »"
+        }
+      ]
+    },
+    {
+      "number": "08",
+      "title": "Comment apprendre les couleurs, les formes et les chiffres en s’amusant ?",
+      "slug": "apprendre-couleurs-formes-chiffres-enfant",
+      "category": "eveil-apprentissage",
+      "keyword": "apprendre couleurs formes chiffres enfant",
+      "meta_description": "Jeux, objets du quotidien, histoires et chansons : découvrez comment faire découvrir les couleurs, les formes et les premiers nombres à votre enfant.",
+      "file": "articles/08-apprendre-couleurs-formes-chiffres-enfant.md",
+      "image": "assets/images/coin-des-parents/apprendre-couleurs-formes-chiffres-enfant.webp",
+      "image_alt": "Enfants qui manipulent des formes colorées devant des cartes de couleurs, de formes et de chiffres",
+      "related_articles": [
+        {
+          "slug": "importance-jeu-developpement-enfant",
+          "title": "Pourquoi le jeu est-il indispensable au développement de l’enfant ?",
+          "anchor": "le jeu comme support d’apprentissage",
+          "placement": "Section « Introduction »"
+        },
+        {
+          "slug": "favoriser-developpement-langage-enfant",
+          "title": "Comment favoriser le développement du langage chez le jeune enfant ?",
+          "anchor": "Nommer les objets et échanger avec son enfant",
+          "placement": "Section « Observer, nommer, jouer au quotidien »"
+        },
+        {
+          "slug": "activites-motricite-enfant",
+          "title": "Comment développer la motricité de son enfant à travers des activités simples ?",
+          "anchor": "les activités de manipulation",
+          "placement": "Section « Couleurs et formes : manipuler avant de nommer »"
+        }
+      ]
+    },
+    {
+      "number": "09",
+      "title": "Pourquoi lire des histoires à son enfant dès le plus jeune âge ?",
+      "slug": "importance-lecture-histoires-enfant",
+      "category": "eveil-apprentissage",
+      "keyword": "importance lecture enfant",
+      "meta_description": "Lire des histoires dès le plus jeune âge favorise les échanges, le langage et le plaisir de découvrir les livres. Voici comment instaurer ce rituel.",
+      "file": "articles/09-importance-lecture-histoires-enfant.md",
+      "image": "assets/images/coin-des-parents/importance-lecture-histoires-enfant.webp",
+      "image_alt": "Une maman et sa fille partagent un album illustré, blotties sur un canapé",
+      "related_articles": [
+        {
+          "slug": "favoriser-developpement-langage-enfant",
+          "title": "Comment favoriser le développement du langage chez le jeune enfant ?",
+          "anchor": "favoriser le développement du langage",
+          "placement": "Section « La lecture : bien plus qu’une histoire »"
+        },
+        {
+          "slug": "apprendre-couleurs-formes-chiffres-enfant",
+          "title": "Comment apprendre les couleurs, les formes et les chiffres en s’amusant ?",
+          "anchor": "découvrir les formes et les couleurs à travers les livres",
+          "placement": "Section « Adapter la lecture à l’âge »"
+        },
+        {
+          "slug": "importance-jeu-developpement-enfant",
+          "title": "Pourquoi le jeu est-il indispensable au développement de l’enfant ?",
+          "anchor": "les bienfaits du jeu dans les apprentissages",
+          "placement": "Section « En conclusion »"
+        }
+      ]
+    },
+    {
+      "number": "10",
+      "title": "Comment accompagner son enfant dans l’apprentissage de la propreté ?",
+      "slug": "accompagner-apprentissage-proprete-enfant",
+      "category": "vie-quotidienne",
+      "keyword": "apprentissage propreté enfant",
+      "meta_description": "Quand commencer la propreté ? Quels signes observer et comment réagir aux accidents ? Des conseils pour accompagner votre enfant sans pression.",
+      "file": "articles/10-accompagner-apprentissage-proprete-enfant.md",
+      "image": "assets/images/coin-des-parents/accompagner-apprentissage-proprete-enfant.webp",
+      "image_alt": "Une maman accroupie encourage son petit garçon près d’un pot, dans la salle de bain",
+      "related_articles": [
+        {
+          "slug": "encourager-autonomie-enfant",
+          "title": "Comment encourager l’autonomie de son enfant au quotidien ?",
+          "anchor": "encourager l’autonomie au quotidien",
+          "placement": "Section « Comment commencer en douceur ? »"
+        },
+        {
+          "slug": "poser-limites-enfant-bienveillance",
+          "title": "Comment poser des limites à un jeune enfant avec bienveillance ?",
+          "anchor": "poser un cadre sans mettre la pression",
+          "placement": "Section « Accidents, refus et retours en arrière »"
+        },
+        {
+          "slug": "preparer-premiere-rentree-creche-maternelle",
+          "title": "Comment se préparer à la première rentrée en crèche ou en maternelle ?",
+          "anchor": "préparer l’entrée en crèche ou à l’école",
+          "placement": "Section « Maison et lieu d’accueil : avancer ensemble »"
+        }
+      ]
+    },
+    {
+      "number": "11",
+      "title": "Comment instaurer une routine du coucher pour faciliter l’endormissement ?",
+      "slug": "routine-coucher-enfant",
+      "category": "vie-quotidienne",
+      "keyword": "routine coucher enfant",
+      "meta_description": "Une routine régulière peut aider votre enfant à aborder le coucher plus sereinement. Découvrez des repères simples pour préparer la nuit.",
+      "file": "articles/11-routine-coucher-enfant.md",
+      "image": "assets/images/coin-des-parents/routine-coucher-enfant.webp",
+      "image_alt": "Une maman lit une histoire à sa fille couchée avec son doudou, à la lumière d’une veilleuse",
+      "related_articles": [
+        {
+          "slug": "developpement-enfant-15-mois-3-ans",
+          "title": "Quelles sont les grandes étapes du développement d’un enfant entre 15 mois et 3 ans ?",
+          "anchor": "les grandes étapes du développement du jeune enfant",
+          "placement": "Section « De combien de sommeil un jeune enfant a-t-il besoin ? »"
+        },
+        {
+          "slug": "separation-enfant-difficile-matin",
+          "title": "Pourquoi la séparation est-elle parfois difficile le matin ?",
+          "anchor": "accompagner les moments de séparation",
+          "placement": "Section « Que faire s’il réclame le parent ou se réveille la nuit ? »"
+        },
+        {
+          "slug": "enfant-refuse-certains-aliments",
+          "title": "Comment accompagner son enfant lorsqu’il refuse certains aliments ?",
+          "anchor": "accompagner les habitudes alimentaires",
+          "placement": "Bloc « À lire aussi » uniquement (plan de maillage)"
+        }
+      ]
+    },
+    {
+      "number": "12",
+      "title": "Comment accompagner son enfant lorsqu’il refuse certains aliments ?",
+      "slug": "enfant-refuse-certains-aliments",
+      "category": "vie-quotidienne",
+      "keyword": "enfant refuse de manger certains aliments",
+      "meta_description": "Votre enfant refuse certains aliments ou trie son assiette ? Comprenez cette période et découvrez comment favoriser des repas sereins sans le forcer.",
+      "file": "articles/12-enfant-refuse-certains-aliments.md",
+      "image": "assets/images/coin-des-parents/enfant-refuse-certains-aliments.webp",
+      "image_alt": "Une maman propose un brocoli à son petit garçon qui croise les bras et détourne la tête",
+      "related_articles": [
+        {
+          "slug": "developpement-enfant-15-mois-3-ans",
+          "title": "Quelles sont les grandes étapes du développement d’un enfant entre 15 mois et 3 ans ?",
+          "anchor": "comprendre les évolutions du jeune enfant",
+          "placement": "Section « Introduction »"
+        },
+        {
+          "slug": "encourager-autonomie-enfant",
+          "title": "Comment encourager l’autonomie de son enfant au quotidien ?",
+          "anchor": "encourager l’autonomie pendant les repas",
+          "placement": "Section « Des repas partagés et réguliers »"
+        },
+        {
+          "slug": "routine-coucher-enfant",
+          "title": "Comment instaurer une routine du coucher pour faciliter l’endormissement ?",
+          "anchor": "installer des habitudes régulières",
+          "placement": "Section « Des repas partagés et réguliers »"
+        }
+      ]
+    },
+    {
+      "number": "13",
+      "title": "Comment encourager l’autonomie de son enfant au quotidien ?",
+      "slug": "encourager-autonomie-enfant",
+      "category": "parentalite",
+      "keyword": "encourager autonomie enfant",
+      "meta_description": "S’habiller, ranger, manger ou participer aux petites tâches : découvrez comment encourager l’autonomie de votre enfant sans le brusquer.",
+      "file": "articles/13-encourager-autonomie-enfant.md",
+      "image": "assets/images/coin-des-parents/encourager-autonomie-enfant.webp",
+      "image_alt": "Fillette qui ferme seule sa veste sous le regard bienveillant de sa maman",
+      "related_articles": [
+        {
+          "slug": "accompagner-apprentissage-proprete-enfant",
+          "title": "Comment accompagner son enfant dans l’apprentissage de la propreté ?",
+          "anchor": "accompagner l’apprentissage de la propreté",
+          "placement": "Section « Cinq façons de l’encourager »"
+        },
+        {
+          "slug": "poser-limites-enfant-bienveillance",
+          "title": "Comment poser des limites à un jeune enfant avec bienveillance ?",
+          "anchor": "poser des limites claires et rassurantes",
+          "placement": "Section « Cinq façons de l’encourager »"
+        },
+        {
+          "slug": "valoriser-efforts-enfant",
+          "title": "Comment valoriser les efforts de son enfant sans le mettre sous pression ?",
+          "anchor": "valoriser les efforts et les progrès",
+          "placement": "Section « Cinq façons de l’encourager »"
+        }
+      ]
+    },
+    {
+      "number": "14",
+      "title": "Comment poser des limites à un jeune enfant avec bienveillance ?",
+      "slug": "poser-limites-enfant-bienveillance",
+      "category": "parentalite",
+      "keyword": "poser limites enfant bienveillance",
+      "meta_description": "Les limites rassurent les jeunes enfants lorsqu’elles sont claires et cohérentes. Découvrez comment dire non, expliquer les règles et rester bienveillant.",
+      "file": "articles/14-poser-limites-enfant-bienveillance.md",
+      "image": "assets/images/coin-des-parents/poser-limites-enfant-bienveillance.webp",
+      "image_alt": "Une adulte s’adresse calmement à un petit garçon boudeur, les bras croisés",
+      "related_articles": [
+        {
+          "slug": "aider-enfant-exprimer-emotions",
+          "title": "Comment aider son enfant à reconnaître et exprimer ses émotions ?",
+          "anchor": "aider l’enfant à comprendre ses émotions",
+          "placement": "Section « Comment poser une limite clairement ? »"
+        },
+        {
+          "slug": "valoriser-efforts-enfant",
+          "title": "Comment valoriser les efforts de son enfant sans le mettre sous pression ?",
+          "anchor": "encourager les comportements et les efforts",
+          "placement": "Section « Comment poser une limite clairement ? »"
+        },
+        {
+          "slug": "gerer-colere-jeune-enfant",
+          "title": "Colères chez le jeune enfant : comment réagir et l’aider à gérer ses émotions ?",
+          "anchor": "réagir aux colères du jeune enfant",
+          "placement": "Section « Que faire lorsqu’il ne respecte pas la règle ? »"
+        }
+      ]
+    },
+    {
+      "number": "15",
+      "title": "Comment valoriser les efforts de son enfant sans le mettre sous pression ?",
+      "slug": "valoriser-efforts-enfant",
+      "category": "parentalite",
+      "keyword": "encourager enfant valoriser efforts",
+      "meta_description": "Encourager un enfant ne signifie pas le féliciter sans cesse. Découvrez comment reconnaître ses efforts, soutenir sa confiance et respecter son rythme.",
+      "file": "articles/15-valoriser-efforts-enfant.md",
+      "image": "assets/images/coin-des-parents/valoriser-efforts-enfant.webp",
+      "image_alt": "Fillette fière qui montre son dessin à une adulte qui l’applaudit",
+      "related_articles": [
+        {
+          "slug": "encourager-autonomie-enfant",
+          "title": "Comment encourager l’autonomie de son enfant au quotidien ?",
+          "anchor": "encourager l’autonomie de son enfant",
+          "placement": "Section « Comment encourager de manière constructive ? »"
+        },
+        {
+          "slug": "apprendre-couleurs-formes-chiffres-enfant",
+          "title": "Comment apprendre les couleurs, les formes et les chiffres en s’amusant ?",
+          "anchor": "découvre les couleurs, les formes et les nombres en jouant",
+          "placement": "Section « Comment encourager de manière constructive ? »"
+        },
+        {
+          "slug": "importance-jeu-developpement-enfant",
+          "title": "Pourquoi le jeu est-il indispensable au développement de l’enfant ?",
+          "anchor": "apprendre en jouant",
+          "placement": "Section « En conclusion »"
+        }
+      ]
+    },
+    {
+      "number": "16",
+      "title": "Comment se préparer à la première rentrée en crèche ou en maternelle ?",
+      "slug": "preparer-premiere-rentree-creche-maternelle",
+      "category": "vie-a-l-ecole",
+      "keyword": "préparer rentrée crèche maternelle",
+      "meta_description": "Première rentrée en crèche ou en maternelle : conseils pour préparer votre enfant, organiser les premiers jours et vivre la séparation plus sereinement.",
+      "file": "articles/16-preparer-premiere-rentree-creche-maternelle.md",
+      "image": "assets/images/coin-des-parents/preparer-premiere-rentree-creche-maternelle.webp",
+      "image_alt": "Une maman aide son petit garçon souriant à enfiler son cartable",
+      "related_articles": [
+        {
+          "slug": "socialisation-enfant-vie-collectivite",
+          "title": "Pourquoi les activités en collectivité sont-elles importantes pour apprendre à vivre ensemble ?",
+          "anchor": "découvrira la vie en collectivité",
+          "placement": "Section « Une préparation adaptée à chaque âge »"
+        },
+        {
+          "slug": "separation-enfant-difficile-matin",
+          "title": "Pourquoi la séparation est-elle parfois difficile le matin ?",
+          "anchor": "les difficultés de séparation le matin",
+          "placement": "Section « Les premiers au revoir et le dialogue avec l’équipe »"
+        },
+        {
+          "slug": "aider-enfant-exprimer-emotions",
+          "title": "Comment aider son enfant à reconnaître et exprimer ses émotions ?",
+          "anchor": "accompagner les émotions de son enfant",
+          "placement": "Section « Et si l’adaptation prend du temps ? »"
+        }
+      ]
+    },
+    {
+      "number": "17",
+      "title": "Pourquoi les activités en collectivité sont-elles importantes pour apprendre à vivre ensemble ?",
+      "slug": "socialisation-enfant-vie-collectivite",
+      "category": "vie-a-l-ecole",
+      "keyword": "socialisation enfant collectivité",
+      "meta_description": "Jeux partagés, coopération, règles et premières amitiés : découvrez comment la vie en collectivité accompagne la socialisation du jeune enfant.",
+      "file": "articles/17-socialisation-enfant-vie-collectivite.md",
+      "image": "assets/images/coin-des-parents/socialisation-enfant-vie-collectivite.webp",
+      "image_alt": "Quatre enfants qui construisent ensemble une tour en blocs de couleur",
+      "related_articles": [
+        {
+          "slug": "preparer-premiere-rentree-creche-maternelle",
+          "title": "Comment se préparer à la première rentrée en crèche ou en maternelle ?",
+          "anchor": "préparer l’entrée en collectivité",
+          "placement": "Section « Introduction »"
+        },
+        {
+          "slug": "importance-jeu-developpement-enfant",
+          "title": "Pourquoi le jeu est-il indispensable au développement de l’enfant ?",
+          "anchor": "le rôle du jeu dans les relations avec les autres",
+          "placement": "Section « Apprendre à être avec les autres »"
+        },
+        {
+          "slug": "aider-enfant-exprimer-emotions",
+          "title": "Comment aider son enfant à reconnaître et exprimer ses émotions ?",
+          "anchor": "aider l’enfant à exprimer ses besoins et ses émotions",
+          "placement": "Section « Qu’apprend-on dans les activités collectives ? »"
+        }
+      ]
+    }
+  ],
+  "seo_integration": {
+    "canonical": "URL absolue propre à chaque page, sur le domaine de production validé",
+    "structured_data": [
+      "Article",
+      "BreadcrumbList"
+    ],
+    "indexing": "Pages articles et catégories indexables; filtres ne doivent pas créer d'URLs indexables dupliquées",
+    "sitemap": "Inclure les pages catégories et articles publiés dans sitemap.xml",
+    "robots": "Vérifier que les pages ne sont pas bloquées par robots.txt ou meta robots",
+    "images": "Chaque article publié doit avoir une image principale pertinente, un nom de fichier descriptif et un texte alternatif factuel",
+    "social": "Open Graph title, description et image par article; image de partage 1200x630 recommandée",
+    "performance": "Images compressées, dimensions explicites, lazy-loading sous la ligne de flottaison, image principale prioritaire",
+    "accessibility": "Un H1 unique, hiérarchie H2/H3 logique, liens descriptifs, contrastes et navigation clavier"
+  }
+}
