@@ -585,7 +585,7 @@
       "age_min": 2,
       "age_max": 4,
       "acces": "public",
-      "statut": "a-venir",
+      "statut": "disponible",
       "type": "Support de routine",
       "description": "Les étapes du matin en images, du réveil aux chaussures : une affiche à placer à hauteur d'enfant, des cartes à découper et un tableau de la semaine.",
       "objectifs": [
@@ -612,7 +612,17 @@
         "Laissez votre enfant faire seul ce qu'il peut, même si c'est plus long.",
         "Le tableau de la semaine est un repère, ni une note ni une obligation."
       ],
-      "duree": "Chaque matin, quelques minutes"
+      "duree": "Chaque matin, quelques minutes",
+      "fichier": "mediatheque-educative/fichiers/ma-routine-du-matin-en-images.pdf",
+      "pages": 5,
+      "apercus": [
+        "mediatheque-educative/apercus/ma-routine-du-matin-en-images-1.webp",
+        "mediatheque-educative/apercus/ma-routine-du-matin-en-images-2.webp",
+        "mediatheque-educative/apercus/ma-routine-du-matin-en-images-3.webp",
+        "mediatheque-educative/apercus/ma-routine-du-matin-en-images-4.webp",
+        "mediatheque-educative/apercus/ma-routine-du-matin-en-images-5.webp"
+      ],
+      "publie_le": "2026-11-10"
     },
     {
       "numero": 27,
