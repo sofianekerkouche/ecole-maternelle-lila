@@ -659,7 +659,7 @@
       "age_min": 3,
       "age_max": 5,
       "acces": "public",
-      "statut": "a-venir",
+      "statut": "disponible",
       "type": "Imagier bilingue",
       "langues": [
         "Français",
@@ -689,7 +689,18 @@
         "Si l'anglais ne vous est pas familier, écoutez la prononciation avec un dictionnaire en ligne.",
         "Les langues parlées à la maison restent une base précieuse."
       ],
-      "duree": "Quelques minutes, à reprendre souvent"
+      "duree": "Quelques minutes, à reprendre souvent",
+      "fichier": "mediatheque-educative/fichiers/les-objets-de-la-maison-en-francais-et-en-anglais.pdf",
+      "pages": 6,
+      "apercus": [
+        "mediatheque-educative/apercus/les-objets-de-la-maison-en-francais-et-en-anglais-1.webp",
+        "mediatheque-educative/apercus/les-objets-de-la-maison-en-francais-et-en-anglais-2.webp",
+        "mediatheque-educative/apercus/les-objets-de-la-maison-en-francais-et-en-anglais-3.webp",
+        "mediatheque-educative/apercus/les-objets-de-la-maison-en-francais-et-en-anglais-4.webp",
+        "mediatheque-educative/apercus/les-objets-de-la-maison-en-francais-et-en-anglais-5.webp",
+        "mediatheque-educative/apercus/les-objets-de-la-maison-en-francais-et-en-anglais-6.webp"
+      ],
+      "publie_le": "2026-11-10"
     },
     {
       "numero": 23,
