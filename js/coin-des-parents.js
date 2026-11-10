@@ -194,7 +194,8 @@
     if (featuredHtml && featured[0] && featuredHtml.getAttribute('data-cdp-slug') !== featured[0].slug) warn('L\'article à la une du HTML ne correspond pas au manifeste');
     if (grid) {
       var htmlSlugs = cards.map(function (c) { return c.getAttribute('data-cdp-slug'); });
-      if (htmlSlugs.join('|') !== slugs.join('|')) warn('Les cartes du HTML ne correspondent pas aux articles du manifeste (ordre ou contenu). Relancer le script de génération.');
+      // L'ordre de « Tous les articles » est volontairement diversifié par le générateur : seul le contenu est comparé.
+      if (htmlSlugs.slice().sort().join('|') !== slugs.slice().sort().join('|')) warn('Les cartes du HTML ne correspondent pas aux articles du manifeste. Relancer le script de génération.');
       cards.forEach(function (c) {
         var a = findArticle(c.getAttribute('data-cdp-slug'));
         if (a && a.category !== c.getAttribute('data-categorie')) warn('Catégorie différente entre HTML et manifeste : ' + a.slug);

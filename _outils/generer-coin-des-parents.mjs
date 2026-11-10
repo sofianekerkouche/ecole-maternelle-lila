@@ -119,6 +119,10 @@ for (const a of manifeste.articles) {
     if (r.slug === a.slug) echec(`${a.slug} : un article ne peut pas être son propre article connexe`);
   }
   if ((a.related_articles || []).length < 1) echec(`${a.slug} : aucun article connexe pour « À lire aussi »`);
+  // Visuel : nommé exactement d'après le slug, original et variante -800 présents, texte alternatif renseigné.
+  if (a.image !== `assets/images/coin-des-parents/${a.slug}.webp`) echec(`${a.slug} : champ "image" absent ou ne correspondant pas au slug (${a.image})`);
+  else for (const f of [a.image, a.image.replace(/\.webp$/, '-800.webp')]) if (!existsSync(join(RACINE, f))) echec(`${a.slug} : fichier image manquant ${f}`);
+  if (!a.image_alt || !a.image_alt.trim()) echec(`${a.slug} : texte alternatif "image_alt" manquant`);
 }
 const aLaUne = manifeste.articles.filter((a) => a.featured === true);
 if (aLaUne.length !== 1) echec(`Il faut exactement 1 article "featured" (trouvé : ${aLaUne.length})`);
@@ -282,18 +286,29 @@ const pied = () => '\n' + profondeur2(COMPOSANTS.pied);
 
 /* ---------- Fragments ---------- */
 const extrait = (a) => a.excerpt || a.meta_description;       // champ "excerpt" prioritaire s'il existe
-const visuel = (a) => `<span class="cdp-illu"><svg class="cdp-wash"><use href="#cdp-wash"/></svg><svg class="cdp-illu-ico" viewBox="0 0 24 24"><use href="#cdp-ico-${a.category}"/></svg></span>`;
+/* Visuels des articles (manifeste : champs "image" et "image_alt", fichier nommé d'après le slug).
+   Deux tailles 16:9 : l'original 1600 × 900 et une variante 800 × 450 (suffixe -800) pour les cartes.
+   `racine` : chemin de la racine du site depuis la page courante ('../' ou '../../').
+   `chargement` : 'lazy' sous la ligne de flottaison, 'prioritaire' pour l'image principale d'une page. */
+const variante800 = (src) => src.replace(/\.webp$/, '-800.webp');
+function imageArticle(a, racine, { sizes, chargement = 'lazy', petite = true }) {
+  const src = racine + a.image;
+  const attributs = chargement === 'prioritaire' ? 'fetchpriority="high" decoding="async"' : 'loading="lazy" decoding="async"';
+  return `<img src="${petite ? variante800(src) : src}" srcset="${variante800(src)} 800w, ${src} 1600w" sizes="${sizes}" width="${petite ? 800 : 1600}" height="${petite ? 450 : 900}" alt="${echapper(a.image_alt)}" ${attributs}>`;
+}
+const TAILLES_CARTE = '(max-width: 600px) 128px, (max-width: 1024px) 50vw, 380px';
 const pluriel = (n, un, plusieurs) => `${n} ${n > 1 ? plusieurs : un}`;
 const urlProdArticle = (a) => `${URL_RUBRIQUE}articles/${a.slug}.html`;
 const urlProdCategorie = (c) => `${URL_RUBRIQUE}${c.slug}/`;
 
-/** Carte d'article. `base` : chemin du dossier des articles depuis la page courante. */
-function carteArticle(a, indent, base = 'articles/', titreNiveau = 'h3') {
+/** Carte d'article. `base` : chemin du dossier des articles depuis la page courante ;
+    `racine` : chemin de la racine du site depuis la page courante. */
+function carteArticle(a, indent, base = 'articles/', titreNiveau = 'h3', racine = '../') {
   const c = categories.get(a.category);
   const url = `${base}${a.slug}.html`;
   return [
     `<article class="cdp-post" data-cdp-slug="${a.slug}" data-categorie="${a.category}">`,
-    `  <a class="cdp-post-media" href="${url}" tabindex="-1" aria-hidden="true">${visuel(a)}</a>`,
+    `  <a class="cdp-post-media" href="${url}" tabindex="-1" aria-hidden="true">${imageArticle(a, racine, { sizes: TAILLES_CARTE })}</a>`,
     `  <span class="cdp-chip">${echapper(c.name)}</span>`,
     `  <${titreNiveau}><a href="${url}">${titreInsecable(echapper(a.title))}</a></${titreNiveau}>`,
     `  <p class="cdp-excerpt">${echapper(extrait(a))}</p>`,
@@ -323,7 +338,7 @@ function blocALaUne(a, indent) {
   return [
     `<article class="cdp-featured" data-cdp-slug="${a.slug}" data-categorie="${a.category}">`,
     `  <a class="cdp-featured-media" href="${url}" tabindex="-1" aria-hidden="true">`,
-    `    ${visuel(a)}`,
+    `    ${imageArticle(a, '../', { sizes: '(max-width: 820px) 100vw, 600px' })}`,
     `    <span class="cdp-featured-tag cdp-brand">À la une</span>`,
     `  </a>`,
     `  <div class="cdp-featured-body">`,
@@ -335,6 +350,30 @@ function blocALaUne(a, indent) {
     `  </div>`,
     `</article>`,
   ].map((l) => indent + l).join('\n');
+}
+
+/** Ordre de « Tous les articles » (accueil de la rubrique uniquement) : thématiques alternées et articles mélangés
+    à l'intérieur de chaque thématique. Tirage pseudo-aléatoire à graine fixe : l'ordre est figé dans le HTML généré,
+    identique à chaque visite et à chaque génération tant que le manifeste ne change pas. Les autres classements
+    (pages thématiques, « À lire aussi », données structurées) suivent toujours l'ordre du manifeste. */
+const GRAINE_COLLECTION = 'coin-des-parents';
+function ordreCollection(liste) {
+  let h = 2166136261;
+  for (const ch of GRAINE_COLLECTION) h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
+  const alea = () => { h = (h + 0x6D2B79F5) | 0; let t = Math.imul(h ^ (h >>> 15), 1 | h); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const melanger = (t) => { const r = [...t]; for (let i = r.length - 1; i > 0; i--) { const j = Math.floor(alea() * (i + 1)); [r[i], r[j]] = [r[j], r[i]]; } return r; };
+  const piles = new Map(manifeste.categories.map((c) => [c.slug, melanger(liste.filter((a) => a.category === c.slug))]));
+  const resultat = [];
+  // Tours successifs : chaque tour prend un article de chaque thématique restante, dans un ordre tiré au sort ;
+  // le premier article d'un tour n'est jamais de la même thématique que le dernier du tour précédent.
+  while ([...piles.values()].some((p) => p.length)) {
+    const tour = melanger([...piles.keys()].filter((s) => piles.get(s).length));
+    const precedente = resultat.at(-1)?.category;
+    if (tour.length > 1 && tour[0] === precedente) tour.push(tour.shift());
+    for (const s of tour) resultat.push(piles.get(s).shift());
+  }
+  if (resultat.length !== liste.length) echec('ordre de la collection : articles perdus');
+  return resultat;
 }
 
 const filAriane = (elements) => ({
@@ -389,7 +428,7 @@ function genererAccueil() {
     ],
   }));
   remplacer('cdp:a-la-une', (i) => blocALaUne(aLaUne[0], i));
-  remplacer('cdp:articles', () => manifeste.articles.map((a) => carteArticle(a, '          ')).join('\n'));
+  remplacer('cdp:articles', () => ordreCollection(manifeste.articles).map((a) => carteArticle(a, '          ')).join('\n'));
 
   page = page.replace(/<meta name="robots" content="[^"]*">/, `<meta name="robots" content="${ROBOTS}">`);
   const entete = '<!-- Fichier généré par _outils/generer-coin-des-parents.mjs à partir de _outils/modeles/accueil.html et de manifest.json. Ne pas modifier directement. -->\n';
@@ -471,6 +510,10 @@ function genererArticle(a) {
 
       <!-- ==================== TEXTE ==================== -->
       <div class="cdp-wrap cdp-article-body">
+        <!-- Image principale : chargée en priorité (au-dessus de la ligne de flottaison sur ordinateur) -->
+        <figure class="cdp-article-col cdp-article-figure">
+          ${imageArticle(a, '../../', { sizes: '(max-width: 820px) calc(100vw - 48px), 760px', chargement: 'prioritaire', petite: false })}
+        </figure>
         <div class="cdp-article-col cdp-prose">
 ${html.split('\n').map((l) => '          ' + l).join('\n')}
         </div>
@@ -493,7 +536,7 @@ ${sources.map((s) => `            <li><a href="${echapper(s.url)}"${relExterne(s
           <h2 id="cdp-related-title">À lire aussi</h2>
         </div>
         <div class="cdp-posts">
-${connexes.map((r) => carteArticle(r, '          ', '')).join('\n')}
+${connexes.map((r) => carteArticle(r, '          ', '', 'h3', '../../')).join('\n')}
         </div>
         <div class="cdp-article-nav">
           <a class="cdp-btn cdp-btn--ghost" href="../${c.slug}/index.html">Tous les articles « ${echapper(c.name)} »</a>
@@ -574,7 +617,7 @@ function genererCategorie(c) {
           <h2 id="cdp-cat-articles-title">Les articles de cette thématique</h2>
         </div>
         ${liste.length ? `<div class="cdp-posts">
-${liste.map((a) => carteArticle(a, '          ', '../articles/')).join('\n')}
+${liste.map((a) => carteArticle(a, '          ', '../articles/', 'h3', '../../')).join('\n')}
         </div>` : `<p class="cdp-empty">Aucun article n'est encore publié dans cette thématique. Les prochains arriveront bientôt.</p>`}
         <div class="cdp-article-nav">
           <a class="cdp-link-hand" href="../index.html#cdp-articles">Voir tous les articles du Coin des parents <svg aria-hidden="true"><use href="#cdp-arrow"/></svg></a>
