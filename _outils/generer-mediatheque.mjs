@@ -23,7 +23,7 @@ import { fileURLToPath } from 'node:url';
 
 /* Prévisualisation : pages en « noindex, follow », hors sitemap.
    Passer à false uniquement lors de la mise en ligne validée. */
-const PREVISUALISATION = true;
+const PREVISUALISATION = false;
 
 const RACINE = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DOSSIER = join(RACINE, 'mediatheque-educative');

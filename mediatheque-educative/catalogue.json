@@ -9,7 +9,7 @@
     "fichier : uniquement pour une ressource publique disponible, chemin depuis la racine du site (ex. mediatheque-educative/fichiers/<slug>.pdf).",
     "Une ressource \"familles\" ne doit JAMAIS avoir de champ fichier : ses PDF ne vont pas dans ce dépôt public (le générateur bloque).",
     "apercus : liste d'images (chemins depuis la racine du site), vide tant que le document n'est pas finalisé.",
-    "Textes descriptifs : propositions à valider (a_valider: true) tant que la ressource n'est pas produite."
+    "a_valider: true = textes provisoires, rédigés avant la production du document. À aligner sur le document final (description, contenu, objectifs, matériel, conseils) puis retirer le champ : la publication est refusée tant qu'il est présent."
   ],
   "espace_familles_url": null,
   "categories": [
@@ -373,33 +373,51 @@
       "age_min": 2,
       "age_max": 5,
       "acces": "public",
-      "statut": "a-venir",
+      "statut": "disponible",
       "pilote": 1,
       "a_la_une": true,
       "type": "Imagier bilingue illustré",
-      "langues": ["Français", "Arabe standard"],
-      "description": "Dix animaux familiers à nommer en français et en arabe standard, avec deux petits jeux de reconnaissance à partager.",
+      "langues": [
+        "Français",
+        "Arabe standard"
+      ],
+      "description": "Dix animaux familiers à nommer en français et en arabe standard vocalisé, avec deux jeux de reconnaissance et un guide pour accompagner votre enfant.",
       "objectifs": [
         "Découvrir le nom de dix animaux familiers en français et en arabe standard.",
-        "Associer un mot entendu à son illustration.",
+        "Associer un mot entendu à son illustration, puis à son nom écrit.",
         "Écouter, répéter et prendre plaisir à jouer avec deux langues."
       ],
       "materiel": [
-        "Le document imprimé, ou affiché sur un écran."
+        "Le document imprimé sur papier A4, de préférence un peu épais.",
+        "Des crayons de couleur pour les deux jeux.",
+        "Facultatif : une plastifieuse pour conserver les planches plus longtemps."
       ],
       "contenu": [
         "Une couverture.",
-        "Deux planches de cinq animaux : chat, chien, cheval, vache, mouton, lion, éléphant, lapin, oiseau, poisson.",
-        "Le jeu « Je montre et je reconnais ».",
-        "Le jeu « Je joue avec les mots ».",
-        "Des conseils aux parents."
+        "Planche 1 : chat, chien, cheval, vache, mouton.",
+        "Planche 2 : lion, éléphant, lapin, oiseau, poisson.",
+        "Jeu 1 « Je montre et je reconnais » : retrouver les dix animaux.",
+        "Jeu 2 « Je joue avec les mots » : relier cinq animaux à leur nom, et trois idées de jeux.",
+        "Un guide pour accompagner votre enfant, selon son âge."
       ],
       "conseils": [
-        "Prononcez le nom d'un animal dans une langue, puis dans l'autre.",
-        "Invitez votre enfant à montrer l'illustration correspondante.",
-        "Accompagnez-le sans pression : l'important est de jouer ensemble, pas de tout retenir."
+        "Préférez des moments courts et réguliers : quelques minutes suffisent.",
+        "Pour les plus jeunes, commencez avec deux ou trois animaux, puis ajoutez-en au fil des jours.",
+        "Dites le nom en français puis en arabe, ou l'inverse. Il est fréquent qu'un jeune enfant mélange les deux langues : c'est une étape normale.",
+        "Encouragez ses efforts plutôt que la bonne réponse, et arrêtez le jeu avant qu'il ne se lasse."
       ],
-      "a_valider": true
+      "duree": "Quelques minutes, à reprendre souvent",
+      "fichier": "mediatheque-educative/fichiers/les-animaux-en-francais-et-en-arabe.pdf",
+      "pages": 6,
+      "apercus": [
+        "mediatheque-educative/apercus/les-animaux-en-francais-et-en-arabe-1.webp",
+        "mediatheque-educative/apercus/les-animaux-en-francais-et-en-arabe-2.webp",
+        "mediatheque-educative/apercus/les-animaux-en-francais-et-en-arabe-3.webp",
+        "mediatheque-educative/apercus/les-animaux-en-francais-et-en-arabe-4.webp",
+        "mediatheque-educative/apercus/les-animaux-en-francais-et-en-arabe-5.webp",
+        "mediatheque-educative/apercus/les-animaux-en-francais-et-en-arabe-6.webp"
+      ],
+      "publie_le": "2026-11-10"
     },
     {
       "numero": 22,
@@ -411,7 +429,10 @@
       "acces": "public",
       "statut": "a-venir",
       "type": "Imagier bilingue",
-      "langues": ["Français", "Anglais"],
+      "langues": [
+        "Français",
+        "Anglais"
+      ],
       "description": "Les objets du quotidien à nommer en français et en anglais, pièce par pièce.",
       "a_valider": true
     },
@@ -425,7 +446,11 @@
       "acces": "familles",
       "statut": "a-venir",
       "type": "Imagier trilingue",
-      "langues": ["Français", "Arabe standard", "Anglais"],
+      "langues": [
+        "Français",
+        "Arabe standard",
+        "Anglais"
+      ],
       "description": "Un imagier en français, en arabe et en anglais pour enrichir le vocabulaire dans trois langues.",
       "a_valider": true
     },
@@ -439,7 +464,11 @@
       "acces": "familles",
       "statut": "a-venir",
       "type": "Cartes illustrées",
-      "langues": ["Français", "Arabe standard", "Anglais"],
+      "langues": [
+        "Français",
+        "Arabe standard",
+        "Anglais"
+      ],
       "description": "Les couleurs et les premiers nombres en français, en arabe et en anglais.",
       "a_valider": true
     },
@@ -521,5 +550,8 @@
       "description": "Mettre la table, ranger ses jouets, arroser une plante : un tableau pour valoriser les petites tâches de la maison.",
       "a_valider": true
     }
+  ],
+  "_decisions": [
+    "Ressource 7 (découpage et collage) : accès public, conformément au catalogue du cahier des charges (12 publiques / 18 réservées) ; la mention « PRIVÉ » de la section pilote 03 est une incohérence du cahier des charges. Décision du 2026-11-10."
   ]
 }

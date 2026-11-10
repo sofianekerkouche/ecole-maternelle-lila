@@ -3,8 +3,10 @@
  * ==========================================================================
  * ÉCOLE MATERNELLE LILA — PUBLIER UNE RESSOURCE DE LA MÉDIATHÈQUE
  * Usage (depuis la racine du projet) :
- *   node _outils/publier-ressource.mjs <slug> <fichier.pdf> <dossier-des-apercus>
- * Exemple :
+ *   node _outils/publier-ressource.mjs <slug> --en-ligne
+ *     → retrouve le PDF et les aperçus dans _mediatheque/NN-<slug>/version-finale/, publie, commite et pousse sur main.
+ *   node _outils/publier-ressource.mjs <slug> <fichier.pdf> <dossier-des-apercus>   (sans mise en ligne)
+ * Exemple avec chemins explicites :
  *   node _outils/publier-ressource.mjs les-animaux-en-francais-et-en-arabe ^
  *     ../_mediatheque/01-animaux-francais-arabe/version-finale/les-animaux-en-francais-et-en-arabe.pdf ^
  *     ../_mediatheque/01-animaux-francais-arabe/version-finale/apercus
@@ -16,7 +18,8 @@
  *   3. passe la ressource en « disponible » dans le catalogue (fichier, pages, aperçus, date de mise en ligne) ;
  *   4. relance le générateur de la Médiathèque.
  * Refuse toute ressource réservée aux familles : leurs PDF ne doivent jamais entrer dans ce dépôt public.
- * Rien n'est publié en ligne : il reste à vérifier, commiter, puis pousser après validation.
+ * Refuse aussi une fiche aux textes encore provisoires (champ "a_valider") : la fiche doit décrire le document réel.
+ * Avec --en-ligne : commit des seuls fichiers de la Médiathèque (et du sitemap), puis push sur main → site à jour.
  * ==========================================================================
  */
 import { spawn, spawnSync } from 'node:child_process';
@@ -34,8 +37,19 @@ const EDGE = ['C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', 'C
   .find((p) => existsSync(p));
 const stop = (msg) => { console.error('Publication interrompue : ' + msg); process.exit(1); };
 
-const [slug, pdf, dossierApercus] = process.argv.slice(2);
-if (!slug || !pdf || !dossierApercus) stop('usage : node _outils/publier-ressource.mjs <slug> <fichier.pdf> <dossier-des-apercus>');
+const args = process.argv.slice(2);
+const EN_LIGNE = args.includes('--en-ligne');
+let [slug, pdf, dossierApercus] = args.filter((a) => !a.startsWith('--'));
+if (!slug) stop('usage : node _outils/publier-ressource.mjs <slug> [<fichier.pdf> <dossier-des-apercus>] [--en-ligne]');
+// Sans chemins : convention de l'atelier de production, _mediatheque/NN-<slug>/version-finale/<slug>.pdf et apercus/.
+if (!pdf) {
+  const atelier = join(RACINE, '_mediatheque');
+  const dossier = existsSync(atelier) && readdirSync(atelier).find((d) => d.replace(/^\d+-/, '') === slug);
+  if (!dossier) stop(`aucun dossier _mediatheque/NN-${slug}/ : indiquez le PDF et le dossier des aperçus.`);
+  pdf = join(atelier, dossier, 'version-finale', `${slug}.pdf`);
+  dossierApercus = join(atelier, dossier, 'version-finale', 'apercus');
+}
+if (!dossierApercus) stop('indiquez aussi le dossier des aperçus.');
 
 /* ---------- Contrôles ---------- */
 const brut = readFileSync(CATALOGUE, 'utf8');
@@ -43,6 +57,12 @@ const catalogue = JSON.parse(brut);
 const r = catalogue.ressources.find((x) => x.slug === slug);
 if (!r) stop(`ressource inconnue dans le catalogue : ${slug}`);
 if (r.acces !== 'public') stop(`« ${r.titre} » est réservée aux familles : son PDF ne doit pas être déposé dans le dépôt public (protection prévue plus tard).`);
+if (r.a_valider) stop(`les textes de la fiche « ${r.titre} » sont encore provisoires. Mettez à jour dans mediatheque-educative/catalogue.json les champs description, type, contenu, objectifs, materiel, conseils (et duree, securite si utile) pour qu'ils décrivent exactement le document final, puis supprimez le champ "a_valider".`);
+if (EN_LIGNE) {
+  const git = (...a) => spawnSync('git', a, { cwd: RACINE, encoding: 'utf8' });
+  const branche = git('rev-parse', '--abbrev-ref', 'HEAD').stdout.trim();
+  if (branche !== 'main') stop(`--en-ligne se lance depuis la branche main (branche actuelle : ${branche}).`);
+}
 if (!existsSync(pdf) || !/\.pdf$/i.test(pdf)) stop(`PDF introuvable : ${pdf}`);
 if (!readFileSync(pdf).subarray(0, 5).toString().startsWith('%PDF')) stop(`le fichier n'est pas un PDF valide : ${pdf}`);
 if (!existsSync(dossierApercus) || !statSync(dossierApercus).isDirectory()) stop(`dossier d'aperçus introuvable : ${dossierApercus}`);
@@ -111,4 +131,15 @@ console.log(`Catalogue : « ${r.titre} » disponible (mise en ligne le ${r.publi
 /* ---------- 4. Génération ---------- */
 const gen = spawnSync(process.execPath, [join(RACINE, '_outils', 'generer-mediatheque.mjs')], { stdio: 'inherit' });
 if (gen.status !== 0) stop('le générateur a signalé une erreur (voir ci-dessus).');
-console.log('\nÀ faire ensuite : vérifier la fiche dans le navigateur, puis commiter. Rien n’est encore en ligne.');
+
+/* ---------- 5. Mise en ligne (option --en-ligne) : commit des seuls fichiers de la Médiathèque, puis push sur main ---------- */
+if (!EN_LIGNE) {
+  console.log('\nÀ faire ensuite : vérifier la fiche dans le navigateur, puis relancer avec --en-ligne (ou commiter et pousser).');
+  process.exit(0);
+}
+const git = (...a) => { const res = spawnSync('git', a, { cwd: RACINE, encoding: 'utf8' }); if (res.status !== 0) stop(`git ${a[0]} : ${(res.stderr || res.stdout).trim()}`); return res.stdout.trim(); };
+git('add', '--', 'mediatheque-educative', 'sitemap.xml');
+if (!git('diff', '--cached', '--name-only')) { console.log('Aucun changement à mettre en ligne.'); process.exit(0); }
+git('commit', '-m', `Médiathèque : publication de « ${r.titre} »`, '-m', `${nbPages} pages, accès libre. Fiche, aperçus et PDF ajoutés ; catalogue et sitemap mis à jour.`, '--', 'mediatheque-educative', 'sitemap.xml');
+git('push', 'origin', 'main');
+console.log(`\nEn ligne : « ${r.titre} » sera visible sur https://ecolematernellelila.com/mediatheque-educative/ressources/${slug}.html dans quelques minutes (délai de GitHub Pages).`);
