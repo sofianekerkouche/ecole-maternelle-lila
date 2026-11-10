@@ -519,7 +519,7 @@
       "age_min": 3,
       "age_max": 5,
       "acces": "public",
-      "statut": "a-venir",
+      "statut": "disponible",
       "type": "Livret illustré",
       "description": "Le même arbre au fil du printemps, de l'été, de l'automne et de l'hiver : le temps qu'il fait, la nature qui change et les vêtements de chaque saison, avec un jeu et un tableau de la météo.",
       "objectifs": [
@@ -545,7 +545,18 @@
         "Utilisez souvent les mots chaud, froid, doux, sec, mouillé.",
         "Partez de ce que votre enfant voit autour de lui : les saisons ne se ressemblent pas partout."
       ],
-      "duree": "Quelques minutes, à reprendre au fil de l'année"
+      "duree": "Quelques minutes, à reprendre au fil de l'année",
+      "fichier": "mediatheque-educative/fichiers/a-la-decouverte-des-quatre-saisons.pdf",
+      "pages": 6,
+      "apercus": [
+        "mediatheque-educative/apercus/a-la-decouverte-des-quatre-saisons-1.webp",
+        "mediatheque-educative/apercus/a-la-decouverte-des-quatre-saisons-2.webp",
+        "mediatheque-educative/apercus/a-la-decouverte-des-quatre-saisons-3.webp",
+        "mediatheque-educative/apercus/a-la-decouverte-des-quatre-saisons-4.webp",
+        "mediatheque-educative/apercus/a-la-decouverte-des-quatre-saisons-5.webp",
+        "mediatheque-educative/apercus/a-la-decouverte-des-quatre-saisons-6.webp"
+      ],
+      "publie_le": "2026-11-10"
     },
     {
       "numero": 18,
