@@ -436,7 +436,7 @@
       "age_min": 2,
       "age_max": 4,
       "acces": "public",
-      "statut": "a-venir",
+      "statut": "disponible",
       "type": "Imagier",
       "description": "La chatte et son chaton, la vache et son veau, la poule et son poussin… Un imagier de six familles d'animaux, avec un jeu à relier et un jeu sur les cris des animaux.",
       "objectifs": [
@@ -462,7 +462,18 @@
         "Imitez les cris ensemble : c'est amusant et cela aide à répéter des sons.",
         "Faites le lien avec votre propre famille."
       ],
-      "duree": "Quelques minutes, à reprendre souvent"
+      "duree": "Quelques minutes, à reprendre souvent",
+      "fichier": "mediatheque-educative/fichiers/les-animaux-et-leurs-petits.pdf",
+      "pages": 6,
+      "apercus": [
+        "mediatheque-educative/apercus/les-animaux-et-leurs-petits-1.webp",
+        "mediatheque-educative/apercus/les-animaux-et-leurs-petits-2.webp",
+        "mediatheque-educative/apercus/les-animaux-et-leurs-petits-3.webp",
+        "mediatheque-educative/apercus/les-animaux-et-leurs-petits-4.webp",
+        "mediatheque-educative/apercus/les-animaux-et-leurs-petits-5.webp",
+        "mediatheque-educative/apercus/les-animaux-et-leurs-petits-6.webp"
+      ],
+      "publie_le": "2026-11-10"
     },
     {
       "numero": 17,
