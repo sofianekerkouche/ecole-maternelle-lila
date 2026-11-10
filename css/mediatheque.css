@@ -50,7 +50,9 @@ body.mdt [data-categorie="vie-quotidienne-autonomie"]  { --c: var(--mdt-c-quo); 
 .mdt-card:hover { transform: translateY(-3px); box-shadow: var(--cdp-shadow-lift); border-color: color-mix(in srgb, var(--c) 45%, var(--cdp-line)); }
 .mdt-card.is-entering { animation: cdpCardIn .32s var(--cdp-ease) both; animation-delay: calc(var(--i, 0) * 30ms); }
 .mdt-card-media { position: relative; display: block; aspect-ratio: 4 / 3; background: var(--soft); overflow: hidden; }
-.mdt-card-media > .mdt-apercu-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+/* Aperçu réel : la première page du PDF, sur la feuille inclinée */
+.mdt-sheet.mdt-sheet--apercu { padding: 0; gap: 0; overflow: visible; }
+.mdt-sheet.mdt-sheet--apercu img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 5px; }
 .mdt-card-body { display: flex; flex-direction: column; gap: .6rem; flex: 1; padding: 1.2rem 1.35rem 1.35rem; }
 .mdt-main .mdt-card h3 { font-size: 1.2rem; line-height: 1.28; font-weight: 600; }
 .mdt-card h3 a { color: var(--cdp-ink); text-decoration: none; background: linear-gradient(var(--c), var(--c)) left 100% / 0 2px no-repeat; transition: background-size .35s var(--cdp-ease); }
@@ -104,6 +106,8 @@ body.mdt [data-categorie="vie-quotidienne-autonomie"]  { --c: var(--mdt-c-quo); 
   background: rgba(255, 255, 255, .94); color: var(--mdt-c-app-ink); font-size: .74rem; font-weight: 800; letter-spacing: .02em; line-height: 1.4;
   box-shadow: 0 2px 8px rgba(60, 44, 28, .08);
 }
+/* Ressource récemment mise en ligne : vert du site, texte blanc gras (5,4:1 sur #527D19) */
+.mdt-flag--new { background: var(--cdp-green-hover); color: #fff; letter-spacing: .04em; text-transform: uppercase; }
 .mdt-lock-badge {
   position: absolute; top: .7rem; right: .7rem; z-index: 1; width: 36px; height: 36px; border-radius: 50%;
   display: grid; place-items: center; background: var(--mdt-lock); color: var(--mdt-lock-ico); box-shadow: 0 0 0 3px rgba(255, 255, 255, .9), 0 4px 12px rgba(242, 169, 59, .4);

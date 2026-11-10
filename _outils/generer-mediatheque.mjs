@@ -64,7 +64,21 @@ const SLUG = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 /* ---------- Lecture et contrôles du catalogue ---------- */
 const catalogue = JSON.parse(readFileSync(join(DOSSIER, 'catalogue.json'), 'utf8'));
 const categories = new Map(catalogue.categories.map((c) => [c.slug, c]));
-const ressources = [...catalogue.ressources].sort((a, b) => a.numero - b.numero);
+/* Ordre d'affichage partout : ressources disponibles d'abord (les plus récentes en tête), puis les ressources à venir,
+   chacune dans l'ordre du catalogue. */
+const ressources = [...catalogue.ressources].sort((a, b) => {
+  const da = a.statut === 'disponible', db = b.statut === 'disponible';
+  if (da !== db) return da ? -1 : 1;
+  if (da && a.publie_le !== b.publie_le) return String(b.publie_le).localeCompare(String(a.publie_le));
+  return a.numero - b.numero;
+});
+/* Pastille « Nouveau » : ressources mises en ligne depuis moins de NOUVEAUTE_JOURS jours au moment de la génération.
+   Les pages étant statiques, relancer le générateur à chaque publication suffit à faire vieillir les pastilles. */
+const NOUVEAUTE_JOURS = 45;
+const AUJOURDHUI = new Date();
+const estNouvelle = (r) => r.statut === 'disponible' && (AUJOURDHUI - new Date(r.publie_le + 'T00:00:00')) / 864e5 < NOUVEAUTE_JOURS;
+const MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+const dateFr = (iso) => { const [a, m, j] = iso.split('-').map(Number); return `${j === 1 ? '1er' : j} ${MOIS[m - 1]} ${a}`; };
 
 for (const c of catalogue.categories) {
   if (!SLUG.test(c.slug || '')) echec(`Slug de catégorie non conforme : ${c.slug}`);
@@ -88,6 +102,11 @@ for (const r of ressources) {
     else if (!/^mediatheque-educative\/fichiers\/[a-z0-9-]+\.pdf$/.test(r.fichier)) echec(`${id} : le fichier doit se trouver dans mediatheque-educative/fichiers/ (${r.fichier})`);
     else if (!existsSync(join(RACINE, r.fichier))) echec(`${id} : fichier introuvable (${r.fichier})`);
     if (!r.pages) echec(`${id} : nombre de pages manquant pour une ressource disponible`);
+  }
+  if (r.statut === 'disponible') {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(r.publie_le || '') || Number.isNaN(new Date(r.publie_le).getTime())) echec(`${id} : date de mise en ligne "publie_le" manquante ou invalide (format AAAA-MM-JJ)`);
+    if (!(r.apercus && r.apercus.length)) echec(`${id} : au moins un aperçu est nécessaire pour une ressource disponible (champ "apercus")`);
+    else for (const img of r.apercus) if (!/^mediatheque-educative\/apercus\/[a-z0-9-]+\.(webp|jpg|png)$/.test(img)) echec(`${id} : les aperçus doivent se trouver dans mediatheque-educative/apercus/ (${img})`);
   }
   if (r.fichier && r.statut !== 'disponible') echec(`${id} : champ "fichier" renseigné alors que la ressource n'est pas disponible`);
   for (const img of r.apercus || []) if (!existsSync(join(RACINE, img))) echec(`${id} : aperçu introuvable (${img})`);
@@ -178,7 +197,7 @@ const PARTAGE = {
   type: 'image/webp', largeur: 1600, hauteur: 900,
   alt: 'Fillette concentrée qui construit avec des blocs de bois devant des étagères de livres',
 };
-function tete({ titre, description, canonique, typeOg = 'website', ld, profondeur, accueil = false }) {
+function tete({ titre, description, canonique, typeOg = 'website', ld, profondeur, accueil = false, robots = ROBOTS }) {
   const r = profondeur === 2 ? '../../' : '../';
   return `<!DOCTYPE html>
 <!-- Fichier généré par _outils/generer-mediatheque.mjs à partir de mediatheque-educative/catalogue.json. Ne pas modifier directement. -->
@@ -186,7 +205,7 @@ function tete({ titre, description, canonique, typeOg = 'website', ld, profondeu
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="${ROBOTS}">
+  <meta name="robots" content="${robots}">
   <title>${echapper(titre)}</title>
   <meta name="description" content="${echapper(description)}">
   <link rel="canonical" href="${canonique}">
@@ -260,13 +279,14 @@ const filAriane = (elements) => ({
 
 /** Visuel d'une ressource : premier aperçu s'il existe, sinon une feuille A4 stylisée aux couleurs de la catégorie. */
 function visuel(r, racine, grand = false) {
-  if (r.apercus && r.apercus.length) {
-    return `<img class="mdt-apercu-img" src="${racine}${r.apercus[0]}" alt="" loading="lazy" decoding="async">`;
-  }
+  // Avec un aperçu : la vraie première page, présentée sur la même feuille inclinée que le visuel d'attente.
+  const contenu = r.apercus && r.apercus.length
+    ? `<span class="mdt-sheet mdt-sheet--apercu"><img src="${racine}${r.apercus[0]}" alt="" loading="lazy" decoding="async"></span>`
+    : `<span class="mdt-sheet"><span class="mdt-sheet-band"></span><span class="mdt-sheet-ico">${svg(`mdt-ico-${r.categorie}`)}</span><span class="mdt-sheet-lines"><i></i><i></i><i></i></span></span>`;
   return [
     `<span class="mdt-mock${grand ? ' mdt-mock--grand' : ''}" aria-hidden="true">`,
     `  <svg class="cdp-wash"><use href="#cdp-wash"/></svg>`,
-    `  <span class="mdt-sheet"><span class="mdt-sheet-band"></span><span class="mdt-sheet-ico">${svg(`mdt-ico-${r.categorie}`)}</span><span class="mdt-sheet-lines"><i></i><i></i><i></i></span></span>`,
+    `  ${contenu}`,
     `</span>`,
   ].join('\n');
 }
@@ -282,6 +302,7 @@ function carte(r, { base, racine, titre = 'h3', chip = true }) {
   const url = `${base}${r.slug}.html`;
   const drapeaux = [
     r.statut === 'a-venir' ? `<span class="mdt-flag">Bientôt disponible</span>` : '',
+    estNouvelle(r) ? `<span class="mdt-flag mdt-flag--new">Nouveau</span>` : '',
     r.acces === 'familles' ? `<span class="mdt-lock-badge" title="Réservée aux familles de l’école">${svg('mdt-lock')}<span class="cdp-sr-only">Réservée aux familles de l’école</span></span>` : '',
   ].filter(Boolean).join('');
   return `<article class="mdt-card" data-categorie="${r.categorie}" data-age-min="${r.age_min}" data-age-max="${r.age_max}" data-acces="${r.acces}" data-statut="${r.statut}" data-recherche="${echapper(motsCles(r))}">
@@ -302,16 +323,23 @@ ${indenter(visuel(r, racine), '    ')}
 </article>`;
 }
 
+/** Compteur d'une catégorie : ressources disponibles dès qu'il y en a, sinon total et accès libre. */
+function compteCategorie(liste) {
+  const dispo = liste.filter((r) => r.statut === 'disponible').length;
+  if (dispo) return `${pluriel(dispo, 'disponible', 'disponibles')} · ${liste.length} au total`;
+  const libres = liste.filter((r) => r.acces === 'public').length;
+  return `${pluriel(liste.length, 'ressource', 'ressources')}${libres ? ` · ${libres} en accès libre` : ''}`;
+}
+
 /** Carte de catégorie (même balisage que le Coin des parents). */
 function carteCategorie(c, base) {
   const liste = ressourcesDe(c.slug);
-  const libres = liste.filter((r) => r.acces === 'public').length;
   return `<a class="cdp-cat" data-categorie="${c.slug}" href="${base}${c.slug}/index.html">
   <svg class="cdp-wash" aria-hidden="true"><use href="#cdp-wash"/></svg>
   <span class="cdp-cat-ico">${svg(`mdt-ico-${c.slug}`)}</span>
   <h3>${texte(c.nom)}</h3>
   <p>${texte(c.description)}</p>
-  <span class="cdp-cat-foot"><span class="cdp-count">${pluriel(liste.length, 'ressource', 'ressources')}${libres ? ` · ${libres} en accès libre` : ''}</span><span class="cdp-cat-arrow">${svg('cdp-arrow')}</span></span>
+  <span class="cdp-cat-foot"><span class="cdp-count">${compteCategorie(liste)}</span><span class="cdp-cat-arrow">${svg('cdp-arrow')}</span></span>
 </a>`;
 }
 
@@ -481,7 +509,7 @@ ${pied({ profondeur: 1, accueil: true })}`;
 /* ---------- 2. Pages catégories ---------- */
 function genererCategorie(c) {
   const liste = ressourcesDe(c.slug);
-  const libres = liste.filter((r) => r.acces === 'public').length;
+
   const url = urlProdCategorie(c);
   const autres = catalogue.categories.filter((x) => x.slug !== c.slug);
   const ld = {
@@ -526,7 +554,7 @@ function genererCategorie(c) {
             <p class="cdp-kicker">Catégorie</p>
             <h1 id="mdt-cat-title">${texte(c.nom)}</h1>
             <p class="cdp-hero-lead">${texte(c.intro)}</p>
-            <p class="cdp-cat-total"><span class="cdp-chip">${pluriel(liste.length, 'ressource', 'ressources')}${libres ? ` · ${libres} en accès libre` : ''}</span></p>
+            <p class="cdp-cat-total"><span class="cdp-chip">${compteCategorie(liste)}</span></p>
           </div>
           <div class="cdp-cat-visual" aria-hidden="true">
             <svg class="cdp-wash"><use href="#cdp-wash"/></svg>
@@ -625,6 +653,7 @@ function genererFiche(r) {
         ...(r.objectifs ? { teaches: r.objectifs } : {}),
         ...(r.pages ? { numberOfPages: r.pages } : {}),
         ...(r.acces === 'public' && r.statut === 'disponible' ? { encoding: { '@type': 'MediaObject', contentUrl: URL_PRODUCTION + r.fichier, encodingFormat: 'application/pdf' } } : {}),
+        ...(r.publie_le ? { datePublished: r.publie_le } : {}),
         isPartOf: { '@type': 'CollectionPage', '@id': URL_RUBRIQUE + '#page', name: NOM, url: URL_RUBRIQUE },
         publisher: ECOLE,
         breadcrumb: { '@id': url + '#fil-ariane' },
@@ -641,6 +670,7 @@ function genererFiche(r) {
     r.duree ? ['mdt-clock', 'Durée indicative', texte(r.duree)] : null,
     r.pages ? ['mdt-pages', 'Nombre de pages', String(r.pages)] : null,
     [r.acces === 'public' ? 'mdt-open' : 'mdt-lock', 'Accès', libelleAcces(r)],
+    r.publie_le ? ['mdt-clock', 'Mise en ligne', dateFr(r.publie_le)] : null,
   ].filter(Boolean);
 
   const apercu = r.apercus && r.apercus.length
@@ -656,6 +686,8 @@ ${indenter(visuel(r, '../../', true), '  ')}
     canonique: url,
     ld,
     profondeur: 2,
+    // Une fiche « bientôt disponible » reste consultable mais hors des moteurs de recherche (contenu encore trop mince).
+    robots: r.statut === 'disponible' ? ROBOTS : 'noindex,follow',
   })}
   <main class="cdp-main mdt-main mdt-fiche-page" id="contenu">
     <article class="mdt-fiche" data-categorie="${r.categorie}" aria-labelledby="mdt-fiche-title">
@@ -737,7 +769,7 @@ ${pied({ profondeur: 2 })}`;
 function genererSitemap() {
   const chemin = join(DOSSIER, 'sitemap.xml');
   const cheminSite = join(RACINE, 'sitemap.xml');
-  const urls = [URL_RUBRIQUE, ...catalogue.categories.map(urlProdCategorie), ...ressources.map(urlProdRessource)];
+  const urls = [URL_RUBRIQUE, ...catalogue.categories.map(urlProdCategorie), ...ressources.filter((r) => r.statut === 'disponible').map(urlProdRessource)];
   let site = existsSync(cheminSite) ? readFileSync(cheminSite, 'utf8') : null;
   if (site) {
     // Retire toute URL de la Médiathèque, puis l'ajoute de nouveau hors prévisualisation.
@@ -758,7 +790,7 @@ if (existsSync(dossierFiches)) for (const f of readdirSync(dossierFiches)) {
 }
 for (const f of existsSync(DOSSIER) ? readdirSync(DOSSIER) : []) {
   const p = join(DOSSIER, f);
-  if (statSync(p).isDirectory() && !['ressources', 'fichiers'].includes(f) && !categories.has(f)) rmSync(p, { recursive: true });
+  if (statSync(p).isDirectory() && !['ressources', 'fichiers', 'apercus'].includes(f) && !categories.has(f)) rmSync(p, { recursive: true });
 }
 genererAccueil();
 for (const c of catalogue.categories) genererCategorie(c);
