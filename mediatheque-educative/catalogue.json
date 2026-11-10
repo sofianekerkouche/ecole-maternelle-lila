@@ -146,33 +146,34 @@
       "statut": "a-venir",
       "pilote": 3,
       "type": "Livret d'activité illustré",
-      "description": "Créer un petit jardin à partir de formes simples à découper et à coller : fleurs, arbres, papillons, nuages et herbe.",
+      "description": "Un livret pour créer un petit jardin à partir de formes simples à découper et à coller : soleil, nuage, papillons, fleurs, arbre et herbe.",
       "objectifs": [
         "Reconnaître et nommer des formes simples.",
         "Exercer la précision du geste en découpant et en collant.",
         "Composer une création personnelle à partir d'éléments donnés."
       ],
       "materiel": [
-        "Le livret imprimé.",
-        "Des ciseaux adaptés à l'âge de l'enfant.",
-        "De la colle non toxique.",
+        "Le livret imprimé sur papier A4, de préférence un peu épais.",
+        "Des ciseaux adaptés à l'âge de l'enfant, à bouts ronds.",
+        "De la colle non toxique, en bâton.",
         "Des crayons ou des feutres pour personnaliser le jardin."
       ],
       "contenu": [
         "Une couverture.",
-        "La découverte des formes et du matériel.",
-        "Les éléments à découper.",
+        "La découverte des formes (cercle, ovale, rectangle, triangle) et du matériel.",
+        "Les éléments du jardin à découper, chacun entouré d'une forme simple en pointillés.",
         "Un fond de jardin à compléter.",
-        "Des idées pour personnaliser la création.",
-        "Des conseils pour accompagner l'enfant."
+        "Six idées pour personnaliser la création, avec un exemple de jardin terminé.",
+        "Des conseils pour accompagner votre enfant."
       ],
       "conseils": [
         "Pour les plus jeunes, préparez ou découpez vous-même les formes si nécessaire.",
         "Les ciseaux adaptés ne s'utilisent qu'avec une surveillance rapprochée.",
-        "Laissez l'enfant choisir où placer chaque élément : il n'y a pas de bon ou de mauvais jardin."
+        "Laissez l'enfant choisir où placer chaque élément : il n'y a pas de bon ou de mauvais jardin.",
+        "Demandez-lui de vous raconter son jardin plutôt que de le juger."
       ],
       "securite": "Activité à réaliser sous la surveillance d'un adulte : ciseaux adaptés à l'âge, colle non toxique.",
-      "a_valider": true
+      "duree": "Environ 20 à 30 minutes, en une ou plusieurs fois"
     },
     {
       "numero": 8,
@@ -234,32 +235,43 @@
       "age_min": 3,
       "age_max": 5,
       "acces": "public",
-      "statut": "a-venir",
+      "statut": "disponible",
       "pilote": 2,
       "type": "Jeu de cartes à découper",
-      "description": "Seize cartes illustrées, soit huit paires, à découper pour jouer en famille, avec des variantes selon l'âge.",
+      "description": "Seize cartes illustrées, soit huit paires d'animaux, à découper pour jouer en famille, avec les règles du jeu et six variantes selon l'âge.",
       "objectifs": [
         "Exercer la mémoire et l'attention.",
         "Observer et reconnaître des images identiques.",
         "Apprendre à attendre son tour et à respecter une règle de jeu."
       ],
       "materiel": [
-        "Le document imprimé, de préférence sur papier épais.",
-        "Des ciseaux (découpage par l'adulte)."
+        "Le document imprimé sur papier A4, de préférence épais : les images ne se voient pas par transparence.",
+        "Des ciseaux, pour l'adulte qui découpe les cartes."
       ],
       "contenu": [
         "Une couverture.",
-        "Deux planches de cartes à découper.",
-        "Les règles du jeu pour les parents.",
-        "Des variantes pour simplifier ou complexifier le jeu."
+        "Cartes à découper 1/2 : chat, chien, lapin, lion, éléphant, vache, oiseau, poisson.",
+        "Cartes à découper 2/2 : les mêmes cartes, pour former les huit paires.",
+        "Les règles du jeu en quatre étapes, avec des conseils pour bien démarrer.",
+        "Six variantes pour simplifier ou compliquer le jeu."
       ],
       "conseils": [
         "Commencez avec trois ou quatre paires pour les plus jeunes, puis ajoutez des cartes au fil des parties.",
         "Nommez les images en les retournant : le jeu devient aussi un moment de langage.",
-        "Valorisez les essais plus que les victoires."
+        "Valorisez les essais plus que les victoires, et arrêtez la partie avant que votre enfant ne se lasse."
       ],
       "securite": "Cartes découpées par un adulte. Surveillez les plus jeunes, qui peuvent porter les cartes à la bouche.",
-      "a_valider": true
+      "duree": "Une partie de 10 à 15 minutes",
+      "fichier": "mediatheque-educative/fichiers/mon-premier-jeu-de-memoire.pdf",
+      "pages": 5,
+      "apercus": [
+        "mediatheque-educative/apercus/mon-premier-jeu-de-memoire-1.webp",
+        "mediatheque-educative/apercus/mon-premier-jeu-de-memoire-2.webp",
+        "mediatheque-educative/apercus/mon-premier-jeu-de-memoire-3.webp",
+        "mediatheque-educative/apercus/mon-premier-jeu-de-memoire-4.webp",
+        "mediatheque-educative/apercus/mon-premier-jeu-de-memoire-5.webp"
+      ],
+      "publie_le": "2026-11-10"
     },
     {
       "numero": 13,
