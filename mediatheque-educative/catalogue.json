@@ -165,7 +165,7 @@
       "age_min": 2,
       "age_max": 4,
       "acces": "public",
-      "statut": "a-venir",
+      "statut": "disponible",
       "type": "Coloriages",
       "description": "Six grands dessins d'animaux aux contours épais, pensés pour les petites mains, avec un espace pour dessiner le décor et un petit modèle en couleur.",
       "objectifs": [
@@ -189,7 +189,20 @@
         "Proposez une page à la fois et affichez les coloriages terminés."
       ],
       "duree": "Environ 10 minutes par coloriage",
-      "securite": "Surveillez les plus jeunes, qui peuvent porter les crayons à la bouche."
+      "securite": "Surveillez les plus jeunes, qui peuvent porter les crayons à la bouche.",
+      "fichier": "mediatheque-educative/fichiers/mes-coloriages-des-animaux.pdf",
+      "pages": 8,
+      "apercus": [
+        "mediatheque-educative/apercus/mes-coloriages-des-animaux-1.webp",
+        "mediatheque-educative/apercus/mes-coloriages-des-animaux-2.webp",
+        "mediatheque-educative/apercus/mes-coloriages-des-animaux-3.webp",
+        "mediatheque-educative/apercus/mes-coloriages-des-animaux-4.webp",
+        "mediatheque-educative/apercus/mes-coloriages-des-animaux-5.webp",
+        "mediatheque-educative/apercus/mes-coloriages-des-animaux-6.webp",
+        "mediatheque-educative/apercus/mes-coloriages-des-animaux-7.webp",
+        "mediatheque-educative/apercus/mes-coloriages-des-animaux-8.webp"
+      ],
+      "publie_le": "2026-11-10"
     },
     {
       "numero": 7,
