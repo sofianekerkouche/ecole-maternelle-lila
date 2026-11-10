@@ -263,28 +263,17 @@
       </header>
 
       <div class="cdp-wrap mdt-fiche-grid">
-        <!-- ==================== CONTENU DE LA FICHE ==================== -->
-        <div class="mdt-fiche-main">
-          <section class="mdt-fiche-section" aria-labelledby="mdt-apercu-title">
-            <h2 id="mdt-apercu-title">Aperçu du document</h2>
-            <div class="mdt-apercu-vide">
-              <span class="mdt-mock mdt-mock--grand" aria-hidden="true">
-                <svg class="cdp-wash"><use href="#cdp-wash"/></svg>
-                <span class="mdt-sheet"><span class="mdt-sheet-band"></span><span class="mdt-sheet-ico"><svg aria-hidden="true"><use href="#mdt-ico-langues-eveil-linguistique"/></svg></span><span class="mdt-sheet-lines"><i></i><i></i><i></i></span></span>
-              </span>
-              <p>L'aperçu des pages sera visible ici dès la publication du document.</p>
-            </div>
-          </section>
-          <aside class="mdt-share" aria-labelledby="mdt-share-title-fiche">
-            <span class="mdt-share-ico"><svg aria-hidden="true"><use href="#cdp-heart"/></svg></span>
-            <div>
-              <h2 id="mdt-share-title-fiche">Une activité à partager avec votre enfant</h2>
-              <p>Chaque ressource est pensée pour être utilisée avec un adulte. Votre présence, votre attention et vos encouragements font partie de l'activité : prenez le temps de jouer ensemble, sans chercher la performance, et adaptez le rythme à celui de votre enfant.</p>
-            </div>
-          </aside>
-
-          <p class="mdt-fiche-later">Les objectifs pédagogiques, le matériel nécessaire et les conseils pour accompagner votre enfant seront présentés ici à la publication de la ressource.</p>
-        </div>
+        <!-- ==================== APERÇU (galerie) ==================== -->
+        <section class="mdt-fiche-section mdt-fiche-apercu" aria-labelledby="mdt-apercu-title">
+          <h2 id="mdt-apercu-title">Aperçu du document</h2>
+          <div class="mdt-apercu-vide">
+            <span class="mdt-mock mdt-mock--grand" aria-hidden="true">
+              <svg class="cdp-wash"><use href="#cdp-wash"/></svg>
+              <span class="mdt-sheet"><span class="mdt-sheet-band"></span><span class="mdt-sheet-ico"><svg aria-hidden="true"><use href="#mdt-ico-langues-eveil-linguistique"/></svg></span><span class="mdt-sheet-lines"><i></i><i></i><i></i></span></span>
+            </span>
+            <p>L'aperçu des pages sera visible ici dès la publication du document.</p>
+          </div>
+        </section>
 
         <!-- ==================== EN BREF ET TÉLÉCHARGEMENT ==================== -->
         <aside class="mdt-fiche-aside" aria-labelledby="mdt-bref-title">
@@ -303,6 +292,21 @@
             </div>
           </div>
         </aside>
+
+        <!-- ==================== CONTENU DE LA FICHE ==================== -->
+        <div class="mdt-fiche-main">
+          <aside class="mdt-share" aria-labelledby="mdt-share-title-fiche">
+            <div class="mdt-share-tete">
+              <span class="mdt-share-ico"><svg aria-hidden="true"><use href="#cdp-heart"/></svg></span>
+              <h2 id="mdt-share-title-fiche">Une activité à partager avec votre enfant</h2>
+            </div>
+            <div>
+              <p>Chaque ressource est pensée pour être utilisée avec un adulte. Votre présence, votre attention et vos encouragements font partie de l'activité : prenez le temps de jouer ensemble, sans chercher la performance, et adaptez le rythme à celui de votre enfant.</p>
+            </div>
+          </aside>
+
+          <p class="mdt-fiche-later">Les objectifs pédagogiques, le matériel nécessaire et les conseils pour accompagner votre enfant seront présentés ici à la publication de la ressource.</p>
+        </div>
       </div>
     </article>
 

@@ -151,3 +151,80 @@
 
   apply(false);
 })();
+
+/**
+ * Galerie d'aperçus des fiches ressources : une page à la fois, défilement automatique toutes les 4 secondes.
+ * Pause : au survol, au clavier (focus), après un glissement au doigt, hors de l'écran, onglet masqué,
+ * ou avec le bouton pause. Aucun défilement automatique si l'utilisateur limite les animations.
+ * Sans JavaScript, la piste reste défilable au doigt ou à la souris (défilement accroché page par page).
+ */
+(function () {
+  'use strict';
+  var galeries = document.querySelectorAll('[data-mdt-galerie]');
+  if (!galeries.length) return;
+  var DELAI = 4000;
+  var reduit = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  Array.prototype.forEach.call(galeries, function (g) {
+    var piste = g.querySelector('.mdt-galerie-piste');
+    var diapos = piste.querySelectorAll('.mdt-galerie-diapo');
+    var n = diapos.length;
+    var ctrl = g.querySelector('.mdt-galerie-ctrl');
+    if (n < 2 || !ctrl) return;
+    ctrl.hidden = false;
+    var points = g.querySelectorAll('.mdt-galerie-point');
+    var btnPause = g.querySelector('[data-galerie="pause"]');
+    var courant = 0, enPause = reduit.matches, survol = false, visible = true, repriseApres = 0;
+
+    function majPoints() {
+      Array.prototype.forEach.call(points, function (p, k) {
+        if (k === courant) p.setAttribute('aria-current', 'true'); else p.removeAttribute('aria-current');
+      });
+    }
+    function majPause() {
+      btnPause.setAttribute('aria-pressed', enPause ? 'true' : 'false');
+      btnPause.setAttribute('aria-label', enPause ? 'Reprendre le défilement des pages' : 'Mettre en pause le défilement des pages');
+    }
+    function aller(k) {
+      courant = (k + n) % n;
+      piste.scrollTo({ left: courant * piste.clientWidth, behavior: reduit.matches ? 'auto' : 'smooth' });
+      majPoints();
+    }
+
+    g.querySelector('[data-galerie="prec"]').addEventListener('click', function () { aller(courant - 1); repriseApres = Date.now() + 8000; });
+    g.querySelector('[data-galerie="suiv"]').addEventListener('click', function () { aller(courant + 1); repriseApres = Date.now() + 8000; });
+    Array.prototype.forEach.call(points, function (p) {
+      p.addEventListener('click', function () { aller(+p.getAttribute('data-galerie-page')); repriseApres = Date.now() + 8000; });
+    });
+    btnPause.addEventListener('click', function () { enPause = !enPause; majPause(); });
+
+    // Page affichée après un glissement manuel
+    var attente;
+    piste.addEventListener('scroll', function () {
+      clearTimeout(attente);
+      attente = setTimeout(function () {
+        var k = Math.round(piste.scrollLeft / piste.clientWidth);
+        if (k !== courant) { courant = Math.max(0, Math.min(n - 1, k)); majPoints(); }
+      }, 120);
+    }, { passive: true });
+    piste.addEventListener('touchstart', function () { repriseApres = Date.now() + 8000; }, { passive: true });
+    g.addEventListener('mouseenter', function () { survol = true; });
+    g.addEventListener('mouseleave', function () { survol = false; });
+    g.addEventListener('focusin', function () { survol = true; });
+    g.addEventListener('focusout', function () { survol = false; });
+    piste.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); aller(courant + 1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); aller(courant - 1); }
+    });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }, { threshold: 0.4 }).observe(g);
+    }
+    window.addEventListener('resize', function () { piste.scrollTo({ left: courant * piste.clientWidth }); });
+
+    majPause();
+    setInterval(function () {
+      if (enPause || survol || !visible || document.hidden || Date.now() < repriseApres) return;
+      aller(courant + 1);
+    }, DELAI);
+  });
+})();

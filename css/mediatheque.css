@@ -162,7 +162,7 @@ body.mdt [data-categorie="vie-quotidienne-autonomie"]  { --c: var(--mdt-c-quo); 
 
 /* ============ ENCADRÉ « UNE ACTIVITÉ À PARTAGER » ============ */
 .mdt-share {
-  display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 1.25rem; align-items: start;
+  display: block;
   max-width: 880px; margin-inline: auto; padding: clamp(1.4rem, 3vw, 2rem);
   background: var(--cdp-card); border: 1px solid var(--cdp-line); border-radius: var(--cdp-r-lg); box-shadow: var(--cdp-shadow-soft);
   border-left: 5px solid #F3D9D7;
@@ -170,7 +170,9 @@ body.mdt [data-categorie="vie-quotidienne-autonomie"]  { --c: var(--mdt-c-quo); 
 .mdt-share-ico { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: #FBEDEC; color: var(--cdp-red); }
 .mdt-share-ico svg { width: 26px; height: 26px; }
 .mdt-main .mdt-share h2 { font-size: clamp(1.35rem, 2.4vw, 1.6rem); line-height: 1.2; font-weight: 600; }
-.mdt-main .mdt-share p { margin-top: .5rem; color: var(--cdp-text); line-height: 1.65; }
+.mdt-share-tete { display: flex; align-items: center; gap: 1rem; }
+.mdt-share-ico { flex: none; }
+.mdt-main .mdt-share p { margin-top: .85rem; color: var(--cdp-text); line-height: 1.65; }
 
 /* ============ FICHE RESSOURCE ============ */
 .mdt-fiche-head .cdp-wrap { position: relative; }
@@ -188,7 +190,13 @@ body.mdt [data-categorie="vie-quotidienne-autonomie"]  { --c: var(--mdt-c-quo); 
 .mdt-badges .mdt-badge--familles svg { color: currentColor; }
 .mdt-badges .mdt-badge--soon { background: var(--mdt-c-app-soft); border-color: transparent; color: var(--mdt-c-app-ink); font-weight: 800; }
 
-.mdt-fiche-grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: clamp(2rem, 4vw, 3.5rem); align-items: start; padding-bottom: clamp(3rem, 6vw, 5rem); }
+.mdt-fiche-grid {
+  display: grid; grid-template-columns: minmax(0, 1fr) 340px; grid-template-areas: "apercu bref" "suite bref";
+  gap: clamp(2rem, 4vw, 2.75rem) clamp(2rem, 4vw, 3.5rem); align-items: start; padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+.mdt-fiche-apercu { grid-area: apercu; min-width: 0; }
+.mdt-fiche-aside { grid-area: bref; }
+.mdt-fiche-main { grid-area: suite; }
 .mdt-fiche-main { min-width: 0; }
 .mdt-main .mdt-fiche-main > * + * { margin-top: clamp(2rem, 4vw, 2.75rem); }
 .mdt-main .mdt-fiche-section h2 { font-size: clamp(1.4rem, 2.5vw, 1.7rem); line-height: 1.2; letter-spacing: -.01em; }
@@ -211,8 +219,29 @@ body.mdt [data-categorie="vie-quotidienne-autonomie"]  { --c: var(--mdt-c-quo); 
   padding: .4rem 1rem; border-radius: var(--cdp-r-pill); background: rgba(255, 255, 255, .92);
   font-size: .86rem; font-weight: 700; color: var(--cdp-muted); text-align: center; line-height: 1.45;
 }
-.mdt-apercus { margin-top: 1rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; }
-.mdt-apercus img { display: block; width: 100%; height: auto; border-radius: var(--cdp-r-sm); border: 1px solid var(--cdp-line); box-shadow: var(--cdp-shadow-soft); background: #fff; }
+/* Galerie d'aperçus : une page à la fois, défilement automatique (js/mediatheque.js), glissement natif sans JavaScript */
+.mdt-galerie { margin-top: 1rem; }
+.mdt-galerie-piste {
+  display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain;
+  border-radius: var(--cdp-r-lg); background: var(--soft, var(--cdp-cream)); border: 1px solid var(--cdp-line);
+}
+.mdt-galerie-piste::-webkit-scrollbar { display: none; }
+.mdt-galerie-piste:focus-visible { outline: 3px solid var(--cdp-turquoise-brand, #81C9CB); outline-offset: 3px; }
+.mdt-galerie-diapo { flex: 0 0 100%; scroll-snap-align: center; margin: 0; padding: clamp(.9rem, 3vw, 1.5rem); display: flex; justify-content: center; align-items: center; height: min(72vh, 620px); }
+.mdt-galerie-diapo img { display: block; height: 100%; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--cdp-r-sm); border: 1px solid var(--cdp-line); box-shadow: var(--cdp-shadow-soft); background: #fff; }
+.mdt-galerie-ctrl { display: flex; align-items: center; justify-content: center; gap: .6rem; margin-top: .9rem; }
+.mdt-galerie-ctrl[hidden] { display: none; }
+.mdt-galerie-btn { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--cdp-line); background: var(--cdp-card); color: var(--cdp-ink); display: grid; place-items: center; cursor: pointer; transition: background .2s ease; }
+.mdt-galerie-btn:hover { background: var(--cdp-green-soft); }
+.mdt-galerie-btn:focus-visible, .mdt-galerie-point:focus-visible { outline: 3px solid var(--cdp-turquoise-brand, #81C9CB); outline-offset: 2px; }
+.mdt-galerie-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.mdt-galerie-pause .mdt-ico-lecture { display: none; }
+.mdt-galerie-pause[aria-pressed="true"] .mdt-ico-pause { display: none; }
+.mdt-galerie-pause[aria-pressed="true"] .mdt-ico-lecture { display: block; fill: currentColor; stroke: none; }
+.mdt-galerie-points { display: flex; flex-wrap: wrap; justify-content: center; gap: .15rem; }
+.mdt-galerie-point { width: 28px; height: 28px; border: 0; background: none; padding: 0; cursor: pointer; display: grid; place-items: center; }
+.mdt-galerie-point::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--cdp-line); transition: background .2s ease, transform .2s ease; }
+.mdt-galerie-point[aria-current="true"]::before { background: var(--ink-c, var(--cdp-green-ink)); transform: scale(1.25); }
 
 .mdt-main .mdt-securite { padding: 1rem 1.2rem; border-radius: 0 var(--cdp-r-md) var(--cdp-r-md) 0; background: var(--mdt-gold-soft); border-left: 4px solid var(--mdt-gold); font-size: .97rem; line-height: 1.6; }
 .mdt-securite strong { color: var(--cdp-ink); }
@@ -254,7 +283,8 @@ body.mdt [data-categorie="vie-quotidienne-autonomie"]  { --c: var(--mdt-c-quo); 
   .mdt-tools-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .mdt-search { grid-column: 1 / -1; }
   .mdt-fiche-grid { grid-template-columns: minmax(0, 1fr); }
-  .mdt-fiche-aside { position: static; order: -1; }   /* informations et accès juste sous le titre */
+  .mdt-fiche-grid { grid-template-areas: "apercu" "bref" "suite"; }   /* galerie, puis « En bref » et le téléchargement */
+  .mdt-fiche-aside { position: static; }
 }
 @media (max-width: 600px) {
   .mdt-cards { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
@@ -277,7 +307,11 @@ body.mdt [data-categorie="vie-quotidienne-autonomie"]  { --c: var(--mdt-c-quo); 
   .mdt-mock--grand .mdt-sheet { width: 36%; }
   .mdt-main .mdt-apercu-vide > p { width: auto; left: 1rem; right: 1rem; transform: none; border-radius: var(--cdp-r-md); }
 }
+@media (max-width: 600px) {
+  .mdt-galerie-diapo { height: min(64vh, 520px); }
+}
 @media (prefers-reduced-motion: reduce) {
   .mdt-card, .mdt-sheet { transition: none; }
+  .mdt-galerie-piste { scroll-behavior: auto; }
   .mdt-card:hover, .mdt-card:hover .mdt-sheet { transform: none; }
 }

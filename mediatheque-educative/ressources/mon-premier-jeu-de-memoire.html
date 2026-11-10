@@ -274,16 +274,52 @@
       </header>
 
       <div class="cdp-wrap mdt-fiche-grid">
+        <!-- ==================== APERÇU (galerie) ==================== -->
+        <section class="mdt-fiche-section mdt-fiche-apercu" aria-labelledby="mdt-apercu-title">
+          <h2 id="mdt-apercu-title">Aperçu du document</h2>
+          <div class="mdt-galerie" data-mdt-galerie>
+            <div class="mdt-galerie-piste" tabindex="0" role="group" aria-roledescription="carrousel" aria-label="Pages du document, 5 pages">
+              <figure class="mdt-galerie-diapo" role="group" aria-roledescription="diapositive" aria-label="Page 1 sur 5"><img src="../../mediatheque-educative/apercus/mon-premier-jeu-de-memoire-1.webp" alt="Aperçu de la page 1 du document « Mon premier jeu de mémoire »" decoding="async"></figure>
+              <figure class="mdt-galerie-diapo" role="group" aria-roledescription="diapositive" aria-label="Page 2 sur 5"><img src="../../mediatheque-educative/apercus/mon-premier-jeu-de-memoire-2.webp" alt="Aperçu de la page 2 du document « Mon premier jeu de mémoire »" loading="lazy" decoding="async"></figure>
+              <figure class="mdt-galerie-diapo" role="group" aria-roledescription="diapositive" aria-label="Page 3 sur 5"><img src="../../mediatheque-educative/apercus/mon-premier-jeu-de-memoire-3.webp" alt="Aperçu de la page 3 du document « Mon premier jeu de mémoire »" loading="lazy" decoding="async"></figure>
+              <figure class="mdt-galerie-diapo" role="group" aria-roledescription="diapositive" aria-label="Page 4 sur 5"><img src="../../mediatheque-educative/apercus/mon-premier-jeu-de-memoire-4.webp" alt="Aperçu de la page 4 du document « Mon premier jeu de mémoire »" loading="lazy" decoding="async"></figure>
+              <figure class="mdt-galerie-diapo" role="group" aria-roledescription="diapositive" aria-label="Page 5 sur 5"><img src="../../mediatheque-educative/apercus/mon-premier-jeu-de-memoire-5.webp" alt="Aperçu de la page 5 du document « Mon premier jeu de mémoire »" loading="lazy" decoding="async"></figure>
+            </div>
+            <div class="mdt-galerie-ctrl" hidden>
+              <button type="button" class="mdt-galerie-btn" data-galerie="prec" aria-label="Page précédente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
+              <div class="mdt-galerie-points"><button type="button" class="mdt-galerie-point" data-galerie-page="0" aria-label="Afficher la page 1" aria-current="true"></button><button type="button" class="mdt-galerie-point" data-galerie-page="1" aria-label="Afficher la page 2"></button><button type="button" class="mdt-galerie-point" data-galerie-page="2" aria-label="Afficher la page 3"></button><button type="button" class="mdt-galerie-point" data-galerie-page="3" aria-label="Afficher la page 4"></button><button type="button" class="mdt-galerie-point" data-galerie-page="4" aria-label="Afficher la page 5"></button></div>
+              <button type="button" class="mdt-galerie-btn" data-galerie="suiv" aria-label="Page suivante"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
+              <button type="button" class="mdt-galerie-btn mdt-galerie-pause" data-galerie="pause" aria-label="Mettre en pause le défilement des pages"><svg class="mdt-ico-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg><svg class="mdt-ico-lecture" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5Z"/></svg></button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== EN BREF ET TÉLÉCHARGEMENT ==================== -->
+        <aside class="mdt-fiche-aside" aria-labelledby="mdt-bref-title">
+          <div class="mdt-bref">
+            <h2 id="mdt-bref-title">En bref</h2>
+            <dl>
+              <div><dt><svg aria-hidden="true"><use href="#mdt-ico-jeux-et-logique"/></svg>Catégorie</dt><dd><a href="../jeux-et-logique/index.html">Jeux et logique</a></dd></div>
+              <div><dt><svg aria-hidden="true"><use href="#mdt-age"/></svg>Âge</dt><dd>3 à 5 ans</dd></div>
+              <div><dt><svg aria-hidden="true"><use href="#mdt-type"/></svg>Type d'activité</dt><dd>Jeu de cartes à découper</dd></div>
+              <div><dt><svg aria-hidden="true"><use href="#mdt-clock"/></svg>Durée indicative</dt><dd>Une partie de 10 à 15 minutes</dd></div>
+              <div><dt><svg aria-hidden="true"><use href="#mdt-pages"/></svg>Nombre de pages</dt><dd>5</dd></div>
+              <div><dt><svg aria-hidden="true"><use href="#mdt-open"/></svg>Accès</dt><dd>Accès libre</dd></div>
+              <div><dt><svg aria-hidden="true"><use href="#mdt-clock"/></svg>Mise en ligne</dt><dd>10 novembre 2026</dd></div>
+            </dl>
+            <a class="cdp-btn cdp-btn--green mdt-download" href="../../mediatheque-educative/fichiers/mon-premier-jeu-de-memoire.pdf" download="Mon premier jeu de mémoire - Ressource éducative - École Maternelle Lila.pdf"><svg aria-hidden="true"><use href="#mdt-download"/></svg>Télécharger le PDF</a>
+            <p class="mdt-action-note">Gratuit · PDF · 5 pages · format A4</p>
+          </div>
+        </aside>
+
         <!-- ==================== CONTENU DE LA FICHE ==================== -->
         <div class="mdt-fiche-main">
-          <section class="mdt-fiche-section" aria-labelledby="mdt-apercu-title">
-            <h2 id="mdt-apercu-title">Aperçu du document</h2>
-            <div class="mdt-apercus"><img src="../../mediatheque-educative/apercus/mon-premier-jeu-de-memoire-1.webp" alt="Aperçu de la page 1 du document « Mon premier jeu de mémoire »" loading="lazy" decoding="async"><img src="../../mediatheque-educative/apercus/mon-premier-jeu-de-memoire-2.webp" alt="Aperçu de la page 2 du document « Mon premier jeu de mémoire »" loading="lazy" decoding="async"><img src="../../mediatheque-educative/apercus/mon-premier-jeu-de-memoire-3.webp" alt="Aperçu de la page 3 du document « Mon premier jeu de mémoire »" loading="lazy" decoding="async"><img src="../../mediatheque-educative/apercus/mon-premier-jeu-de-memoire-4.webp" alt="Aperçu de la page 4 du document « Mon premier jeu de mémoire »" loading="lazy" decoding="async"><img src="../../mediatheque-educative/apercus/mon-premier-jeu-de-memoire-5.webp" alt="Aperçu de la page 5 du document « Mon premier jeu de mémoire »" loading="lazy" decoding="async"></div>
-          </section>
           <aside class="mdt-share" aria-labelledby="mdt-share-title-fiche">
-            <span class="mdt-share-ico"><svg aria-hidden="true"><use href="#cdp-heart"/></svg></span>
-            <div>
+            <div class="mdt-share-tete">
+              <span class="mdt-share-ico"><svg aria-hidden="true"><use href="#cdp-heart"/></svg></span>
               <h2 id="mdt-share-title-fiche">Une activité à partager avec votre enfant</h2>
+            </div>
+            <div>
               <p>Chaque ressource est pensée pour être utilisée avec un adulte. Votre présence, votre attention et vos encouragements font partie de l'activité : prenez le temps de jouer ensemble, sans chercher la performance, et adaptez le rythme à celui de votre enfant.</p>
             </div>
           </aside>
@@ -322,24 +358,6 @@
           </section>
           <p class="mdt-securite"><strong>Sécurité :</strong> Cartes découpées par un adulte. Surveillez les plus jeunes, qui peuvent porter les cartes à la bouche.</p>
         </div>
-
-        <!-- ==================== EN BREF ET TÉLÉCHARGEMENT ==================== -->
-        <aside class="mdt-fiche-aside" aria-labelledby="mdt-bref-title">
-          <div class="mdt-bref">
-            <h2 id="mdt-bref-title">En bref</h2>
-            <dl>
-              <div><dt><svg aria-hidden="true"><use href="#mdt-ico-jeux-et-logique"/></svg>Catégorie</dt><dd><a href="../jeux-et-logique/index.html">Jeux et logique</a></dd></div>
-              <div><dt><svg aria-hidden="true"><use href="#mdt-age"/></svg>Âge</dt><dd>3 à 5 ans</dd></div>
-              <div><dt><svg aria-hidden="true"><use href="#mdt-type"/></svg>Type d'activité</dt><dd>Jeu de cartes à découper</dd></div>
-              <div><dt><svg aria-hidden="true"><use href="#mdt-clock"/></svg>Durée indicative</dt><dd>Une partie de 10 à 15 minutes</dd></div>
-              <div><dt><svg aria-hidden="true"><use href="#mdt-pages"/></svg>Nombre de pages</dt><dd>5</dd></div>
-              <div><dt><svg aria-hidden="true"><use href="#mdt-open"/></svg>Accès</dt><dd>Accès libre</dd></div>
-              <div><dt><svg aria-hidden="true"><use href="#mdt-clock"/></svg>Mise en ligne</dt><dd>10 novembre 2026</dd></div>
-            </dl>
-            <a class="cdp-btn cdp-btn--green mdt-download" href="../../mediatheque-educative/fichiers/mon-premier-jeu-de-memoire.pdf" download><svg aria-hidden="true"><use href="#mdt-download"/></svg>Télécharger le PDF</a>
-            <p class="mdt-action-note">Gratuit · PDF · 5 pages · format A4</p>
-          </div>
-        </aside>
       </div>
     </article>
 

@@ -344,9 +344,11 @@ function carteCategorie(c, base) {
 }
 
 const ENCADRE_PARTAGE = `<aside class="mdt-share" aria-labelledby="mdt-share-title">
-  <span class="mdt-share-ico">${svg('cdp-heart')}</span>
-  <div>
+  <div class="mdt-share-tete">
+    <span class="mdt-share-ico">${svg('cdp-heart')}</span>
     <h2 id="mdt-share-title">Une activité à partager avec votre enfant</h2>
+  </div>
+  <div>
     <p>Chaque ressource est pensée pour être utilisée avec un adulte. Votre présence, votre attention et vos encouragements font partie de l'activité : prenez le temps de jouer ensemble, sans chercher la performance, et adaptez le rythme à celui de votre enfant.</p>
   </div>
 </aside>`;
@@ -607,9 +609,13 @@ ${items.map((x) => `    <li>${texte(x)}</li>`).join('\n')}
 </section>`;
 }
 
+/** Nom du fichier enregistré par le visiteur : « <titre> - Ressource éducative - École Maternelle Lila.pdf »
+    (caractères interdits dans les noms de fichiers retirés, « : » remplacé par un tiret). */
+const nomTelechargement = (r) => `${r.titre.replace(/\s*:\s*/g, ' - ').replace(/[\\/*?"<>|]/g, '').trim()} - Ressource éducative - École Maternelle Lila.pdf`;
+
 function blocAction(r) {
   if (r.acces === 'public' && r.statut === 'disponible') {
-    return `<a class="cdp-btn cdp-btn--green mdt-download" href="../../${r.fichier}" download>${svg('mdt-download')}Télécharger le PDF</a>
+    return `<a class="cdp-btn cdp-btn--green mdt-download" href="../../${r.fichier}" download="${echapper(nomTelechargement(r))}">${svg('mdt-download')}Télécharger le PDF</a>
 <p class="mdt-action-note">Gratuit · PDF${r.pages ? ` · ${pluriel(r.pages, 'page', 'pages')}` : ''} · format A4</p>`;
   }
   if (r.acces === 'public') {
@@ -671,7 +677,17 @@ function genererFiche(r) {
   ].filter(Boolean);
 
   const apercu = r.apercus && r.apercus.length
-    ? `<div class="mdt-apercus">${r.apercus.map((img, i) => `<img src="../../${img}" alt="Aperçu de la page ${i + 1} du document « ${echapper(r.titre)} »" loading="lazy" decoding="async">`).join('')}</div>`
+    ? `<div class="mdt-galerie" data-mdt-galerie>
+  <div class="mdt-galerie-piste" tabindex="0" role="group" aria-roledescription="carrousel" aria-label="Pages du document, ${pluriel(r.apercus.length, 'page', 'pages')}">
+${r.apercus.map((img, i) => `    <figure class="mdt-galerie-diapo" role="group" aria-roledescription="diapositive" aria-label="Page ${i + 1} sur ${r.apercus.length}"><img src="../../${img}" alt="Aperçu de la page ${i + 1} du document « ${echapper(r.titre)} »"${i ? ' loading="lazy"' : ''} decoding="async"></figure>`).join('\n')}
+  </div>
+  <div class="mdt-galerie-ctrl" hidden>
+    <button type="button" class="mdt-galerie-btn" data-galerie="prec" aria-label="Page précédente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
+    <div class="mdt-galerie-points">${r.apercus.map((_, i) => `<button type="button" class="mdt-galerie-point" data-galerie-page="${i}" aria-label="Afficher la page ${i + 1}"${i ? '' : ' aria-current="true"'}></button>`).join('')}</div>
+    <button type="button" class="mdt-galerie-btn" data-galerie="suiv" aria-label="Page suivante"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
+    <button type="button" class="mdt-galerie-btn mdt-galerie-pause" data-galerie="pause" aria-label="Mettre en pause le défilement des pages"><svg class="mdt-ico-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg><svg class="mdt-ico-lecture" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5Z"/></svg></button>
+  </div>
+</div>`
     : `<div class="mdt-apercu-vide">
 ${indenter(visuel(r, '../../', true), '  ')}
   <p>L'aperçu des pages sera visible ici dès la publication du document.</p>
@@ -708,22 +724,11 @@ ${indenter(visuel(r, '../../', true), '  ')}
       </header>
 
       <div class="cdp-wrap mdt-fiche-grid">
-        <!-- ==================== CONTENU DE LA FICHE ==================== -->
-        <div class="mdt-fiche-main">
-          <section class="mdt-fiche-section" aria-labelledby="mdt-apercu-title">
-            <h2 id="mdt-apercu-title">Aperçu du document</h2>
-${indenter(apercu, '            ')}
-          </section>
-${indenter(ENCADRE_PARTAGE.replace(/mdt-share-title/g, 'mdt-share-title-fiche'), '          ')}
-${[
-    liste('Ce que contient le document', 'mdt-contenu-title', r.contenu, true),
-    liste('Objectifs pédagogiques', 'mdt-objectifs-title', r.objectifs),
-    liste('Matériel nécessaire', 'mdt-materiel-title', r.materiel),
-    liste('Conseils pour accompagner l\'enfant', 'mdt-conseils-title', r.conseils),
-  ].filter(Boolean).map((b) => indenter(b, '          ')).join('\n')}${r.securite ? `
-          <p class="mdt-securite"><strong>Sécurité :</strong> ${texte(r.securite)}</p>` : ''}${details ? '' : `
-          <p class="mdt-fiche-later">Les objectifs pédagogiques, le matériel nécessaire et les conseils pour accompagner votre enfant seront présentés ici à la publication de la ressource.</p>`}
-        </div>
+        <!-- ==================== APERÇU (galerie) ==================== -->
+        <section class="mdt-fiche-section mdt-fiche-apercu" aria-labelledby="mdt-apercu-title">
+          <h2 id="mdt-apercu-title">Aperçu du document</h2>
+${indenter(apercu, '          ')}
+        </section>
 
         <!-- ==================== EN BREF ET TÉLÉCHARGEMENT ==================== -->
         <aside class="mdt-fiche-aside" aria-labelledby="mdt-bref-title">
@@ -735,6 +740,19 @@ ${infos.map(([i, t, v]) => `              <div><dt>${svg(i)}${t}</dt><dd>${v}</d
 ${indenter(blocAction(r), '            ')}
           </div>
         </aside>
+
+        <!-- ==================== CONTENU DE LA FICHE ==================== -->
+        <div class="mdt-fiche-main">
+${indenter(ENCADRE_PARTAGE.replace(/mdt-share-title/g, 'mdt-share-title-fiche'), '          ')}
+${[
+    liste('Ce que contient le document', 'mdt-contenu-title', r.contenu, true),
+    liste('Objectifs pédagogiques', 'mdt-objectifs-title', r.objectifs),
+    liste('Matériel nécessaire', 'mdt-materiel-title', r.materiel),
+    liste('Conseils pour accompagner l\'enfant', 'mdt-conseils-title', r.conseils),
+  ].filter(Boolean).map((b) => indenter(b, '          ')).join('\n')}${r.securite ? `
+          <p class="mdt-securite"><strong>Sécurité :</strong> ${texte(r.securite)}</p>` : ''}${details ? '' : `
+          <p class="mdt-fiche-later">Les objectifs pédagogiques, le matériel nécessaire et les conseils pour accompagner votre enfant seront présentés ici à la publication de la ressource.</p>`}
+        </div>
       </div>
     </article>
 ${voisines.length ? `
