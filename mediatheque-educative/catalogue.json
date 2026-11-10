@@ -113,10 +113,46 @@
       "age_min": 3,
       "age_max": 4,
       "acces": "public",
-      "statut": "a-venir",
+      "statut": "disponible",
       "type": "Planches d'association",
-      "description": "Rond, carré, triangle, rectangle : reconnaître les formes simples dans les objets du quotidien.",
-      "a_valider": true
+      "description": "Rond, carré, triangle, rectangle : quatre formes à reconnaître dans les objets du quotidien, avec un jeu à relier, un jeu de tri et un coloriage codé.",
+      "objectifs": [
+        "Reconnaître et nommer quatre formes simples.",
+        "Retrouver ces formes dans les objets du quotidien.",
+        "Trier et associer des objets selon leur forme."
+      ],
+      "materiel": [
+        "Le document imprimé en couleur, sur papier A4.",
+        "Des ciseaux pour l'adulte qui découpe les cartes du jeu de tri.",
+        "Des crayons de couleur pour le jeu à relier et le coloriage codé."
+      ],
+      "contenu": [
+        "Une couverture.",
+        "Les quatre formes, chacune avec deux objets du quotidien.",
+        "Le jeu « Je relie l'objet à sa forme », et trois autres jeux de formes.",
+        "Un jeu de tri : quatre boîtes et huit petites cartes à découper.",
+        "Un coloriage codé : une maison et un sapin faits de formes.",
+        "Un guide pour accompagner votre enfant."
+      ],
+      "conseils": [
+        "Faites suivre le contour des formes avec le doigt.",
+        "Nommez les formes autour de vous au fil de la journée.",
+        "Commencez par le rond et le carré, puis ajoutez le triangle et le rectangle.",
+        "Préférez les jeux de tri et de chasse aux formes aux questions répétées."
+      ],
+      "duree": "Quelques minutes par activité",
+      "securite": "Les petites cartes du jeu de tri sont découpées par un adulte. Surveillez les plus jeunes, qui peuvent les porter à la bouche.",
+      "fichier": "mediatheque-educative/fichiers/les-formes-geometriques-autour-de-nous.pdf",
+      "pages": 6,
+      "apercus": [
+        "mediatheque-educative/apercus/les-formes-geometriques-autour-de-nous-1.webp",
+        "mediatheque-educative/apercus/les-formes-geometriques-autour-de-nous-2.webp",
+        "mediatheque-educative/apercus/les-formes-geometriques-autour-de-nous-3.webp",
+        "mediatheque-educative/apercus/les-formes-geometriques-autour-de-nous-4.webp",
+        "mediatheque-educative/apercus/les-formes-geometriques-autour-de-nous-5.webp",
+        "mediatheque-educative/apercus/les-formes-geometriques-autour-de-nous-6.webp"
+      ],
+      "publie_le": "2026-11-10"
     },
     {
       "numero": 3,
@@ -402,8 +438,31 @@
       "acces": "public",
       "statut": "a-venir",
       "type": "Imagier",
-      "description": "La chatte et son chaton, la vache et son veau : un imagier pour découvrir les animaux et leurs petits.",
-      "a_valider": true
+      "description": "La chatte et son chaton, la vache et son veau, la poule et son poussin… Un imagier de six familles d'animaux, avec un jeu à relier et un jeu sur les cris des animaux.",
+      "objectifs": [
+        "Découvrir les animaux et le nom de leurs petits.",
+        "Comparer et décrire : grand, petit.",
+        "Écouter, imiter et associer les cris des animaux."
+      ],
+      "materiel": [
+        "Le document imprimé en couleur, sur papier A4.",
+        "Un crayon pour le jeu à relier."
+      ],
+      "contenu": [
+        "Une couverture.",
+        "Planche 1 : la chatte et son chaton, la chienne et son chiot, la vache et son veau.",
+        "Planche 2 : la brebis et son agneau, la jument et son poulain, la poule et son poussin.",
+        "Le jeu « Qui est mon petit ? » : relier chaque maman à son petit.",
+        "Le jeu « Qui fait ce bruit ? » : les cris des animaux.",
+        "Un guide pour accompagner votre enfant."
+      ],
+      "conseils": [
+        "Commencez par deux ou trois familles, puis ajoutez les autres au fil des jours.",
+        "Comparez la maman et son petit : grand, petit.",
+        "Imitez les cris ensemble : c'est amusant et cela aide à répéter des sons.",
+        "Faites le lien avec votre propre famille."
+      ],
+      "duree": "Quelques minutes, à reprendre souvent"
     },
     {
       "numero": 17,
@@ -634,8 +693,33 @@
       "acces": "public",
       "statut": "a-venir",
       "type": "Cartes illustrées",
-      "description": "Joie, tristesse, colère, peur : des cartes pour reconnaître les émotions et apprendre à les dire.",
-      "a_valider": true
+      "description": "Joie, tristesse, colère, peur, surprise, calme : des cartes illustrées pour reconnaître les émotions, apprendre à les dire et les dessiner.",
+      "objectifs": [
+        "Reconnaître six émotions sur un visage.",
+        "Mettre des mots sur ce que l'on ressent.",
+        "Exprimer ses émotions par le dessin et la parole."
+      ],
+      "materiel": [
+        "Le document imprimé en couleur, sur papier A4.",
+        "Des ciseaux pour l'adulte qui découpe les cartes.",
+        "Des crayons pour le tableau et les dessins.",
+        "Facultatif : un miroir."
+      ],
+      "contenu": [
+        "Une couverture.",
+        "Six émotions à reconnaître : joie, tristesse, colère, peur, surprise, calme.",
+        "Des cartes à découper, dont trois à dessiner.",
+        "Mon émotion du jour : un visage à colorier chaque jour de la semaine.",
+        "Je dessine les émotions : quatre visages à dessiner.",
+        "Un guide pour accompagner votre enfant."
+      ],
+      "conseils": [
+        "Nommez l'émotion que vous observez : les mots aident l'enfant à comprendre ce qu'il ressent.",
+        "Accueillez l'émotion sans la juger, puis aidez votre enfant à se calmer.",
+        "Racontez vos propres émotions avec des mots simples.",
+        "Utilisez les cartes à un moment calme, pas au cœur d'une colère."
+      ],
+      "duree": "Quelques minutes, à reprendre souvent"
     },
     {
       "numero": 28,
