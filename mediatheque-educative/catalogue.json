@@ -143,7 +143,7 @@
       "age_min": 3,
       "age_max": 4,
       "acces": "public",
-      "statut": "a-venir",
+      "statut": "disponible",
       "pilote": 3,
       "type": "Livret d'activité illustré",
       "description": "Un livret pour créer un petit jardin à partir de formes simples à découper et à coller : soleil, nuage, papillons, fleurs, arbre et herbe.",
@@ -173,7 +173,18 @@
         "Demandez-lui de vous raconter son jardin plutôt que de le juger."
       ],
       "securite": "Activité à réaliser sous la surveillance d'un adulte : ciseaux adaptés à l'âge, colle non toxique.",
-      "duree": "Environ 20 à 30 minutes, en une ou plusieurs fois"
+      "duree": "Environ 20 à 30 minutes, en une ou plusieurs fois",
+      "fichier": "mediatheque-educative/fichiers/mes-premieres-creations-decoupage-et-collage.pdf",
+      "pages": 6,
+      "apercus": [
+        "mediatheque-educative/apercus/mes-premieres-creations-decoupage-et-collage-1.webp",
+        "mediatheque-educative/apercus/mes-premieres-creations-decoupage-et-collage-2.webp",
+        "mediatheque-educative/apercus/mes-premieres-creations-decoupage-et-collage-3.webp",
+        "mediatheque-educative/apercus/mes-premieres-creations-decoupage-et-collage-4.webp",
+        "mediatheque-educative/apercus/mes-premieres-creations-decoupage-et-collage-5.webp",
+        "mediatheque-educative/apercus/mes-premieres-creations-decoupage-et-collage-6.webp"
+      ],
+      "publie_le": "2026-11-10"
     },
     {
       "numero": 8,
