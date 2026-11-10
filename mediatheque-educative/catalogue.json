@@ -702,7 +702,7 @@
       "age_min": 3,
       "age_max": 5,
       "acces": "public",
-      "statut": "a-venir",
+      "statut": "disponible",
       "type": "Cartes illustrées",
       "description": "Joie, tristesse, colère, peur, surprise, calme : des cartes illustrées pour reconnaître les émotions, apprendre à les dire et les dessiner.",
       "objectifs": [
@@ -730,7 +730,18 @@
         "Racontez vos propres émotions avec des mots simples.",
         "Utilisez les cartes à un moment calme, pas au cœur d'une colère."
       ],
-      "duree": "Quelques minutes, à reprendre souvent"
+      "duree": "Quelques minutes, à reprendre souvent",
+      "fichier": "mediatheque-educative/fichiers/je-reconnais-et-j-exprime-mes-emotions.pdf",
+      "pages": 6,
+      "apercus": [
+        "mediatheque-educative/apercus/je-reconnais-et-j-exprime-mes-emotions-1.webp",
+        "mediatheque-educative/apercus/je-reconnais-et-j-exprime-mes-emotions-2.webp",
+        "mediatheque-educative/apercus/je-reconnais-et-j-exprime-mes-emotions-3.webp",
+        "mediatheque-educative/apercus/je-reconnais-et-j-exprime-mes-emotions-4.webp",
+        "mediatheque-educative/apercus/je-reconnais-et-j-exprime-mes-emotions-5.webp",
+        "mediatheque-educative/apercus/je-reconnais-et-j-exprime-mes-emotions-6.webp"
+      ],
+      "publie_le": "2026-11-10"
     },
     {
       "numero": 28,
