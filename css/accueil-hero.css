@@ -1,0 +1,134 @@
+/* ==========================================================================
+   ÉCOLE MATERNELLE LILA — HERO DE LA PAGE D'ACCUEIL
+   Même esprit que les héros du Coin des parents et de la Médiathèque éducative
+   (css/coin-des-parents.css, section « 1. HERO ») : surtitre, titre Fraunces souligné
+   au pinceau, signature Pacifico, bouton vert + lien manuscrit, photo en arche
+   entourée de lavis d'aquarelle et de cœurs.
+   Feuille autonome (classes « lh- ») : ni coin-des-parents.css ni style.css ne sont modifiés.
+   ========================================================================== */
+
+.lh-hero {
+  --lh-ivory: #FFFCF6;
+  --lh-ink: #2B2622;
+  --lh-text: #4A4540;
+  --lh-green: #689B22;
+  --lh-green-hover: #527D19;
+  --lh-green-active: #466B14;
+  --lh-green-ink: #426B16;
+  --lh-green-wash: #9DC26B;
+  --lh-turquoise-brand: #81C9CB;
+  --lh-turquoise-soft: #E3F3F4;
+  --lh-red: #E8253A;
+  --lh-red-hover: #D1182C;
+  --lh-font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --lh-font-body: 'Nunito', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --lh-font-brand: 'Pacifico', 'Brush Script MT', cursive;
+  --lh-shadow-lift: 0 2px 4px rgba(60, 44, 28, .05), 0 16px 36px rgba(60, 44, 28, .10);
+  --lh-ease: cubic-bezier(.4, 0, .2, 1);
+
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(2.5rem, 6vw, 5rem) clamp(3rem, 7vw, 6rem);
+  color: var(--lh-text);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  background-color: var(--lh-ivory);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .42  0 0 0 0 .33  0 0 0 0 .2  0 0 0 .045 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  -webkit-font-smoothing: antialiased;
+}
+.lh-hero p { margin: 0; }
+.lh-hero :focus-visible { outline: 3px solid var(--lh-green-ink); outline-offset: 3px; border-radius: 6px; }
+.lh-svg-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.lh-wrap {
+  max-width: 1200px; margin-inline: auto;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+}
+.lh-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.lh-copy { min-width: 0; }
+
+.lh-kicker {
+  font-family: var(--lh-font-body); font-weight: 800; font-size: .78rem; line-height: 1.4;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--lh-green-ink);
+  display: inline-flex; align-items: center; gap: .55rem;
+}
+.lh-kicker::before { content: ""; width: 22px; height: 2px; border-radius: 2px; background: currentColor; opacity: .7; flex: none; }
+
+.lh-hero h1 {
+  margin: 1.1rem 0 0; padding: 0;
+  font-family: var(--lh-font-display); font-optical-sizing: auto; color: var(--lh-ink);
+  font-size: clamp(2.6rem, 5.6vw, 4.5rem); line-height: 1.04; letter-spacing: -.025em; font-weight: 500;
+  text-wrap: balance;
+}
+.lh-hero h1::after { display: none; }
+.lh-hero h1 em { font-style: italic; font-weight: 400; position: relative; display: inline-block; z-index: 0; }
+.lh-hero h1 em svg { position: absolute; left: -8%; bottom: -.02em; width: 116%; height: .5em; z-index: -1; color: var(--lh-turquoise-brand); }
+
+.lh-signature {
+  margin-top: 1rem !important;
+  font-family: var(--lh-font-brand); font-weight: 400; letter-spacing: 0;
+  font-size: clamp(1.4rem, 2.2vw, 1.7rem); line-height: 1.5; color: var(--lh-red);
+}
+.lh-lead { margin-top: 1.2rem !important; max-width: 50ch; font-size: 1.12rem; }
+
+.lh-actions { margin-top: 2rem; display: flex; gap: .9rem 1.5rem; flex-wrap: wrap; align-items: center; }
+.lh-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 48px;
+  padding: .75rem 1.55rem; border-radius: 999px; border: 2px solid transparent;
+  font-family: var(--lh-font-body); font-weight: 800; font-size: 1.1875rem; line-height: 1.2;
+  text-decoration: none; cursor: pointer;
+  background: var(--lh-green); color: #fff; box-shadow: 0 4px 14px rgba(104, 155, 34, .25);
+  transition: background-color .25s var(--lh-ease), transform .25s var(--lh-ease), box-shadow .25s var(--lh-ease);
+}
+.lh-btn:hover { background: var(--lh-green-hover); color: #fff; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(104, 155, 34, .3); }
+.lh-btn:active { background: var(--lh-green-active); transform: translateY(0); box-shadow: 0 2px 8px rgba(104, 155, 34, .25); }
+.lh-link-hand {
+  font-family: var(--lh-font-body); font-weight: 800; font-size: 1.1875rem; line-height: 1.3; color: var(--lh-red); padding-bottom: 6px;
+  display: inline-flex; align-items: center; gap: .4rem;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8' preserveAspectRatio='none'><path d='M2 5.5 C 30 2, 60 7, 118 3' fill='none' stroke='%23E8253A' stroke-width='2.2' stroke-linecap='round'/></svg>") left bottom / 100% 7px no-repeat;
+  transition: gap .25s var(--lh-ease), color .25s var(--lh-ease);
+}
+.lh-link-hand svg { width: 16px; height: 16px; flex: none; }
+.lh-link-hand:hover { gap: .7rem; color: var(--lh-red-hover); }
+.lh-link-hand:active { color: var(--lh-ink); }
+
+/* Visuel : photo de l'établissement en arche */
+.lh-visual { position: relative; min-width: 0; justify-self: center; width: min(100%, 560px); }
+.lh-wash { position: absolute; pointer-events: none; }
+.lh-wash--a { inset: -14% -22% auto auto; width: 115%; color: var(--lh-turquoise-brand); }
+.lh-wash--b { left: -20%; bottom: -12%; width: 70%; color: var(--lh-green-wash); }
+.lh-arch {
+  position: relative; margin: 0; max-width: 100%; overflow: hidden;
+  border-radius: 72px 72px 24px 24px; border: 7px solid var(--lh-ivory);
+  background: var(--lh-turquoise-soft); box-shadow: var(--lh-shadow-lift);
+}
+.lh-arch img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: 40% 50%; }
+.lh-heart { position: absolute; color: var(--lh-red); opacity: .75; }
+.lh-heart--1 { top: 4%; left: -6%; width: 26px; height: 26px; transform: rotate(-14deg); }
+.lh-heart--2 { top: 18%; right: -7%; width: 18px; height: 18px; transform: rotate(12deg); }
+
+/* Sous le hero : la mission de l'école, en introduction des cartes de l'établissement */
+.about-mission-text { margin: 2.4rem auto 0; max-width: 72ch; font-size: 1.08rem; line-height: 1.8; text-align: center; }
+.about-section .environment-content { margin-top: 0; }
+/* Bande crème après le hero ivoire, comme l'enchaînement des rubriques */
+.lh-hero + .about-section { background: #F7F0E6 !important; padding-top: clamp(3.5rem, 7vw, 5rem); }
+.lh-hero + .about-section .environment-content { background-color: transparent !important; }
+
+@media (max-width: 820px) {
+  .lh-grid { grid-template-columns: minmax(0, 1fr); }
+  .lh-visual { width: min(100%, 520px); margin-top: 1rem; }
+}
+@media (max-width: 600px) {
+  .lh-hero { font-size: 1rem; }
+  .lh-kicker { letter-spacing: .1em; }
+  .lh-hero h1 { font-size: clamp(2.3rem, 10.5vw, 3rem); }
+  .lh-actions { flex-direction: column; align-items: stretch; text-align: center; }
+  .lh-actions .lh-btn { width: 100%; }
+  .lh-actions .lh-link-hand { align-self: center; }
+  .about-mission-text { font-size: 1rem; line-height: 1.7; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lh-btn, .lh-link-hand { transition: none; }
+  .lh-btn:hover { transform: none; }
+}

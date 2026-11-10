@@ -2140,6 +2140,7 @@ ul, ol {
 .section-title::after { bottom: -22px; }
 .section-title-wrap { margin-bottom: 1.4rem; }
 .niveaux-section .section-title::after { display: block; }
+.niveaux-section .section-title-wrap { margin-bottom: 3rem; }
 .niveau-header { flex-direction: column; gap: .5rem; }
 .niveau-header .age-badge { align-self: flex-end; order: -1; margin-bottom: .1rem; }
 @media (min-width: 821px) {
@@ -2154,9 +2155,6 @@ ul, ol {
 
 
 /* Ajustements demandés : navigation des sections, logo et pied de page */
-.niveaux-section .section-title::after {
-  display: none;
-}
 .footer-brand .footer-slogan {
   color: var(--color-primary);
   font-style: italic;

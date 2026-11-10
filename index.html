@@ -68,6 +68,12 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://ecolematernellelila.com/assets/images/og-ecole-maternelle-lila.jpg">
   <link rel="stylesheet" href="css/menu-ressources.css">
+  <!-- Hero de l'accueil : Fraunces (titre), comme les rubriques Coin des parents et Médiathèque -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400&display=swap">
+  <link rel="stylesheet" href="css/accueil-hero.css">
+  <link rel="preload" as="image" href="assets/images/accueil/facade-ecole-maternelle-lila.webp" fetchpriority="high">
 </head>
 <body>
 
@@ -181,27 +187,63 @@
 
   <main>
     <!-- ====================================================================
-         SECTION 2 — BIENVENUE À L'ÉCOLE LILA (L'ÉCOLE)
+         SECTION 1 — HERO (même esprit que le Coin des parents et la Médiathèque)
          ==================================================================== -->
-    <section class="section about-section" id="presentation">
-      <div class="container">
-        <div class="about-content-centered about-intro-layout">
-          <div class="about-logo-panel">
-            <img src="assets/images/Logo-principal-Ecole-Maternelle-Lila.svg" alt="Logo de l’École Maternelle Lila" loading="lazy">
+    <section class="lh-hero" id="presentation" aria-labelledby="lh-hero-title">
+      <svg class="lh-svg-defs" aria-hidden="true" focusable="false">
+        <defs>
+          <filter id="lh-wc" x="-25%" y="-25%" width="150%" height="150%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="3" seed="7" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="16" xChannelSelector="R" yChannelSelector="G" result="disp"/>
+            <feGaussianBlur in="disp" stdDeviation="1.4"/>
+          </filter>
+          <filter id="lh-brush" x="-5%" y="-40%" width="110%" height="180%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04 0.6" numOctaves="2" seed="3" result="n"/>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="7"/>
+          </filter>
+          <symbol id="lh-wash-shape" viewBox="0 0 200 170">
+            <g filter="url(#lh-wc)">
+              <ellipse cx="100" cy="85" rx="86" ry="68" fill="currentColor" opacity=".26"/>
+              <ellipse cx="84" cy="74" rx="58" ry="44" fill="currentColor" opacity=".22"/>
+              <ellipse cx="128" cy="104" rx="42" ry="30" fill="currentColor" opacity=".2"/>
+            </g>
+          </symbol>
+          <symbol id="lh-heart-shape" viewBox="0 0 24 24"><path d="M12 20.3S3.5 15 3.5 9.2A4.6 4.6 0 0 1 12 6.6a4.6 4.6 0 0 1 8.5 2.6C20.5 15 12 20.3 12 20.3Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+          <symbol id="lh-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        </defs>
+      </svg>
+      <div class="lh-wrap">
+        <div class="lh-grid">
+          <div class="lh-copy">
+            <p class="lh-kicker">Crèche et école maternelle à Tizi&#8209;Ouzou</p>
+            <h1 id="lh-hero-title">Bienvenue à l'École Maternelle <em>Lila<svg viewBox="0 0 200 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 20 C 50 8, 120 26, 196 13" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" opacity=".5" filter="url(#lh-brush)"/></svg></em></h1>
+            <p class="lh-signature">Grandir en confiance, apprendre avec plaisir&nbsp;!</p>
+            <p class="lh-lead">À Thala-Allam, nous accueillons les enfants de 15&nbsp;mois à 6&nbsp;ans, de la crèche à la Grande Section, dans un environnement accueillant, stimulant et adapté à leur âge.</p>
+            <div class="lh-actions">
+              <a class="lh-btn" href="#inscriptions">Organiser une visite</a>
+              <a class="lh-link-hand" href="#sections">Découvrir nos sections <svg aria-hidden="true"><use href="#lh-arrow"/></svg></a>
+            </div>
           </div>
-          <div class="about-copy-panel">
-            <h1 class="section-title">Bienvenue à l'École <span class="mobile-title-break" aria-hidden="true"></span>Maternelle Lila</h1>
-            <div class="about-lead-text">
-              <p>Située à Thala-Allam, à Tizi-Ouzou, l'École Maternelle Lila accueille les enfants dès 15 mois au sein de sa crèche et les accompagne jusqu'à 6 ans dans leur parcours préscolaire, au sein d'un environnement accueillant, stimulant et adapté à leur âge.</p>
-              <p>Notre mission est de favoriser leur éveil, leur autonomie et leur créativité à travers des activités pédagogiques et ludiques, encadrées par une équipe bienveillante et qualifiée.</p>
-            </div>
-            <p class="about-slogan">Grandir en confiance, apprendre avec plaisir !</p>
-            <div class="about-cta-actions">
-              <a href="#sections" class="btn btn-primary">Découvrir nos sections</a>
-              <a href="#inscriptions" class="btn btn-call">Organiser une visite</a>
-            </div>
+          <div class="lh-visual">
+            <svg class="lh-wash lh-wash--a" aria-hidden="true"><use href="#lh-wash-shape"/></svg>
+            <svg class="lh-wash lh-wash--b" aria-hidden="true"><use href="#lh-wash-shape"/></svg>
+            <svg class="lh-heart lh-heart--1" viewBox="0 0 24 24" aria-hidden="true"><use href="#lh-heart-shape"/></svg>
+            <svg class="lh-heart lh-heart--2" viewBox="0 0 24 24" aria-hidden="true"><use href="#lh-heart-shape"/></svg>
+            <figure class="lh-arch"><img src="assets/images/accueil/facade-ecole-maternelle-lila.webp" width="680" height="383" alt="Façade de l'École Maternelle Lila à Thala-Allam, Tizi-Ouzou : bâtiment clair de trois étages, portail blanc et jeunes arbres" fetchpriority="high" decoding="async"></figure>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2 — L'ÉCOLE : MISSION ET ÉTABLISSEMENT
+         ==================================================================== -->
+    <section class="section about-section" id="ecole">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2 class="section-title">Un lieu pensé pour <br class="mobile-title-break">grandir sereinement</h2>
+        </div>
+        <p class="about-mission-text">Notre mission est de favoriser l'éveil, l'autonomie et la créativité de chaque enfant à travers des activités pédagogiques et ludiques, encadrées par une équipe bienveillante et qualifiée.</p>
       </div>
 <div class="container environment-content" id="environnement-ecole">
           <div class="school-facilities-grid" aria-label="Les atouts de notre établissement">
