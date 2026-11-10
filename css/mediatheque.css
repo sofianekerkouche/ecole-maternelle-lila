@@ -108,11 +108,16 @@ body.mdt [data-categorie="vie-quotidienne-autonomie"]  { --c: var(--mdt-c-quo); 
 }
 /* Ressource récemment mise en ligne : vert du site, texte blanc gras (5,4:1 sur #527D19) */
 .mdt-flag--new { background: var(--cdp-green-hover); color: #fff; letter-spacing: .04em; text-transform: uppercase; }
+/* Ressource réservée aux familles : visuel flouté sous un voile clair, cadenas au centre */
+.mdt-card[data-acces="familles"] .mdt-card-media > .mdt-mock { filter: blur(5px) saturate(.9); transform: scale(1.08); }
+.mdt-card[data-acces="familles"] .mdt-card-media::after { content: ""; position: absolute; inset: 0; background: rgba(255, 250, 242, .35); }
 .mdt-lock-badge {
-  position: absolute; top: .7rem; right: .7rem; z-index: 1; width: 36px; height: 36px; border-radius: 50%;
-  display: grid; place-items: center; background: var(--mdt-lock); color: var(--mdt-lock-ico); box-shadow: 0 0 0 3px rgba(255, 255, 255, .9), 0 4px 12px rgba(242, 169, 59, .4);
+  position: absolute; top: 50%; left: 50%; z-index: 2; width: 68px; height: 68px; border-radius: 50%; transform: translate(-50%, -50%);
+  display: grid; place-items: center; background: var(--mdt-lock); color: var(--mdt-lock-ico);
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, .75), 0 10px 26px rgba(138, 75, 0, .28); transition: transform .35s var(--cdp-ease);
 }
-.mdt-lock-badge svg { width: 18px; height: 18px; }
+.mdt-lock-badge svg { width: 30px; height: 30px; }
+.mdt-card:hover .mdt-lock-badge { transform: translate(-50%, -50%) scale(1.06); }
 
 /* ============ RECHERCHE ET FILTRES (listes déroulantes) ============ */
 .mdt-tools {
@@ -297,8 +302,8 @@ body.mdt [data-categorie="vie-quotidienne-autonomie"]  { --c: var(--mdt-c-quo); 
   .mdt-card .cdp-chip { font-size: .72rem; }
   .mdt-sheet { width: 58%; }
   .mdt-flag { top: auto; bottom: .5rem; left: .4rem; right: .4rem; padding: .2rem .35rem; font-size: .66rem; text-align: center; }
-  .mdt-lock-badge { top: .45rem; right: .45rem; width: 30px; height: 30px; }
-  .mdt-lock-badge svg { width: 15px; height: 15px; }
+  .mdt-lock-badge { width: 44px; height: 44px; box-shadow: 0 0 0 4px rgba(255, 255, 255, .75), 0 6px 16px rgba(138, 75, 0, .25); }
+  .mdt-lock-badge svg { width: 20px; height: 20px; }
   .mdt-tools-row { grid-template-columns: minmax(0, 1fr); gap: .6rem; }
   .mdt-access--familles { font-size: .76rem; }
   .mdt-share { grid-template-columns: minmax(0, 1fr); }
@@ -314,4 +319,6 @@ body.mdt [data-categorie="vie-quotidienne-autonomie"]  { --c: var(--mdt-c-quo); 
   .mdt-card, .mdt-sheet { transition: none; }
   .mdt-galerie-piste { scroll-behavior: auto; }
   .mdt-card:hover, .mdt-card:hover .mdt-sheet { transform: none; }
+  .mdt-lock-badge { transition: none; }
+  .mdt-card:hover .mdt-lock-badge { transform: translate(-50%, -50%); }
 }

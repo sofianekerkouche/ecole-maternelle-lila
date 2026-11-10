@@ -301,7 +301,7 @@ function carte(r, { base, racine, titre = 'h3', chip = true }) {
   const c = categories.get(r.categorie);
   const url = `${base}${r.slug}.html`;
   const drapeaux = [
-    r.statut === 'a-venir' ? `<span class="mdt-flag">Bientôt disponible</span>` : '',
+    r.statut === 'a-venir' && r.acces !== 'familles' ? `<span class="mdt-flag">Bientôt disponible</span>` : '', // familles : le cadenas suffit
     estNouvelle(r) ? `<span class="mdt-flag mdt-flag--new">Nouveau</span>` : '',
     r.acces === 'familles' ? `<span class="mdt-lock-badge" title="Réservée aux familles de l’école">${svg('mdt-lock')}<span class="cdp-sr-only">Réservée aux familles de l’école</span></span>` : '',
   ].filter(Boolean).join('');
